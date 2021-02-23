@@ -31,10 +31,10 @@ Sign in to the [Azure portal](https://portal.azure.com) with your Azure account.
 ![Azure Purview](../images/01-create-purview.png)
 
 3. On the **Basics** tab, do the following:
-    *  Select a **Subscription**.
-    *  Select a **Resource group**.
-    *  Enter a **Purview account name**.
-    *  Select a **Location**.
+    * Select a **Subscription**.
+    * Select a **Resource group**.
+    * Enter a **Purview account name**.
+    * Select a **Location**.
 
 Note:
 
@@ -47,7 +47,7 @@ Note:
 ![Azure Purview](../images/01-create-basic.png)
 
 4. On the **Configuration** tab, do the following:
-    *  Select a **Platform size**.
+    * Select a **Platform size** *(4 capacity units is sufficient for non-production scenarios)*.
 
 Note:
 
@@ -69,3 +69,7 @@ Note:
 7. To open the out of the box user experience, click **Open Purview Studio**.
 
 ![Azure Purview](../images/01-open-studio.png)
+
+## Summary
+
+This module provided an overview of how to create an Azure Purview account instance.

@@ -1,6 +1,6 @@
 # Module 02 - Register & Scan
 
-[< Previous Module](../modules/module01.md) - **[Home](../readme.md)** - [Next Module>](../modules/module03.md)
+[< Previous Module](../modules/module01.md) - **[Home](../README.md)** - [Next Module>](../modules/module03.md)
 
 ## Prerequisites
 

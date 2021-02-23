@@ -1,6 +1,6 @@
 # Module 05 - Glossary
 
-[< Previous Module](../modules/module04.md) - **[Home](../readme.md)** - [Next Module>](../modules/module06.md)
+[< Previous Module](../modules/module04.md) - **[Home](../README.md)** - [Next Module>](../modules/module06.md)
 
 ## Prerequisites
 

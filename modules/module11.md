@@ -1,6 +1,6 @@
 # Module 11 - REST API
 
-[< Previous Module](../modules/module10.md) - **[Home](../readme.md)** - [Next Module>](../modules/module12.md)
+[< Previous Module](../modules/module10.md) - **[Home](../README.md)** - [Next Module>](../modules/module12.md)
 
 ## Prerequisites
 

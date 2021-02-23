@@ -1,6 +1,6 @@
 # Module 06 - Classifications
 
-[< Previous Module](../modules/module05.md) - **[Home](../readme.md)** - [Next Module>](../modules/module07.md)
+[< Previous Module](../modules/module05.md) - **[Home](../README.md)** - [Next Module>](../modules/module07.md)
 
 ## Prerequisites
 

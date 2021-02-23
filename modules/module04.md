@@ -1,6 +1,6 @@
 # Module 04 - Asset Enrichment
 
-[< Previous Module](../modules/module03.md) - **[Home](../README.md)** - [Next Module>](../modules/module04.md)
+[< Previous Module](../modules/module03.md) - **[Home](../README.md)** - [Next Module>](../modules/module05.md)
 
 ## Prerequisites
 

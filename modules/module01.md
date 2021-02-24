@@ -9,7 +9,7 @@
 
 ## Introduction
 
-To create and use the Azure Purview platform, you will need to provision a Purview account within an active Azure subscription.
+To create and use the Azure Purview platform, you will need to provision an Azure Purview account within an active Azure subscription.
 
 ## Learning Objectives
 
@@ -24,17 +24,20 @@ Sign in to the [Azure portal](https://portal.azure.com) with your Azure account.
 
 1. From the **Home** screen, click **Create a resource**.
 
-![Azure Purview](../images/01-create-resource.png)  
+    ![Azure Purview](../images/01-create-resource.png)  
 
 2. Search the Marketplace for "Azure Purview" and click **Create**.
 
-![Azure Purview](../images/01-create-purview.png)
+    ![Azure Purview](../images/01-create-purview.png)
 
-3. On the **Basics** tab, do the following:
-    * Select a **Subscription**.
-    * Select a **Resource group**.
-    * Enter a **Purview account name**.
-    * Select a **Location**.
+3. Provide the necessary inputs on the **Basics** tab.
+
+    | Parameter  | Example Value |
+    | --- | --- |
+    | Subscription | `Azure Internal Access` |
+    | Resource group | `purviewlab` |
+    | Purview account name | `purview-69426` |
+    | Location | `Brazil South` |
 
 Note:
 
@@ -44,10 +47,13 @@ Note:
 * The hyphen (-) character must be immediately preceded and followed by a letter or number.
 * Spaces are not allowed.
 
-![Azure Purview](../images/01-create-basic.png)
+    ![Azure Purview](../images/01-create-basic.png)
 
-4. On the **Configuration** tab, do the following:
-    * Select a **Platform size** *(4 capacity units is sufficient for non-production scenarios)*.
+4. Provide the necessary inputs on the **Configuration** tab.
+
+    | Parameter  | Example Value | Note |
+    | --- | --- | --- |
+    | Platform size | `4 capacity units` | Sufficient for non-production scenarios. |
 
 Note:
 
@@ -56,19 +62,19 @@ Note:
 * While in public preview, there are currently two options: 4 or 16.
 * One Capacity Unit is able to support approximately 1 API call per second.
 
-![Azure Purview](../images/01-create-configuration.png)
+    ![Azure Purview](../images/01-create-configuration.png)
 
 5. On the **Review + Create** tab, once the message in the ribbon returns "Validation passed", verify your selections and click **Create**.
 
-![Azure Purview](../images/01-create-create.png)
+    ![Azure Purview](../images/01-create-create.png)
 
 6. Wait several minutes while your deployment is in progress. Once complete, click **Go to resource**.
 
-![Azure Purview](../images/01-goto-resource.png)
+    ![Azure Purview](../images/01-goto-resource.png)
 
 7. To open the out of the box user experience, click **Open Purview Studio**.
 
-![Azure Purview](../images/01-open-studio.png)
+    ![Azure Purview](../images/01-open-studio.png)
 
 ## Summary
 

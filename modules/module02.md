@@ -20,6 +20,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 * Create a Collection.
 * Register a source.
+* Set up authentication for a source.
 * Scan a source.
 
 ## Sign in to Azure
@@ -65,3 +66,35 @@ Sign in to the [Azure portal](https://portal.azure.com) with your Azure account.
 6. Wait several minutes while your deployment is in progress. Once complete, click **Go to resource**.
 
     ![Azure Purview](../images/02-storage-goto.png)
+
+## Set up Authentication for a Scan
+
+To scan a source, Azure Purview requires a set of credentials with the necessary permissions. For Azure Data Lake Storage Gen2, Azure Purview supports the following authentication methods.
+
+* Managed Identity (recommended)
+* Service Principal
+* Account Key
+
+In this module we will walk through how to grant the Azure Purview Managed Identity the necessary access to successfully configure and run a scan.
+
+1. From your Azure Data Lake Storage Gen2 account, select **Access Control (IAM)** from the left navigation menu.
+
+    ![Azure Purview](../images/02-storage-access.png)
+
+2. Click **Add role assignments**.
+
+    ![Azure Purview](../images/02-storage-addrole.png)
+
+3. Populate the role assignment prompt as per the table below, select the Azure Purview managed from the list, click **Save**.
+
+    | Property  | Value |
+    | --- | --- |
+    | Role | `Storage Blob Data Reader` |
+    | Assign access to | `User, group, or service principal` |
+    | Select | `<purview-account-name>` |
+
+    ![Azure Purview](../images/02-storage-assignment.png)
+
+4. Navigate to the **Role assignments** tab and confirm the Azure Purview managed identity has been assigned the Storage Blob Data Reader role.
+
+    ![Azure Purview](../images/02-storage-reader.png)

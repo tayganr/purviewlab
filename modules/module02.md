@@ -17,12 +17,14 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 ## Table of Contents
 
-1. Create an Azure Data Lake Storage Gen2 Account
-2. Grant the Azure Purview Managed Identity Access
-3. Upload Data to Azure Data Lake Storage Gen2 Account
-4. Create a Collection
-5. Register a Source
-6. Scan a Source
+1. [Create an Azure Data Lake Storage Gen2 Account](#1-create-an-azure-data-lake-storage-gen2-account)
+2. [Grant the Azure Purview Managed Identity Access](#2-grant-the-azure-purview-managed-identity-access)
+3. [Upload Data to Azure Data Lake Storage Gen2 Account](#3-upload-data-to-azure-data-lake-storage-gen2-account)
+4. [Create a Collection](#4-create-a-collection)
+5. [Register a Source](#5-register-a-source)
+6. [Scan a Source](#6-scan-a-source)
+
+<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
 ## 1. Create an Azure Data Lake Storage Gen2 Account
 
@@ -108,7 +110,7 @@ Before proceeding with the following steps, you will need to:
 * Open Azure Storage Explorer.
 * Sign in to Azure via **View > Account Management > Add an account...**.
 
-1. Download a copy of the **[Bing Coronavirus Query Set](../assets/BingCoronavirusQuerySet.zip)** to your local machine. Note: This data set was originally sourced from [Microsoft Research Open Data](https://msropendata.com/datasets/c5031874-835c-48ed-8b6d-31de2dad0654).
+1. Download a copy of the **[Bing Coronavirus Query Set](https://github.com/tayganr/purviewlab/raw/main/assets/BingCoronavirusQuerySet.zip)** to your local machine. Note: This data set was originally sourced from [Microsoft Research Open Data](https://msropendata.com/datasets/c5031874-835c-48ed-8b6d-31de2dad0654).
 
 2. Locate the downloaded zip file via File Explorer and unzip the contents by right-clicking the file and selecting **Extract All...**.
 

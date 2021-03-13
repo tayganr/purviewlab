@@ -4,28 +4,54 @@
 
 ## Prerequisites
 
-* A description of the first prerequisite.
-* A description of the second prerequisite.
-* A description of the nth prerequisite.
+* An Azure account with an active subscription.
+* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 
 ## Introduction
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+A glossary is an important tool for maintaining and organizing your catalog. You build your glossary by defining new terms or importing a term list and then applying those terms to your assets.
 
-## Step 1 - Title
+## Table of Contents
+
+1. [Create a Term (System Default Term Template)](#1)
+2. [Create a Term (Custom Term Template)](#2)
+3. [Bulk Import Terms](#3)
+4. [Bulk Export Terms](#4)
+
+<div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
+
+## 1. Create a Term (System Default Term Template
+
+1. Do A
+2. Do B
+3. Do C
+
+<div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
+
+## 2. Create a Term (Custom Term Template)
 
 1. Do A
 2. Do B
 3. Do C
 
-## Step 2 - Title
+<div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
+
+## 3. Bulk Import Terms
 
 1. Do A
 2. Do B
 3. Do C
 
-## Step 3 - Title
+<div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
+
+## 4. Bulk Export Terms
 
 1. Do A
 2. Do B
 3. Do C
+
+<div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
+
+## Summary
+
+This module provided an overview of how to create, export, and import terms into the Azure Purview glossary.

@@ -20,7 +20,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
-## 1. Create a Term (System Default Term Template
+## 1. Create a Term (System Default Term Template)
 
 1. Do A
 2. Do B

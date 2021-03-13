@@ -17,6 +17,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 2. [Create a Term (Custom Term Template)](#2-create-a-term-custom-term-template)
 3. [Bulk Import Terms](#3-bulk-import-terms)
 4. [Bulk Export Terms](#4-bulk-export-terms)
+5. [Assign a Term to an Asset](#5-assign-a-term-to-an-asset)
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
@@ -45,6 +46,14 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
 ## 4. Bulk Export Terms
+
+1. Do A
+2. Do B
+3. Do C
+
+<div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
+
+## Assign a Term to an Asset
 
 1. Do A
 2. Do B

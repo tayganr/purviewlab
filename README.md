@@ -25,7 +25,7 @@ After you complete this workshop, you will be able to:
 
 1. [Create an Azure Purview Account](./modules/module01.md)
 2. [Register & Scan](./modules/module02.md)
-3. [Search](./modules/module03.md)
+3. [Search & Browse](./modules/module03.md)
 5. [Glossary](./modules/module04.md)
 6. [Classifications](./modules/module05.md)
 7. [Lineage](./modules/module06.md)

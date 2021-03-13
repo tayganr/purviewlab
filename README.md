@@ -26,14 +26,13 @@ After you complete this workshop, you will be able to:
 1. [Create an Azure Purview Account](./modules/module01.md)
 2. [Register & Scan](./modules/module02.md)
 3. [Search](./modules/module03.md)
-4. [Asset Enrichment](./modules/module04.md)
-5. [Glossary](./modules/module05.md)
-6. [Classifications](./modules/module06.md)
-7. [Lineage](./modules/module07.md)
-8. [Insights](./modules/module08.md)
-9. [Monitor](./modules/module09.md)
-10. [Integrate with Azure Synapse Analytics](./modules/module10.md)
-11. [REST API](./modules/module11.md)
+5. [Glossary](./modules/module04.md)
+6. [Classifications](./modules/module05.md)
+7. [Lineage](./modules/module06.md)
+8. [Insights](./modules/module07.md)
+9. [Monitor](./modules/module08.md)
+10. [Integrate with Azure Synapse Analytics](./modules/module09.md)
+11. [REST API](./modules/module10.md)
 
 ## Contributors
 

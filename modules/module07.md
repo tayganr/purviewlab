@@ -1,6 +1,6 @@
-# Module 07 - Lineage
+# Module 07 - Insights
 
-[< Previous Module](../modules/module06.md) - **[Home](../README.md)** - [Next Module>](../modules/module08.md)
+[< Previous Module](../modules/module07.md) - **[Home](../README.md)** - [Next Module>](../modules/module09.md)
 
 ## Prerequisites
 

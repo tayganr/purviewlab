@@ -1,6 +1,6 @@
-# Module 06 - Classifications
+# Module 06 - Lineage
 
-[< Previous Module](../modules/module05.md) - **[Home](../README.md)** - [Next Module>](../modules/module07.md)
+[< Previous Module](../modules/module06.md) - **[Home](../README.md)** - [Next Module>](../modules/module08.md)
 
 ## Prerequisites
 

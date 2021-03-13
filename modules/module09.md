@@ -1,6 +1,6 @@
 # Module 09 - Integrate with Azure Synapse Analytics
 
-[< Previous Module](../modules/module09.md) - **[Home](../README.md)** - [Next Module>](../modules/module11.md)
+[< Previous Module](../modules/module08.md) - **[Home](../README.md)** - [Next Module>](../modules/module10.md)
 
 ## Prerequisites
 

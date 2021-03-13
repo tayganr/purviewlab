@@ -1,6 +1,6 @@
 # Module 08 - Monitor
 
-[< Previous Module](../modules/module08.md) - **[Home](../README.md)** - [Next Module>](../modules/module10.md)
+[< Previous Module](../modules/module07.md) - **[Home](../README.md)** - [Next Module>](../modules/module09.md)
 
 ## Prerequisites
 

@@ -16,7 +16,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 * Create an Azure Purview account using the Azure portal.
 * Select the appropriate platform size.
 
-## Sign in to Azure
+## Sign in to the Azure Portal
 
 Sign in to the [Azure portal](https://portal.azure.com) with your Azure account.
 

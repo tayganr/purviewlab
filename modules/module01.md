@@ -20,15 +20,17 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
 Sign in to the [Azure portal](https://portal.azure.com) with your Azure account.
 
+<div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
+
 ## Create an Azure Purview Account
 
 1. From the **Home** screen, click **Create a resource**.
 
-    ![Azure Purview](../images/01-create-resource.png)  
+    ![Create a Resource](../images/01-create-resource.png)  
 
 2. Search the Marketplace for "Azure Purview" and click **Create**.
 
-    ![Azure Purview](../images/01-create-purview.png)
+    ![Create Purview Resource](../images/01-create-purview.png)
 
 3. Provide the necessary inputs on the **Basics** tab.
 
@@ -47,7 +49,7 @@ Note:
 * The hyphen (-) character must be immediately preceded and followed by a letter or number.
 * Spaces are not allowed.
 
-    ![Azure Purview](../images/01-create-basic.png)
+    ![Purview Account Bassics](../images/01-create-basic.png)
 
 4. Provide the necessary inputs on the **Configuration** tab.
 
@@ -62,19 +64,21 @@ Note:
 * While in public preview, there are currently two options: 4 or 16.
 * One Capacity Unit is able to support approximately 1 API call per second.
 
-    ![Azure Purview](../images/01-create-configuration.png)
+    ![Configure Purview Account](../images/01-create-configuration.png)
 
 5. On the **Review + Create** tab, once the message in the ribbon returns "Validation passed", verify your selections and click **Create**.
 
-    ![Azure Purview](../images/01-create-create.png)
+    ![Create Purview Account](../images/01-create-create.png)
 
 6. Wait several minutes while your deployment is in progress. Once complete, click **Go to resource**.
 
-    ![Azure Purview](../images/01-goto-resource.png)
+    ![Go to resource](../images/01-goto-resource.png)
 
 7. To open the out of the box user experience, click **Open Purview Studio**.
 
-    ![Azure Purview](../images/01-open-studio.png)
+    ![Open Purview Studio](../images/01-open-studio.png)
+
+<div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
 
 ## Summary
 

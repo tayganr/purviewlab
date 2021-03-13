@@ -13,10 +13,10 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 ## Table of Contents
 
-1. [Create a Term (System Default Term Template)](#1)
-2. [Create a Term (Custom Term Template)](#2)
-3. [Bulk Import Terms](#3)
-4. [Bulk Export Terms](#4)
+1. [Create a Term (System Default Term Template)](#1-create-a-term-system-default-term-template)
+2. [Create a Term (Custom Term Template)](#2-create-a-term-custom-term-template)
+3. [Bulk Import Terms](#3-bulk-import-terms)
+4. [Bulk Export Terms](#4-bulk-export-terms)
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 

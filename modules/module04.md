@@ -114,18 +114,19 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     :bulb: Tip: You can quickly find specific types of terms using the filters at the top (e.g. Status = Approved).
 
-    ![](../images/module04/04-glossary-filter.png)
+    ![Filter Terms](../images/module04/04-glossary-filter.png)
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
 ## 4. Bulk Export Terms
 
-1. Do A
-2. Do B
-3. Do C
+1. From the **Glossary** screen, select all terms and then de-select terms that do not belong to Workplace Analytics (i.e. Contoso Parent, Contoso Child). **All Workplace Analytics terms** should be selected. Click **Export terms**.
 
-![](../images/module04/04-glossary-export.png)
-![](../images/module04/04-export-downloads.png)
+    ![Export Terms](../images/module04/04-glossary-export.png)
+
+2. If the export was successful, you should find a **CSV** file has been copied to your local machine (e.g. Downloads).
+
+    ![Downloads](../images/module04/04-export-downloads.png)
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 

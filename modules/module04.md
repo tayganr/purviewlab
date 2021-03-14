@@ -24,6 +24,9 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 ## 1. Create a Term (System Default Term Template)
 
 1. Do A
+
+![New Glossary Term](../images/module04/04-glossary-new.png)
+
 2. Do B
 3. Do C
 

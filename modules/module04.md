@@ -130,15 +130,25 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 ## 5. Assign a Term to an Asset
 
-1. Do A
-2. Do B
-3. Do C
+1. Perform a wildcard search by typing asterik (**\***) into the search bar and hitting **Enter** to submit the query. Click on an asset title (e.g. `QueriesByState`) to view the details.
 
-![](../images/module04/04-search-wildcard.png)
-![](../images/module04/04-asset-edit.png)
-![](../images/module04/04-asset-term.png)
-![](../images/module04/04-term-assets.png)
-![](../images/module04/04-term-assigned.png)
+    ![Wildcard Search](../images/module04/04-search-wildcard.png)
+
+2. Click **Edit**.
+
+    ![](../images/module04/04-asset-edit.png)
+
+3. Open the **Glossary terms** drop-down and select a glossary term (e.g. `Contoso Child`). Click **Save**.
+
+    ![](../images/module04/04-asset-term.png)
+
+4. Click on the hyperlinked term name to view the glossary term details.
+
+    ![](../images/module04/04-term-assigned.png)
+
+5. Click **Refresh** to view the **Catalog assets** the term is assigned to.
+
+    ![](../images/module04/04-term-assets.png)
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 

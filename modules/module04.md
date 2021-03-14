@@ -110,7 +110,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     ![Upload CSV file](../images/module04/04-import-ok.png)
 
-6. Once complete, you should see 50 additional terms beneath the parent (Workplace Analytics).<br>:bulb: Tip: You can quickly find specific types of terms using the filters at the top (e.g. Status = Approved).
+6. Once complete, you should see 50 additional terms beneath the parent (Workplace Analytics).<br>:bulb: **Tip**: You can quickly find specific types of terms using the filters at the top (e.g. Status = Approved).
 
     ![Filter Terms](../images/module04/04-glossary-filter.png)
 

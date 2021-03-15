@@ -4,13 +4,16 @@
 
 ## Prerequisites
 
-* A description of the first prerequisite.
-* A description of the second prerequisite.
-* A description of the nth prerequisite.
+* An Azure account with an active subscription.
+* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* An Azure Data Lake Storage Gen2 Account (see [module 02](../modules/module02.md)).
 
-## Introduction
+## Table of Contents
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+1. Create a Custom Classification
+2. Create a Custom Classification Rule (Regular Expression)
+3. Create a Custom Scan Rule Set
+4. Scan and Classify
 
 ## Step 1 - Title
 

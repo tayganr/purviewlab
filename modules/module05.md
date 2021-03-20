@@ -21,11 +21,16 @@
 
 ## 1. Create a Classification
 
-1. Do A
+1. Open Purview Studio, navigate to **Management Center** > **Classifications** (under Metadata management) and click **New**.
 
     ![New Classification](../images/module05/05.01-classifications-new.png)
 
-2. Do B
+2. Populate the classification fields as per the example below and click **OK**.
+
+    | Field  | Example Value |
+    | --- | --- |
+    | Name | `Twitter_Handle` |
+    | Description | `The username that appears at the end of your unique Twitter URL.` |
 
     ![Create Classification](../images/module05/05.02-classifications-create.png)
 
@@ -33,19 +38,36 @@
 
 ## 2. Create a Custom Classification Rule (Regular Expression)
 
-1. Do A
+1. Navigate to **Management Center** > **Classification rules** (under Metadata management) and click **New**.
 
     ![New Classification Rule](../images/module05/05.03-classificationrules-new.png)
 
-2. Do B
+2. Populate the classification rule fields as per the example below and click **Continue**.
+
+    | Field  | Example Value |
+    | --- | --- |
+    | Name | `Twitter_Handle` |
+    | Description | `The username that appears at the end of your unique Twitter URL.` |
+    | Classification name | `Twitter_Handle` |
+    | State | `Enabled` |
+    | Type | `Regular Expression` |
 
     ![Regular Expression Classification Rule](../images/module05/05.04-classificationrules-regex.png)
 
-3. Do C
+3. Download a copy of **[twitter_handles.csv](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.csv)** to your local machine.
+
+4. Click the **Browse** icon and open the local copy of **[twitter_handles.csv](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.csv)**.
+
+5. Select the data pattern associated to the **Handle** column and click **Add to patterns**.
 
     ![Pattern Detection](../images/module05/05.05-regex-file.png)
 
-4. Do D
+6. Modify the Data Pattern by replacing the plus sysmbol (`+`) with with `{5,15}`.
+
+    * The plus sysmbol (`+`) indicates one or more characters matching the preceding item. This may lead to false positives as it would allow for an unlimited number of alphanumeric characters. Twitter handles must be a minimum of 5 and a maximum of 15 characters.
+    * With `{5,15}`, this will ensure matches only occur where there is a at least 5 and at most 15 occurences of the preceding item.
+
+7. While we can also specify a **Column Pattern**, in this example we will rely solely on the Data Pattern. Clear the **Column Pattern** input and click **Create**.
 
     ![Create Classification Rule](../images/module05/05.06-regex-create.png)
 
@@ -53,19 +75,25 @@
 
 ## 3. Create a Scan Rule Set
 
-1. Do A
+1. Navigate to **Management Center** > **Scan rule sets** (under General) and click **New**.
 
     ![New Scan Rule Set](../images/module05/05.07-scanruleset-new.png)
 
-2. Do B
+2. Populate the scan rule set fields as per the example below and click **Continue**.
+
+    | Field  | Example Value |
+    | --- | --- |
+    | Source Type | `Azure Data Lake Storage Gen2` |
+    | Scan rule set name | `twitter_scan_rule_set` |
+    | Scan rule description | `Custom scan rule set to detect parquet files and classify twitter handles.` |
 
     ![Scan Rule Set Name](../images/module05/05.08-scanruleset-create.png)
 
-3. Do C
+3. Clear all file type selections with the exception of **PARQUET** and click **Continue**.
 
     ![Scan Rule Set File Type](../images/module05/05.09-scanruleset-filetype.png)
 
-4. Do D
+4. Clear all selected System rules and select the custom classification rule **Twitter_Handle** and click **Create**.
 
     ![Scan Rule Set Classification](../images/module05/05.10-scanruleset-rules.png)
 
@@ -73,19 +101,28 @@
 
 ## 4. Upload Data to an Azure Data Lake Storage Gen2 Account
 
-1. Do A
+Before proceeding with the following steps, you will need to:
+* Download and install [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/).
+* Open Azure Storage Explorer.
+* Sign in to Azure via **View > Account Management > Add an account...**.
+
+Note: If you have not created an Azure Data Lake Stroage Gen2 Account, see [module 02](../modules/module02.md).
+
+1. Download a copy of **[twitter_handles.parquet](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.parquet)** to your local machine. 
+
+1. Navigate to your Azure Data Lake Storage Gen2 Account, expand **Blob Containers**, and **Open** the **raw** container. Note: If a raw container does not exist, create one.
 
     ![Open Container](../images/module05/05.11-explorer-container.png)
 
-2. Do B
+2. Click on the **New Folder** button, provide the folder a name (e.g. `Twitter`) and click **OK**.
 
     ![New Folder](../images/module05/05.12-explorer-folder.png)
 
-3. Do C
+3. Click on the **Upload** button and select **Upload Files...**.
 
     ![Upload File](../images/module05/05.13-explorer-upload.png)
 
-4. Do D
+4. Select the local copy of **[twitter_handles.parquet](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.parquet)** and click **Upload**.
 
     ![Upload Parquet](../images/module05/05.14-explorer-parquet.png)
 
@@ -93,11 +130,11 @@
 
 ## 5. Scan an Azure Data Lake Storage Gen2 Account
 
-1. Do A
+1. Open Purview Studio, navigate to **Sources** and click **New Scan**. Note: If you have not registered your Azure Data Lake Storage Gen2 Account, see [module 02](../modules/module02.md).
 
     ![New Scan](../images/module05/05.15-sources-newscan.png)
 
-2. Do B
+2. Click **Test connection** to ensure the credentials have access and click **Continue**.
 
     ![Test Connection](../images/module05/05.16-scan-test.png)
 
@@ -109,7 +146,7 @@
 
     ![Scan Rule Set Details](../images/module05/05.18-scanruleset-viewdetail.png)
 
-5. E
+5. Es
 
     ![Verify Scan Rule Set](../images/module05/05.19-scanruleset-verify.png)
 

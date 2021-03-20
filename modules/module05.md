@@ -10,12 +10,14 @@
 
 ## Table of Contents
 
-1. [Create a Classification](#1)
-2. [Create a Classification Rule (Regular Expression)](#1)
-3. [Create a Scan Rule Set](#1)
-4. [Upload Data to an Azure Data Lake Storage Gen2 Account](#1)
-5. [Scan an Azure Data Lake Storage Gen2 Account](#1)
-6. [Search by Classification](#1)
+1. [Create a Classification](#1-create-a-classification)
+2. [Create a Classification Rule (Regular Expression)](#2-create-a-custom-classification-rule-regular-expression)
+3. [Create a Scan Rule Set](#3-create-a-scan-rule-set)
+4. [Upload Data to an Azure Data Lake Storage Gen2 Account](#4-upload-data-to-an-azure-data-lake-storage-gen2-account)
+5. [Scan an Azure Data Lake Storage Gen2 Account](#5-scan-an-azure-data-lake-storage-gen2-account)
+6. [Search by Classification](#6-search-by-classification)
+
+<div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 
 ## 1. Create a Classification
 
@@ -26,6 +28,8 @@
 2. Do B
 
     ![Create Classification](../images/module05/05.02-classifications-create.png)
+
+<div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 
 ## 2. Create a Custom Classification Rule (Regular Expression)
 
@@ -45,6 +49,8 @@
 
     ![Create Classification Rule](../images/module05/05.06-regex-create.png)
 
+<div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
+
 ## 3. Create a Scan Rule Set
 
 1. Do A
@@ -63,6 +69,8 @@
 
     ![Scan Rule Set Classification](../images/module05/05.10-scanruleset-rules.png)
 
+<div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
+
 ## 4. Upload Data to an Azure Data Lake Storage Gen2 Account
 
 1. Do A
@@ -80,6 +88,8 @@
 4. Do D
 
     ![Upload Parquet](../images/module05/05.14-explorer-parquet.png)
+
+<div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 
 ## 5. Scan an Azure Data Lake Storage Gen2 Account
 
@@ -123,6 +133,8 @@
 
     ![Scan Progress](../images/module05/05.24-source-progress.png)
 
+<div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
+
 ## 6. Search by Classification
 
 1. Do A
@@ -140,3 +152,9 @@
 4. D
 
     ![Asset Schema](../images/module05/05.28-asset-schema.png)
+
+<div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
+
+## Summary
+
+This module provided an overview of how to create a custom classification, and how to have the classification automatically applied as part of a scan using a custom scan rule set.

@@ -56,6 +56,8 @@
 2. Do B
 3. Do C
 
+<div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
+
 ## Summary
 
 This module provided an overview of how to intergrate Azure Purview with Azure Data Factory and how relationships between assets and ETL activities can be automatically created at run time, allowing us to visually represent data lineage and trace upstream and downstream dependencies.

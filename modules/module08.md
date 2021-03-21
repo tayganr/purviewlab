@@ -13,9 +13,11 @@ Azure Purview administrators can use Azure Monitor to track the operational stat
 
 ## Table of Contents
 
-1. Provide a User Access to Azure Purview Metrics
-2. Visualize Azure Purview Metrics
-3. Send Diagnostic Logs to Azure Storage
+1. [Provide a User Access to Azure Purview Metrics](#1-provide-a-user-access-to-azure-purview-metrics)
+2. [Visualize Azure Purview Metrics](#2-visualize-azure-purview-metrics)
+3. [Send Diagnostic Logs to Azure Storage](#3-send-diagnostic-logs-to-azure-storage)
+
+<div align="right"><a href="#module-08---monitor">↥ back to top</a></div>
 
 ## 1. Provide a User Access to Azure Purview Metrics
 

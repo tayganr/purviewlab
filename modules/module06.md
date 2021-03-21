@@ -10,11 +10,11 @@
 
 ## Table of Contents
 
-1. Azure Purview Access Control (Owner or User Access Administrator)
-2. Create an Azure Data Factory Account
-3. Create an Azure Data Factory Connection in Azure Purview
-4. Copy Data using Azure Data Factory
-5. View Lineage in Azure Purview
+1. [Azure Purview Access Control (Owner or User Access Administrator)](#1-azure-purview-access-control-owner-or-user-access-administrator)
+2. [Create an Azure Data Factory Account](#2-create-an-azure-data-factory-account)
+3. [Create an Azure Data Factory Connection in Azure Purview](#3-create-an-azure-data-factory-connection-in-azure-purview)
+4. [Copy Data using Azure Data Factory](#4-copy-data-using-azure-data-factory)
+5. [View Lineage in Azure Purview](#5-view-lineage-in-azure-purview)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

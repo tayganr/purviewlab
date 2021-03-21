@@ -4,28 +4,197 @@
 
 ## Prerequisites
 
-* A description of the first prerequisite.
-* A description of the second prerequisite.
-* A description of the nth prerequisite.
+* An Azure account with an active subscription.
+* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* Set up and complete a scan (see [module 02](../modules/module02.md)).
+
+Note: Insights can take several hours post the completion of a scan to reflect new assets.
 
 ## Introduction
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Insights provides customers, a single pane of glass view into their catalog and further aims to provide specific insights to the data source administrators, business users, data stewards, data officer and, security administrators. Azure Purview currently has the following reports available:
 
-## Step 1 - Title
+* Assets
+* Scans
+* Glossary
+* Classification
+* Sensitivity Labels
+* File Extensions
 
-1. Do A
-2. Do B
-3. Do C
+## Table of Contents
 
-## Step 2 - Title
+1. Asset Insights
+2. Scan Insights
+3. Glossary Insights
+4. Classification Insights
+5. Sensitivity Labels Insights
+6. File Extensions Insights
 
-1. Do A
-2. Do B
-3. Do C
+<div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
-## Step 3 - Title
+## 1. Asset Insights
 
-1. Do A
-2. Do B
-3. Do C
+1. Open Purview Studio, navigate to **Insights** > **Assets**.
+
+    ![Assets Insights](../images/module07/07.01-assets-insights.png)
+
+2. The Assets page displays the following **high-level metrics**.
+    * Number of Source Types
+    * Number of Discovered Assets
+    * Number of Classified Assets
+
+    ![Assets KPI](../images/module07/07.02-assets-kpi.png)
+
+3. Further down the page you will find additional **data visualisations**, typically these tiles will allow interactive filtering and the ability to drill-down into the underlying detail by clicking **View more**. The Assets page includes the following **graphs**:
+    * Number of Assets by Source Type
+
+    ![Assets Graph 01](../images/module07/07.03-assets-graph01.png)
+
+    * Size Trend (GB) of File Type within Source Types
+
+    ![Assets Graph 02](../images/module07/07.04-assets-graph02.png)
+
+    * Number of Files Not Associated with a Resource Set
+
+    ![Assets Graph 03](../images/module07/07.05-assets-graph03.png)
+
+<div align="right"><a href="#module-07---insights">↥ back to top</a></div>
+
+## 2. Scan Insights
+
+1. Open Purview Studio, navigate to **Insights** > **Scans**.
+
+    ![Scan Insights](../images/module07/07.06-scans-insights.png)
+
+2. The Scans page displays the following **high-level metrics**.
+    * Number of Scans
+    * Number of Successful Scans
+    * Number of Canceled Scans
+    * Number of Failed Scans
+
+    ![Scan KPI](../images/module07/07.07-scans-kpi.png)
+
+3. The Scans page includes the following **graphs**:
+    * Number of Scans by Date and Status
+
+    ![Scan Graph 01](../images/module07/07.08-scans-graph01.png)
+
+<div align="right"><a href="#module-07---insights">↥ back to top</a></div>
+
+## 3. Glossary Insights
+
+1. Open Purview Studio, navigate to **Insights** > **Glossary**.
+
+    ![Glossary Insights](../images/module07/07.09-glossary-insights.png)
+
+2. The Glossary page displays the following **high-level metrics**.
+    * Total Number of Terms
+    * Number of Approved Terms without Assets
+    * Number of Expired Terms with Assets
+
+    ![Glossary KPI](../images/module07/07.10-glossary-kpi.png)
+
+3. The Glossary page includes the following **graphs**:
+    * Terms by Asset Count
+
+    ![Glossary Graph 01](../images/module07/07.11-glossary-graph01.png)
+
+    * Terms by Status (with and without assets)
+
+    ![Glossary Graph 02](../images/module07/07.12-glossary-graph02.png)
+
+    * Number of Incomplete Terms
+
+    ![Glossary Graph 03](../images/module07/07.13-glossary-graph03.png)
+
+<div align="right"><a href="#module-07---insights">↥ back to top</a></div>
+
+## 4. Classification Insights
+
+1. Open Purview Studio, navigate to **Insights** > **Classification**.
+
+    ![Classification Insights](../images/module07/07.14-classification-insights.png)
+
+2. The Classification page displays the following **high-level metrics**.
+    * Number of Subscriptions (with Classifications)
+    * Unique Number of Classifications Found
+    * Number of Sources Classified
+    * Number of Files Classified
+    * Number of Tables Classified
+
+    ![Classification KPI](../images/module07/07.15-classification-kpi.png)
+
+3. The Classification page includes the following **graphs**:
+    * Number of Sources with Classified Data by Date
+
+    ![Classification Graph 01](../images/module07/07.16-classification-graph01.png)
+
+    * Number of Sources by Classification
+
+    ![Classification Graph 02](../images/module07/07.17-classification-graph02.png)
+
+    * Number of Files by Classification
+
+    ![Classification Graph 03](../images/module07/07.18-classification-graph03.png)
+
+    * Number of Tables by Classification
+
+    ![Classification Graph 04](../images/module07/07.19-classification-graph04.png)
+
+<div align="right"><a href="#module-07---insights">↥ back to top</a></div>
+
+## 5. Sensitivity Labels Insights
+
+1. Open Purview Studio, navigate to **Insights** > **Sensitivity Labels**.
+
+    ![Sensitivity Labels Insights](../images/module07/07.20-labels-insights.png)
+
+2. The Sensitivity Labels page displays the following **high-level metrics**.
+    * Number of Subscriptions (with Sensititivty Labels)
+    * Unique Number of Labels Found
+    * Number of Sources Labeled
+    * Number of Files Labeled
+    * Number of Tables Labeled
+
+    ![Sensitivity Labels KPI](../images/module07/07.21-labels-kpi.png)
+
+3. The Sensitivity Labels page includes the following **graphs**:
+    * Number of Sources with Labeled Data by Date
+
+    ![Sensitivity Labels Graph 01](../images/module07/07.22-labels-graph01.png)
+
+    * Number of Sources by Label
+
+    ![Sensitivity Labels Graph 02](../images/module07/07.23-labels-graph02.png)
+
+    * Number of Files by Label
+
+    ![Sensitivity Labels Graph 03](../images/module07/07.24-labels-graph03.png)
+
+    * Number of Tables by Label
+
+    ![Sensitivity Labels Graph 04](../images/module07/07.25-labels-graph04.png)
+
+<div align="right"><a href="#module-07---insights">↥ back to top</a></div>
+
+## 6. File Extensions Insights
+
+1. Open Purview Studio, navigate to **Insights** > **File Extensions**.
+
+    ![File Extensions Insights](../images/module07/07.26-fileext-insights.png)
+
+2. The File Extensions page displays the following **high-level metrics**.
+    * Unique Number of File Extensions Found
+
+    ![File Extensions KPI](../images/module07/07.27-fileext-kpi.png)
+
+3. The File Extensions page includes the following **graphs**:
+    * Number of Files by File Extension
+
+    ![File Extensions Graph 01](../images/module07/07.28-fileext-graph01.png)
+   
+<div align="right"><a href="#module-07---insights">↥ back to top</a></div>
+
+## Summary
+
+This module provided an overview of how to glean insights on Assets, Scans, Glossary Terms, Classifications, Sensitivity Labels, and File Extensions across your data estate.

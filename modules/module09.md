@@ -4,9 +4,9 @@
 
 ## Prerequisites
 
-* A description of the first prerequisite.
-* A description of the second prerequisite.
-* A description of the nth prerequisite.
+* An Azure account with an active subscription.
+* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* An Azure Synapse Analytics Workspace.
 
 ## Introduction
 

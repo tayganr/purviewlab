@@ -6,24 +6,36 @@
 
 * An Azure account with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* An Azure Purview catalog with some assets (see [module 02](../modules/module02.md)).
 
-## Introduction
+## Table of Contents
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+1. Azure Data Lake Storage Gen2 Account Access
+2. Create an Azure Synapse Analytics Workspace
+3. Connect to a Purview Account
+4. Search a Purview Account
 
-## 1. Create an Azure Synapse Analytics Workspace
+<div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
+
+## 1. Azure Data Lake Storage Gen2 Account Access
 
 1. Do A
 2. Do B
 3. Do C
 
-## Step 2 - Title
+## 2. Create an Azure Synapse Analytics Workspace
 
 1. Do A
 2. Do B
 3. Do C
 
-## Step 3 - Title
+## 3. Connect to a Purview Account
+
+1. Do A
+2. Do B
+3. Do C
+
+## 4. Search a Purview Account
 
 1. Do A
 2. Do B

@@ -20,32 +20,76 @@
 ## 1. Azure Data Lake Storage Gen2 Account Access
 
 1. Do A
+
+    ![](../images/module09/09.01-storage-access.png)
+
 2. Do B
-3. Do C
+
+    ![](../images/module09/09.02-storage-rbac.png)
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 
 ## 2. Create an Azure Synapse Analytics Workspace
 
 1. Do A
+
+    ![](../images/module09/09.03-marketplace-synapse.png)
+
 2. Do B
+
+    ![](../images/module09/09.04-synapse-basics.png)
+
 3. Do C
+
+    ![](../images/module09/09.05-synapse-security.png)
+
+4. Do D
+
+    ![](../images/module09/09.06-synapse-validate.png)
+
+5. Do E
+
+    ![](../images/module09/09.07-synapse-deployment.png)
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 
 ## 3. Connect to a Purview Account
 
 1. Do A
+
+    ![](../images/module09/09.08-synapse-studio.png)
+
 2. Do B
+
+    ![](../images/module09/09.09-synapse-connect.png)
+
 3. Do C
+
+    ![](../images/module09/09.10-synapse-purview.png)
+
+4. Do E
+
+    ![](../images/module09/09.11-synapse-success.png)
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 
 ## 4. Search a Purview Account
 
 1. Do A
+
+    ![](../images/module09/09.12-synapse-search.png)
+
 2. Do B
+
+    ![](../images/module09/09.13-synapse-open.png)
+
 3. Do C
+
+    ![](../images/module09/09.14-synapse-select.png)
+
+4. Do E
+
+    ![](../images/module09/09.15-synapse-run.png)
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 

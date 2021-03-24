@@ -6,13 +6,12 @@
 
 * An Azure account with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
-* An Azure Synapse Analytics Workspace.
 
 ## Introduction
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-## Step 1 - Title
+## 1. Create a
 
 1. Do A
 2. Do B

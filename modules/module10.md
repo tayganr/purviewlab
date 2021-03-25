@@ -19,32 +19,56 @@
 ## 1. Register an Application
 
 1. Do A
+
+    ![](../images/module10/10.01-azuread-appreg.png)
+
 2. Do B
+
+    ![](../images/module10/10.02-azuread-register.png)
+
 3. Do C
+
+    ![](../images/module10/10.03-spn-copy.png)
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
 ## 2. Generate a Client Secret
 
 1. Do A
+
+    ![](../images/module10/10.04-spn-secret.png)
+
 2. Do B
+
+    ![](../images/module10/10.05-spn-secretadd.png)
+
 3. Do C
+
+    ![](../images/module10/10.06-secret-copy.png)
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
 ## 3. Provide Service Principal Access to Azure Purview
 
 1. Do A
+
+    ![](../images/module10/10.07-access-add.png)
+
 2. Do B
-3. Do C
+
+    ![](../images/module10/10.08-rbac-assign.png)
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
 ## 4. Use Postman to Call Azure Purview REST API
 
 1. Do A
+
+    ![](../images/module10/10.09-postman-login.png)
+
 2. Do B
-3. Do C
+
+    ![](../images/module10/10.10-postman-get.png)
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 

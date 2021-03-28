@@ -76,11 +76,37 @@
 
 ## 4. Use Postman to Call Azure Purview REST API
 
-1. Do A
+1. Open [Postman](https://www.postman.com/product/rest-client/), create a new **HTTP request** as per the details below.
+    
+    | Property | Value |
+    | --- | --- |
+    | HTTP Method | `POST` |
+    | URL | `https://login.microsoftonline.com/YOUR_TENANT_ID/oauth2/token` |
+    | Body Type | `x-wwww-form-urlencoded` |
+
+    Navigate to **Body**, select `x-wwww-form-urlencoded` and provide the following key value pairs. Once HTTP request is ready, click **Send**. If successful, the response will contain an **access token**, copy this value for later use.
+
+    | Form Key | Form Value |
+    | --- | --- |
+    | grant_type | `client_credentials` |
+    | client_id | `YOUR_CLIENT_ID` |
+    | client_secret | `YOUR_CLIENT_SECRET` |
+    | resource | `https://purview.azure.net` |
 
     ![](../images/module10/10.09-postman-login.png)
 
-2. Do B
+2. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below.
+
+    | Property | Value |
+    | --- | --- |
+    | HTTP Method | `GET` |
+    | URL | `https://YOUR_PURVIEW_ACCOUNT.catalog.purview.azure.com/api/atlas/v2/types/typedefs` |
+
+    Navigate to **Headers**, provide the following key value pair, click **Send**.
+
+    | Header Key | Header Value |
+    | --- | --- |
+    | Authorization | `Bearer YOUR_ACCESS_TOKEN` |
 
     ![](../images/module10/10.10-postman-get.png)
 

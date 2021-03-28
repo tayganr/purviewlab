@@ -18,15 +18,24 @@
 
 ## 1. Register an Application
 
-1. Do A
+1. Sign in to the [Azure portal](https://portal.azure.com/), navigate to **Azure Active Directory** > **App registrations**, and click **New registration**.
 
     ![](../images/module10/10.01-azuread-appreg.png)
 
-2. Do B
+2. Provide the application a **name**, select an **account type**, and click **Register**.
+
+    | Property | Example Value |
+    | --- | --- |
+    | Name | `purview-spn` |
+    | Account Type | Accounts in this organizational directory only - Single tenant |
+    | Redirect URI (optional) | *Leave blank* |
 
     ![](../images/module10/10.02-azuread-register.png)
 
-3. Do C
+3. **Copy** the following values for later use.
+
+    * Application (client) ID
+    * Directory (tenant) ID
 
     ![](../images/module10/10.03-spn-copy.png)
 
@@ -34,15 +43,20 @@
 
 ## 2. Generate a Client Secret
 
-1. Do A
+1. Navigate to **Certifications & secrets** and click **New client secret**.
 
     ![](../images/module10/10.04-spn-secret.png)
 
-2. Do B
+2. Provide a **Description** and set the **expiration** to `In 1 year`, click **Add**.
+
+    | Property | Example Value |
+    | --- | --- |
+    | Description | `purview-api` |
+    | Expires | `In 1 year` |
 
     ![](../images/module10/10.05-spn-secretadd.png)
 
-3. Do C
+3. **Copy** the client secret value for later use.
 
     ![](../images/module10/10.06-secret-copy.png)
 
@@ -50,11 +64,11 @@
 
 ## 3. Provide Service Principal Access to Azure Purview
 
-1. Do A
+1. Under the Azure Purview account, navigate to **Access control (IAM)** and click **Add role assignments**.
 
     ![](../images/module10/10.07-access-add.png)
 
-2. Do B
+2. Select the **Purview Data Curator** role, select the service principal and click **Save**.
 
     ![](../images/module10/10.08-rbac-assign.png)
 

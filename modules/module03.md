@@ -14,7 +14,7 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 ## :dart: Objectives
 
-* Browse the Azure Purview data catalog.
+* Understand how to search and browse the Azure Purview data catalog.
 
 ## Table of Contents
 

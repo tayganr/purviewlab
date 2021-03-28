@@ -2,7 +2,7 @@
 
 [< Previous Module](../modules/module06.md) - **[Home](../README.md)** - [Next Module>](../modules/module08.md)
 
-## Prerequisites
+## :thinking: Prerequisites
 
 * An Azure account with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
@@ -10,7 +10,7 @@
 
 Note: Insights can take several hours post the completion of a scan to reflect new assets.
 
-## Introduction
+## :loudspeaker: Introduction
 
 Insights provides customers, a single pane of glass view into their catalog and further aims to provide specific insights to the data source administrators, business users, data stewards, data officer and, security administrators. Azure Purview currently has the following reports available:
 
@@ -195,6 +195,6 @@ Insights provides customers, a single pane of glass view into their catalog and 
    
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
-## Summary
+## :tada: Summary
 
 This module provided an overview of how to glean insights on Assets, Scans, Glossary Terms, Classifications, Sensitivity Labels, and File Extensions across your data estate.

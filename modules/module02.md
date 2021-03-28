@@ -2,7 +2,7 @@
 
 [< Previous Module](../modules/module01.md) - **[Home](../README.md)** - [Next Module>](../modules/module03.md)
 
-## Prerequisites
+## :thinking: Prerequisites
 
 * An Azure account with an active subscription.
 * An Azure Azure Purview account (see [previous module](../modules/module01.md)).
@@ -11,7 +11,7 @@
 
 * [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
 
-## Introduction
+## :loudspeaker: Introduction
 
 To populate Azure Purview with assets for data discovery and understanding, we must register sources that exist across our data estate so that we can leverage the out of the box scanning capabilities. Scanning enables Azure Purview to extract technical metadata such as the fully qualified name, schema, data types, and apply classifications by parsing a sample of the underlying data. In this module, we will walk through how to register and scan an Azure Data Lake Storage Gen2 account.
 
@@ -210,6 +210,6 @@ Before proceeding with the following steps, you will need to:
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
-## Summary
+## :tada: Summary
 
 This module provided an overview of how to create a collection, register a source, and trigger a scan.

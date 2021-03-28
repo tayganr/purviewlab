@@ -2,7 +2,7 @@
 
 [< Previous Module](../modules/module04.md) - **[Home](../README.md)** - [Next Module>](../modules/module06.md)
 
-## Prerequisites
+## :thinking: Prerequisites
 
 * An Azure account with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
@@ -192,6 +192,6 @@ Note: If you have not created an Azure Data Lake Stroage Gen2 Account, see [modu
 
 <div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 
-## Summary
+## :tada: Summary
 
 This module provided an overview of how to create a custom classification, and how to have the classification automatically applied as part of a scan using a custom scan rule set.

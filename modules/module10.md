@@ -2,7 +2,7 @@
 
 [< Previous Module](../modules/module09.md) - **[Home](../README.md)** - [Next Module>](../modules/module11.md)
 
-## Prerequisites
+## :thinking: Prerequisites
 
 * An Azure account with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
@@ -112,6 +112,6 @@
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
-## Summary
+## :tada: Summary
 
 In this module, you learn how to get started with the Azure Purview REST APIs. Anyone who wants to submit data to an Azure Purview Catalog, include the catalog as part of an automated process, or build their own user experience on the catalog can use the REST APIs to do so.

@@ -2,12 +2,12 @@
 
 [< Previous Module](../modules/module07.md) - **[Home](../README.md)** - [Next Module>](../modules/module09.md)
 
-## Prerequisites
+## :thinking: Prerequisites
 
 * An Azure account with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 
-## Introduction
+## :loudspeaker: Introduction
 
 Azure Purview administrators can use Azure Monitor to track the operational state of an Azure Purview account instance. Metrics are collected to provide data points for you to track potential problems, troubleshoot, and improve the reliability of the Purview platform.
 
@@ -142,6 +142,6 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
 <div align="right"><a href="#module-08---monitor">↥ back to top</a></div>
 
-## Summary
+## :tada: Summary
 
 This module provided an overview of how to visualize Azure Purview metrics within the Azure Portal and how to capture raw telemetry to an Azure Storage account.

@@ -6,21 +6,6 @@ Azure Purview is a unified data governance service that helps you manage and gov
 
 ![Azure Purview](./images/readme/00-azure-purview.png)
 
-## Learning Objectives
-
-This workshop is ideal for individuals or teams looking to accelerate their understanding of the Azure Purview service through a series of curated learning modules.
-
-After you complete this workshop, you will be able to:
-
-* Provision and size an Azure Purview account.
-* Register a data source.
-* Create and run a scan.
-* Search and browse the data catalog.
-* Create, import, & export glossary terms.
-* Create and apply custom classifications.
-* Automate the population of lineage from ETL tools such as Azure Data Factory.
-* Derive insights from your Azure Purview account.
-
 ## Modules
 
 1. [Create an Azure Purview Account](./modules/module01.md)

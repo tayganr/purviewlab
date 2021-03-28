@@ -89,7 +89,7 @@ Note:
     B ) vCore Hours  
     C ) Neither
 
-3. Which Azure Purview module provides the base funcionality (i.e. source registration, automated scanning and classification, data discovery.)?
+3. Which Azure Purview module provides the base funcionality (i.e. source registration, automated scanning and classification, data discovery)?
 
     A ) C0  
     B ) C1  

@@ -79,6 +79,26 @@ Note:
 
 <div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
 
-## Summary
+## :mortar_board: Knowledge Check
+
+1. Which of the following Azure Purview pricing meters is fluid, with consumption varying based on usage?
+
+    A ) Capacity Units  
+    B ) vCore Hours  
+    C ) Neither
+
+2. Which of the following Azure Purview pricing meters is fixed, with consumption based on quantity provisioned?
+
+    A ) Capacity Units  
+    B ) vCore Hours  
+    C ) Neither
+
+3. Which Azure Purview module provides the base funcionality (i.e. Source registration, automated scanning and classification, data discovery.)?
+
+    A ) C0  
+    B ) C1  
+    C ) D0
+
+## :tada: Summary
 
 This module provided an overview of how to create an Azure Purview account instance.

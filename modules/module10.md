@@ -7,6 +7,10 @@
 * An Azure account with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 
+## :loudspeaker: Introduction
+
+In addition to Purview Studio, the Azure Purview platform can be accessed via an API. This enables users to submit data directly to the catalog, include the catalog as part of an automated process, or build their own user experience on top of the catalog.
+
 ## :hammer: Tools
 
 * [Postman](https://www.postman.com/product/rest-client/) (REST API Client)

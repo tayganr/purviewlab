@@ -8,6 +8,10 @@
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 * An Azure Purview catalog with some assets (see [module 02](../modules/module02.md)).
 
+## :loudspeaker: Introduction
+
+Registering an Azure Purview account to a Synapse workspace allows you to discover Azure Purview assets and interact with them through Synapse capabilities.
+
 ## Table of Contents
 
 1. [Azure Data Lake Storage Gen2 Account Access](#1-azure-data-lake-storage-gen2-account-access)

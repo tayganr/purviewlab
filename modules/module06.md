@@ -8,6 +8,10 @@
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 * An Azure Data Lake Storage Gen2 Account (see [module 02](../modules/module02.md)).
 
+## :loudspeaker: Introduction
+
+ABC
+
 ## Table of Contents
 
 1. [Azure Purview Access Control (Purview Data Source Administrator)](#1-azure-purview-access-control-purview-data-source-administrator)

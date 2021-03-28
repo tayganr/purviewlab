@@ -12,6 +12,10 @@
 
 * [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
 
+## :loudspeaker: Introduction
+
+Azure Purview provides a large set of default classifications that represent typical data types that might exist in your data estate (e.g. email address, credit card number, passport number, etc). You also have the ability to create custom classifications if any of the default classifications don't meet your needs.
+
 ## Table of Contents
 
 1. [Create a Classification](#1-create-a-classification)

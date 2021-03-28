@@ -12,6 +12,11 @@
 
 Registering an Azure Purview account to a Synapse workspace allows you to discover Azure Purview assets and interact with them through Synapse specific capabilities.
 
+## :dart: Objectives
+
+* Regiser Azure Purview to a Synapse workspace.
+* Query a dataset that exists in the Azure Purview catalog with Azure Synapse Analytics.
+
 ## Table of Contents
 
 1. [Azure Data Lake Storage Gen2 Account Access](#1-azure-data-lake-storage-gen2-account-access)

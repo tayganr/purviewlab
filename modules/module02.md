@@ -15,6 +15,10 @@
 
 To populate Azure Purview with assets for data discovery and understanding, we must register sources that exist across our data estate so that we can leverage the out of the box scanning capabilities. Scanning enables Azure Purview to extract technical metadata such as the fully qualified name, schema, data types, and apply classifications by parsing a sample of the underlying data. In this module, we will walk through how to register and scan an Azure Data Lake Storage Gen2 account.
 
+## :dart: Objectives
+
+* Register and scan an Azure Data Lake Storage Gen2 account using the Azure Purview managed identity.
+
 ## Table of Contents
 
 1. [Create an Azure Data Lake Storage Gen2 Account](#1-create-an-azure-data-lake-storage-gen2-account)

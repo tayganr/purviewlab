@@ -12,6 +12,10 @@
 
 Once sources have been registered and scanned, the underlying data catalog will begin to populate with assets that represent real-world objects (e.g. a table in an Azure SQL Database, a Power BI report, etc.) The surfacing of these assets via Azure Purview's search experience helps empower data consumers to find data assets that matters to them.
 
+## :dart: Objectives
+
+* Browse the Azure Purview data catalog.
+
 ## Table of Contents
 
 1. [Search Catalog](#1-search-catalog)

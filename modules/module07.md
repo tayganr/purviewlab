@@ -21,6 +21,10 @@ Insights provides customers, a single pane of glass view into their catalog and 
 * Sensitivity Labels
 * File Extensions
 
+## :dart: Objectives
+
+* Understand the different types of insights that can be gleaned from the out of the box reporting.
+
 ## Table of Contents
 
 1. [Asset Insights](#1-asset-insights)

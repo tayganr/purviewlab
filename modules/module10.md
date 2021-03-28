@@ -15,6 +15,10 @@
 
 In addition to Purview Studio, the Azure Purview platform can be accessed via an API. This enables users to submit data directly to the catalog, include the catalog as part of an automated process, or build their own user experience on top of the catalog.
 
+## :dart: Objectives
+
+* Return data from the Azure Purview REST API.
+
 ## Table of Contents
 
 1. [Register an Application](#1-register-an-application)

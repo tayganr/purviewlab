@@ -2,12 +2,12 @@
 
 **[Home](../README.md)** - [Next Module>](../modules/module02.md)
 
-## Prerequisites
+## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * Your account must have permissions to create resources in the subscription.
 
-## Introduction
+## :loudspeaker: Introduction
 
 To create and use the Azure Purview platform, you will need to provision an Azure Purview account within an active Azure subscription.
 

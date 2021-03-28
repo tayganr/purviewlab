@@ -14,7 +14,7 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 
 ## :dart: Objectives
 
-* Regiser Azure Purview to a Synapse workspace.
+* Regiser an Azure Purview account to a Synapse workspace.
 * Query a dataset that exists in the Azure Purview catalog with Azure Synapse Analytics.
 
 ## Table of Contents

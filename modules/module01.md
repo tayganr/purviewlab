@@ -15,15 +15,11 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
 * Create an Azure Purview account using the Azure portal.
 
-## Sign in to the Azure Portal
-
-Sign in to the [Azure portal](https://portal.azure.com) with your Azure account.
-
 <div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
 
 ## Create an Azure Purview Account
 
-1. From the **Home** screen, click **Create a resource**.
+1. Sign in to the [Azure portal](https://portal.azure.com) with your Azure account and from the **Home** screen, click **Create a resource**.
 
     ![Create a Resource](../images/module01/01.01-create-resource.png)  
 
@@ -93,11 +89,13 @@ Note:
     B ) vCore Hours  
     C ) Neither
 
-3. Which Azure Purview module provides the base funcionality (i.e. Source registration, automated scanning and classification, data discovery.)?
+3. Which Azure Purview module provides the base funcionality (i.e. source registration, automated scanning and classification, data discovery.)?
 
     A ) C0  
     B ) C1  
     C ) D0
+
+<div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
 
 ## :tada: Summary
 

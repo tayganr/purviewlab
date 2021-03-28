@@ -4,9 +4,7 @@
 
 Azure Purview is a unified data governance service that helps you manage and govern your on-premises, multicloud and software-as-a-service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification and end-to-end data lineage. Empower data consumers to find valuable, trustworthy data.
 
-![Azure Purview](./images/readme/00-azure-purview.png)
-
-## Modules
+## Learning Modules
 
 1. [Create an Azure Purview Account](./modules/module01.md)
 2. [Register & Scan](./modules/module02.md)
@@ -18,8 +16,3 @@ Azure Purview is a unified data governance service that helps you manage and gov
 8. [Monitor](./modules/module08.md)
 9. [Integrate with Azure Synapse Analytics](./modules/module09.md)
 10. [REST API](./modules/module10.md)
-
-## Contributors
-
-* Christina Leo ([christinaleo-msft](https://github.com/christinaleo-msft))
-* Taygan Rifat ([tayganr](https://github.com/tayganr))

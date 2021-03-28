@@ -5,7 +5,7 @@
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* Your account must have permissions to create resources in the subscription.
+* Your must have permissions to create resources in your Azure subscription.
 
 ## :loudspeaker: Introduction
 

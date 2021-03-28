@@ -10,7 +10,7 @@
 
 ## :loudspeaker: Introduction
 
-Registering an Azure Purview account to a Synapse workspace allows you to discover Azure Purview assets and interact with them through Synapse capabilities.
+Registering an Azure Purview account to a Synapse workspace allows you to discover Azure Purview assets and interact with them through Synapse specific capabilities.
 
 ## Table of Contents
 

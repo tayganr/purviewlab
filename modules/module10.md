@@ -9,7 +9,7 @@
 
 ## :hammer: Tools
 
-* [Postman](https://www.postman.com/product/rest-client/) (API Client)
+* [Postman](https://www.postman.com/product/rest-client/) (REST API Client)
 
 ## Table of Contents
 

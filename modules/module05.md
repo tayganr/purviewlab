@@ -8,6 +8,10 @@
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 * An Azure Data Lake Storage Gen2 Account (see [module 02](../modules/module02.md)).
 
+## :hammer: Tools
+
+* [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
+
 ## Table of Contents
 
 1. [Create a Classification](#1-create-a-classification)

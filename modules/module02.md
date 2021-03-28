@@ -7,7 +7,7 @@
 * An Azure account with an active subscription.
 * An Azure Azure Purview account (see [previous module](../modules/module01.md)).
 
-## Tools
+## :hammer: Tools
 
 * [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
 

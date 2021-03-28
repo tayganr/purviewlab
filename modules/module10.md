@@ -7,6 +7,10 @@
 * An Azure account with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 
+## :hammer: Tools
+
+* [Postman](https://www.postman.com/product/rest-client/)
+
 ## Table of Contents
 
 1. [Register an Application](#1-register-an-application)

@@ -4,17 +4,16 @@
 
 ## Prerequisites
 
-* An Azure account with an active subscription.
+* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * Your account must have permissions to create resources in the subscription.
 
 ## Introduction
 
 To create and use the Azure Purview platform, you will need to provision an Azure Purview account within an active Azure subscription.
 
-## Learning Objectives
+## :dart: Objectives
 
 * Create an Azure Purview account using the Azure portal.
-* Select the appropriate platform size.
 
 ## Sign in to the Azure Portal
 

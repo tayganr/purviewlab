@@ -88,10 +88,12 @@ Follow the steps to add the newly created Data Factory account to your Puview Da
 2. Under External connections, select Data Factory connection.
 3. On the Data Factory connection page, select **New**.
 4. From the New Data Factory Connections dialog, choose the appropriate Azure Subscription and Data Factory.
-![image](https://user-images.githubusercontent.com/27697035/112852294-b4a95f80-90a3-11eb-9ac7-372b9de25491.png)
+
+![image](https://user-images.githubusercontent.com/27697035/112858305-a3635180-90a9-11eb-8310-5dc7e2b24aa5.png)
+
 5. Click **OK**
 
-![image](https://user-images.githubusercontent.com/27697035/112852727-19fd5080-90a4-11eb-959e-b8dab40ce7b4.png)
+![image](https://user-images.githubusercontent.com/27697035/112858423-c1c94d00-90a9-11eb-8302-eca921c36825.png)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

@@ -77,13 +77,13 @@ To view existing Data Factory accounts connected to your Purview Data Catalog, d
 
 ## 3. Create an Azure Data Factory Connection in Azure Purview
 
-Follow the steps to add the newly created Data Factory account to your Puview Data Catlog.
 >:warning: In order to add new External connections, you need to be assigned any one of the following Azure Purview roles: 
 * Owner
 * User Access Administrator
 
-You must also have *Owner* or *Contributor* rights to the Data Factory instance you wish to add.
+>You must also have *Owner* or *Contributor* rights to the Data Factory instance you wish to add.
 
+Follow the steps to add the newly created Data Factory account to your Puview Data Catlog.
 1. Select Management Center on the left navigation pane.
 2. Under External connections, select Data Factory connection.
 3. On the Data Factory connection page, select **New**.

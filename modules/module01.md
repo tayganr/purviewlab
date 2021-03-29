@@ -6,6 +6,7 @@
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * Your must have permissions to create resources in your Azure subscription.
+* Your subscription must have the following resource providers registered: Microsoft.Purview, Microsoft.Storage, and Microsoft.EventHub.
 
 ## :loudspeaker: Introduction
 

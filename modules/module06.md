@@ -32,25 +32,64 @@ This document explains the steps required for connecting an Azure Data Factory a
 
 ## 1. Azure Purview Access Control (Purview Data Source Administrator)
 
-1. Do A
-2. Do B
-3. Do C
+Multiple Azure Data Factories can connect to a single Azure Purview Data Catalog to push lineage information. The current limit allows you to connect up ten Data Factory accounts at a time from the Purview management center. 
+
+>:warning: In order to view External connections, you need to be assigned any one of the following Azure Purview roles: 
+* Contributor
+* Owner
+* Reader
+* User Access Administrator
+
+
+To view existing Data Factory accounts connected to your Purview Data Catalog, do the following:
+
+1. Select Management Center on the left navigation pane.
+2. Under External connections, select Data Factory connection.
+3. The Data Factory connection list appears.
+
+![image](https://user-images.githubusercontent.com/27697035/112839336-fc28ef00-9095-11eb-8d49-d0bc63270f03.png)
+
+>:warning: In order to add new External connections, you need to be assigned any one of the following Azure Purview roles: 
+* Owner
+* User Access Administrator
+
+You must also have *Owner* or *Contributor* rights to the Data Factory instance you wish to add.
+
+
+
+
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 
 ## 2. Create an Azure Data Factory Account
 
-1. Do A
-2. Do B
-3. Do C
+1. From the Azure Portal, click **Create a Resource**
+2. Click on the Analytics Category or search for Data Factory
+3. Choose **Create** from the Marketplace tile.
+![image](https://user-images.githubusercontent.com/27697035/112855239-89743f80-90a6-11eb-8049-b349837d4b30.png)
+4. In the Create Data Factory Dialog, assign the appropriate subscription and resource group.
+5. The region will default to the same as the selected Resource Group.
+6. Give the Data Factory a unique name.
+![image](https://user-images.githubusercontent.com/27697035/112855517-c809fa00-90a6-11eb-818c-ed10f14062a0.png)
+7. Under the Git Configuration tab, select **Configure Git Later**.
+![image](https://user-images.githubusercontent.com/27697035/112856137-639b6a80-90a7-11eb-9317-43de2dfd5b19.png)
+8. Click **Review + Create**
+9. When the validation is passed, click **Create** to deploy the new Data Factory.
+
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 
 ## 3. Create an Azure Data Factory Connection in Azure Purview
 
-1. Do A
-2. Do B
-3. Do C
+Follow the steps to add the newly created Data Factory account to your Puview Data Catlog.
+1. Select Management Center on the left navigation pane.
+2. Under External connections, select Data Factory connection.
+3. On the Data Factory connection page, select **New**.
+4. From the New Data Factory Connections dialog, choose the appropriate Azure Subscription and Data Factory.
+![image](https://user-images.githubusercontent.com/27697035/112852294-b4a95f80-90a3-11eb-9ac7-372b9de25491.png)
+5. Click **OK**
+
+![image](https://user-images.githubusercontent.com/27697035/112852727-19fd5080-90a4-11eb-959e-b8dab40ce7b4.png)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

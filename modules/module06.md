@@ -35,10 +35,10 @@ This document explains the steps required for connecting an Azure Data Factory a
 Multiple Azure Data Factories can connect to a single Azure Purview Data Catalog to push lineage information. The current limit allows you to connect up ten Data Factory accounts at a time from the Purview management center. 
 
 >:warning: In order to view External connections, you need to be assigned any one of the following Azure Purview roles: 
-* Contributor
-* Owner
-* Reader
-* User Access Administrator
+>* Contributor
+>* Owner
+>* Reader
+>* User Access Administrator
 
 
 To view existing Data Factory accounts connected to your Purview Data Catalog, do the following:
@@ -78,9 +78,9 @@ To view existing Data Factory accounts connected to your Purview Data Catalog, d
 ## 3. Create an Azure Data Factory Connection in Azure Purview
 
 >:warning: In order to add new External connections, you need to be assigned any one of the following Azure Purview roles: 
-* Owner
-* User Access Administrator
-
+>* Owner
+>* User Access Administrator
+>
 >You must also have *Owner* or *Contributor* rights to the Data Factory instance you wish to add.
 
 Follow the steps to add the newly created Data Factory account to your Puview Data Catlog.

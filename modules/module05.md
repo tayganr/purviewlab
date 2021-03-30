@@ -61,7 +61,7 @@ Azure Purview provides a large set of default classifications that represent typ
     | --- | --- |
     | Name | `Twitter_Handle` |
     | Description | `The username that appears at the end of your unique Twitter URL.` |
-    | Classification name | `Twitter_Handle` |
+    | Classification name | `Twitter Handle` |
     | State | `Enabled` |
     | Type | `Regular Expression` |
 

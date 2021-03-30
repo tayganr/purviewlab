@@ -99,9 +99,17 @@ Follow the steps to add the newly created Data Factory account to your Puview Da
 
 ## 4. Copy Data using Azure Data Factory
 
-1. Do A
-2. Do B
-3. Do C
+1. From the Azure Portal, navigate to your Azure Data Factory Instance.
+2. In the Overview panel, click **Author & Monitor**
+
+![image](https://user-images.githubusercontent.com/27697035/112965566-487d3900-9141-11eb-9883-14e833f39e65.png)
+
+3. In the Azure Data Factory Home panel, click **Copy Data**
+
+![image](https://user-images.githubusercontent.com/27697035/112966013-b6c1fb80-9141-11eb-86a8-d81bd16add1e.png)
+
+4. 
+
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

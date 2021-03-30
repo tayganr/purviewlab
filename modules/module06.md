@@ -104,31 +104,9 @@ Follow the steps to add the newly created Data Factory account to your Puview Da
 
 ![image](https://user-images.githubusercontent.com/27697035/112965566-487d3900-9141-11eb-9883-14e833f39e65.png)
 
-3. In the Azure Data Factory Home panel, click **Copy Data**
-
-![image](https://user-images.githubusercontent.com/27697035/112966013-b6c1fb80-9141-11eb-86a8-d81bd16add1e.png)
-
-4. Give the new copy task a distinctive name or accept the default value.
-
-![image](https://user-images.githubusercontent.com/27697035/112978003-ab290180-914e-11eb-9f54-fcd346c550e6.png)
-
-5. Click **Next** at the bottom of the dialog, then click **Create New Connection** in The *Source Data Store* panel.
-
-![image](https://user-images.githubusercontent.com/27697035/112978311-14a91000-914f-11eb-83b7-9713df457ebd.png)
-
-6. Choose **Azure Data Lake Storage Gen2** from the the *New Linked Service* menu, then click **Continue** at the bottom of the screen.
-
-![image](https://user-images.githubusercontent.com/27697035/112979770-efb59c80-9150-11eb-8045-5fc299408e71.png)
-
-7. Enter a descriptive name for the linked service connection or use the default value.
-8. Choose the appropriate Azure Subscription.
-9. Choose the storage account you created in Module 2.
-10. Click **Test Connection** and look for the *Connection Successful* tick box.
-11. Click **Create**.
-
-![image](https://user-images.githubusercontent.com/27697035/112979802-f8a66e00-9150-11eb-8a2c-34785cc64d7f.png)
 
 
+13.
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

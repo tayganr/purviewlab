@@ -91,7 +91,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     ![](../images/module04/04.10-term-create2.png)
 
-10. From the **Glossary** screen, change the view to **Table view** to see the hierarchal glossary.
+10. From the **Glossary** screen, change the view to **Hierarchical view** to see the hierarchal glossary.
 
     ![](../images/module04/04.11-glossary-table.png)
 

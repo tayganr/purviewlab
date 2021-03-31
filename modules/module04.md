@@ -126,7 +126,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 ## 4. Bulk Export Terms
 
-1. From the **Glossary** screen, select all terms and then de-select terms that do not belong to Workplace Analytics (i.e. Contoso Parent, Contoso Child). **All Workplace Analytics terms** should be selected. Click **Export terms**.
+1. From the **Glossary** screen, we want to select ALL terms (top check box) and then de-select terms that do not belong to Workplace Analytics (i.e. Contoso Parent, Contoso Child). **All Workplace Analytics terms** should be selected. Click **Export terms**.
 
     ![Export Terms](../images/module04/04.17-glossary-export.png)
 

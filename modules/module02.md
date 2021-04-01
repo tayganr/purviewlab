@@ -234,7 +234,7 @@ Before proceeding with the following steps, you will need to:
     B ) Glossary Terms (e.g. column `Sales Tax` is tagged with the `Sales Tax` glossary term)  
     C ) Classifications (e.g. column `ccnum` is tagged with the `Credit Card Number` classification)  
 
-<div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
+<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
 ## :tada: Summary
 

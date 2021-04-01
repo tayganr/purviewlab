@@ -214,6 +214,28 @@ Before proceeding with the following steps, you will need to:
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
+## :mortar_board: Knowledge Check
+
+1. What type of object can help organize data sources into logical groups?
+
+    A ) Buckets    
+    B ) Collections  
+    C ) Groups  
+
+2. At which point does Azure Purview begin to populate the data map with assets?
+
+    A ) After an Azure Purview account is created  
+    B ) After a Data Source has been registered    
+    C ) After a Data Source has been scanned
+
+3. Which of the following attributes is not automatically assigned to an asset as a result of the system-built scanning functionality?
+
+    A ) Technical Metadata (e.g. Fully Qualified Name, Path, Schema, etc)  
+    B ) Glossary Terms (e.g. column `Sales Tax` is tagged with the `Sales Tax` glossary term)  
+    C ) Classifications (e.g. column `ccnum` is tagged with the `Credit Card Number` classification)  
+
+<div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
+
 ## :tada: Summary
 
 This module provided an overview of how to create a collection, register a source, and trigger a scan.

@@ -128,7 +128,26 @@ Follow the steps to add the newly created Data Factory account to your Puview Da
 
 ![image](https://user-images.githubusercontent.com/27697035/113295743-7c4a9100-92f0-11eb-8745-9ef698962f59.png)
 
-12. Make sure the new linked service you've created is highlighted in blue. It should be the only one, unless you've created other linked services.
+12. Make sure the new linked service you've created is highlighted in blue. It should be the only one, unless you've created other linked services. Click **Next**.
+13. From the Dataset panel, click the **Browse** button to the right of the File or Folder field and navigate to the 2020 subfolder in your data lake store.
+
+![image](https://user-images.githubusercontent.com/27697035/113297402-781f7300-92f2-11eb-9b34-cc483fc87efb.png)
+
+14. Click **Choose**, then **Next**.
+
+![image](https://user-images.githubusercontent.com/27697035/113297634-c2085900-92f2-11eb-9b9e-efe92360a9ca.png)
+
+15. In the Dataset panel, make sure the data preview looks sensible, then click **Next*.
+
+![image](https://user-images.githubusercontent.com/27697035/113297955-2fb48500-92f3-11eb-991f-bfad2ee5b27d.png)
+
+16. In the Destination panel, choose the same linked service you used for the Source definition and click **Next**.
+
+![image](https://user-images.githubusercontent.com/27697035/113298228-81f5a600-92f3-11eb-9843-8dc9c07104cd.png)
+
+17. Browse to the _raw_ folder level, then click **Next**.
+
+
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

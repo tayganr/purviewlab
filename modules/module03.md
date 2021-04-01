@@ -97,6 +97,38 @@ While the search experience is ideal for keyword based discovery, Purview Studio
 
 <div align="right"><a href="#module-03---search--browse">↥ back to top</a></div>
 
+## :mortar_board: Knowledge Check
+
+1. There are a number of  attributes that we can use to narrow our search results via the filter pane, which of the following is not available as a quick filter?
+
+    A ) Asset Type  
+    B ) Classification  
+    C ) Size  
+
+2. Using Purview Studio (UI), you can edit an asset and manually update an assets Description?
+
+    A ) True  
+    B ) False  
+
+3. Using Purview Studio (UI), you can edit an asset and manually add and remove Classifications?
+
+    A ) True  
+    B ) False  
+
+4. Using Purview Studio (UI), you can edit an asset and manually update an assets Technical Properties (e.g. qualifiedName, partitionCount, totalSizeBytes, etc)?
+
+    A ) True  
+    B ) False  
+
+5. Assets in the catalog can be assigned contacts, which of the following is an invalid contact type?
+
+    A ) Expert  
+    B ) Owner  
+    C ) Reader  
+
+<div align="right"><a href="#module-03---search--browse">↥ back to top</a></div>
+
+
 ## :tada: Summary
 
 This module provided an overview of how to search, browse, and update an asset.

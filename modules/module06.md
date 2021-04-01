@@ -147,11 +147,11 @@ Follow the steps to add the newly created Data Factory account to your Puview Da
 
 17. Browse to the _raw_ folder level, then click **Choose**.
 
-![image](https://user-images.githubusercontent.com/27697035/113308980-9db27980-92fe-11eb-8fc1-79cb52c4f776.png)
+![image](https://user-images.githubusercontent.com/27697035/113313091-d5bbbb80-9302-11eb-8fd3-6834c38dea32.png)
 
-18. In the next screen, add File name, and choose _Merge files_ from the **Copy behaviour** drop-down menu. Finally, click **Next**.
+18. In the next screen, add the File name "2020_Merged.parquet", and choose _Merge files_ from the **Copy behaviour** drop-down menu. Finally, click **Next**.
 
-![image](https://user-images.githubusercontent.com/27697035/113309622-3cd77100-92ff-11eb-8b6b-7f4fc8033da6.png)
+![image](https://user-images.githubusercontent.com/27697035/113313444-292e0980-9303-11eb-817c-2b3b87e243f9.png)
 
 19. In the File format settings panel, choose _Parquet format_ from the **File format** drop-down menu. Click **Next**.
 
@@ -159,7 +159,7 @@ Follow the steps to add the newly created Data Factory account to your Puview Da
 
 20. Use all the default settings in the next screen and click **Next**.
 21. Review the pipeline summary in the last screen and click **Next**.
-22. The pipeline will begin to run. When you see the *Deployment complete* message, click **Finish**.
+22. The pipeline will validate, deploy, and then begin to run. When you see the *Deployment complete* message, click **Finish**.
 
 ![image](https://user-images.githubusercontent.com/27697035/113310495-35649780-9300-11eb-8e42-a01ad4aae7e8.png)
 

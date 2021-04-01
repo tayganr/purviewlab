@@ -126,10 +126,9 @@ Follow the steps to add the newly created Data Factory account to your Puview Da
 10. Click **Test Connection** and look for the *Connection Successful* tick box.
 11. Click **Create**.
 
-![image](https://user-images.githubusercontent.com/27697035/112979802-f8a66e00-9150-11eb-8a2c-34785cc64d7f.png)
+![image](https://user-images.githubusercontent.com/27697035/113295743-7c4a9100-92f0-11eb-8745-9ef698962f59.png)
 
-
-12.
+12. Make sure the new linked service you've created is highlighted in blue. It should be the only one, unless you've created other linked services.
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

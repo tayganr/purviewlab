@@ -145,9 +145,23 @@ Follow the steps to add the newly created Data Factory account to your Puview Da
 
 ![image](https://user-images.githubusercontent.com/27697035/113298228-81f5a600-92f3-11eb-9843-8dc9c07104cd.png)
 
-17. Browse to the _raw_ folder level, then click **Next**.
+17. Browse to the _raw_ folder level, then click **Choose**.
 
+![image](https://user-images.githubusercontent.com/27697035/113308980-9db27980-92fe-11eb-8fc1-79cb52c4f776.png)
 
+18. In the next screen, add File name, and choose _Merge files_ from the **Copy behaviour** drop-down menu. Finally, click **Next**.
+
+![image](https://user-images.githubusercontent.com/27697035/113309622-3cd77100-92ff-11eb-8b6b-7f4fc8033da6.png)
+
+19. In the File format settings panel, choose _Parquet format_ from the **File format** drop-down menu. Click **Next**.
+
+![image](https://user-images.githubusercontent.com/27697035/113309949-98a1fa00-92ff-11eb-8126-f18debde7441.png)
+
+20. Use all the default settings in the next screen and click **Next**.
+21. Review the pipeline summary in the last screen and click **Next**.
+22. The pipeline will begin to run. When you see the *Deployment complete* message, click **Finish**.
+
+![image](https://user-images.githubusercontent.com/27697035/113310495-35649780-9300-11eb-8e42-a01ad4aae7e8.png)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

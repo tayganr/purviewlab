@@ -160,6 +160,25 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
+## :mortar_board: Knowledge Check
+
+1. Glossary terms with the same name but different descriptions can exist under the same parent term?
+
+    A ) True  
+    B ) False 
+
+2. Glossary terms with the same name can exist as long as each instance has a unique parent term?
+
+    A ) True  
+    B ) False  
+
+3. Glossary terms created using different term templates can be exported together using the Purview Studio (UI) glossary "Export terms" functionality?
+
+    A ) True  
+    B ) False  
+
+<div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
+
 ## :tada: Summary
 
 This module provided an overview of how to create, export, and import terms into the Azure Purview glossary.

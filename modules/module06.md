@@ -167,9 +167,33 @@ Follow the steps to add the newly created Data Factory account to your Puview Da
 
 ## 5. View Lineage in Azure Purview
 
-1. Do A
-2. Do B
-3. Do C
+1. Open Purview Studio, if it's not open already.
+2. Navigate to the _Home_ screen by clicking on the house icon on the left hand tool bar.
+3. Click **Browse assets**.
+
+![image](https://user-images.githubusercontent.com/27697035/113314511-50d1a180-9304-11eb-9cbd-dc7ef0e564a7.png)
+
+4. Select the **Azure Data Factory** tile.
+
+![image](https://user-images.githubusercontent.com/27697035/113314718-81194000-9304-11eb-82ac-8c4098df50d2.png)
+
+5. Click on the link for the Azure Data Factory instance containing the pipeline you just created in the previous section. 
+
+![image](https://user-images.githubusercontent.com/27697035/113315035-c473ae80-9304-11eb-86e1-38e4d29cab60.png)
+ 
+6. Select the copy pipeline you just ran. Then click the subscription name link.
+
+![image](https://user-images.githubusercontent.com/27697035/113315466-39df7f00-9305-11eb-8faf-541b4dbad16c.png)
+
+7. From the _Overview_ screen, click on **Lineage**.
+
+![image](https://user-images.githubusercontent.com/27697035/113315732-7f9c4780-9305-11eb-9235-a0a43b691366.png)
+
+8. You can now see the lineage created by the copy pipeline. 
+
+![image](https://user-images.githubusercontent.com/27697035/113315943-bd996b80-9305-11eb-9c4e-9c9ba97ee2d8.png)
+
+On the left are the two sets of files with common schema that are in the source folder. The copy activity sits in the center, and the ouput file sits on the right. 
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

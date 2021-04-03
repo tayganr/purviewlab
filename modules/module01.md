@@ -34,7 +34,8 @@ Create an Azure Purview account using the Azure portal.
 
     ![Create Purview Resource](../images/module01/01.02-create-purview.png)
 
-3. Provide the necessary inputs on the **Basics** tab.
+3. Provide the necessary inputs on the **Basics** tab.  
+    Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
 
     | Parameter  | Example Value |
     | --- | --- |

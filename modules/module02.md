@@ -442,7 +442,7 @@ Before proceeding with the following steps, you will need to:
 
 ## 12. View Assets
 
-1. To view the assets that have materialised as an outcome of running the scans, perform a wildcard search by typing the asterik character (`*`) into the search bar and hitting the Enter key to submit the query and return the search results.
+1. To view the assets that have materialised as an outcome of running the scans, perform a wildcard search by typing the asterisk character (`*`) into the search bar and hitting the Enter key to submit the query and return the search results.
 
     ![](../images/module02/02.72-search-wildcard.png)
 

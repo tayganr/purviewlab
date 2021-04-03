@@ -44,15 +44,7 @@ Create an Azure Purview account using the Azure portal.
     | Purview account name | `purview-69426` |
     | Location | `Brazil South` |
 
-Note:
-
-* The Purview account name is used to programmatically access the Purview account and cannot be changed.
-* The Purview account name can only contain letters, numbers, and hyphens.
-* The first and last characters must be a letter or number.
-* The hyphen (-) character must be immediately preceded and followed by a letter or number.
-* Spaces are not allowed.
-
-    ![Purview Account Bassics](../images/module01/01.03-create-basic.png)
+    ![Purview Account Basics](../images/module01/01.03-create-basic.png)
 
 4. Provide the necessary inputs on the **Configuration** tab.
 

@@ -202,7 +202,7 @@ Before proceeding with the following steps, you will need to:
 
     > :bulb: **Did you know?**
     >
-    > **Scan Rule Sets** determine which **File Types** and **Classification Rules** are in scope. If you wanted to include a custom file type or custom classification rule as part of a scan, a custom scan rule set will need to be created.
+    > **Scan Rule Sets** determine which **File Types** and **Classification Rules** are in scope. If you want to include a custom file type or custom classification rule as part of a scan, a custom scan rule set will need to be created.
 
     ![Scan rule set](../images/module02/02.26-scan-ruleset.png)
 

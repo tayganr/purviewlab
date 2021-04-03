@@ -26,8 +26,14 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 2. [Grant the Azure Purview Managed Identity Access](#2-grant-the-azure-purview-managed-identity-access)
 3. [Upload Data to Azure Data Lake Storage Gen2 Account](#3-upload-data-to-azure-data-lake-storage-gen2-account)
 4. [Create a Collection](#4-create-a-collection)
-5. [Register a Source](#5-register-a-source)
-6. [Scan a Source](#6-scan-a-source)
+5. [Register a Source (ADLS Gen2)](#5-register-a-source)
+6. [Scan a Source with the Azure Purview Managed Identity](#6-scan-a-source)
+7. Create an Azure SQL Database
+8. Create an Azure Key Vault
+9. Add Credentials to Azure Purview
+10. Register a Source (Azure SQL DB)
+11. Scan a Source with Azure Key Vault Credentials
+12. View Assets
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
@@ -164,7 +170,7 @@ Before proceeding with the following steps, you will need to:
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
-## 5. Register a Source
+## 5. Register a Source (ADLS Gen2)
 
 1. Open Purview Studio, navigate to **Sources** and click **Register**.
 
@@ -184,7 +190,7 @@ Before proceeding with the following steps, you will need to:
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
-## 6. Scan a Source
+## 6. Scan a Source with the Azure Purview Managed Identity
 
 1. Open Purview Studio, navigate to **Sources**, and within the Azure Data Lake Storage Gen2 source tile, click the **New Scan** button.
 
@@ -221,6 +227,198 @@ Before proceeding with the following steps, you will need to:
 8. Click Refresh to periodically update the status of the scan. Note: It will take approximately 5 minutes to complete.
 
     ![Monitor Scan](../images/module02/02.30-sources-refresh.png)
+
+<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+
+## 7. Create an Azure SQL Database
+
+1. Sign in to the [Azure portal](https://portal.azure.com) with your Azure account and from the **Home** screen, click **Create a resource**.
+
+    ![Azure Purview](../images/module01/01.01-create-resource.png)  
+
+2.  ABC
+
+    ![](../images/module02/02.31-create-sql.png)
+
+3. ABC
+
+    ![](../images/module02/02.32-singledb-create.png)
+
+4. ABC
+ 
+    ![](../images/module02/02.33-sqlsvr-create.png)
+
+5. ABC
+
+    ![](../images/module02/02.34-sqlsvr-new.png)
+
+6. ABC
+
+    ![](../images/module02/02.35-sqldb-configure.png)
+
+7. ABC
+
+    ![](../images/module02/02.36-sqldb-serverless.png)
+
+8. ABC
+
+    ![](../images/module02/02.37-sqldb-sample.png)
+
+9. ABC
+
+    ![](../images/module02/02.38-sqldb-create.png)
+
+10. ABC
+
+    ![](../images/module02/02.39-sqldb-complete.png)
+
+11. ABC
+
+    ![](../images/module02/02.40-sqlsvr-firewall.png)
+
+<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+
+## 8. Create an Azure Key Vault
+
+1. ABC
+
+    ![](../images/module02/02.44-create-vault.png)
+
+2. ABC
+
+    ![](../images/module02/02.45-vault-basics.png)
+
+3. ABC
+
+    ![](../images/module02/02.46-policy-add.png)
+
+4. ABC
+
+    ![](../images/module02/02.47-policy-select.png)
+
+5. ABC
+
+    ![](../images/module02/02.48-policy-principal.png)
+
+6. ABC
+
+    ![](../images/module02/02.49-secret-permissions.png)
+
+7. ABC
+
+    ![](../images/module02/02.50-policy-add.png)
+
+8. ABC
+
+    ![](../images/module02/02.51-vault-review.png)
+
+9. ABC
+
+    ![](../images/module02/02.52-vault-create.png)
+
+10. ABC
+
+    ![](../images/module02/02.53-vault-goto.png)
+
+11. ABC
+
+    ![](../images/module02/02.54-vault-secrets.png)
+
+12. ABC
+
+    ![](../images/module02/02.55-vault-sqlsecret.png)
+
+<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+
+## 9. Add Credentials to Azure Purview
+
+1. ABC
+
+    ![](../images/module02/02.56-management-vault.png)
+
+2. ABC
+
+    ![](../images/module02/02.57-vault-new.png)
+
+3. ABC
+
+    ![](../images/module02/02.58-vault-create.png)
+
+4. ABC
+
+    ![](../images/module02/02.59-vault-access.png)
+
+5. ABC
+
+    ![](../images/module02/02.60-credentials-new.png)
+
+6. ABC
+
+    ![](../images/module02/02.61-vault-close.png)
+
+7. ABC
+
+    ![](../images/module02/02.62-credentials-create.png)
+
+<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+
+## 10. Register a Source (Azure SQL DB)
+
+1. ABC
+
+    ![](../images/module02/02.41-sources-register.png)
+
+2. ABC
+
+    ![](../images/module02/02.42-register-sqldb.png)
+
+3. ABC
+
+    ![](../images/module02/02.43-register-azuresql.png)
+
+<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+
+## 11. Scan a Source with Azure Key Vault Credentials
+
+1. ABC
+
+    ![](../images/module02/02.63-sources-scansql.png)
+
+2. ABC
+
+    ![](../images/module02/02.64-sqlscan-credentials.png)
+
+3. ABC
+
+    ![](../images/module02/02.65-sqlscan-scope.png)
+
+4. ABC
+
+    ![](../images/module02/02.66-sqlscan-scanruleset.png)
+
+5. ABC
+
+    ![](../images/module02/02.67-sqlscan-schedule.png)
+
+6. ABC
+
+    ![](../images/module02/02.68-sqlscan-run.png)
+
+7. ABC
+
+    ![](../images/module02/02.69-sqlscan-details.png)
+
+8. ABC
+
+    ![](../images/module02/02.70-sqlscan-refresh.png)
+
+
+
+<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+
+## 12. View Assets
+
+1. 
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 

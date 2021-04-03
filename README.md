@@ -16,3 +16,6 @@ Azure Purview is a unified data governance service that helps you manage and gov
 8. [Monitor](./modules/module08.md)
 9. [Integrate with Azure Synapse Analytics](./modules/module09.md)
 10. [REST API](./modules/module10.md)
+
+## Workshop URL
+[aka.ms/purviewlab](https://aka.ms/purviewlab)

@@ -184,7 +184,7 @@ Before proceeding with the following steps, you will need to:
 
     > :bulb: **Did you know?**
     >
-    > At this point, we have simply registered a data source. No assets are written to the catalog until a scan is run.
+    > At this point, we have simply registered a data source. Assets are not written to the catalog until after a scan has finished running.
 
     ![Source Properties](../images/module02/02.22-sources-properties.png)
 
@@ -224,7 +224,7 @@ Before proceeding with the following steps, you will need to:
 
     ![View Details](../images/module02/02.29-sources-details.png)
 
-8. Click Refresh to periodically update the status of the scan. Note: It will take approximately 5 minutes to complete.
+8. Click **Refresh** to periodically update the status of the scan. Note: It will take approximately 5 minutes to complete.
 
     ![Monitor Scan](../images/module02/02.30-sources-refresh.png)
 
@@ -260,6 +260,8 @@ Before proceeding with the following steps, you will need to:
     | Confirm password | `<your-sql-admin-password>` |
     | Location | `East US 2` |
 
+    > Note: The **admin login** and **password** will be required later in the module. Make note of these two values.
+
     ![](../images/module02/02.34-sqlsvr-new.png)
 
 6. Click **Configure database**.
@@ -286,7 +288,7 @@ Before proceeding with the following steps, you will need to:
 
     ![](../images/module02/02.40-sqldb-server.png)
 
-12. Click Firewalls and virtual networks, set Allow Azure services and resources to access this server to Yes, click **Save**.
+12. Click **Firewalls and virtual networks**, set **Allow Azure services and resources to access this server** to **Yes**, click **Save**.
 
     ![](../images/module02/02.41-sqlsvr-firewall.png)
 
@@ -294,51 +296,55 @@ Before proceeding with the following steps, you will need to:
 
 ## 8. Create an Azure Key Vault
 
-1. ABC
+1. From the **Home** screen of the Azure Portal, click **Create a resource**.
+
+    ![Azure Purview](../images/module01/01.01-create-resource.png)  
+
+2. Search for `Key Vault` and click **Create**.
 
     ![](../images/module02/02.45-create-vault.png)
 
-2. ABC
+3. Under the **Basics** tab, select a **Resource group** (e.g. `resourcegroup-1`), provide a **Key vault name** (e.g. `vault-team01`), select a Region (e.g. `East US 2`). 
 
     ![](../images/module02/02.46-vault-basics.png)
 
-3. ABC
+4. Navigate to the **Access policy** tab and click **Add Access Policy**.
 
     ![](../images/module02/02.47-policy-add.png)
 
-4. ABC
+5. Under **Select principal**, click **None selected**.
 
     ![](../images/module02/02.48-policy-select.png)
 
-5. ABC
+6. Search for the name of your Azure Purview account (e.g. `purview-team01`), select the item, click **Select**.
 
     ![](../images/module02/02.49-policy-principal.png)
 
-6. ABC
+7. Under **Secret permissions**, select **Get** and **List**.
 
     ![](../images/module02/02.50-secret-permissions.png)
 
-7. ABC
+8. Review your selections and click **Add**.
 
     ![](../images/module02/02.51-policy-add.png)
 
-8. ABC
+9. Click **Review + create**.
 
     ![](../images/module02/02.52-vault-review.png)
 
-9. ABC
+10. Click **Create**.
 
     ![](../images/module02/02.53-vault-create.png)
 
-10. ABC
+11. Once your deployment is complete, click **Go to resource**.
 
     ![](../images/module02/02.54-vault-goto.png)
 
-11. ABC
+12. Navigate to **Secrets** and click **Generate/Import**.
 
     ![](../images/module02/02.55-vault-secrets.png)
 
-12. ABC
+13. Under **Name** type `sql-secret`. Under **Value** provide the same password that was specified for the SQL Server admin account created earlier in step 7.5. Click **Create**.
 
     ![](../images/module02/02.56-vault-sqlsecret.png)
 
@@ -346,31 +352,37 @@ Before proceeding with the following steps, you will need to:
 
 ## 9. Add Credentials to Azure Purview
 
-1. ABC
+1. To make the secret accessible to Azure Purview, we must establish a connection to Azure Key Vault. Open **Purview Studio**, navigate to **Management Center** > **Credentials**, click **Manage Key Vault connections**.
 
     ![](../images/module02/02.57-management-vault.png)
 
-2. ABC
+2. Click **New**.
 
     ![](../images/module02/02.58-vault-new.png)
 
-3. ABC
+3. Use the drop-down menus to select the appropriate **Subscription** and **Key Vault name**. Click **Create**.
 
     ![](../images/module02/02.59-vault-create.png)
 
-4. ABC
+4. Since we have already granted the Purview managed identity access to our Azure Key Vault, click **Confirm**.
 
     ![](../images/module02/02.60-vault-access.png)
 
-5. ABC
+5. Click **Close**.
 
-    ![](../images/module02/02.61-credentials-new.png)
+    ![](../images/module02/02.61-vault-close.png)
 
-6. ABC
+6. Under **Credentials** click **New**.
 
-    ![](../images/module02/02.62-vault-close.png)
+    ![](../images/module02/02.62-credentials-new.png)
 
-7. ABC
+7. Provide the necessary details and click **Create**.
+
+    * Overwrite the **Name** to `credential-SQL`
+    * Set the **Authentication method** to `SQL authentication`
+    * Set the **User name** to the SQL Server admin login specified earlier (e.g. `team01`)
+    * Select the **Key Vault connection**
+    * Set the **Secret name** to `sql-secret`
 
     ![](../images/module02/02.63-credentials-create.png)
 
@@ -378,15 +390,15 @@ Before proceeding with the following steps, you will need to:
 
 ## 10. Register a Source (Azure SQL DB)
 
-1. ABC
+1. Open Purview Studio, navigate to **Sources** and click **Register**.
 
     ![](../images/module02/02.42-sources-register.png)
 
-2. ABC
+2. Navigate to the **Azure** tab, select **Azure SQL Database**, click **Continue**.
 
     ![](../images/module02/02.43-register-sqldb.png)
 
-3. ABC
+3. Select the **Azure subscritpion**, **Server name**, and **Collection**. Click **Register**.
 
     ![](../images/module02/02.44-register-azuresql.png)
 
@@ -394,45 +406,45 @@ Before proceeding with the following steps, you will need to:
 
 ## 11. Scan a Source with Azure Key Vault Credentials
 
-1. ABC
+1. Open Purview Studio, navigate to **Sources**, and within the Azure SQL Database source tile, click the **New Scan** button.
 
     ![](../images/module02/02.64-sources-scansql.png)
 
-2. ABC
+2. Select the **Database** and **Credential** from the drop-down menus. Click **Test connection**. Click **Continue**.
 
     ![](../images/module02/02.65-sqlscan-credentials.png)
 
-3. ABC
+3. Click **Continue**.
 
     ![](../images/module02/02.66-sqlscan-scope.png)
 
-4. ABC
+4. Click **Continue**.
 
     ![](../images/module02/02.67-sqlscan-scanruleset.png)
 
-5. ABC
+5. Set the trigger to **Once**, click **Continue**.
 
     ![](../images/module02/02.68-sqlscan-schedule.png)
 
-6. ABC
+6. Click **Save and Run**.
 
     ![](../images/module02/02.69-sqlscan-run.png)
 
-7. ABC
+7. To monitor the progress of the scan, click **View Details**.
 
     ![](../images/module02/02.70-sqlscan-details.png)
 
-8. ABC
+8. Click **Refresh** to periodically update the status of the scan. Note: It will take approximately 5 minutes to complete.
 
     ![](../images/module02/02.71-sqlscan-refresh.png)
-
-
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
 ## 12. View Assets
 
-1. 
+1. To view the assets that have materialised as an outcome of running the scans, perform a wildcard search by typing the asterik character (`*`) into the search bar and hitting the Enter key to submit the query and return the search results.
+
+    ![](../images/module02/02.72-search-wildcard.png)
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 

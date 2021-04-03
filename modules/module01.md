@@ -18,9 +18,9 @@ Create an Azure Purview account using the Azure portal.
 
 ## Table of Contents
 
-1. Create an Azure Purview Account
-2. Grant Access to Azure Purview's Data Plane
-3. Open Purview Studio
+1. [Create an Azure Purview Account](#1-create-an-azure-purview-account)
+2. [Grant Access to Azure Purview's Data Plane](#2-grant-access-to-azure-purviews-data-plane)
+3. [Open Purview Studio](#3-open-purview-studio)
 
 <div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
 

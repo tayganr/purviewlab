@@ -176,7 +176,7 @@ Before proceeding with the following steps, you will need to:
 
 3. Select the **Azure subscritpion**, **Storage account name**, and **Collection**. Click **Register**.
 
-     > :bulb: **Did you know?**
+    > :bulb: **Did you know?**
     >
     > At this point, we have simply registered a data source. No assets are written to the catalog until a scan is run.
 
@@ -199,6 +199,10 @@ Before proceeding with the following steps, you will need to:
     ![Scan Scope](../images/module02/02.25-scan-scope.png)
 
 4. Select the system default scan rule set and click **Continue**.
+
+    > :bulb: **Did you know?**
+    >
+    > **Scan Rule Sets** determine which **File Types** and **Classification Rules** are in scope. If you wanted to include a custom file type or custom classification rule as part of a scan, a custom scan rule set will need to be created.
 
     ![Scan rule set](../images/module02/02.26-scan-ruleset.png)
 

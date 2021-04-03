@@ -236,45 +236,59 @@ Before proceeding with the following steps, you will need to:
 
     ![Azure Purview](../images/module01/01.01-create-resource.png)  
 
-2.  ABC
+2.  Search for `Azure SQL` and click **Create**.
 
     ![](../images/module02/02.31-create-sql.png)
 
-3. ABC
+3. Select **Single database** and click **Create**.
 
     ![](../images/module02/02.32-singledb-create.png)
 
-4. ABC
+4. Under the **Basics** tab, select a **Resource group** (e.g. `resourcegroup-1`), provide a **Database name** (e.g. `sqldb-team01`) and under **Server** click **Create new**.
  
     ![](../images/module02/02.33-sqlsvr-create.png)
 
-5. ABC
+5. Provide the necessary inputs and click **OK**.
+
+    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
+
+    | Property  | Example Value |
+    | --- | --- |
+    | Server name | `sqlsvr-team01` |
+    | Server admin login | `team01` |
+    | Password | `<your-sql-admin-password>` |
+    | Confirm password | `<your-sql-admin-password>` |
+    | Location | `East US 2` |
 
     ![](../images/module02/02.34-sqlsvr-new.png)
 
-6. ABC
+6. Click **Configure database**.
 
     ![](../images/module02/02.35-sqldb-configure.png)
 
-7. ABC
+7. Select **Serverless** and click **Apply**.
 
     ![](../images/module02/02.36-sqldb-serverless.png)
 
-8. ABC
+8. Navigate to the **Additional settings** tab, select **Sample**, click **Review + create**.
 
-    ![](../images/module02/02.37-sqldb-sample.png)
+    ![Additional Settings](../images/module02/02.37-sqldb-sample.png)
 
-9. ABC
+9. Click **Create**.
 
     ![](../images/module02/02.38-sqldb-create.png)
 
-10. ABC
+10. Once the deployment is complete, click **Go to resource**.
 
     ![](../images/module02/02.39-sqldb-complete.png)
 
-11. ABC
+11. Navigate to the **Server**.
 
-    ![](../images/module02/02.40-sqlsvr-firewall.png)
+    ![](../images/module02/02.40-sqldb-server.png)
+
+12. Click Firewalls and virtual networks, set Allow Azure services and resources to access this server to Yes, click **Save**.
+
+    ![](../images/module02/02.41-sqlsvr-firewall.png)
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
@@ -282,51 +296,51 @@ Before proceeding with the following steps, you will need to:
 
 1. ABC
 
-    ![](../images/module02/02.44-create-vault.png)
+    ![](../images/module02/02.45-create-vault.png)
 
 2. ABC
 
-    ![](../images/module02/02.45-vault-basics.png)
+    ![](../images/module02/02.46-vault-basics.png)
 
 3. ABC
 
-    ![](../images/module02/02.46-policy-add.png)
+    ![](../images/module02/02.47-policy-add.png)
 
 4. ABC
 
-    ![](../images/module02/02.47-policy-select.png)
+    ![](../images/module02/02.48-policy-select.png)
 
 5. ABC
 
-    ![](../images/module02/02.48-policy-principal.png)
+    ![](../images/module02/02.49-policy-principal.png)
 
 6. ABC
 
-    ![](../images/module02/02.49-secret-permissions.png)
+    ![](../images/module02/02.50-secret-permissions.png)
 
 7. ABC
 
-    ![](../images/module02/02.50-policy-add.png)
+    ![](../images/module02/02.51-policy-add.png)
 
 8. ABC
 
-    ![](../images/module02/02.51-vault-review.png)
+    ![](../images/module02/02.52-vault-review.png)
 
 9. ABC
 
-    ![](../images/module02/02.52-vault-create.png)
+    ![](../images/module02/02.53-vault-create.png)
 
 10. ABC
 
-    ![](../images/module02/02.53-vault-goto.png)
+    ![](../images/module02/02.54-vault-goto.png)
 
 11. ABC
 
-    ![](../images/module02/02.54-vault-secrets.png)
+    ![](../images/module02/02.55-vault-secrets.png)
 
 12. ABC
 
-    ![](../images/module02/02.55-vault-sqlsecret.png)
+    ![](../images/module02/02.56-vault-sqlsecret.png)
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
@@ -334,31 +348,31 @@ Before proceeding with the following steps, you will need to:
 
 1. ABC
 
-    ![](../images/module02/02.56-management-vault.png)
+    ![](../images/module02/02.57-management-vault.png)
 
 2. ABC
 
-    ![](../images/module02/02.57-vault-new.png)
+    ![](../images/module02/02.58-vault-new.png)
 
 3. ABC
 
-    ![](../images/module02/02.58-vault-create.png)
+    ![](../images/module02/02.59-vault-create.png)
 
 4. ABC
 
-    ![](../images/module02/02.59-vault-access.png)
+    ![](../images/module02/02.60-vault-access.png)
 
 5. ABC
 
-    ![](../images/module02/02.60-credentials-new.png)
+    ![](../images/module02/02.61-credentials-new.png)
 
 6. ABC
 
-    ![](../images/module02/02.61-vault-close.png)
+    ![](../images/module02/02.62-vault-close.png)
 
 7. ABC
 
-    ![](../images/module02/02.62-credentials-create.png)
+    ![](../images/module02/02.63-credentials-create.png)
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
@@ -366,15 +380,15 @@ Before proceeding with the following steps, you will need to:
 
 1. ABC
 
-    ![](../images/module02/02.41-sources-register.png)
+    ![](../images/module02/02.42-sources-register.png)
 
 2. ABC
 
-    ![](../images/module02/02.42-register-sqldb.png)
+    ![](../images/module02/02.43-register-sqldb.png)
 
 3. ABC
 
-    ![](../images/module02/02.43-register-azuresql.png)
+    ![](../images/module02/02.44-register-azuresql.png)
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 
@@ -382,35 +396,35 @@ Before proceeding with the following steps, you will need to:
 
 1. ABC
 
-    ![](../images/module02/02.63-sources-scansql.png)
+    ![](../images/module02/02.64-sources-scansql.png)
 
 2. ABC
 
-    ![](../images/module02/02.64-sqlscan-credentials.png)
+    ![](../images/module02/02.65-sqlscan-credentials.png)
 
 3. ABC
 
-    ![](../images/module02/02.65-sqlscan-scope.png)
+    ![](../images/module02/02.66-sqlscan-scope.png)
 
 4. ABC
 
-    ![](../images/module02/02.66-sqlscan-scanruleset.png)
+    ![](../images/module02/02.67-sqlscan-scanruleset.png)
 
 5. ABC
 
-    ![](../images/module02/02.67-sqlscan-schedule.png)
+    ![](../images/module02/02.68-sqlscan-schedule.png)
 
 6. ABC
 
-    ![](../images/module02/02.68-sqlscan-run.png)
+    ![](../images/module02/02.69-sqlscan-run.png)
 
 7. ABC
 
-    ![](../images/module02/02.69-sqlscan-details.png)
+    ![](../images/module02/02.70-sqlscan-details.png)
 
 8. ABC
 
-    ![](../images/module02/02.70-sqlscan-refresh.png)
+    ![](../images/module02/02.71-sqlscan-refresh.png)
 
 
 

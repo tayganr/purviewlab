@@ -36,6 +36,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     ![Create Purview Resource](../images/module01/01.02-create-purview.png)
 
 3. Provide the necessary inputs on the **Basics** tab.  
+
     > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
 
     | Parameter  | Example Value |

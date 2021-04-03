@@ -5,7 +5,7 @@
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* Access to an Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 
 ## :hammer: Tools
 

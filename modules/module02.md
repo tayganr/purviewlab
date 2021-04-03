@@ -26,14 +26,14 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 2. [Grant the Azure Purview Managed Identity Access](#2-grant-the-azure-purview-managed-identity-access)
 3. [Upload Data to Azure Data Lake Storage Gen2 Account](#3-upload-data-to-azure-data-lake-storage-gen2-account)
 4. [Create a Collection](#4-create-a-collection)
-5. [Register a Source (ADLS Gen2)](#5-register-a-source)
-6. [Scan a Source with the Azure Purview Managed Identity](#6-scan-a-source)
-7. Create an Azure SQL Database
-8. Create an Azure Key Vault
-9. Add Credentials to Azure Purview
-10. Register a Source (Azure SQL DB)
-11. Scan a Source with Azure Key Vault Credentials
-12. View Assets
+5. [Register a Source (ADLS Gen2)](#5-register-a-source-adls-gen2)
+6. [Scan a Source with the Azure Purview Managed Identity](#6-scan-a-source-with-the-azure-purview-managed-identity)
+7. [Create an Azure SQL Database](#7-create-an-azure-sql-database)
+8. [Create an Azure Key Vault](#8-create-an-azure-key-vault)
+9. [Add Credentials to Azure Purview](#9-add-credentials-to-azure-purview)
+10.[Register a Source (Azure SQL DB)](#10-register-a-source-azure-sql-db)
+11.[Scan a Source with Azure Key Vault Credentials](#11-scan-a-source-with-azure-key-vault-credentials)
+12.[View Assets](#12-view-assets)
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
 

@@ -14,7 +14,8 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
 ## :dart: Objectives
 
-Create an Azure Purview account using the Azure portal.
+* Create an Azure Purview account using the Azure portal.
+* Provide users the necessary level of access to Azure Purview's data plane.
 
 ## Table of Contents
 

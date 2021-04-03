@@ -127,6 +127,8 @@ Note:
 
     ![Open Purview Studio](../images/module01/01.07-open-studio.png)
 
+<div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
+
 ## :mortar_board: Knowledge Check
 
 1. Which of the following Azure Purview pricing meters is fluid, with consumption varying based on usage?

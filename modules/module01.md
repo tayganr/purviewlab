@@ -59,7 +59,7 @@ Note:
     > 
     > **v-Core Hours** on the other hand is the unit used to measure **serverless** compute that is needed to run a scan. You only pay per vCore-Hour of scanning that you consume (rounded up to the nearest minute).
     >
-    >See the [Azure Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/azure-purview/) page for more information.
+    >For more information, check out the [Azure Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/azure-purview/) page.
 
     ![Configure Purview Account](../images/module01/01.04-create-configuration.png)
 

@@ -53,9 +53,13 @@ Note:
     | --- | --- | --- |
     | Platform size | `4 capacity units` | Sufficient for non-production scenarios. |
 
-    > :bulb: **Capacity Units** determine the size of the platform. Capacity Units are a **provisioned** set of resources that is needed to keep the Azure Purview platform up and running. 1 Capacity Unit is able to support approximately 1 API call per second.  
+    > :bulb: **Did you know?**
+    >
+    >**Capacity Units** determine the size of the platform and is a **provisioned** (fixed) set of resources that is needed to keep the Azure Purview platform up and running. 1 Capacity Unit is able to support approximately 1 API call per second. Capacity Units are required regardless of whether you plan to invoke the Azure Purview API endpoints directly (i.e. ISV scenario) or indirectly via Purview Studio (GUI).
     > 
-    > When Azure Purview needs to run a scan, **serverless** compute resources will be engaged, this is measured in **v-Core Hours**. See [Azure Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/azure-purview/) for more information.
+    > **v-Core Hours** on the other hand is the unit used to measure **serverless** compute that is needed to run a scan. You only pay per vCore-Hour of scanning that you consume (rounded up to the nearest minute).
+    >
+    >See the [Azure Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/azure-purview/) page for more information.
 
     ![Configure Purview Account](../images/module01/01.04-create-configuration.png)
 

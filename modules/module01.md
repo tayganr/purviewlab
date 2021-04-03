@@ -53,7 +53,7 @@ Note:
     | --- | --- | --- |
     | Platform size | `4 capacity units` | Sufficient for non-production scenarios. |
 
-    :bulb: **Capacity Units** determine the size of the platform. They are a provisioned set of resources that are needed to keep Azure Purview up and running. 1 Capacity Unit is able to support approximately 1 API call per second.
+    > :bulb: **Capacity Units** determine the size of the platform. They are a provisioned set of resources that are needed to keep Azure Purview up and running. 1 Capacity Unit is able to support approximately 1 API call per second.
 
     ![Configure Purview Account](../images/module01/01.04-create-configuration.png)
 

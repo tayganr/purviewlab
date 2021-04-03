@@ -18,7 +18,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 ## :dart: Objectives
 
 * Register and scan an Azure Data Lake Storage Gen2 account using the Azure Purview managed identity.
-* Register and scan an Azure SQL Database using SQL authentication.
+* Register and scan an Azure SQL Database using SQL authentication credentials stored in Azure Key Vault.
 
 ## Table of Contents
 

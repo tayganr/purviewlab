@@ -141,6 +141,12 @@ Create an Azure Purview account using the Azure portal.
     B ) C1  
     C ) D0
 
+4. Which pre-defined Azure Purview role provides access to manage data sources?
+
+    A ) Purview Data Reader  
+    B ) Purview Data Curator  
+    C ) Purview Data Source Administrator
+
 <div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
 
 ## :tada: Summary

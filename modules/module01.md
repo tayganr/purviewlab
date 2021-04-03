@@ -36,7 +36,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     ![Create Purview Resource](../images/module01/01.02-create-purview.png)
 
 3. Provide the necessary inputs on the **Basics** tab.  
-    Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
+    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
 
     | Parameter  | Example Value |
     | --- | --- |
@@ -104,7 +104,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     | Purview Data Curator | `Read/Write` |  | Access to Purview Studio (read & write). |
     | Purview Data Source Administrator |  | `Read/Write` | No access to Purview Studio. Manage data sources and data scans. |
 
-4. Navigate to the **Role assignments** tab and confirm the **Purview Data Curator** role been has been assigned. Tip: Filter **Scope** to `This resource`.
+4. Navigate to the **Role assignments** tab and confirm the **Purview Data Curator** role been has been assigned. Tip: Filter **Scope** to `This resource` to limit the results.
 
     ![Role Assignments](../images/module01/01.11-access-confirm.png)
 

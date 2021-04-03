@@ -4,20 +4,21 @@
 
 ## :thinking: Prerequisites
 
-* An Azure account with an active subscription.
-* An Azure Azure Purview account (see [previous module](../modules/module01.md)).
+* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* Access to an Azure Azure Purview account (see [module 01](../modules/module01.md)).
 
 ## :hammer: Tools
 
-* [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
+* [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) (Download and Install)
 
 ## :loudspeaker: Introduction
 
-To populate Azure Purview with assets for data discovery and understanding, we must register sources that exist across our data estate so that we can leverage the out of the box scanning capabilities. Scanning enables Azure Purview to extract technical metadata such as the fully qualified name, schema, data types, and apply classifications by parsing a sample of the underlying data. In this module, we will walk through how to register and scan an Azure Data Lake Storage Gen2 account.
+To populate Azure Purview with assets for data discovery and understanding, we must register sources that exist across our data estate so that we can leverage the out of the box scanning capabilities. Scanning enables Azure Purview to extract technical metadata such as the fully qualified name, schema, data types, and apply classifications by parsing a sample of the underlying data. In this module, we will walk through how to register and scan data sources.
 
 ## :dart: Objectives
 
 * Register and scan an Azure Data Lake Storage Gen2 account using the Azure Purview managed identity.
+* Register and scan an Azure SQL Database using SQL authentication.
 
 ## Table of Contents
 
@@ -40,7 +41,9 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![Azure Purview](../images/module02/02.01-create-storage.png)
 
-3. Provide the necessary inputs on the **Basics** tab.
+3. Provide the necessary inputs on the **Basics** tab.  
+    > Note: The table below provides example values for Subscription, Resource Group, Purview account name, and Location for illustrative purposes only, ensure to specify values that make sense for your deployment.
+
     | Parameter  | Example Value |
     | --- | --- |
     | Subscription | `Azure Internal Access` |
@@ -50,11 +53,6 @@ To populate Azure Purview with assets for data discovery and understanding, we m
     | Performance | `Standard` |
     | Account kind | `StorageV2 (general purpose v2)` |
     | Replication | `Locally-redundant storage (LRS)` |
-
-    Note:
-
-    * The storage account name can only contain lowercase letters and numbers.
-    * The storage account name must be between 3 and 24 characters.
 
     ![Azure Purview](../images/module02/02.02-storage-basics.png)
 
@@ -100,7 +98,7 @@ In this module we will walk through how to grant the Azure Purview Managed Ident
 
     ![Azure Purview](../images/module02/02.08-storage-assignment.png)
 
-4. Navigate to the **Role assignments** tab and confirm the Azure Purview managed identity has been assigned the Storage Blob Data Reader role.
+4. Navigate to the **Role assignments** tab and confirm the Azure Purview managed identity has been assigned the Storage Blob Data Reader role. Tip: Filter **Scope** to `This resource` to limit the results.
 
     ![Azure Purview](../images/module02/02.09-storage-reader.png)
 
@@ -158,6 +156,10 @@ Before proceeding with the following steps, you will need to:
 
 2. Provide the collection a **Name** (e.g. Contoso) and click **Create**.
 
+    > :bulb: **Did you know?**
+    >
+    > **Collections** can be used to logically group data sources. Collections can also belong to other Collections to form a hierarchy (e.g. Organization Name > Business Unit). Collections can collapse or expand by clicking the circle attached to the arrow between levels.
+
     ![Contoso Collection](../images/module02/02.19-sources-contoso.png)
 
 <div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
@@ -173,6 +175,10 @@ Before proceeding with the following steps, you will need to:
     ![Sources](../images/module02/02.21-sources-adls.png)
 
 3. Select the **Azure subscritpion**, **Storage account name**, and **Collection**. Click **Register**.
+
+     > :bulb: **Did you know?**
+    >
+    > At this point, we have simply registered a data source. No assets are written to the catalog until a scan is run.
 
     ![Source Properties](../images/module02/02.22-sources-properties.png)
 
@@ -228,7 +234,7 @@ Before proceeding with the following steps, you will need to:
     B ) After a Data Source has been registered    
     C ) After a Data Source has been scanned
 
-3. Which of the following attributes is not automatically assigned to an asset as a result of the system-built scanning functionality?
+3. Which of the following attributes is **not** automatically assigned to an asset as a result of the system-built scanning functionality?
 
     A ) Technical Metadata (e.g. Fully Qualified Name, Path, Schema, etc)  
     B ) Glossary Terms (e.g. column `Sales Tax` is tagged with the `Sales Tax` glossary term)  

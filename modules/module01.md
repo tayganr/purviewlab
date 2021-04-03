@@ -10,7 +10,7 @@
 
 ## :loudspeaker: Introduction
 
-To create and use the Azure Purview platform, you will need to provision an Azure Purview account within an active Azure subscription.
+To create and use the Azure Purview platform, you will need to provision an Azure Purview account.
 
 ## :dart: Objectives
 
@@ -53,7 +53,9 @@ Note:
     | --- | --- | --- |
     | Platform size | `4 capacity units` | Sufficient for non-production scenarios. |
 
-    > :bulb: **Capacity Units** determine the size of the platform. Capacity Units are a **provisioned** set of resources that is needed to keep the Azure Purview platform up and running. 1 Capacity Unit is able to support approximately 1 API call per second.
+    > :bulb: **Capacity Units** determine the size of the platform. Capacity Units are a **provisioned** set of resources that is needed to keep the Azure Purview platform up and running. 1 Capacity Unit is able to support approximately 1 API call per second.  
+    > 
+    > When Azure Purview needs to run a scan, **serverless** compute resources will be engaged, this is measured in **v-Core Hours**. See [Azure Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/azure-purview/) for more information.
 
     ![Configure Purview Account](../images/module01/01.04-create-configuration.png)
 

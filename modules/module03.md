@@ -14,13 +14,17 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 ## :dart: Objectives
 
-* Understand how to search and browse the Azure Purview data catalog.
+* Search the catalog by keyword.
+* Browse the catalog by source.
+* Update an existing asset.
+* Perform a bulk edit operation.
 
 ## Table of Contents
 
 1. [Search Catalog](#1-search-catalog)
 2. [Update an Asset](#2-update-an-asset)
 3. [Browse Assets](#3-browse-assets)
+4. [Bulk Edit](#4-bulk-edit)
 
 <div align="right"><a href="#module-03---search--browse">↥ back to top</a></div>
 
@@ -63,9 +67,17 @@ Once sources have been registered and scanned, the underlying data catalog will 
     | Country | `Country from where the query was issued.` |
     | PopularityScore | `Value between 1 and 100 inclusive. 1 indicates least popular query on the day/State/Country with Coronavirus intent, and 100 indicates the most popular query for the same geography on the same day.` |
 
+    > :bulb: **Did you know?**
+    >
+    > **Classifications** and **Glossary Terms** can be assigned at the asset level (e.g. a Table within a Database) as well as at the schema level (e.g. a Column within a Table Schema).
+
     ![Update Schema](../images/module03/03.06-asset-schema.png)
 
 5. Navigate to the **Contacts** tab and set someone within your organization to be an **Expert** and an **Owner**. Click **Save**.
+
+    > :bulb: **Did you know?**
+    >
+    > Assets can be related to two different types of contacts. **Experts** are often are typically business process or subject matter experts in different business areas or departments. Where as **Owners** are often senior executives or business area owners that define governance or business processes over certain data areas.
 
     ![Update Contacts](../images/module03/03.07-asset-contacts.png)
 
@@ -77,7 +89,7 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 ## 3. Browse Assets
 
-While the search experience is ideal for keyword based discovery, Purview Studio allows users to also navigate the catalog by source.
+While the search experience is ideal for keyword based discovery, Purview Studio also allows users to navigate the catalog by source.
 
 1. Open Purview Studio and from the **Home** screen, click **Browse assets**.
 
@@ -97,9 +109,36 @@ While the search experience is ideal for keyword based discovery, Purview Studio
 
 <div align="right"><a href="#module-03---search--browse">↥ back to top</a></div>
 
+## 4. Bulk Edit
+
+Azure Purview allows us to perform certain operations (add/replace/remove) against a subset of attributes (Expert, Owner, Term, Classification) in bulk directly within Purview Studio.
+
+
+1. Open Purview Studio and from the **Home** screen, type the asterik character (**\***) into the search bar and hit **Enter**.
+
+    ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
+
+2. Hover your mouse over an item in the list to reveal the checkbox on the right-hand side. Select five items and click **View selected**.
+
+    ![View Selected](../images/module03/03.13-bulk-view.png)
+
+3. Click **Bulk edit**.
+
+    ![Bulk Edit](../images/module03/03.14-bulk-edit.png)
+
+4. Set the **Attribute** to `Owner`, set **Operation** to `Add`, select two users in your organization and click **Apply**.
+ 
+    ![Apply Changes](../images/module03/03.15-bulk-apply.png)
+
+5. Click **Deselect all and close**.
+
+    ![Deselect](../images/module03/03.16-bulk-deselect.png)
+
+<div align="right"><a href="#module-03---search--browse">↥ back to top</a></div>
+
 ## :mortar_board: Knowledge Check
 
-1. There are a number of  attributes that we can use to narrow our search results via the filter pane, which of the following is not available as a quick filter?
+1. There are a number of  attributes that we can use to narrow our search results via the filter pane, which of the following is **not** available as a quick filter?
 
     A ) Asset Type  
     B ) Classification  
@@ -131,4 +170,4 @@ While the search experience is ideal for keyword based discovery, Purview Studio
 
 ## :tada: Summary
 
-This module provided an overview of how to search, browse, and update an asset.
+This module provided an overview of how to search, browse, and update assets.

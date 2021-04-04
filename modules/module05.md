@@ -69,6 +69,10 @@ Azure Purview provides a large set of default classifications that represent typ
     | State | `Enabled` |
     | Type | `Regular Expression` |
 
+    > :bulb: **Did you know?**
+    >
+    > There are two types of classification rules. **Regular Expression** performs pattern matching against the actual data and/or column name. Where as **Dictionary** based classification rules allows us to supply a list of all possible values via a CSV or TSV file.
+
     ![Regular Expression Classification Rule](../images/module05/05.05-classificationrules-regex.png)
 
 3. Download a copy of **[twitter_handles.csv](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.csv)** to your local machine.
@@ -76,6 +80,10 @@ Azure Purview provides a large set of default classifications that represent typ
 4. Click the **Browse** icon and open the local copy of **[twitter_handles.csv](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.csv)**.
 
 5. Select the data pattern associated to the **Handle** column and click **Add to patterns**.
+
+    > :bulb: **Did you know?**
+    >
+    > **Thresholds** help minimise the possibility of false-positive classifications. **Distinct data values threshold** is the total number of distinct data values that need to be found in a column before the scanner will run the data pattern on it. **Minimum match threshold** is the minimum percentage of data value matches in a column that needs to be found by the scanner for the classification to be applied.
 
     ![Pattern Detection](../images/module05/05.06-regex-file.png)
 
@@ -93,6 +101,10 @@ Azure Purview provides a large set of default classifications that represent typ
 ## 3. Create a Scan Rule Set
 
 1. Navigate to **Management Center** > **Scan rule sets** (under General) and click **New**.
+
+    > :bulb: **Did you know?**
+    >
+    > **Scan Rule Sets** determine which **File Types** and **Classification Rules** are in scope. If you want to include a custom file type or custom classification rule as part of a scan, a custom scan rule set will need to be created.
 
     ![New Scan Rule Set](../images/module05/05.08-scanruleset-new.png)
 
@@ -212,6 +224,16 @@ Note: If you have not created an Azure Data Lake Stroage Gen2 Account, see [modu
     ![Asset Schema](../images/module05/05.30-asset-schema.png)
 
 <div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
+
+
+## :mortar_board: Knowledge Check
+
+1. Which of the following is a valid classification rule type?
+
+    A ) Python  
+    B ) Regular Expression  
+    C ) C++
+
 
 ## :tada: Summary
 

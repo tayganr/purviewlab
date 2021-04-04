@@ -26,6 +26,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 3. [Bulk Import Terms](#3-bulk-import-terms)
 4. [Bulk Export Terms](#4-bulk-export-terms)
 5. [Assign a Term to an Asset](#5-assign-a-term-to-an-asset)
+6. [Update an Existing Term](#6-update-an-existing-term)
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
@@ -156,19 +157,19 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 2. Click **Edit**.
 
-    ![](../images/module04/04.20-asset-edit.png)
+    ![Edit Asset](../images/module04/04.20-asset-edit.png)
 
 3. Open the **Glossary terms** drop-down and select a glossary term (e.g. `Contoso Child`). Click **Save**.
 
-    ![](../images/module04/04.21-asset-term.png)
+    ![Assign Term](../images/module04/04.21-asset-term.png)
 
 4. Click on the hyperlinked term name to view the glossary term details.
 
-    ![](../images/module04/04.22-term-assigned.png)
+    ![Assigned Terms](../images/module04/04.22-term-assigned.png)
 
 5. Click **Refresh** to view the **Catalog assets** the term is assigned to.
 
-    ![](../images/module04/04.23-term-assets.png)
+    ![Catalog assets](../images/module04/04.23-term-assets.png)
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
@@ -177,11 +178,11 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 1. From the **Glossary** screen, open an existing term (e.g. `Aggregation`).
 
-![](../images/module04/04.24-term-view.png)
+    ![Term Details](../images/module04/04.24-term-view.png)
 
 2. Navigate to the **Related** tab and click **Edit**.
 
-![](../images/module04/04.25-term-related.png)
+    ![Related](../images/module04/04.25-term-related.png)
 
 3. Use the drop-down menu to assign two glossary terms as **Synonyms**.
 
@@ -189,11 +190,11 @@ A glossary is an important tool for maintaining and organizing your catalog. You
     >
     > **Synonyms** are other terms with the same or similar definitions. Where as **Related terms** are other terms that are related but have different definitions.
 
-![](../images/module04/04.26-term-synonym.png)
+    ![Synonyms](../images/module04/04.26-term-synonym.png)
 
 4. Use the drop-down menu to assign two glossary terms as **Related terms**.
 
-![](../images/module04/04.27-term-related.png)
+    ![Related Terms](../images/module04/04.27-term-related.png)
 
 5. Navigate to the **Contacts** tab and assign an **Expert** and a **Steward**. Click **Save**.
 
@@ -201,7 +202,9 @@ A glossary is an important tool for maintaining and organizing your catalog. You
     >
     > Glossary terms can be related to two different types of contacts. **Experts** are typically business process or subject matter experts. Where as **Stewards** define the standards for a data object or business term. They drive quality standards, nomenclature, rules.
 
-![](../images/module04/04.28-term-contacts.png)
+    ![Term Contacts](../images/module04/04.28-term-contacts.png)
+
+<div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 

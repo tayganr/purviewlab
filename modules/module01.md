@@ -137,7 +137,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     B ) vCore Hours  
     C ) Neither
 
-3. Which Azure Purview module provides the base funcionality (i.e. source registration, automated scanning and classification, data discovery)?
+3. Which Azure Purview module provides the base functionality (i.e. source registration, automated scanning and classification, data discovery)?
 
     A ) C0  
     B ) C1  

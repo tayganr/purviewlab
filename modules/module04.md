@@ -37,6 +37,10 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 2. Select the **System default** term template and click **Continue**.
 
+    > :bulb: **Did you know?**
+    >
+    > A **Term Template** determines the attributes for a term. The **System default** term template has the basic fields (e.g. Name, Definition, Status, etc). **Custom** term templates can be used to capture additional custom attributes.
+
     ![System default term template](../images/module04/04.02-term-default.png)
 
 3. Populate the term fields as per the examples below and click **Create**.
@@ -126,7 +130,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     ![Upload CSV file](../images/module04/04.15-import-ok.png)
 
-6. Once complete, you should see 50 additional terms beneath the parent (Workplace Analytics).<br>:bulb: **Tip**: You can quickly find specific types of terms using the filters at the top (e.g. Status = Approved).
+6. Once complete, you should see 50 additional terms beneath the parent (Workplace Analytics). **Tip**: You can quickly find specific types of terms using the filters at the top (e.g. Status = Approved).
 
     ![Filter Terms](../images/module04/04.16-glossary-filter.png)
 
@@ -146,7 +150,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 ## 5. Assign a Term to an Asset
 
-1. Perform a wildcard search by typing asterik (**\***) into the search bar and hitting **Enter** to submit the query. Click on an asset title (e.g. `QueriesByState`) to view the details.
+1. Perform a wildcard search by typing asterik (**\***) into the search bar and hitting the Enter key to submit the query. Click on an asset title (e.g. `QueriesByState`) to view the details.
 
     ![Wildcard Search](../images/module04/04.19-search-wildcard.png)
 

@@ -234,6 +234,16 @@ Note: If you have not created an Azure Data Lake Stroage Gen2 Account, see [modu
     B ) Regular Expression  
     C ) C++
 
+2. When creating a regular expression based classification rule, you must specify a Data Pattern **AND** a Column Pattern.
+
+    A ) True  
+    B ) False
+
+3. Custom classifications are automatically in scope of a system default scan rule set.
+
+    A ) True  
+    B ) False  
+
 
 ## :tada: Summary
 

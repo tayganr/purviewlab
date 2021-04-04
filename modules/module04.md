@@ -46,6 +46,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
     | Status | `Approved` |
     | Name | `Contoso Parent` |
     | Definition | `This will be the parent term.` |
+    | Parent | `None` |
     | Acronym | `CP` |
     | Resource Name | `Azure Purview` |
     | Resource Link | `https://aka.ms/Azure-Purview` |

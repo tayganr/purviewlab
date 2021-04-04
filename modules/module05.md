@@ -135,13 +135,17 @@ Note: If you have not created an Azure Data Lake Stroage Gen2 Account, see [modu
 
     ![New Folder](../images/module05/05.13-explorer-folder.png)
 
-3. Click on the **Upload** button and select **Upload Files...**.
+3. Right-click on the newly created folder and click **Open**.
 
-    ![Upload File](../images/module05/05.14-explorer-upload.png)
+   ![Open Folder](../images/module05/05.14-explorer-openfolder.png)
 
-4. Select the local copy of **[twitter_handles.parquet](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.parquet)** and click **Upload**.
+4. Click on the **Upload** button and select **Upload Files...**.
 
-    ![Upload Parquet](../images/module05/05.15-explorer-parquet.png)
+    ![Upload File](../images/module05/05.15-explorer-upload.png)
+
+5. Select the local copy of **[twitter_handles.parquet](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.parquet)** and click **Upload**.
+
+    ![Upload Parquet](../images/module05/05.16-explorer-parquet.png)
 
 <div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 
@@ -149,43 +153,43 @@ Note: If you have not created an Azure Data Lake Stroage Gen2 Account, see [modu
 
 1. Open Purview Studio, navigate to **Sources** and click **New Scan**. Note: If you have not registered your Azure Data Lake Storage Gen2 Account, see [module 02](../modules/module02.md).
 
-    ![New Scan](../images/module05/05.16-sources-newscan.png)
+    ![New Scan](../images/module05/05.17-sources-newscan.png)
 
 2. Click **Test connection** to ensure the credentials have access and click **Continue**.
 
-    ![Test Connection](../images/module05/05.17-scan-test.png)
+    ![Test Connection](../images/module05/05.18-scan-test.png)
 
 3. By default, Azure Purview will have the parent Azure Data Lake Storage Gen2 account selected and therefore include all paths in scope. To reduce the scope, deselect the parent and select the **Twitter** folder only.
 
-    ![Scope Scan](../images/module05/05.18-scan-scope.png)
+    ![Scope Scan](../images/module05/05.19-scan-scope.png)
 
 4. To validate the scope of the custom scan rule set, click **View detail**.
 
-    ![Scan Rule Set Details](../images/module05/05.19-scanruleset-viewdetail.png)
+    ![Scan Rule Set Details](../images/module05/05.20-scanruleset-viewdetail.png)
 
 5. Confirm that the custom scan rule set includes the **PARQUET** file type and the custom classification rule **Twitter_Handle**. Click **OK**.
 
-    ![Verify Scan Rule Set](../images/module05/05.20-scanruleset-verify.png)
+    ![Verify Scan Rule Set](../images/module05/05.21-scanruleset-verify.png)
 
 6. Select the custom scan rule set **twitter_scan_rule_set** and click **Continue**.
 
-    ![Select Scan Rule Set](../images/module05/05.21-scanruleset-select.png)
+    ![Select Scan Rule Set](../images/module05/05.22-scanruleset-select.png)
 
 7. Set the scan trigger to **Once** and click **Continue**.
 
-    ![Scan Cadence](../images/module05/05.22-scan-trigger.png)
+    ![Scan Cadence](../images/module05/05.23-scan-trigger.png)
 
 8. Click **Save and Run**.
 
-    ![Run Scan](../images/module05/05.23-scan-saverun.png)
+    ![Run Scan](../images/module05/05.24-scan-saverun.png)
 
 9. To view the progress of the scan, navigate to **Sources** and click **View details** on the Azure Data Lake Storage Gen2 account.
 
-    ![Source Details](../images/module05/05.24-source-viewdetails.png)
+    ![Source Details](../images/module05/05.25-source-viewdetails.png)
 
 10. Periodically click **Refresh** to update the scan status until **Complete**. Note: This will take approximately 5 minutes.
 
-    ![Scan Progress](../images/module05/05.25-source-progress.png)
+    ![Scan Progress](../images/module05/05.26-source-progress.png)
 
 <div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 
@@ -193,19 +197,19 @@ Note: If you have not created an Azure Data Lake Stroage Gen2 Account, see [modu
 
 1. Once the scan has complete, perform a wildcard search by typing in the asterik character (**\***) into the search bar and hit Enter.
 
-    ![Wildcard Search](../images/module05/05.26-search-wildcard.png)
+    ![Wildcard Search](../images/module05/05.27-search-wildcard.png)
 
 2. Limit the search results by setting **Classification** within the filter panel to **Twitter Handle**. Click on the asset title (**twitter_handles.parquet**) to view the asset details.
 
-    ![Filter Classification](../images/module05/05.27-search-filter.png)
+    ![Filter Classification](../images/module05/05.28-search-filter.png)
 
 3. You will notice on the Overview tab that the schema includes the Twitter Handle classification. To identity which column has been classified, navigate to the **Schema** tab.
 
-    ![Asset Details](../images/module05/05.28-asset-details.png)
+    ![Asset Details](../images/module05/05.29-asset-details.png)
 
 4. Within the Schema tab we can see that **Account name** is the column that has been classified.
 
-    ![Asset Schema](../images/module05/05.29-asset-schema.png)
+    ![Asset Schema](../images/module05/05.30-asset-schema.png)
 
 <div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 

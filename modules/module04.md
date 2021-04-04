@@ -94,6 +94,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
     | Status | `Approved` |
     | Name | `Contoso Child` |
     | Definition | `This will be the long description for the child glossary term.` |
+    | Parent | `Contoso Parent` |
     | Business Unit | `Marketing` |
 
     ![](../images/module04/04.10-term-create2.png)

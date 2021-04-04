@@ -47,9 +47,9 @@ Azure Purview provides a large set of default classifications that represent typ
 
     ![Create Classification](../images/module05/05.02-classifications-create.png)
 
-3. ABC
+3. Navigate to the **Custom** tab to confirm the custom classification has been created.
 
-    ![Create Classification](../images/module05/05.03-classifications-custom)
+    ![Create Classification](../images/module05/05.03-classifications-custom.png)
 
 <div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 

@@ -73,7 +73,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     ![Term template](../images/module04/04.06-attribute-new.png)
 
-4. Provide the Attribute a **Name** (e.g. `Business Unit`), set **Field Type** to `Single Choice` and populate with values (e.g. `Sales`, `Marketing`, `Finance`, `Human Resources`, `IT`). Click **Apply**.
+4. Populate the attribute fields as per the examples below and click **Apply**.
 
     | Field  | Example Value |
     | --- | --- |
@@ -138,7 +138,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 ## 4. Bulk Export Terms
 
-1. From the **Glossary** screen, we want to select ALL terms (top check box) and then de-select terms that do not belong to Workplace Analytics (i.e. Contoso Parent, Contoso Child). **All Workplace Analytics terms** should be selected. Click **Export terms**.
+1. From the **Glossary** screen, we want to select ALL terms (top check box) and then de-select terms that do not belong to Workplace Analytics (i.e. Contoso Parent, Contoso Child). **All Workplace Analytics terms** should be selected. Click **Export terms**. Note: You can not export terms from different term templates.
 
     ![Export Terms](../images/module04/04.17-glossary-export.png)
 
@@ -172,6 +172,37 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
+
+## 6. Update an Existing Term
+
+1. From the **Glossary** screen, open an existing term (e.g. `Aggregation`).
+
+![](../images/module04/04.24-term-view.png)
+
+2. Navigate to the **Related** tab and click **Edit**.
+
+![](../images/module04/04.25-term-related.png)
+
+3. Use the drop-down menu to assign two glossary terms as **Synonyms**.
+
+    > :bulb: **Did you know?**
+    >
+    > **Synonyms** are other terms with the same or similar definitions. Where as **Related terms** are other terms that are related but have different definitions.
+
+![](../images/module04/04.26-term-synonym.png)
+
+4. Use the drop-down menu to assign two glossary terms as **Related terms**.
+
+![](../images/module04/04.27-term-related.png)
+
+5. Navigate to the **Contacts** tab and assign an **Expert** and a **Steward**. Click **Save**.
+
+    > :bulb: **Did you know?**
+    >
+    > Glossary terms can be related to two different types of contacts. **Experts** are typically business process or subject matter experts. Where as **Stewards** define the standards for a data object or business term. They drive quality standards, nomenclature, rules.
+
+![](../images/module04/04.28-term-contacts.png)
+
 ## :mortar_board: Knowledge Check
 
 1. Glossary terms with the same name but different descriptions can exist under the same parent term?
@@ -179,10 +210,11 @@ A glossary is an important tool for maintaining and organizing your catalog. You
     A ) True  
     B ) False 
 
-2. Glossary terms with the same name can exist as long as each instance has a unique parent term?
+2. Glossary terms can be related to other terms in the glossary. Which of the following is **not** a valid glossary term relationship type?
 
-    A ) True  
-    B ) False  
+    A ) Synonyms  
+    B ) Antonyms  
+    C) Related terms  
 
 3. Glossary terms created using different term templates can be exported together using the Purview Studio (UI) glossary "Export terms" functionality?
 

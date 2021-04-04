@@ -77,7 +77,7 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
     > :bulb: **Did you know?**
     >
-    > Assets can be related to two different types of contacts. **Experts** are often are typically business process or subject matter experts in different business areas or departments. Where as **Owners** are often senior executives or business area owners that define governance or business processes over certain data areas.
+    > Assets can be related to two different types of contacts. **Experts** are often business process or subject matter experts. Where as **Owners** are often senior executives or business area owners that define governance or business processes over certain data areas.
 
     ![Update Contacts](../images/module03/03.07-asset-contacts.png)
 
@@ -138,7 +138,7 @@ Azure Purview allows us to perform certain operations (add/replace/remove) again
 
 ## :mortar_board: Knowledge Check
 
-1. There are a number of  attributes that we can use to narrow our search results via the filter pane, which of the following is **not** available as a quick filter?
+1. There are a number of attributes that we can use to narrow our search results via the filter pane, which of the following is **not** available as a quick filter?
 
     A ) Asset Type  
     B ) Classification  

@@ -217,7 +217,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     A ) Synonyms  
     B ) Antonyms  
-    C) Related terms  
+    C ) Related terms  
 
 3. Glossary terms created using different term templates can be exported together using the Purview Studio (UI) glossary "Export terms" functionality?
 

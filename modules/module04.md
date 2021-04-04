@@ -69,7 +69,13 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     ![Term template](../images/module04/04.06-attribute-new.png)
 
-4. Provide the Attribute a **Name** (e.g. `Business Unit`), set **Field Type** to **Single Choice** and populate with values (e.g. `Sales`, `Marketing`, `Finance`, `IT`). Click **Apply**.
+4. Provide the Attribute a **Name** (e.g. `Business Unit`), set **Field Type** to **Single Choice** and populate with values (e.g. `Sales`, `Marketing`, `Finance`, `Human Resources`, `IT`). Click **Apply**.
+
+    | Field  | Example Value |
+    | --- | --- |
+    | Attribute name | `Business Unit` |
+    | Field type | `Single choice` |
+    | Choices | `Sales`, `Marketing`, `Finance`, `Human Resources`, `IT`, |
 
     ![Attribute](../images/module04/04.07-attribute-properties.png)
 

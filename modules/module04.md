@@ -39,7 +39,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     > :bulb: **Did you know?**
     >
-    > A **Term Template** determines the attributes for a term. The **System default** term template has the basic fields (e.g. Name, Definition, Status, etc). **Custom** term templates can be used to capture additional custom attributes.
+    > A **Term Template** determines the attributes for a term. The **System default** term template has the basic fields only (e.g. Name, Definition, Status, etc). **Custom** term templates can be used to capture additional custom attributes.
 
     ![System default term template](../images/module04/04.02-term-default.png)
 

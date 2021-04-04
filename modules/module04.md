@@ -18,6 +18,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 * Bulk Import Terms into the Glossary via a CSV file.
 * Bulk Export Terms from the Glossary into a CSV file.
 * Assign a Term to an Asset in the Data Catalog.
+* Update an existing Term with Related Terms and Contacts.
 
 ## Table of Contents
 

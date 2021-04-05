@@ -14,7 +14,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 ## :dart: Objectives
 
 * Create a Term in the Glossary using the System Default Term Template.
-* Create a Term in the Glossary using a Custom Term Tempalte.
+* Create a Term in the Glossary using a Custom Term Template.
 * Bulk Import Terms into the Glossary via a CSV file.
 * Bulk Export Terms from the Glossary into a CSV file.
 * Assign a Term to an Asset in the Data Catalog.

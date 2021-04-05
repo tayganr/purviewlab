@@ -30,7 +30,7 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 ## 1. Search Catalog
 
-1. Open Purview Studio and from the **Home** screen, type the asterik character (**\***) into the search bar and hit **Enter**.
+1. Open Purview Studio and from the **Home** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 
@@ -114,7 +114,7 @@ While the search experience is ideal for keyword based discovery, Purview Studio
 Azure Purview allows us to perform certain operations (add/replace/remove) against a subset of attributes (Expert, Owner, Term, Classification) in bulk directly within Purview Studio.
 
 
-1. Open Purview Studio and from the **Home** screen, type the asterik character (**\***) into the search bar and hit **Enter**.
+1. Open Purview Studio and from the **Home** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 

@@ -49,7 +49,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
     ![Assets KPI](../images/module07/07.02-assets-kpi.png)
 
-3. Further down the page you will find additional **data visualisations**, typically these tiles will allow interactive filtering and the ability to drill-down into the underlying detail by clicking **View more**. The Assets page includes the following **graphs**:
+3. Further down the page you will find additional **data visualizations**, typically these tiles will allow interactive filtering and the ability to drill-down into the underlying detail by clicking **View more**. The Assets page includes the following **graphs**:
 
     **Asset Count per Source Type**
 
@@ -170,7 +170,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
     ![Sensitivity Labels Insights](../images/module07/07.20-labels-insights.png)
 
 2. The Sensitivity Labels page displays the following **high-level metrics**.
-    * Number of Subscriptions (with Sensititivty Labels)
+    * Number of Subscriptions (with Sensitivity Labels)
     * Unique Number of Labels Found
     * Number of Sources Labeled
     * Number of Files Labeled

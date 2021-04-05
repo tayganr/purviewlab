@@ -87,10 +87,10 @@ Azure Purview provides a large set of default classifications that represent typ
 
     ![Pattern Detection](../images/module05/05.06-regex-file.png)
 
-6. Modify the Data Pattern by replacing the plus sysmbol (`+`) with with `{5,15}`.
+6. Modify the Data Pattern by replacing the plus symbol (`+`) with with `{5,15}`.
 
-    * The plus sysmbol (`+`) indicates one or more characters matching the preceding item. This may lead to false positives as it would allow for an unlimited number of alphanumeric characters. Twitter handles must be a minimum of 5 and a maximum of 15 characters.
-    * With `{5,15}`, this will ensure matches only occur where there is a at least 5 and at most 15 occurences of the preceding item.
+    * The plus symbol (`+`) indicates one or more characters matching the preceding item. This may lead to false positives as it would allow for an unlimited number of alphanumeric characters. Twitter handles must be a minimum of 5 and a maximum of 15 characters.
+    * With `{5,15}`, this will ensure matches only occur where there is a at least 5 and at most 15 occurrences of the preceding item.
 
 7. While we can also specify a **Column Pattern**, in this example we will rely solely on the Data Pattern. Clear the **Column Pattern** input and click **Create**.
 
@@ -135,7 +135,7 @@ Before proceeding with the following steps, you will need to:
 * Open Azure Storage Explorer.
 * Sign in to Azure via **View > Account Management > Add an account...**.
 
-Note: If you have not created an Azure Data Lake Stroage Gen2 Account, see [module 02](../modules/module02.md).
+Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [module 02](../modules/module02.md).
 
 1. Download a copy of **[twitter_handles.parquet](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.parquet)** to your local machine. 
 
@@ -207,7 +207,7 @@ Note: If you have not created an Azure Data Lake Stroage Gen2 Account, see [modu
 
 ## 6. Search by Classification
 
-1. Once the scan has complete, perform a wildcard search by typing in the asterik character (**\***) into the search bar and hit Enter.
+1. Once the scan has complete, perform a wildcard search by typing in the asterisk character (**\***) into the search bar and hit Enter.
 
     ![Wildcard Search](../images/module05/05.27-search-wildcard.png)
 

@@ -180,7 +180,7 @@ Before proceeding with the following steps, you will need to:
 
     ![Sources](../images/module02/02.21-sources-adls.png)
 
-3. Select the **Azure subscritpion**, **Storage account name**, and **Collection**. Click **Register**.
+3. Select the **Azure subscription**, **Storage account name**, and **Collection**. Click **Register**.
 
     > :bulb: **Did you know?**
     >

@@ -58,7 +58,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     >
     > **Capacity Units** determine the size of the platform and is a **provisioned** (fixed) set of resources that is needed to keep the Azure Purview platform up and running. 1 Capacity Unit is able to support approximately 1 API call per second. Capacity Units are required regardless of whether you plan to invoke the Azure Purview API endpoints directly (i.e. ISV scenario) or indirectly via Purview Studio (GUI).
     > 
-    > **v-Core Hours** on the other hand is the unit used to measure **serverless** compute that is needed to run a scan. You only pay per vCore-Hour of scanning that you consume (rounded up to the nearest minute).
+    > **vCore Hours** on the other hand is the unit used to measure **serverless** compute that is needed to run a scan. You only pay per vCore Hour of scanning that you consume (rounded up to the nearest minute).
     >
     > For more information, check out the [Azure Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/azure-purview/) page.
 
@@ -96,7 +96,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
     > :bulb: **Did you know?**
     >
-    > Azure Purview has a set of pre-defined Data Plane roles that can be used to control who can access what.
+    > Azure Purview has a set of predefined Data Plane roles that can be used to control who can access what.
     >
 
     | Role  | Catalog | Sources/Scans | Description | 
@@ -143,7 +143,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     B ) C1  
     C ) D0
 
-4. Which pre-defined Azure Purview role provides access to manage data sources?
+4. Which predefined Azure Purview role provides access to manage data sources?
 
     A ) Purview Data Reader  
     B ) Purview Data Curator  

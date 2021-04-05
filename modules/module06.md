@@ -199,4 +199,4 @@ On the left are the two sets of files with common schema that are in the source 
 
 ## :tada: Summary
 
-This module provided an overview of how to intergrate Azure Purview with Azure Data Factory and how relationships between assets and ETL activities can be automatically created at run time, allowing us to visually represent data lineage and trace upstream and downstream dependencies.
+This module provided an overview of how to integrate Azure Purview with Azure Data Factory and how relationships between assets and ETL activities can be automatically created at run time, allowing us to visually represent data lineage and trace upstream and downstream dependencies.

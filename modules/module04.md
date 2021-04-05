@@ -105,7 +105,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     ![](../images/module04/04.10-term-create2.png)
 
-10. From the **Glossary** screen, change the view to **Hierarchical view** to see the hierarchal glossary.
+10. From the **Glossary** screen, change the view to **Hierarchical view** to see the hierarchical glossary.
 
     ![](../images/module04/04.11-glossary-table.png)
 
@@ -152,7 +152,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 ## 5. Assign a Term to an Asset
 
-1. Perform a wildcard search by typing asterik (**\***) into the search bar and hitting the Enter key to submit the query. Click on an asset title (e.g. `QueriesByState`) to view the details.
+1. Perform a wildcard search by typing asterisk (**\***) into the search bar and hitting the Enter key to submit the query. Click on an asset title (e.g. `QueriesByState`) to view the details.
 
     ![Wildcard Search](../images/module04/04.19-search-wildcard.png)
 

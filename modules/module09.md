@@ -29,7 +29,7 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 ## 1. Azure Data Lake Storage Gen2 Account Access
 
 * This particular unit builds upon  previous modules (e.g. pre-provisioned Azure Purview account with an Azure Data Lake Storage Gen2 account registered and scanned, see prerequisites for more details).
-* While this exercise will focus on how to integrate Azure Purview with Azure Synapse Analytics, if you would like to test the ability to connect to external sources within Synapse Studio, you will need to ensure the account being used to perform ad-hoc queries has sufficient privleges (e.g. Storage Blob Data Reader).
+* While this exercise will focus on how to integrate Azure Purview with Azure Synapse Analytics, if you would like to test the ability to connect to external sources within Synapse Studio, you will need to ensure the account being used to perform ad-hoc queries has sufficient privileges (e.g. Storage Blob Data Reader).
 
 1. Navigate to the **Access Control (IAM)** screen within the storage account provisioned in [module 02](../modules/module02.md) and click **Add role assignments**.
 

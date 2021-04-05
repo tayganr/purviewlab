@@ -28,7 +28,7 @@ Azure Purview administrators can use Azure Monitor to track the operational stat
 
 Metrics can be accessed from the Azure Portal for an Azure Purview account instance. Access to the metrics can be granted via a role assignment.
 * The person who created the Purview account automatically gets permissions to view metrics.
-* Other individuals can be provded access by adding them to the **Monitoring Reader** role.
+* Other individuals can be provided access by adding them to the **Monitoring Reader** role.
 
 1. Sign in to the [Azure portal](https://portal.azure.com) and navigate to your **Azure Purview** > **Access Control** > **Role assignments**.
 

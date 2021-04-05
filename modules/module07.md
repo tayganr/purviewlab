@@ -12,7 +12,7 @@ Note: Insights can take several hours post the completion of a scan to reflect n
 
 ## :loudspeaker: Introduction
 
-Insights provides customers, a single pane of glass view into their catalog and further aims to provide specific insights to the data source administrators, business users, data stewards, data officer and, security administrators. Azure Purview currently has the following reports available:
+Insights provides customers, a single pane of glass view into their catalog and further aims to provide specific insights to the data source administrators, business users, data stewards, data officer, and security administrators. Azure Purview currently has the following reports available:
 
 * Assets
 * Scans
@@ -50,7 +50,8 @@ Insights provides customers, a single pane of glass view into their catalog and 
     ![Assets KPI](../images/module07/07.02-assets-kpi.png)
 
 3. Further down the page you will find additional **data visualisations**, typically these tiles will allow interactive filtering and the ability to drill-down into the underlying detail by clicking **View more**. The Assets page includes the following **graphs**:
-    * Number of Assets by Source Type
+
+    * Asset Count per Source Type
 
     ![Assets Graph 01](../images/module07/07.03-assets-graph01.png)
 
@@ -58,9 +59,13 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
     ![Assets Graph 02](../images/module07/07.04-assets-graph02.png)
 
-    * Number of Files Not Associated with a Resource Set
+    * Files Not Associated with a Resource Set
 
     ![Assets Graph 03](../images/module07/07.05-assets-graph03.png)
+
+    > :bulb: **Did you know?**
+    >
+    > Using the quick filters on the **Asset Count per Source Type** graph and drilling into the details by clicking **View more**, is a quick and easy way of identifying which sources contain certain types of data.
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
@@ -82,6 +87,10 @@ Insights provides customers, a single pane of glass view into their catalog and 
     * Number of Scans by Date and Status
 
     ![Scan Graph 01](../images/module07/07.08-scans-graph01.png)
+
+    > :bulb: **Did you know?**
+    >
+    > Clicking **View more** on the **Scan Status** graph will show scans that have occurred over the last 30 days with aggregated counts by status (Success, Failed, Canceled). Drilling further by clicking on a scan name will reveal the scan run history with quick action buttons to edit, delete, or run.
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
@@ -111,6 +120,10 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
     ![Glossary Graph 03](../images/module07/07.13-glossary-graph03.png)
 
+    > :bulb: **Did you know?**
+    >
+    > Terms are considered **incomplete** if they are missing a definition, expert, or steward. If a term is missing more than one of these things, it is shown as **Missing multiple**.
+
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
 ## 4. Classification Insights
@@ -129,19 +142,19 @@ Insights provides customers, a single pane of glass view into their catalog and 
     ![Classification KPI](../images/module07/07.15-classification-kpi.png)
 
 3. The Classification page includes the following **graphs**:
-    * Number of Sources with Classified Data by Date
+    * Top Sources with Classified Data by Date
 
     ![Classification Graph 01](../images/module07/07.16-classification-graph01.png)
 
-    * Number of Sources by Classification
+    * Top Classification Categories by Sources
 
     ![Classification Graph 02](../images/module07/07.17-classification-graph02.png)
 
-    * Number of Files by Classification
+    * Top Classifications for Files
 
     ![Classification Graph 03](../images/module07/07.18-classification-graph03.png)
 
-    * Number of Tables by Classification
+    * Top Classifications for Tables
 
     ![Classification Graph 04](../images/module07/07.19-classification-graph04.png)
 

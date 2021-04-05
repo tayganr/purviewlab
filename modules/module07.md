@@ -51,15 +51,15 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 3. Further down the page you will find additional **data visualisations**, typically these tiles will allow interactive filtering and the ability to drill-down into the underlying detail by clicking **View more**. The Assets page includes the following **graphs**:
 
-    * Asset Count per Source Type
+    **Asset Count per Source Type**
 
     ![Assets Graph 01](../images/module07/07.03-assets-graph01.png)
 
-    * Size Trend (GB) of File Type within Source Types
+    **Size Trend (GB) of File Type within Source Types**
 
     ![Assets Graph 02](../images/module07/07.04-assets-graph02.png)
 
-    * Files Not Associated with a Resource Set
+    **Files Not Associated with a Resource Set**
 
     ![Assets Graph 03](../images/module07/07.05-assets-graph03.png)
 
@@ -84,7 +84,8 @@ Insights provides customers, a single pane of glass view into their catalog and 
     ![Scan KPI](../images/module07/07.07-scans-kpi.png)
 
 3. The Scans page includes the following **graphs**:
-    * Number of Scans by Date and Status
+    
+    **Number of Scans by Date and Status**
 
     ![Scan Graph 01](../images/module07/07.08-scans-graph01.png)
 
@@ -108,15 +109,16 @@ Insights provides customers, a single pane of glass view into their catalog and 
     ![Glossary KPI](../images/module07/07.10-glossary-kpi.png)
 
 3. The Glossary page includes the following **graphs**:
-    * Terms by Asset Count
+     
+    **Terms by Asset Count**
 
     ![Glossary Graph 01](../images/module07/07.11-glossary-graph01.png)
 
-    * Terms by Status (with and without assets)
+    **Terms by Status (with and without assets)**
 
     ![Glossary Graph 02](../images/module07/07.12-glossary-graph02.png)
 
-    * Number of Incomplete Terms
+    **Number of Incomplete Terms**
 
     ![Glossary Graph 03](../images/module07/07.13-glossary-graph03.png)
 
@@ -142,19 +144,20 @@ Insights provides customers, a single pane of glass view into their catalog and 
     ![Classification KPI](../images/module07/07.15-classification-kpi.png)
 
 3. The Classification page includes the following **graphs**:
-    * Top Sources with Classified Data by Date
+     
+    **Top Sources with Classified Data by Date**
 
     ![Classification Graph 01](../images/module07/07.16-classification-graph01.png)
 
-    * Top Classification Categories by Sources
+    **Top Classification Categories by Sources**
 
     ![Classification Graph 02](../images/module07/07.17-classification-graph02.png)
 
-    * Top Classifications for Files
+    **Top Classifications for Files**
 
     ![Classification Graph 03](../images/module07/07.18-classification-graph03.png)
 
-    * Top Classifications for Tables
+    **Top Classifications for Tables**
 
     ![Classification Graph 04](../images/module07/07.19-classification-graph04.png)
 
@@ -176,19 +179,20 @@ Insights provides customers, a single pane of glass view into their catalog and 
     ![Sensitivity Labels KPI](../images/module07/07.21-labels-kpi.png)
 
 3. The Sensitivity Labels page includes the following **graphs**:
-    * Number of Sources with Labeled Data by Date
+    
+    **Number of Sources with Labeled Data by Date**
 
     ![Sensitivity Labels Graph 01](../images/module07/07.22-labels-graph01.png)
 
-    * Number of Sources by Label
+    **Number of Sources by Label**
 
     ![Sensitivity Labels Graph 02](../images/module07/07.23-labels-graph02.png)
 
-    * Number of Files by Label
+    **Number of Files by Label**
 
     ![Sensitivity Labels Graph 03](../images/module07/07.24-labels-graph03.png)
 
-    * Number of Tables by Label
+    **Number of Tables by Label**
 
     ![Sensitivity Labels Graph 04](../images/module07/07.25-labels-graph04.png)
 
@@ -206,7 +210,8 @@ Insights provides customers, a single pane of glass view into their catalog and 
     ![File Extensions KPI](../images/module07/07.27-fileext-kpi.png)
 
 3. The File Extensions page includes the following **graphs**:
-    * Number of Files by File Extension
+    
+    **Number of Files by File Extension**
 
     ![File Extensions Graph 01](../images/module07/07.28-fileext-graph01.png)
    

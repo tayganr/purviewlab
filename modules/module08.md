@@ -4,7 +4,7 @@
 
 ## :thinking: Prerequisites
 
-* An Azure account with an active subscription.
+* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 
 ## :loudspeaker: Introduction

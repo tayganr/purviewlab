@@ -9,7 +9,7 @@
 
 ## :hammer: Tools
 
-* [Postman](https://www.postman.com/product/rest-client/) (REST API Client)
+* [Postman](https://www.postman.com/product/rest-client/) (Download and Install)
 
 ## :loudspeaker: Introduction
 
@@ -93,7 +93,7 @@ In addition to Purview Studio, the Azure Purview platform can be accessed via an
     | Property | Value |
     | --- | --- |
     | HTTP Method | `POST` |
-    | URL | `https://login.microsoftonline.com/YOUR_TENANT_ID/oauth2/token` |
+    | URL | `https://login.microsoftonline.com/`**YOUR_TENANT_ID**`/oauth2/token` |
     | Body Type | `x-wwww-form-urlencoded` |
 
     Navigate to **Body**, select `x-wwww-form-urlencoded` and provide the following key value pairs. Once HTTP request is ready, click **Send**. If successful, the response will contain an **access token**, copy this value for later use.

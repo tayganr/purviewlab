@@ -27,178 +27,180 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## Table of Contents
 
-1. [Azure Purview Access Control (Purview Data Source Administrator)](#1-azure-purview-access-control-purview-data-source-administrator)
-2. [Create an Azure Data Factory Account](#2-create-an-azure-data-factory-account)
-3. [Create an Azure Data Factory Connection in Azure Purview](#3-create-an-azure-data-factory-connection-in-azure-purview)
-4. [Copy Data using Azure Data Factory](#4-copy-data-using-azure-data-factory)
-5. [View Lineage in Azure Purview](#5-view-lineage-in-azure-purview)
+1. [Create an Azure Data Factory Account](#1-create-an-azure-data-factory-account)
+2. [Create an Azure Data Factory Connection in Azure Purview](#2-create-an-azure-data-factory-connection-in-azure-purview)
+3. [Copy Data using Azure Data Factory](#3-copy-data-using-azure-data-factory)
+4. [View Lineage in Azure Purview](#4-view-lineage-in-azure-purview)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 
-## 1. Azure Purview Access Control (Purview Data Source Administrator)
+## 1. Create an Azure Data Factory Account
 
-Multiple Azure Data Factories can connect to a single Azure Purview Data Catalog to push lineage information. The current limit allows you to connect up ten Data Factory accounts at a time from the Purview management center. 
+1. Sign in to the [Azure portal](https://portal.azure.com) with your Azure account and from the **Home** screen, click **Create a resource**.
 
->:warning: In order to view External connections, you need to be assigned any one of the following Azure Purview roles: 
->* Contributor
->* Owner
->* Reader
->* User Access Administrator
+    ![Create a Resource](../images/module01/01.01-create-resource.png)  
 
+2. Search the Marketplace for "Data Factory" and click **Create**.
+    
+    ![Azure Marketplace](../images/module06/06.01-marketplace-create.png)
 
-To view existing Data Factory accounts connected to your Purview Data Catalog, do the following:
+3. Provide the necessary inputs on the **Basics** tab and then navigate to **Git configuration**.  
 
-1. Select Management Center on the left navigation pane.
-2. Under External connections, select Data Factory connection.
-3. The Data Factory connection list appears.
+    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
 
-![image](https://user-images.githubusercontent.com/27697035/112839336-fc28ef00-9095-11eb-8d49-d0bc63270f03.png)
+    | Parameter  | Example Value |
+    | --- | --- |
+    | Subscription | `BuildEnv` |
+    | Resource group | `resourcegroup-1` |
+    | Region | `East US 2` |
+    | Name | `adf-team01` |
 
-<div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
+    ![Azure Data Factory Basics](../images/module06/06.02-create-basics.png)
 
-## 2. Create an Azure Data Factory Account
+4. Select **Configure Git later** and click **Review + create**.
 
-1. From the Azure Portal, click **Create a Resource**
-2. Click on the Analytics Category or search for Data Factory
-3. Choose **Create** from the Marketplace tile.
+    ![Azure Data Factory Basics](../images/module06/06.03-create-git.png)
 
-![image](https://user-images.githubusercontent.com/27697035/112855239-89743f80-90a6-11eb-8049-b349837d4b30.png)
+5. Once validation has passed, click **Create**.
 
-4. In the Create Data Factory Dialog, assign the appropriate subscription and resource group.
-5. The region will default to the same as the selected Resource Group.
-6. Give the Data Factory a unique name.
+    ![](../images/module06/06.04-create-adf.png)
 
-![image](https://user-images.githubusercontent.com/27697035/112855517-c809fa00-90a6-11eb-818c-ed10f14062a0.png)
+6. Wait until the deployment is complete, then return to Purview Studio.
 
-7. Under the Git Configuration tab, select **Configure Git Later**.
-
-![image](https://user-images.githubusercontent.com/27697035/112856137-639b6a80-90a7-11eb-9317-43de2dfd5b19.png)
-
-8. Click **Review + Create**
-9. When the validation is passed, click **Create** to deploy the new Data Factory.
-
+    ![Deployment Complete](../images/module06/06.05-adf-deployment.png)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 
-## 3. Create an Azure Data Factory Connection in Azure Purview
+## 2. Create an Azure Data Factory Connection in Azure Purview
 
->:warning: In order to add new External connections, you need to be assigned any one of the following Azure Purview roles: 
->* Owner
->* User Access Administrator
->
->You must also have *Owner* or *Contributor* rights to the Data Factory instance you wish to add.
+1. Open Purview Studio, navigate to **Management Center** > **Data Factory** and click **New**.
 
-Follow the steps to add the newly created Data Factory account to your Puview Data Catlog.
-1. Select Management Center on the left navigation pane.
-2. Under External connections, select Data Factory connection.
-3. On the Data Factory connection page, select **New**.
-4. From the New Data Factory Connections dialog, choose the appropriate Azure Subscription and Data Factory.
+    > :warning: If you are unable to view/add Data Factory connections, you may need to assign one of the following roles: 
+    > * Contributor
+    > * Owner
+    > * Reader
+    > * User Access Administrator
 
-![image](https://user-images.githubusercontent.com/27697035/112858305-a3635180-90a9-11eb-8310-5dc7e2b24aa5.png)
+    ![](../images/module06/06.06-purview-management.png)
 
-5. Click **OK**
+2. Select your Azure Data Factory from the drop-down menu and click **OK**.
 
-![image](https://user-images.githubusercontent.com/27697035/112858423-c1c94d00-90a9-11eb-8302-eca921c36825.png)
+    ![](../images/module06/06.07-purview-adf.png)
 
-<div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
+3. Once finished, you should see the Data Factory in a **connected** state.
 
-## 4. Copy Data using Azure Data Factory
-
-1. From the Azure Portal, navigate to your Azure Data Factory Instance.
-2. In the Overview panel, click **Author & Monitor**
-
-![image](https://user-images.githubusercontent.com/27697035/112965566-487d3900-9141-11eb-9883-14e833f39e65.png)
-
-3. In the Azure Data Factory Home panel, click **Copy Data**
-
-![image](https://user-images.githubusercontent.com/27697035/112966013-b6c1fb80-9141-11eb-86a8-d81bd16add1e.png)
-
-4. Give the new copy task a distinctive name or accept the default value.
-
-![image](https://user-images.githubusercontent.com/27697035/112978003-ab290180-914e-11eb-9f54-fcd346c550e6.png)
-
-5. Click **Next** at the bottom of the dialog, then click **Create New Connection** in The *Source Data Store* panel.
-
-![image](https://user-images.githubusercontent.com/27697035/112978311-14a91000-914f-11eb-83b7-9713df457ebd.png)
-
-6. Choose **Azure Data Lake Storage Gen2** from the the *New Linked Service* menu, then click **Continue** at the bottom of the screen.
-
-![image](https://user-images.githubusercontent.com/27697035/112979770-efb59c80-9150-11eb-8045-5fc299408e71.png)
-
-7. Enter a descriptive name for the linked service connection or use the default value.
-8. Choose the appropriate Azure Subscription.
-9. Choose the storage account you created in Module 2.
-10. Click **Test Connection** and look for the *Connection Successful* tick box.
-11. Click **Create**.
-
-![image](https://user-images.githubusercontent.com/27697035/113295743-7c4a9100-92f0-11eb-8745-9ef698962f59.png)
-
-12. Make sure the new linked service you've created is highlighted in blue. It should be the only one, unless you've created other linked services. Click **Next**.
-13. From the Dataset panel, click the **Browse** button to the right of the File or Folder field and navigate to the 2020 subfolder in your data lake store.
-
-![image](https://user-images.githubusercontent.com/27697035/113297402-781f7300-92f2-11eb-9b34-cc483fc87efb.png)
-
-14. Click **Choose**, then **Next**.
-
-![image](https://user-images.githubusercontent.com/27697035/113297634-c2085900-92f2-11eb-9b9e-efe92360a9ca.png)
-
-15. In the Dataset panel, make sure the data preview looks sensible, then click **Next*.
-
-![image](https://user-images.githubusercontent.com/27697035/113297955-2fb48500-92f3-11eb-991f-bfad2ee5b27d.png)
-
-16. In the Destination panel, choose the same linked service you used for the Source definition and click **Next**.
-
-![image](https://user-images.githubusercontent.com/27697035/113298228-81f5a600-92f3-11eb-9843-8dc9c07104cd.png)
-
-17. Browse to the _raw_ folder level, then click **Choose**.
-
-![image](https://user-images.githubusercontent.com/27697035/113313091-d5bbbb80-9302-11eb-8fd3-6834c38dea32.png)
-
-18. In the next screen, add the File name "2020_Merged.parquet", and choose _Merge files_ from the **Copy behaviour** drop-down menu. Finally, click **Next**.
-
-![image](https://user-images.githubusercontent.com/27697035/113313444-292e0980-9303-11eb-817c-2b3b87e243f9.png)
-
-19. In the File format settings panel, choose _Parquet format_ from the **File format** drop-down menu. Click **Next**.
-
-![image](https://user-images.githubusercontent.com/27697035/113309949-98a1fa00-92ff-11eb-8126-f18debde7441.png)
-
-20. Use all the default settings in the next screen and click **Next**.
-21. Review the pipeline summary in the last screen and click **Next**.
-22. The pipeline will validate, deploy, and then begin to run. When you see the *Deployment complete* message, click **Finish**.
-
-![image](https://user-images.githubusercontent.com/27697035/113310495-35649780-9300-11eb-8e42-a01ad4aae7e8.png)
+    ![](../images/module06/06.08-adf-connected.png)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 
-## 5. View Lineage in Azure Purview
+## 3. Copy Data using Azure Data Factory
 
-1. Open Purview Studio, if it's not open already.
-2. Navigate to the _Home_ screen by clicking on the house icon on the left hand tool bar.
-3. Click **Browse assets**.
+1. Within the Azure Portal, navigate to your Azure Data Factory resource and click **Author & Monitor**.
 
-![image](https://user-images.githubusercontent.com/27697035/113314511-50d1a180-9304-11eb-9cbd-dc7ef0e564a7.png)
+    ![](../images/module06/06.09-adf-author.png)
 
-4. Select the **Azure Data Factory** tile.
+2. Click **Copy data**.
+    ![](../images/module06/06.10-adf-copywizard.png)
 
-![image](https://user-images.githubusercontent.com/27697035/113314718-81194000-9304-11eb-82ac-8c4098df50d2.png)
+3. Rename the task the **copyPipeline** and click **Next**.
 
-5. Click on the link for the Azure Data Factory instance containing the pipeline you just created in the previous section. 
+    ![](../images/module06/06.11-adf-pipelinename.png)
 
-![image](https://user-images.githubusercontent.com/27697035/113315035-c473ae80-9304-11eb-86e1-38e4d29cab60.png)
- 
-6. Select the copy pipeline you just ran. Then click the subscription name link.
+4. Click **Create new connection**.
+    
+    ![](../images/module06/06.12-adf-sourceconn.png)
 
-![image](https://user-images.githubusercontent.com/27697035/113315466-39df7f00-9305-11eb-8faf-541b4dbad16c.png)
+5. Filter the list of sources by clicking **Azure**, select **Azure Data Lake Storage Gen2** and click **Continue**.
+    
+    ![](../images/module06/06.13-adf-adlsgen2.png)
 
-7. From the _Overview_ screen, click on **Lineage**.
+6. Select your **Azure subscription** and **Storage account**, click **Test connection** and then click **Create**.
 
-![image](https://user-images.githubusercontent.com/27697035/113315732-7f9c4780-9305-11eb-9235-a0a43b691366.png)
+    ![](../images/module06/06.14-adf-linkedservice.png)
 
-8. You can now see the lineage created by the copy pipeline. 
+7. Click **Next**.
 
-![image](https://user-images.githubusercontent.com/27697035/113315943-bd996b80-9305-11eb-9c4e-9c9ba97ee2d8.png)
+    ![](../images/module06/06.15-adf-sourceselect.png)
 
-On the left are the two sets of files with common schema that are in the source folder. The copy activity sits in the center, and the ouput file sits on the right. 
+8. Click **Browse**.
+
+    ![](../images/module06/06.16-adf-browse.png)
+
+9. Navigate to `raw/BingCoronavirusQuerySet/2020/` and click **Choose**.
+    
+    ![](../images/module06/06.17-adf-choose.png)
+
+10. Confirm your folder path selection and click **Next**.
+
+    ![](../images/module06/06.18-adf-input.png)
+
+11. Preview the sample data and click **Next**.
+    
+    ![](../images/module06/06.19-adf-preview.png)
+
+12. Select the same **AzureDataLakeStorage1** connection for the destination and click **Next**.
+
+    ![](../images/module06/06.20-adf-destination.png)
+
+13. Click **Browse**.
+
+    ![](../images/module06/06.21-adf-browseoutput.png)
+
+14. Navigate to `raw/` and click **Choose**.
+
+    ![](../images/module06/06.22-adf-chooseoutput.png)
+
+15. Confirm your folder path selection, set the **file name** to `2020_merged.parquet`, set the **copy behavior** to **Merge files**, and click **Next**.
+
+    ![](../images/module06/06.23-adf-merge.png)
+
+16. Set the **file format** to **Parquet format** and click **Next**.
+
+    ![](../images/module06/06.24-adf-format.png)
+
+17. Leave the default settings and click **Next**.
+
+    ![](../images/module06/06.25-adf-settings.png)
+
+18. Review the summary and proceed by clicking **Next**.
+
+    ![](../images/module06/06.26-adf-summary.png)
+
+19. Once the deployment is complete, click **Finish**.
+
+    ![](../images/module06/06.27-adf-finish.png)
+
+20. Navigate to the **Monitoring** screen to confirm the pipeline has run **successfully**.
+
+    ![](../images/module06/06.28-adf-monitor.png)
+
+<div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
+
+## 4. View Lineage in Azure Purview
+
+1. Open Purview Studio, from the Home screen click **Browse**.
+
+    ![](../images/module06/06.29-purview-browse.png)
+
+2. Select **Azure Data Factory**.
+
+    ![](../images/module06/06.30-browse-adf.png)
+
+3. Select the **Azure Data Factory account instance**.
+
+    ![](../images/module06/06.31-browse-instance.png)
+
+4. Select the **copyPipeline** and click to open the **Copy Activity**.
+    
+    ![](../images/module06/06.32-browse-pipeline.png)
+
+5. Navigate to the **Lineage** tab.
+
+    ![](../images/module06/06.33-browse-asset.png)
+
+6. You can see the lineage information has been automatically pushed from Azure Data Factory to Purview. On the left are the two sets of files with common schema that are in the source folder. The copy activity sits in the center, and the ouput file sits on the right.
+
+    ![](../images/module06/06.34-browse-lineage.png)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

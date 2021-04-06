@@ -204,7 +204,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
     ![](../images/module06/06.33-browse-asset.png)
 
-6. You can see the lineage information has been automatically pushed from Azure Data Factory to Purview. On the left are the two sets of files with common schema that are in the source folder. The copy activity sits in the center, and the ouput file sits on the right.
+6. You can see the lineage information has been automatically pushed from Azure Data Factory to Purview. On the left are the two sets of files that share a common schema in the source folder, the copy activity sits in the center, and the ouput file sits on the right.
 
     ![](../images/module06/06.34-browse-lineage.png)
 

@@ -14,9 +14,9 @@ One of the platform features of Azure Purview is the ability to show the lineage
 
 Lineage in Purview includes datasets and processes.
 
-* **Dataset**: A dataset (structured or unstructured) provided as an input to a process. For example, a SQL Table, Azure blob, and files (such as .csv and .xml), are all considered datasets. In the lineage section of Purview, datasets are represented by rectangular boxes.
+* **Dataset**: A dataset (structured or unstructured) provided as an input to a process. For example, a SQL Table, Azure blob, and files (such as .csv and .xml), are all considered datasets. In the lineage section of Purview, datasets are represented by **rectangular boxes**.
 
-* **Process**: An activity or transformation performed on a dataset is called a process. For example, ADF Copy activity, Data Share snapshot and so on. In the lineage section of Purview, processes are represented by round-edged boxes.
+* **Process**: An activity or transformation performed on a dataset is called a process. For example, ADF Copy activity, Data Share snapshot and so on. In the lineage section of Purview, processes are represented by **round-edged boxes**.
 
 This module steps through what is required for connecting an Azure Data Factory account with an Azure Purview account to track data lineage.
 
@@ -204,7 +204,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
     ![](../images/module06/06.33-browse-asset.png)
 
-6. You can see the lineage information has been automatically pushed from Azure Data Factory to Purview. On the left are the two sets of files that share a common schema in the source folder, the copy activity sits in the center, and the ouput file sits on the right.
+6. You can see the lineage information has been automatically pushed from Azure Data Factory to Purview. On the left are the two sets of files that share a common schema in the source folder, the copy activity sits in the center, and the output file sits on the right.
 
     ![](../images/module06/06.34-browse-lineage.png)
 

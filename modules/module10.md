@@ -148,9 +148,18 @@ To invoke the REST API, we must first register an application (i.e. service prin
     | --- | --- |
     | Authorization | `Bearer YOUR_ACCESS_TOKEN` |
 
-    > Note: You generated an access_token in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
+    > Note: You generated an `access_token` in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
 
     ![](../images/module10/10.10-postman-get.png)
+
+4. If successful, Postman should return a JSON document in the body of the response. Click on the **magnifying glass** and search for the following phrase `"name": "azure_sql_table"` to jump down to the entity definition for an Azure SQL Table.
+
+    > :bulb: **Did you know?**
+    >
+    > While Azure Purview provides a number of system built type definitions for a variety of object types, Customers can use the API to create their own custom type definitions.
+
+    ![](../images/module10/10.12-typedef-search.png)
+
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 

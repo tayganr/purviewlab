@@ -116,6 +116,8 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 1. Download a copy of **[import-terms-sample.csv](https://github.com/tayganr/purviewlab/raw/main/assets/import-terms-sample.csv)** to your local machine.
 
+    ![Import terms](../images/module04/04.29-sample-saveas.png)
+
 2. From the **Glossary** screen, click **Import terms**.
 
     ![Import terms](../images/module04/04.12-glossary-import.png)

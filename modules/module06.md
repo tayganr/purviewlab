@@ -18,7 +18,12 @@ Lineage in Purview includes datasets and processes.
 
 * **Process**: An activity or transformation performed on a dataset is called a process. For example, ADF Copy activity, Data Share snapshot and so on. In the lineage section of Purview, processes are represented by round-edged boxes.
 
-This document explains the steps required for connecting an Azure Data Factory account with an Azure Purview account to track data lineage.
+This module steps through what is required for connecting an Azure Data Factory account with an Azure Purview account to track data lineage.
+
+## :dart: Objectives
+
+* Connect an Azure Data Factory account with an Azure Purview account.
+* Trigger a Data Factory pipeline to run so that the lineage metadata can be pushed into Purview.
 
 ## Table of Contents
 

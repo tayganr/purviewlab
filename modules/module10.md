@@ -30,11 +30,11 @@ In addition to Purview Studio, the Azure Purview platform can be accessed via an
 
 ## 1. Register an Application
 
-To invoke the REST API, we must first register an application (i.e. service principal) that will act as the identity that the Azure Purview platform reognizes and is configured to trust.
+To invoke the REST API, we must first register an application (i.e. service principal) that will act as the identity that the Azure Purview platform reognizes and is configured to trust.    
 
-    > :bulb: **Did you know?**
-    >
-    > An Azure **service principal** is an identity created for use with applications, hosted services, and automated tools to access Azure resources.
+> :bulb: **Did you know?**
+>
+> An Azure **service principal** is an identity created for use with applications, hosted services, and automated tools to access Azure resources.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/), navigate to **Azure Active Directory** > **App registrations**, and click **New registration**.
 

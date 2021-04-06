@@ -97,7 +97,6 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     > :bulb: **Did you know?**
     >
     > Azure Purview has a set of predefined Data Plane roles that can be used to control who can access what.
-    >
 
     | Role  | Catalog | Sources/Scans | Description | 
     | --- | --- | --- | --- |

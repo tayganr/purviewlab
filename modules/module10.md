@@ -89,11 +89,15 @@ In addition to Purview Studio, the Azure Purview platform can be accessed via an
 ## 4. Use Postman to Call Azure Purview REST API
 
 1. Open [Postman](https://www.postman.com/product/rest-client/), create a new **HTTP request** as per the details below.
+
+    > :bulb: **Did you know?**
+    >
+    > The OAuth2 service endpoint is used to gain access to protected resources such as Azure Purview. The HTTP request enables us to acquire an `access_token` in a way that is language agnostic, this will subsequently be used to query the Azure Purview API.
     
     | Property | Value |
     | --- | --- |
     | HTTP Method | `POST` |
-    | URL | `https://login.microsoftonline.com/`**YOUR_TENANT_ID**`/oauth2/token` |
+    | URL | `https://login.microsoftonline.com/YOUR_TENANT_ID/oauth2/token` |
     | Body Type | `x-wwww-form-urlencoded` |
 
     Navigate to **Body**, select `x-wwww-form-urlencoded` and provide the following key value pairs. Once HTTP request is ready, click **Send**. If successful, the response will contain an **access token**, copy this value for later use.

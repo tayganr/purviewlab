@@ -163,6 +163,26 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
+## :mortar_board: Knowledge Check
+
+1. The Azure Purview API is largely based on which open source project?
+
+    A ) Apache Maven  
+    B ) Apache Spark  
+    C ) Apache Atlas
+
+2. The Azure Purview API only works with Python.
+
+    A ) True  
+    B ) False  
+
+3. The Azure Purview API can be used to create custom lineage between data processes and data assets.
+
+    A ) True  
+    B ) False  
+
+<div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+
 ## :tada: Summary
 
 In this module, you learned how to get started with the Azure Purview REST API. To learn more about the Azure Purview REST API, check out the [Swagger documentation](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).

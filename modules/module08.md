@@ -46,6 +46,10 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
     | Assign access to | `User, group, or service principal` |
     | Select | `<account-name>` |
 
+    > :bulb: **Did you know?**
+    >
+    > **Monitoring Reader** role can view all monitoring data but cannot modify any resource or edit any settings related to monitoring resources. This role is appropriate for users in an organization such as Azure Purview administrators.
+
     ![Assign Role](../images/module08/08.03-access-assign.png)
 
 4. Navigate to the **Role assignments** tab and confirm the identity has been assigned the **Monitoring Reader** role. Tip: Filter **Scope** to `This resource` to limit the results.
@@ -118,9 +122,17 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
 5. Navigate to your **Azure Purview** account instance, click **Diagnostic settings** and select **Add diagnostic setting**.
 
+    > :bulb: **Did you know?**
+    >
+    > **Diagnostic settings** can be used to send platform logs and metrics to one or more destinations (Log Analytics Workspace, Storage Account, an Event Hub).
+
     ![Add Diagnostic Setting](../images/module08/08.14-diagnostic-add.png)
 
 6. Provide the diagnostic setting a name (e.g. `Audit`), select **ScanStatusLogEvent**, select **Archive to a storage account**, select your storage account (e.g. `blob2486`) and click **Save**.
+
+    > :bulb: **Did you know?**
+    >
+    > **ScanStatusLogEvent** tracks the scan life cycle. A scan operation follows progress through a sequence of states, from Queued, Running and finally a terminal state of Succeeded | Failed | Canceled. An event is logged for each state transition.
 
     ![Save Diagnostic Setting](../images/module08/08.15-diagnostic-save.png)
 
@@ -140,7 +152,7 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
     ![Scan Progress](../images/module08/08.19-scan-progress.png)
 
-11. Once the scan is complete, open your storage account within the Azure Portal and navigate to **Storage Explorer**. If the audit log has been captured, you should be able to navigate down the folder path until you find a JSON document that contains details about the scan.
+11. Once the scan is complete, open your storage account within the Azure Portal and navigate to **Storage Explorer**. If the audit log has been captured, you should be able to navigate down the folder path until you find a JSON document that contains details about the scan. Note: You can also use [Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) as an alternative to the Azure Portal.
 
     ![Storage Explorer](../images/module08/08.20-storage-explorer.png)
 
@@ -149,6 +161,26 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
     ![Event JSON](../images/module08/08.21-event-json.png)
 
 <div align="right"><a href="#module-08---monitor">↥ back to top</a></div>
+
+## :mortar_board: Knowledge Check
+
+1. Which of the following Azure Purview pricing meters is fluid, with consumption varying based on usage?
+
+    A ) Capacity Units  
+    B ) vCore Hours  
+    C ) Neither
+
+2. Which of the following Azure Purview pricing meters is fixed, with consumption based on quantity provisioned?
+
+    A ) Capacity Units  
+    B ) vCore Hours  
+    C ) Neither
+
+3. Which Azure Purview module provides the base functionality (i.e. source registration, automated scanning and classification, data discovery)?
+
+    A ) C0  
+    B ) C1  
+    C ) D0
 
 ## :tada: Summary
 

@@ -48,7 +48,7 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
     ![Assign Role](../images/module08/08.03-access-assign.png)
 
-4. Navigate to the **Role assignments** tab and confirm the identity has been assigned the **Monitoring Reader** role.
+4. Navigate to the **Role assignments** tab and confirm the identity has been assigned the **Monitoring Reader** role. Tip: Filter **Scope** to `This resource` to limit the results.
 
     ![Verify Access](../images/module08/08.04-access-verify.png)
 
@@ -93,11 +93,14 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
     ![Create Storage Account](../images/module08/08.10-storage-create.png)
 
 2. Provide the necessary inputs on the **Basics** tab and click **Review + create**.
+
+    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
+
     | Parameter  | Example Value |
     | --- | --- |
     | Subscription | `Azure Internal Access` |
     | Resource group | `purview-workshop` |
-    | Purview account name | `blob2486` |
+    | Storage account name | `blob2486` |
     | Location | `(South America) Brazil South` |
     | Performance | `Standard` |
     | Account kind | `StorageV2 (general purpose v2)` |

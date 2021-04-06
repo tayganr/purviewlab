@@ -186,19 +186,19 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 3. The Sensitivity Labels page includes the following **graphs**:
     
-    **Number of Sources with Labeled Data by Date**
+    **Top Sources with Labeled Data by Date**
 
     ![Sensitivity Labels Graph 01](../images/module07/07.22-labels-graph01.png)
 
-    **Number of Sources by Label**
+    **Top Labels Applied Across Sources**
 
     ![Sensitivity Labels Graph 02](../images/module07/07.23-labels-graph02.png)
 
-    **Number of Files by Label**
+    **Top Labels Applied on Files**
 
     ![Sensitivity Labels Graph 03](../images/module07/07.24-labels-graph03.png)
 
-    **Number of Tables by Label**
+    **Top Labels Applied on Tables**
 
     ![Sensitivity Labels Graph 04](../images/module07/07.25-labels-graph04.png)
 
@@ -217,10 +217,31 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 3. The File Extensions page includes the following **graphs**:
     
-    **Number of Files by File Extension**
+    **Top File Extensions**
 
     ![File Extensions Graph 01](../images/module07/07.28-fileext-graph01.png)
    
+<div align="right"><a href="#module-07---insights">↥ back to top</a></div>
+
+## :mortar_board: Knowledge Check
+
+1. Which section would show the **number of discovered assets**?
+
+    A ) Assets  
+    B ) Scans  
+    C ) File extensions
+
+2. A glossary term that does not have a steward (i.e. an assigned contact), is shown as an **incomplete term**.
+
+    A ) True  
+    B ) False
+
+3. An asset has been tagged as `highly confidential`. Which type of tag is this?
+
+    A ) Classification  
+    B ) Category  
+    C ) Sensitivity Label
+
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
 ## :tada: Summary

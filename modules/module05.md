@@ -225,7 +225,6 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 
 <div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 
-
 ## :mortar_board: Knowledge Check
 
 1. Which of the following is a valid classification rule type?
@@ -244,6 +243,7 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
     A ) True  
     B ) False  
 
+<div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 
 ## :tada: Summary
 

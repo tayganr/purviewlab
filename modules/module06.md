@@ -85,11 +85,19 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 2. Select your Azure Data Factory from the drop-down menu and click **OK**.
 
+    > :bulb: **Did you know?**
+    >
+    > Azure Purview can connect to **multiple** Azure Data Factories but each Azure Data Factory account can only connect to **one** Azure Purview account.
+
     ![](../images/module06/06.07-purview-adf.png)
 
 3. Once finished, you should see the Data Factory in a **connected** state.
 
     ![](../images/module06/06.08-adf-connected.png)
+
+    > :bulb: **Did you know?**
+    >
+    > When a user registers an Azure Data Factory, behind the scenes the Data Factory managed identity is added to the Purview RBAC role: `Purview Data Curator`. From this point, pipeline executions will push lineage metadata back into Purview where supported, see [supported Azure Data Factory activities](https://docs.microsoft.com/en-us/azure/purview/how-to-link-azure-data-factory#supported-azure-data-factory-activities).
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

@@ -76,6 +76,11 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 3. **Copy** the client secret value for later use.
 
+
+    > :bulb: **Did you know?**
+    >
+    > A **client secret** is a secret string that the application uses to prove its identity when requesting a token, this can also can be referred to as an application password.
+
     ![](../images/module10/10.06-secret-copy.png)
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>

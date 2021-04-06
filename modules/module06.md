@@ -210,6 +210,25 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 
+## :mortar_board: Knowledge Check
+
+1. An Azure Purview account can connect to multiple Azure Data Factories?
+
+    A ) True  
+    B ) False
+
+2. An Azure Data Factory can connect to multiple Azure Purview accounts?
+
+    A ) True  
+    B ) False  
+
+3. ETL processes are rendered on the lineage graph with what type of edges?
+
+    A ) Squared edges  
+    B ) Rounded edges  
+
+<div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
+
 ## :tada: Summary
 
 This module provided an overview of how to integrate Azure Purview with Azure Data Factory and how relationships between assets and ETL activities can be automatically created at run time, allowing us to visually represent data lineage and trace upstream and downstream dependencies.

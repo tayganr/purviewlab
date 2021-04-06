@@ -31,7 +31,7 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 * This particular unit builds upon  previous modules (e.g. pre-provisioned Azure Purview account with an Azure Data Lake Storage Gen2 account registered and scanned, see prerequisites for more details).
 * While this exercise will focus on how to integrate Azure Purview with Azure Synapse Analytics, if you would like to test the ability to connect to external sources within Synapse Studio, you will need to ensure the account being used to perform ad-hoc queries has sufficient privileges (e.g. Storage Blob Data Reader).
 
-1. Navigate to the **Access Control (IAM)** screen within the storage account provisioned in [module 02](../modules/module02.md) and click **Add role assignments**.
+1. Navigate to the **Access Control (IAM)** screen within the Azure Data Lake Storage Gen2 account provisioned in [module 02](../modules/module02.md) and click **Add role assignments**.
 
     ![Storage Access Control](../images/module09/09.01-storage-access.png)
 
@@ -54,6 +54,8 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
     ![Azure Marketplace Synapse](../images/module09/09.03-marketplace-synapse.png)
 
 2. Provide the necessary inputs on the **Basics** tab and click **Next: Security >**.
+
+    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
 
     | Parameter  | Example Value |
     | --- | --- |
@@ -117,6 +119,25 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 4. To execute the query, click **Run**. Note: The user executing the query must have the appropriate level of access (e.g. Storage Blob Data Reader), see step 1 for more details..
 
     ![Run Query](../images/module09/09.15-synapse-run.png)
+
+<div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
+
+## :mortar_board: Knowledge Check
+
+1. Connecting a Synapse workspace to Azure Purview enables you to discover data assets that live **outside** of the Azure Synapse Analytics workspace?
+
+    A ) True  
+    B ) False  
+
+2. A single Synapse Analytics workspace can connect to **multiple** Azure Purview accounts?
+
+    A ) True  
+    B ) False  
+
+3. Once Synapse Analytics is connected to an Azure Purview account, users can quickly generate a new linked service or integration dataset via the action buttons (for supported file types)?
+
+    A ) True    
+    B ) False  
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 

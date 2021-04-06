@@ -164,23 +164,25 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
 ## :mortar_board: Knowledge Check
 
-1. Which of the following Azure Purview pricing meters is fluid, with consumption varying based on usage?
+1. Which built-in role is needed to provide users access to **view monitoring data**?
 
-    A ) Capacity Units  
-    B ) vCore Hours  
-    C ) Neither
+    A ) Purview Data Reader  
+    B ) Metrics Reader  
+    C ) Monitoring Reader
 
-2. Which of the following Azure Purview pricing meters is fixed, with consumption based on quantity provisioned?
+2. Which of the following is **not** available as an Azure Purview metric?
 
-    A ) Capacity Units  
-    B ) vCore Hours  
-    C ) Neither
+    A ) ScanCompleted  
+    B ) ScanDuration  
+    C ) ScanTimeTaken
 
-3. Which Azure Purview module provides the base functionality (i.e. source registration, automated scanning and classification, data discovery)?
+3. The **ScanStatusLogEvent** schema contains an attribute that indicates the total run time. What is the name of this attribute?
 
-    A ) C0  
-    B ) C1  
-    C ) D0
+    A ) scanTotalRunTime  
+    B ) scanTotalRunTimeInSeconds  
+    C ) scanTotalDuration
+
+<div align="right"><a href="#module-08---monitor">↥ back to top</a></div>
 
 ## :tada: Summary
 

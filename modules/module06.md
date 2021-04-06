@@ -108,7 +108,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 2. Click **Copy data**.
     ![](../images/module06/06.10-adf-copywizard.png)
 
-3. Rename the task the **copyPipeline** and click **Next**.
+3. Rename the task to **copyPipeline** and click **Next**.
 
     ![](../images/module06/06.11-adf-pipelinename.png)
 

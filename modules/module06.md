@@ -76,9 +76,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 1. Open Purview Studio, navigate to **Management Center** > **Data Factory** and click **New**.
 
     > :warning: If you are unable to add Data Factory connections, you may need to assign one of the following roles: 
-    > * Contributor
     > * Owner
-    > * Reader
     > * User Access Administrator
 
     ![](../images/module06/06.06-purview-management.png)

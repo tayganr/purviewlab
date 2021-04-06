@@ -122,7 +122,20 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
     ![](../images/module10/10.09-postman-login.png)
 
-2. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below.
+2. Within the Azure portal, open the Azure Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.
+
+    > :bulb: **Did you know?**
+    >
+    > The Azure Purview catalog endpoint is largely based on the open source **Apache Atlas** project. Therefore many of the existing Apache Atlas resources (e.g. [swagger](https://atlas.apache.org/api/v2/ui/index.html)) is equally relevant for Azure Purview. There is also the official API Swagger documentation available for download - [PurviewCatalogAPISwagger.zip](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).
+
+    ![Purview Properties](../images/module10/10.11-purview-properties.png)
+
+3. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below. 
+
+    * Paste the copied endpoint into the URL (e.g. `https://PURVIEW_ACCOUNT.catalog.purview.azure.com`)
+    * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/types/typedefs`
+
+    > Note: Calling this particular endpoint will result in the bulk retrieval of all **type definitions**. A type definition in Azure Purview is the equivalent of a blueprint and determines how certain objects (e.g. entities, classifications, relationships, etc) need to be created.
 
     | Property | Value |
     | --- | --- |

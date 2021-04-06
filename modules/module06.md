@@ -184,7 +184,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## 4. View Lineage in Azure Purview
 
-1. Open Purview Studio, from the Home screen click **Browse**.
+1. Open Purview Studio, from the Home screen click **Browse assets**.
 
     ![](../images/module06/06.29-purview-browse.png)
 

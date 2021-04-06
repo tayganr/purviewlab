@@ -54,7 +54,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
     | --- | --- |
     | Subscription | `Azure Internal Access` |
     | Resource group | `purviewlab` |
-    | Purview account name | `storage69426` |
+    | Storage account name | `storage69426` |
     | Location | `(South America) Brazil South` |
     | Performance | `Standard` |
     | Account kind | `StorageV2 (general purpose v2)` |

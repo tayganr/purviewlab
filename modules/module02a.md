@@ -29,7 +29,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 1. [Scan a Source with the Azure Purview Managed Identity](#6-scan-a-source-with-the-azure-purview-managed-identity)
 1. [View Assets](#6-view-assets)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
 ## 1. Create an Azure Data Lake Storage Gen2 Account
 
@@ -68,7 +68,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![Azure Purview](../images/module02/02.05-storage-goto.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
 ## 2. Grant the Azure Purview Managed Identity Access
 
@@ -102,7 +102,7 @@ In this module we will walk through how to grant the Azure Purview Managed Ident
 
     ![Azure Purview](../images/module02/02.09-storage-reader.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
 ## 3. Upload Data to Azure Data Lake Storage Gen2 Account
 
@@ -146,7 +146,7 @@ Before proceeding with the following steps, you will need to:
 
     ![Transfer Complete](../images/module02/02.17-explorer-transfer.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
 ## 4. Create a Collection
 
@@ -162,7 +162,7 @@ Before proceeding with the following steps, you will need to:
 
     ![Contoso Collection](../images/module02/02.19-sources-contoso.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
 ## 5. Register a Source (ADLS Gen2)
 
@@ -182,7 +182,7 @@ Before proceeding with the following steps, you will need to:
 
     ![Source Properties](../images/module02/02.22-sources-properties.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
 ## 6. Scan a Source with the Azure Purview Managed Identity
 
@@ -222,7 +222,7 @@ Before proceeding with the following steps, you will need to:
 
     ![Monitor Scan](../images/module02/02.30-sources-refresh.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
 ## 7. View Assets
 
@@ -230,7 +230,7 @@ Before proceeding with the following steps, you will need to:
 
     ![](../images/module02/02.72-search-wildcard.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 
@@ -254,7 +254,7 @@ Before proceeding with the following steps, you will need to:
     B ) Glossary Terms (e.g. column `Sales Tax` is tagged with the `Sales Tax` glossary term)  
     C ) Classifications (e.g. column `ccnum` is tagged with the `Credit Card Number` classification)  
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
 ## :tada: Summary
 

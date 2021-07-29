@@ -24,7 +24,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 1. [Scan a Source with Azure Key Vault Credentials](#5-scan-a-source-with-azure-key-vault-credentials)
 1. [View Assets](#6-view-assets)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## 1. Create an Azure SQL Database
 
@@ -88,7 +88,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.41-sqlsvr-firewall.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## 2. Create an Azure Key Vault
 
@@ -144,7 +144,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.56-vault-sqlsecret.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## 3. Add Credentials to Azure Purview
 
@@ -182,7 +182,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.63-credentials-create.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## 4. Register a Source (Azure SQL DB)
 
@@ -198,7 +198,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.44-register-azuresql.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## 5. Scan a Source with Azure Key Vault Credentials
 
@@ -234,7 +234,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.71-sqlscan-refresh.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## 6. View Assets
 
@@ -242,7 +242,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.72-search-wildcard.png)
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 
@@ -266,7 +266,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
     B ) Glossary Terms (e.g. column `Sales Tax` is tagged with the `Sales Tax` glossary term)  
     C ) Classifications (e.g. column `ccnum` is tagged with the `Credit Card Number` classification)  
 
-<div align="right"><a href="#module-02---register--scan">↥ back to top</a></div>
+<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## :tada: Summary
 

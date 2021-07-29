@@ -19,10 +19,12 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 1. [Create an Azure SQL Database](#1-create-an-azure-sql-database)
 1. [Create an Azure Key Vault](#2-create-an-azure-key-vault)
-1. [Add Credentials to Azure Purview](#3-add-credentials-to-azure-purview)
-1. [Register a Source (Azure SQL DB)](#4-register-a-source-azure-sql-db)
-1. [Scan a Source with Azure Key Vault Credentials](#5-scan-a-source-with-azure-key-vault-credentials)
-1. [View Assets](#6-view-assets)
+1. [Grant Access to Azure Purview using Key Vault Access Policy](#3-grant-access-to-azure-purview-using-key-vault-access-policy)
+1. [Generate a Secret](#4-generate-a-secret)
+1. [Add Credentials to Azure Purview](#5-add-credentials-to-azure-purview)
+1. [Register a Source (Azure SQL DB)](#6-register-a-source-azure-sql-db)
+1. [Scan a Source with Azure Key Vault Credentials](#7-scan-a-source-with-azure-key-vault-credentials)
+1. [View Assets](#8-view-assets)
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 

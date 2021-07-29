@@ -47,7 +47,14 @@ resource sqlsvr 'Microsoft.Sql/servers@2021-02-01-preview' = {
     administratorLogin: 'sqladmin'
     administratorLoginPassword: 'sqlPassword!'
   }
-  resource firewall 'firewallRules' = {
+  resource firewall1 'firewallRules' = {
+    name: 'allowAzure'
+    properties: {
+      startIpAddress: '0.0.0.0'
+      endIpAddress: '0.0.0.0'
+    }
+  }
+  resource firewall2 'firewallRules' = {
     name: 'allowAll'
     properties: {
       startIpAddress: '0.0.0.0'

@@ -154,3 +154,5 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 ## :tada: Summary
 
 This module provided an overview of how to provision an Azure Purview account using the Azure Portal and how to grant the appropriate level of access to Azure Purview's data plane.
+
+[Continue >](../modules/module02.md)

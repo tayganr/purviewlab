@@ -1,6 +1,6 @@
 # Module 09 - Integrate with Azure Synapse Analytics
 
-[< Previous Module](../modules/module08.md) - **[Home](../README.md)** - [Next Module>](../modules/module10.md)
+[< Previous Module](../modules/module08.md) - **[Home](../README.md)** - [Next Module >](../modules/module10.md)
 
 ## :thinking: Prerequisites
 
@@ -144,3 +144,5 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 ## :tada: Summary
 
 This module provided an overview of how to register an Azure Purview account to an Azure Synapse Analytics Workspace, view the details of an asset that exists outside of the Synapse workspace, and how you can quickly query an external source.
+
+[Continue >](../modules/module10.md)

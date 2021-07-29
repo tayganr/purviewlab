@@ -1,6 +1,6 @@
 # Module 05 - Classifications
 
-[< Previous Module](../modules/module04.md) - **[Home](../README.md)** - [Next Module>](../modules/module06.md)
+[< Previous Module](../modules/module04.md) - **[Home](../README.md)** - [Next Module >](../modules/module06.md)
 
 ## :thinking: Prerequisites
 
@@ -248,3 +248,5 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 ## :tada: Summary
 
 This module provided an overview of how to create a custom classification, and how to have the classification automatically applied as part of a scan using a custom scan rule set.
+
+[Continue >](../modules/module06.md)

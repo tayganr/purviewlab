@@ -1,6 +1,6 @@
 # Module 06 - Lineage
 
-[< Previous Module](../modules/module05.md) - **[Home](../README.md)** - [Next Module>](../modules/module07.md)
+[< Previous Module](../modules/module05.md) - **[Home](../README.md)** - [Next Module >](../modules/module07.md)
 
 ## :thinking: Prerequisites
 
@@ -232,3 +232,5 @@ This module steps through what is required for connecting an Azure Data Factory 
 ## :tada: Summary
 
 This module provided an overview of how to integrate Azure Purview with Azure Data Factory and how relationships between assets and ETL activities can be automatically created at run time, allowing us to visually represent data lineage and trace upstream and downstream dependencies.
+
+[Continue >](../modules/module07.md)

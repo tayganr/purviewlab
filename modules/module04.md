@@ -1,6 +1,6 @@
 # Module 04 - Glossary
 
-[< Previous Module](../modules/module03.md) - **[Home](../README.md)** - [Next Module>](../modules/module05.md)
+[< Previous Module](../modules/module03.md) - **[Home](../README.md)** - [Next Module >](../modules/module05.md)
 
 ## :thinking: Prerequisites
 
@@ -232,3 +232,5 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 ## :tada: Summary
 
 This module provided an overview of how to create, export, and import terms into the Azure Purview glossary.
+
+[Continue >](../modules/module05.md)

@@ -1,6 +1,6 @@
 # Module 07 - Insights
 
-[< Previous Module](../modules/module06.md) - **[Home](../README.md)** - [Next Module>](../modules/module08.md)
+[< Previous Module](../modules/module06.md) - **[Home](../README.md)** - [Next Module >](../modules/module08.md)
 
 ## :thinking: Prerequisites
 
@@ -247,3 +247,5 @@ Insights provides customers, a single pane of glass view into their catalog and 
 ## :tada: Summary
 
 This module provided an overview of how to glean insights on Assets, Scans, Glossary Terms, Classifications, Sensitivity Labels, and File Extensions across your data estate.
+
+[Continue >](../modules/module08.md)

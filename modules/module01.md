@@ -1,6 +1,6 @@
 # Module 01 - Create an Azure Purview Account
 
-**[Home](../README.md)** - [Next Module>](../modules/module02.md)
+**[Home](../README.md)** - [Next Module >](../modules/module02.md)
 
 ## :thinking: Prerequisites
 

@@ -1,6 +1,6 @@
 # Module 02 - Register & Scan
 
-[< Previous Module](../modules/module01.md) - **[Home](../README.md)** - [Next Module>](../modules/module03.md)
+[< Previous Module](../modules/module01.md) - **[Home](../README.md)** - [Next Module >](../modules/module03.md)
 
 ## :thinking: Prerequisites
 
@@ -473,3 +473,5 @@ Before proceeding with the following steps, you will need to:
 ## :tada: Summary
 
 This module provided an overview of how to create a collection, register a source, and trigger a scan.
+
+[Continue >](../modules/module03.md)

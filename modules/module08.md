@@ -1,6 +1,6 @@
 # Module 08 - Monitor
 
-[< Previous Module](../modules/module07.md) - **[Home](../README.md)** - [Next Module>](../modules/module09.md)
+[< Previous Module](../modules/module07.md) - **[Home](../README.md)** - [Next Module >](../modules/module09.md)
 
 ## :thinking: Prerequisites
 
@@ -187,3 +187,5 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 ## :tada: Summary
 
 This module provided an overview of how to visualize Azure Purview metrics within the Azure Portal and how to capture raw telemetry to an Azure Storage account.
+
+[Continue >](../modules/module09.md)

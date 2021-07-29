@@ -1,6 +1,6 @@
 # Module 03 - Search & Browse
 
-[< Previous Module](../modules/module02.md) - **[Home](../README.md)** - [Next Module>](../modules/module04.md)
+[< Previous Module](../modules/module02.md) - **[Home](../README.md)** - [Next Module >](../modules/module04.md)
 
 ## :thinking: Prerequisites
 
@@ -171,3 +171,5 @@ Azure Purview allows us to perform certain operations (add/replace/remove) again
 ## :tada: Summary
 
 This module provided an overview of how to search, browse, and update assets.
+
+[Continue >](../modules/module04.md)

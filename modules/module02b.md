@@ -144,6 +144,10 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.51-policy-add.png)
 
+7. Click **Save**.
+
+    ![](../images/module02/02.75-keyvault-savepolicy.png)
+
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## 4. Generate a Secret

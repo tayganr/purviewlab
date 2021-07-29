@@ -7,7 +7,7 @@ Azure Purview is a unified data governance service that helps you manage and gov
 ## Learning Modules
 
 1. [Create an Azure Purview Account](./modules/module01.md)
-2. Register & Scan: [2A. ADLS Gen1 (Managed Identity)](./modules/module02a.md) | [2B. Azure SQL DB (Azure Key Vault)](./modules/module02a.md)
+2. Register & Scan: [2A. ADLS Gen1 (Managed Identity)](./modules/module02a.md) | [2B. Azure SQL DB (Azure Key Vault)](./modules/module02b.md)
 3. [Search & Browse](./modules/module03.md)
 4. [Glossary](./modules/module04.md)
 5. [Classifications](./modules/module05.md)

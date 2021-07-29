@@ -1,6 +1,7 @@
 targetScope = 'resourceGroup'
 param location string
 param suffix string
+param objectId string
 param roleNameGuid string = newGuid()
 var roleDefinitionprefix = '/subscriptions/${subscription().subscriptionId}/providers/Microsoft.Authorization/roleDefinitions'
 var role = {
@@ -10,7 +11,8 @@ var role = {
   UserAccessAdministrator: '${roleDefinitionprefix}/18d7d88d-d35e-4fb5-a5c3-7773c20a72d9'
   StorageBlobDataOwner: '${roleDefinitionprefix}/b7e6dc6d-f1e8-4753-8033-0f276bb0955b'
   StorageBlobDataContributor: '${roleDefinitionprefix}/ba92f5b4-2d11-453d-a403-e96b0029c9fe'
-  StorageBlobDataReader: '${roleDefinitionprefix}/ 2a2b9908-6ea1-4ae2-8e65-a410df84e7d1'
+  StorageBlobDataReader: '${roleDefinitionprefix}/2a2b9908-6ea1-4ae2-8e65-a410df84e7d1'
+  KeyVaultSecretsOfficer: '${roleDefinitionprefix}/b86a8fe4-44ce-4948-aee5-eccb2c155cd7'
 }
 
 // Azure Purview Account
@@ -93,7 +95,23 @@ resource kv 'Microsoft.KeyVault/vaults@2021-04-01-preview' = {
       name: 'standard'
     }
     tenantId: subscription().tenantId
-    accessPolicies: []
+    accessPolicies: [
+      {
+        tenantId: subscription().tenantId
+        objectId: objectId
+        permissions:{
+          secrets: [
+            'get'
+            'list'
+            'set'
+            'delete'
+            'recover'
+            'backup'
+            'restore'
+          ]
+        }
+      }
+    ]
   }
 }
 
@@ -159,11 +177,11 @@ resource sws 'Microsoft.Synapse/workspaces@2021-05-01' = {
 }
 
 // Role Assignment (Synapse Workspace Managed Identity -> Storage Blob Data Contributor)
-resource roleAssignment 'Microsoft.Authorization/roleAssignments@2020-08-01-preview' = {
+resource roleAssignment1 'Microsoft.Authorization/roleAssignments@2020-08-01-preview' = {
   name: roleNameGuid
   scope: swsadls
   properties: {
-    principalId: reference(sws.name,sws.apiVersion,'full').identity.principalId
+    principalId: reference(sws.name, sws.apiVersion, 'full').identity.principalId
     roleDefinitionId: role['StorageBlobDataContributor']
     principalType: 'ServicePrincipal'
   }

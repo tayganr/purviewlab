@@ -104,29 +104,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.46-vault-basics.png)
 
-4. Navigate to the **Access policy** tab and click **Add Access Policy**.
-
-    ![](../images/module02/02.47-policy-add.png)
-
-5. Under **Select principal**, click **None selected**.
-
-    ![](../images/module02/02.48-policy-select.png)
-
-6. Search for the name of your Azure Purview account (e.g. `purview-team01`), select the item, click **Select**.
-
-    ![](../images/module02/02.49-policy-principal.png)
-
-7. Under **Secret permissions**, select **Get** and **List**.
-
-    ![](../images/module02/02.50-secret-permissions.png)
-
-8. Review your selections and click **Add**.
-
-    ![](../images/module02/02.51-policy-add.png)
-
 9. Click **Review + create**.
-
-    ![](../images/module02/02.52-vault-review.png)
 
 10. Click **Create**.
 
@@ -136,17 +114,49 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.54-vault-goto.png)
 
-12. Navigate to **Secrets** and click **Generate/Import**.
+<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
+
+## 3. Grant Access to Azure Purview using Key Vault Access Policy 
+
+1. Navigate to your **Azure Key Vault** resource and click **Access policies**
+    
+    ![](../images/module02/02.73-keyvault-policies.png)
+
+2. Click **Add Access Policy**.
+
+    ![](../images/module02/02.74-keyvault-addpolicy.png)
+
+3. Under **Select principal**, click **None selected**.
+
+    ![](../images/module02/02.48-policy-select.png)
+
+4. Search for the name of your Azure Purview account (e.g. `purview-team01`), select the item, click **Select**.
+
+    ![](../images/module02/02.49-policy-principal.png)
+
+5. Under **Secret permissions**, select **Get** and **List**.
+
+    ![](../images/module02/02.50-secret-permissions.png)
+
+6. Review your selections and click **Add**.
+
+    ![](../images/module02/02.51-policy-add.png)
+
+<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
+
+## 4. Generate a Secret
+
+1. Navigate to **Secrets** and click **Generate/Import**.
 
     ![](../images/module02/02.55-vault-secrets.png)
 
-13. Under **Name** type `sql-secret`. Under **Value** provide the same password that was specified for the SQL Server admin account created earlier in step 7.5. Click **Create**.
+2. Under **Name** type `sql-secret`. Under **Value** provide the same password that was specified for the SQL Server admin account created earlier in step 7.5. Click **Create**.
 
     ![](../images/module02/02.56-vault-sqlsecret.png)
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 3. Add Credentials to Azure Purview
+## 5. Add Credentials to Azure Purview
 
 1. To make the secret accessible to Azure Purview, we must establish a connection to Azure Key Vault. Open **Purview Studio**, navigate to **Management Center** > **Credentials**, click **Manage Key Vault connections**.
 
@@ -184,7 +194,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 4. Register a Source (Azure SQL DB)
+## 6. Register a Source (Azure SQL DB)
 
 1. Open Purview Studio, navigate to **Sources** and click **Register**.
 
@@ -200,7 +210,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 5. Scan a Source with Azure Key Vault Credentials
+## 7. Scan a Source with Azure Key Vault Credentials
 
 1. Open Purview Studio, navigate to **Sources**, and within the Azure SQL Database source tile, click the **New Scan** button.
 
@@ -236,7 +246,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 6. View Assets
+## 8. View Assets
 
 1. To view the assets that have materialised as an outcome of running the scans, perform a wildcard search by typing the asterisk character (`*`) into the search bar and hitting the Enter key to submit the query and return the search results.
 

@@ -211,6 +211,8 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 ## :mortar_board: Knowledge Check
 
+[http://aka.ms/purviewlab/q04](http://aka.ms/purviewlab/q04)
+
 1. Glossary terms with the same name but different descriptions can exist under the same parent term?
 
     A ) True  

@@ -450,6 +450,8 @@ Before proceeding with the following steps, you will need to:
 
 ## :mortar_board: Knowledge Check
 
+[http://aka.ms/purviewlab/q02](http://aka.ms/purviewlab/q02)
+
 1. What type of object can help organize data sources into logical groups?
 
     A ) Buckets    

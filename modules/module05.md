@@ -227,6 +227,8 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 
 ## :mortar_board: Knowledge Check
 
+[http://aka.ms/purviewlab/q05](http://aka.ms/purviewlab/q05)
+
 1. Which of the following is a valid classification rule type?
 
     A ) Python  

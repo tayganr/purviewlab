@@ -225,6 +225,8 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 ## :mortar_board: Knowledge Check
 
+[http://aka.ms/purviewlab/q07](http://aka.ms/purviewlab/q07)
+
 1. Which section would show the **number of discovered assets**?
 
     A ) Assets  

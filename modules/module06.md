@@ -212,6 +212,8 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## :mortar_board: Knowledge Check
 
+[http://aka.ms/purviewlab/q06](http://aka.ms/purviewlab/q06)
+
 1. An Azure Purview account can connect to multiple Azure Data Factories?
 
     A ) True  

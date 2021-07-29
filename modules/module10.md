@@ -165,6 +165,8 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 ## :mortar_board: Knowledge Check
 
+[http://aka.ms/purviewlab/q10](http://aka.ms/purviewlab/q10)
+
 1. The Azure Purview API is largely based on which open source project?
 
     A ) Apache Maven  

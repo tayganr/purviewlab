@@ -45,5 +45,5 @@ Note:
 9. [Integrate with Azure Synapse Analytics](./modules/module09.md)
 10. [REST API](./modules/module10.md)
 
-## Workshop URL
+## :link: Workshop URL
 [aka.ms/purviewlab](https://aka.ms/purviewlab)

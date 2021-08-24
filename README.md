@@ -28,8 +28,9 @@ Click the button below to automatically deploy the associated resources to Azure
 
 Note:
 
-* The Azure Purview account resource has been purposely excluded from the template so that participants have an opportunity to understand how to deploy an Azure Purview account.
-* The template is setup to deploy resources to the same location as the selected resource group, ensure to select a [valid location](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=purview&regions=all).  
+* The Azure Purview account resource has been purposely **excluded** from the template so that participants have an opportunity to understand how to deploy an Azure Purview account via the Azure Portal.
+* The template is setup to deploy resources to the same location as the selected resource group, ensure to select a [valid location](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=purview&regions=all).
+* The deployment should take approximately 5 minutes to complete.
 
 ## :books: Learning Modules
 

@@ -8,10 +8,27 @@ Azure Purview is a unified data governance service that helps you manage and gov
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * Owner permissions within a Resource Group to create resources and manage role assignments.
+* The subscription must have the following resource providers registered.
+    * Microsoft.Authorization
+    * Microsoft.DataFactory
+    * Microsoft.EventHub
+    * Microsoft.KeyVault
+    * Microsoft.Purview
+    * Microsoft.Storage
+    * Microsoft.Sql
+    * Microsoft.Synapse
+    
 
 
 ## :test_tube: Lab Environment Setup
+
+Click the button below to pre-deploy Azure resources required for this lab.
+
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftayganr%2Fpurviewlab%2Fmain%2Ftemplate%2Fazuredeploy.json)
+
+Tips:
+
+* The template is setup to deploy resources to the same location as the selected resource group. Ensure to select a [valid location](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=purview&regions=all).  
 
 ## :books: Learning Modules
 

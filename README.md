@@ -22,13 +22,14 @@ Azure Purview is a unified data governance service that helps you manage and gov
 
 ## :test_tube: Lab Environment Setup
 
-Click the button below to pre-deploy Azure resources required for this lab.
+Click the button below to automatically deploy the associated Azure resources required for this lab.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftayganr%2Fpurviewlab%2Fmain%2Ftemplate%2Fazuredeploy.json)
 
-Tips:
+Note:
 
-* The template is setup to deploy resources to the same location as the selected resource group. Ensure to select a [valid location](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=purview&regions=all).  
+* The Azure Purview account resource has been purposely excluded from the template so that participants have an opportunity to understand how to deploy an Azure Purview account.
+* The template is setup to deploy resources to the same location as the selected resource group, ensure to select a [valid location](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=purview&regions=all).  
 
 ## :books: Learning Modules
 

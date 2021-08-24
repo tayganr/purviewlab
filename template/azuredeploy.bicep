@@ -14,17 +14,17 @@ var role = {
 }
 
 // Azure Purview Account
-resource pv 'Microsoft.Purview/accounts@2020-12-01-preview' = {
-  name: 'pvlab-${randomString}-pv'
-  location: location
-  sku: {
-    name: 'Standard'
-    capacity: 1
-  }
-  identity: {
-    type: 'SystemAssigned'
-  }
-}
+// resource pv 'Microsoft.Purview/accounts@2020-12-01-preview' = {
+//   name: 'pvlab-${randomString}-pv'
+//   location: location
+//   sku: {
+//     name: 'Standard'
+//     capacity: 1
+//   }
+//   identity: {
+//     type: 'SystemAssigned'
+//   }
+// }
 
 // Azure Storage Account
 resource adls 'Microsoft.Storage/storageAccounts@2021-04-01' = {

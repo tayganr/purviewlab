@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.4.613.9944",
-      "templateHash": "4097959776113782150"
+      "templateHash": "14262244766042982825"
     }
   },
   "functions": [],
@@ -76,19 +76,6 @@
       "dependsOn": [
         "[resourceId('Microsoft.Synapse/workspaces', format('pvlab-{0}-synapse', variables('randomString')))]"
       ]
-    },
-    {
-      "type": "Microsoft.Purview/accounts",
-      "apiVersion": "2020-12-01-preview",
-      "name": "[format('pvlab-{0}-pv', variables('randomString'))]",
-      "location": "[variables('location')]",
-      "sku": {
-        "name": "Standard",
-        "capacity": 1
-      },
-      "identity": {
-        "type": "SystemAssigned"
-      }
     },
     {
       "type": "Microsoft.Storage/storageAccounts",

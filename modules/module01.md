@@ -38,15 +38,15 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
 3. Provide the necessary inputs on the **Basics** tab.  
 
-    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment. If you have pre-deployed other Azure resources using the lab template, they would have been created with a `randomId`, it is recommended to use the same `randomId` as per the example below.
+    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment. If you have pre-deployed other Azure resources using the lab template, they would have been created with a `randomId`, it is recommended to use the same `randomId` for the Azure Purview account name as per the example below.
 
     | Parameter  | Example Value |
     | --- | --- |
     | Subscription | `YOUR_AZURE_SUBSCRIPTION` |
-    | Resource group | `YOUR_RESOURCE_GROUP` |
+    | Resource group | `pvlab-rg` |
     | Purview account name | `pvlab-{randomId}-pv` |
     | Location | `YOUR_LOCATION` |
-    | Managed Resource Group Name | `pvlab-{randomId}-rg-managed` |
+    | Managed Resource Group Name | `pvlab-rg-managed` |
 
     ![Purview Account Basics](../images/module01/_01.03-create-basic.png)
 

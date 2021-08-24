@@ -38,7 +38,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
 3. Provide the necessary inputs on the **Basics** tab.  
 
-    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment. If you have pre-deployed the other Azure resources, they would have been created with a `randomId`, it is recommended to use the same `randomId` as per the example below.
+    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment. If you have pre-deployed other Azure resources using the lab template, they would have been created with a `randomId`, it is recommended to use the same `randomId` as per the example below.
 
     | Parameter  | Example Value |
     | --- | --- |

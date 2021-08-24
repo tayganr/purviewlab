@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.4.613.9944",
-      "templateHash": "16379510422390349639"
+      "templateHash": "7620412009166000560"
     }
   },
   "functions": [],
@@ -51,18 +51,18 @@
     {
       "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
       "apiVersion": "2021-04-01",
-      "name": "[format('{0}/{1}/{2}', format('pvlab{0}swsadls', variables('randomString')), 'default', format('synapsefs{0}', variables('randomString')))]",
+      "name": "[format('{0}/{1}/{2}', format('pvlab{0}synapse', variables('randomString')), 'default', format('synapsefs{0}', variables('randomString')))]",
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', format('pvlab{0}swsadls', variables('randomString')), 'default')]",
-        "[resourceId('Microsoft.Storage/storageAccounts', format('pvlab{0}swsadls', variables('randomString')))]"
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', format('pvlab{0}synapse', variables('randomString')), 'default')]",
+        "[resourceId('Microsoft.Storage/storageAccounts', format('pvlab{0}synapse', variables('randomString')))]"
       ]
     },
     {
       "type": "Microsoft.Storage/storageAccounts/blobServices",
       "apiVersion": "2021-04-01",
-      "name": "[format('{0}/{1}', format('pvlab{0}swsadls', variables('randomString')), 'default')]",
+      "name": "[format('{0}/{1}', format('pvlab{0}synapse', variables('randomString')), 'default')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', format('pvlab{0}swsadls', variables('randomString')))]"
+        "[resourceId('Microsoft.Storage/storageAccounts', format('pvlab{0}synapse', variables('randomString')))]"
       ]
     },
     {
@@ -151,7 +151,7 @@
     {
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2021-04-01",
-      "name": "[format('pvlab{0}swsadls', variables('randomString'))]",
+      "name": "[format('pvlab{0}synapse', variables('randomString'))]",
       "location": "[variables('location')]",
       "kind": "StorageV2",
       "sku": {
@@ -176,7 +176,7 @@
       "location": "[variables('location')]",
       "properties": {
         "defaultDataLakeStorage": {
-          "accountUrl": "[reference(format('pvlab{0}swsadls', variables('randomString'))).primaryEndpoints.dfs]",
+          "accountUrl": "[reference(format('pvlab{0}synapse', variables('randomString'))).primaryEndpoints.dfs]",
           "filesystem": "[format('synapsefs{0}', variables('randomString'))]"
         }
       },
@@ -184,13 +184,13 @@
         "type": "SystemAssigned"
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', format('pvlab{0}swsadls', variables('randomString')))]"
+        "[resourceId('Microsoft.Storage/storageAccounts', format('pvlab{0}synapse', variables('randomString')))]"
       ]
     },
     {
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2020-08-01-preview",
-      "scope": "[format('Microsoft.Storage/storageAccounts/{0}', format('pvlab{0}swsadls', variables('randomString')))]",
+      "scope": "[format('Microsoft.Storage/storageAccounts/{0}', format('pvlab{0}synapse', variables('randomString')))]",
       "name": "[guid(resourceGroup().id)]",
       "properties": {
         "principalId": "[reference(format('pvlab-{0}-synapse', variables('randomString')), '2021-05-01', 'full').identity.principalId]",
@@ -199,7 +199,7 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Synapse/workspaces', format('pvlab-{0}-synapse', variables('randomString')))]",
-        "[resourceId('Microsoft.Storage/storageAccounts', format('pvlab{0}swsadls', variables('randomString')))]"
+        "[resourceId('Microsoft.Storage/storageAccounts', format('pvlab{0}synapse', variables('randomString')))]"
       ]
     }
   ]

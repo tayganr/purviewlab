@@ -13,19 +13,6 @@ var role = {
   StorageBlobDataReader: '${roleDefinitionprefix}/2a2b9908-6ea1-4ae2-8e65-a410df84e7d1'
 }
 
-// Azure Purview Account
-// resource pv 'Microsoft.Purview/accounts@2020-12-01-preview' = {
-//   name: 'pvlab-${randomString}-pv'
-//   location: location
-//   sku: {
-//     name: 'Standard'
-//     capacity: 1
-//   }
-//   identity: {
-//     type: 'SystemAssigned'
-//   }
-// }
-
 // Azure Storage Account
 resource adls 'Microsoft.Storage/storageAccounts@2021-04-01' = {
   name: 'pvlab${randomString}adls'
@@ -93,23 +80,7 @@ resource kv 'Microsoft.KeyVault/vaults@2021-04-01-preview' = {
       name: 'standard'
     }
     tenantId: subscription().tenantId
-    accessPolicies: [
-      // {
-      //   tenantId: subscription().tenantId
-      //   objectId: objectId
-      //   permissions:{
-      //     secrets: [
-      //       'get'
-      //       'list'
-      //       'set'
-      //       'delete'
-      //       'recover'
-      //       'backup'
-      //       'restore'
-      //     ]
-      //   }
-      // }
-    ]
+    accessPolicies: []
   }
 }
 
@@ -127,7 +98,7 @@ resource adf 'Microsoft.DataFactory/factories@2018-06-01' = {
 
 // Default Data Lake Storage Account (Synapse Workspace)
 resource swsadls 'Microsoft.Storage/storageAccounts@2021-04-01' = {
-  name: 'pvlab${randomString}swsadls'
+  name: 'pvlab${randomString}synapse'
   location: location
   kind: 'StorageV2'
   sku: {

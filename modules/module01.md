@@ -101,32 +101,15 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     > :bulb: **Did you know?**
     >
     > Azure Purview has a set of predefined data plane roles that can be used to control who can access what.
-
-    | Role  | Catalog | Sources/Scans | Description | 
-    | --- | --- | --- | --- |
-    | Purview Data Reader | `Read` |  | Access to Purview Studio (read only). |
-    | Purview Data Curator | `Read/Write` |  | Access to Purview Studio (read & write). |
-    | Purview Data Source Administrator |  | `Read/Write` | No access to Purview Studio. Manage data sources and data scans. |
-
-3. Populate the role assignment prompt as per the table below, select the targeted Azure AD identities, click **Save**.
-
-    | Property  | Value |
-    | --- | --- |
-    | Role | `Purview Data Curator` |
-    | Assign access to | `User, group, or service principal` |
-    | Select | `<Azure AD Identities>` |
-
-    ![Purview Data Curator](../images/module01/01.10-role-assignment.png)
-
-    > :bulb: **Did you know?**
     >
-    > Azure Purview has a set of predefined Data Plane roles that can be used to control who can access what.
+    > For more information, check out [Access control in Azure Purview](https://docs.microsoft.com/en-us/azure/purview/catalog-permissions).
 
-    | Role  | Catalog | Sources/Scans | Description | 
-    | --- | --- | --- | --- |
-    | Purview Data Reader | `Read` |  | Access to Purview Studio (read only). |
-    | Purview Data Curator | `Read/Write` |  | Access to Purview Studio (read & write). |
-    | Purview Data Source Administrator |  | `Read/Write` | No access to Purview Studio. Manage data sources and data scans. |
+    | Role  | Collections | Catalog | Sources/Scans | Description | 
+    | --- | --- | --- | --- | --- |
+    | Collection Admin | `Read/Write` | | | Manage collections and role assignments. |
+    | Data Reader ||  `Read` |  | Access to Catalog (read only). |
+    | Data Curator || `Read/Write` |  | Access to Catalog (read & write). |
+    | Data Source Admin |  || `Read/Write` | Manage data sources and data scans. |
 
 <div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
 

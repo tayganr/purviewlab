@@ -5,13 +5,13 @@
     "_generator": {
       "name": "bicep",
       "version": "0.4.613.9944",
-      "templateHash": "14262244766042982825"
+      "templateHash": "16379510422390349639"
     }
   },
   "functions": [],
   "variables": {
     "location": "[resourceGroup().location]",
-    "randomString": "[substring(guid(resourceGroup().id), 6)]",
+    "randomString": "[substring(guid(resourceGroup().id), 0, 6)]",
     "roleDefinitionprefix": "[format('/subscriptions/{0}/providers/Microsoft.Authorization/roleDefinitions', subscription().subscriptionId)]",
     "role": {
       "Owner": "[format('{0}/8e3af657-a8ff-443c-a75c-2fe8c4bcb635', variables('roleDefinitionprefix'))]",

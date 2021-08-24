@@ -107,8 +107,8 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     | Role  | Collections | Catalog | Sources/Scans | Description | 
     | --- | --- | --- | --- | --- |
     | Collection Admin | `Read/Write` | | | Manage collections and role assignments. |
-    | Data Reader ||  `Read` |  | Access to Catalog (read only). |
-    | Data Curator || `Read/Write` |  | Access to Catalog (read & write). |
+    | Data Reader ||  `Read` |  | Access to catalog (read only). |
+    | Data Curator || `Read/Write` |  | Access to catalog (read & write). |
     | Data Source Admin |  || `Read/Write` | Manage data sources and data scans. |
 
 <div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>

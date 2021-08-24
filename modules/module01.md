@@ -15,19 +15,20 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 ## :dart: Objectives
 
 * Create an Azure Purview account using the Azure portal.
-* Provide users the necessary level of access to Azure Purview's data plane.
+* Provide additional users access to Azure Purview's data plane.
 
 ## Table of Contents
 
-1. [Create an Azure Purview Account](#1-create-an-azure-purview-account)
-2. [Grant Access to Azure Purview's Data Plane](#2-grant-access-to-azure-purviews-data-plane)
-3. [Open Purview Studio](#3-open-purview-studio)
+| #  | Section | Targeted Role |
+| --- | --- | --- |
+| 1 | [Create an Azure Purview Account](#1-create-an-azure-purview-account) | Azure Administrator |
+| 2 | [Grant Access to Azure Purview's Data Plane](#2-grant-access-to-azure-purviews-data-plane) | Collection Administrator |
 
 <div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
 
 ## 1. Create an Azure Purview Account
 
-1. Sign in to the [Azure portal](https://portal.azure.com) with your Azure account and from the **Home** screen, click **Create a resource**.
+1. Sign in to the [Azure portal](https://portal.azure.com), navigate to the **Home** screen, click **Create a resource**.
 
     ![Create a Resource](../images/module01/01.01-create-resource.png)  
 
@@ -37,52 +38,75 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
 3. Provide the necessary inputs on the **Basics** tab.  
 
-    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
+    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment. If you have pre-deployed the other Azure resources, they would have been created with a `randomId`, it is recommended to use the same `randomId` as per the example below.
 
     | Parameter  | Example Value |
     | --- | --- |
-    | Subscription | `Azure Internal Access` |
-    | Resource group | `purviewlab` |
-    | Purview account name | `purview-69426` |
-    | Location | `Brazil South` |
+    | Subscription | `YOUR_AZURE_SUBSCRIPTION` |
+    | Resource group | `YOUR_RESOURCE_GROUP` |
+    | Purview account name | `pvlab-{randomId}-pv` |
+    | Location | `YOUR_LOCATION` |
+    | Managed Resource Group Name | `pvlab-{randomId}-rg-managed` |
 
-    ![Purview Account Basics](../images/module01/01.03-create-basic.png)
-
-4. Provide the necessary inputs on the **Configuration** tab.
-
-    | Parameter  | Example Value | Note |
-    | --- | --- | --- |
-    | Platform size | `4 capacity units` | Sufficient for non-production scenarios. |
+    ![Purview Account Basics](../images/module01/_01.03-create-basic.png)
 
     > :bulb: **Did you know?**
     >
-    > **Capacity Units** determine the size of the platform and is a **provisioned** (fixed) set of resources that is needed to keep the Azure Purview platform up and running. 1 Capacity Unit is able to support approximately 1 API call per second. Capacity Units are required regardless of whether you plan to invoke the Azure Purview API endpoints directly (i.e. ISV scenario) or indirectly via Purview Studio (GUI).
+    > **Capacity Units** determine the size of the platform and is a **provisioned** (fixed) set of resources that is needed to keep the Azure Purview platform up and running. 1 Capacity Unit is able to support approximately 25 data map operations per second. Capacity Units are required regardless of whether you plan to invoke the Azure Purview API endpoints directly (i.e. ISV scenario) or indirectly via Purview Studio (GUI).
     > 
     > **vCore Hours** on the other hand is the unit used to measure **serverless** compute that is needed to run a scan. You only pay per vCore Hour of scanning that you consume (rounded up to the nearest minute).
     >
     > For more information, check out the [Azure Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/azure-purview/) page.
 
-    ![Configure Purview Account](../images/module01/01.04-create-configuration.png)
+4. On the **Networking** tab, select **All networks**.
+   
+    ![Networking](../images/module01/_01.04-create-networking.png)
 
 5. On the **Review + Create** tab, once the message in the ribbon returns "Validation passed", verify your selections and click **Create**.
 
-    ![Create Purview Account](../images/module01/01.05-create-create.png)
+    ![Create Purview Account](../images/module01/_01.05-create-create.png)
 
 6. Wait several minutes while your deployment is in progress. Once complete, click **Go to resource**.
 
-    ![Go to resource](../images/module01/01.06-goto-resource.png)
+    ![Go to resource](../images/module01/_01.06-goto-resource.png)
 
 <div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
 
 ## 2. Grant Access to Azure Purview's Data Plane
 
-1. Navigate to your Azure Purview account and select **Access Control (IAM)** from the left navigation menu.
+1. Navigate to your Azure Purview account and click **Open** within the **Open Purview Studio** tile.
 
-    ![Access Control](../images/module01/01.08-purview-access.png)
+    ![Access Control](../images/module01/_01.07-open-studio.png)
 
-2. Click **Add role assignments**.
+2. On the left-hand side, navigate to **Data map**.
 
-    ![Add Role Assignment](../images/module01/01.09-access-add.png)
+    ![Add Role Assignment](../images/module01/_01.08-studio-datamap.png)
+
+3. Select **Collections**.
+
+    ![Collections](../images/module01/_01.09-datamap-collections.png)
+
+4. Select **Role assignments**.
+
+    ![Role assignments](../images/module01/_01.10-collections-roleassignments.png)
+
+5. On the right-hand side of **Data curators**, click the **Add** icon.
+
+    ![Add Role Assignment](../images/module01/_01.11-roleassignments-datacurator.png)
+
+6. Search for another user within your Azure Active Directory, select their account, click **OK**.
+
+    ![Add or Remove Data Curators](../images/module01/_01.12-datacurator-add.png)
+
+    > :bulb: **Did you know?**
+    >
+    > Azure Purview has a set of predefined data plane roles that can be used to control who can access what.
+
+    | Role  | Catalog | Sources/Scans | Description | 
+    | --- | --- | --- | --- |
+    | Purview Data Reader | `Read` |  | Access to Purview Studio (read only). |
+    | Purview Data Curator | `Read/Write` |  | Access to Purview Studio (read & write). |
+    | Purview Data Source Administrator |  | `Read/Write` | No access to Purview Studio. Manage data sources and data scans. |
 
 3. Populate the role assignment prompt as per the table below, select the targeted Azure AD identities, click **Save**.
 
@@ -103,22 +127,6 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     | Purview Data Reader | `Read` |  | Access to Purview Studio (read only). |
     | Purview Data Curator | `Read/Write` |  | Access to Purview Studio (read & write). |
     | Purview Data Source Administrator |  | `Read/Write` | No access to Purview Studio. Manage data sources and data scans. |
-
-4. Navigate to the **Role assignments** tab and confirm the **Purview Data Curator** role been has been assigned. Tip: Filter **Scope** to `This resource` to limit the results.
-
-    ![Role Assignments](../images/module01/01.11-access-confirm.png)
-
-5. Repeat the previous steps by adding a second role to the same set of Azure AD identities, this time with the **Purview Data Source Administrator** role.
-
-    ![Purview Data Source Administrator](../images/module01/01.12-role-assignment2.png)
-
-<div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
-
-## 3. Open Purview Studio
-
-1. To open the out of the box user experience, navigate to the Azure Purview account instance and click **Open Purview Studio**.
-
-    ![Open Purview Studio](../images/module01/01.07-open-studio.png)
 
 <div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
 

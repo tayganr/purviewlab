@@ -1,6 +1,5 @@
 var location = resourceGroup().location
-// var randomString = substring(guid(resourceGroup().id),0,6)
-var randomString = 'hui345'
+var randomString = substring(guid(resourceGroup().id),0,6)
 
 // Azure built-in role definitions
 var roleDefinitionprefix = '/subscriptions/${subscription().subscriptionId}/providers/Microsoft.Authorization/roleDefinitions'

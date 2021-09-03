@@ -221,5 +221,5 @@ resource sqlVirtualMachineName_resource 'Microsoft.SqlVirtualMachine/SqlVirtualM
   ]
 }
 
-output adminUsername string = adminUsername
-output adminPAssword string = adminPassword
+output SQLVMadminUsername string = adminUsername
+output SQLVMadminPassword string = adminPassword

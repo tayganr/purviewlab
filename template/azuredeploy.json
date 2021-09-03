@@ -474,11 +474,11 @@
             }
           ],
           "outputs": {
-            "adminUsername": {
+            "SQLVMadminUsername": {
               "type": "string",
               "value": "[variables('adminUsername')]"
             },
-            "adminPAssword": {
+            "SQLVMadminPassword": {
               "type": "string",
               "value": "[variables('adminPassword')]"
             }

@@ -155,3 +155,13 @@ resource roleAssignment 'Microsoft.Authorization/roleAssignments@2020-08-01-prev
     principalType: 'ServicePrincipal'
   }
 }
+
+
+// Azure SQL VM
+module sqlVm './sql_vm.bicep' = {
+  name: 'SQLVMDeployment'
+  params: {
+    location: location
+    randomString: randomString
+  }
+}

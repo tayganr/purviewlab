@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.4.613.9944",
-      "templateHash": "7620412009166000560"
+      "templateHash": "7802308096273950817"
     }
   },
   "functions": [],
@@ -201,6 +201,290 @@
         "[resourceId('Microsoft.Synapse/workspaces', format('pvlab-{0}-synapse', variables('randomString')))]",
         "[resourceId('Microsoft.Storage/storageAccounts', format('pvlab{0}synapse', variables('randomString')))]"
       ]
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2019-10-01",
+      "name": "SQLVMDeployment",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "location": {
+            "value": "[variables('location')]"
+          },
+          "randomString": {
+            "value": "[variables('randomString')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.4.613.9944",
+              "templateHash": "14891450055380168942"
+            }
+          },
+          "parameters": {
+            "location": {
+              "type": "string"
+            },
+            "randomString": {
+              "type": "string"
+            }
+          },
+          "functions": [],
+          "variables": {
+            "subnetName": "[format('pvlab-{0}-subnet', parameters('randomString'))]",
+            "virtualNetworkName": "[format('pvlab-{0}-vnet', parameters('randomString'))]",
+            "networkSecurityGroupName": "[format('pvlab-{0}-nsg', parameters('randomString'))]",
+            "publicIpAddressName": "[format('pvlab-{0}-pub-ip', parameters('randomString'))]",
+            "virtualMachineComputerName": "[format('pvlab{0}com', parameters('randomString'))]",
+            "sqlVirtualMachineName": "[format('pvlab-{0}-sqlvm', parameters('randomString'))]",
+            "adminUsername": "[format('sqladmin{0}', parameters('randomString'))]",
+            "adminPassword": "[format('{0}!{1}', parameters('randomString'), parameters('randomString'))]"
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Network/virtualNetworks/subnets",
+              "apiVersion": "2020-11-01",
+              "name": "[format('{0}/{1}', variables('virtualNetworkName'), variables('subnetName'))]",
+              "properties": {
+                "addressPrefix": "10.2.0.0/24"
+              },
+              "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]"
+              ]
+            },
+            {
+              "type": "Microsoft.Network/networkInterfaces",
+              "apiVersion": "2018-10-01",
+              "name": "[format('pvlab-{0}-ni', parameters('randomString'))]",
+              "location": "[parameters('location')]",
+              "properties": {
+                "ipConfigurations": [
+                  {
+                    "name": "[variables('subnetName')]",
+                    "properties": {
+                      "subnet": {
+                        "id": "[format('{0}/subnets/{1}', resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName')), variables('subnetName'))]"
+                      },
+                      "privateIPAllocationMethod": "Dynamic",
+                      "publicIPAddress": {
+                        "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIpAddressName'))]"
+                      }
+                    }
+                  }
+                ],
+                "networkSecurityGroup": {
+                  "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
+                }
+              },
+              "dependsOn": [
+                "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]",
+                "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIpAddressName'))]",
+                "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]"
+              ]
+            },
+            {
+              "type": "Microsoft.Network/networkSecurityGroups",
+              "apiVersion": "2019-02-01",
+              "name": "[variables('networkSecurityGroupName')]",
+              "location": "[parameters('location')]",
+              "properties": {
+                "securityRules": [
+                  {
+                    "name": "RDP",
+                    "properties": {
+                      "priority": 300,
+                      "protocol": "Tcp",
+                      "access": "Allow",
+                      "direction": "Inbound",
+                      "sourceAddressPrefix": "*",
+                      "sourcePortRange": "*",
+                      "destinationAddressPrefix": "*",
+                      "destinationPortRange": "3389"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "Microsoft.Network/virtualNetworks",
+              "apiVersion": "2020-11-01",
+              "name": "[variables('virtualNetworkName')]",
+              "location": "[parameters('location')]",
+              "properties": {
+                "addressSpace": {
+                  "addressPrefixes": [
+                    "10.2.0.0/16"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "Microsoft.Network/publicIPAddresses",
+              "apiVersion": "2019-02-01",
+              "name": "[variables('publicIpAddressName')]",
+              "location": "[parameters('location')]",
+              "properties": {
+                "publicIPAllocationMethod": "Dynamic"
+              },
+              "sku": {
+                "name": "Basic"
+              }
+            },
+            {
+              "type": "Microsoft.Compute/disks",
+              "apiVersion": "2020-12-01",
+              "name": "[format('pvlab-{0}_DataDisk', parameters('randomString'))]",
+              "location": "[parameters('location')]",
+              "sku": {
+                "name": "Premium_LRS"
+              },
+              "properties": {
+                "diskSizeGB": 8,
+                "creationData": {
+                  "createOption": "Empty"
+                }
+              }
+            },
+            {
+              "type": "Microsoft.Compute/virtualMachines",
+              "apiVersion": "2021-03-01",
+              "name": "[variables('sqlVirtualMachineName')]",
+              "location": "[parameters('location')]",
+              "properties": {
+                "hardwareProfile": {
+                  "vmSize": "Standard_B1ms"
+                },
+                "storageProfile": {
+                  "osDisk": {
+                    "createOption": "FromImage",
+                    "managedDisk": {
+                      "storageAccountType": "StandardSSD_LRS"
+                    }
+                  },
+                  "imageReference": {
+                    "publisher": "microsoftsqlserver",
+                    "offer": "sql2019-ws2019",
+                    "sku": "sqldev",
+                    "version": "latest"
+                  },
+                  "dataDisks": [
+                    {
+                      "lun": 0,
+                      "createOption": "Attach",
+                      "caching": "ReadOnly",
+                      "diskSizeGB": null,
+                      "managedDisk": {
+                        "id": "[resourceId('Microsoft.Compute/disks', format('pvlab-{0}_DataDisk', parameters('randomString')))]",
+                        "storageAccountType": "StandardSSD_LRS"
+                      },
+                      "writeAcceleratorEnabled": false
+                    }
+                  ]
+                },
+                "networkProfile": {
+                  "networkInterfaces": [
+                    {
+                      "id": "[resourceId('Microsoft.Network/networkInterfaces', format('pvlab-{0}-ni', parameters('randomString')))]"
+                    }
+                  ]
+                },
+                "osProfile": {
+                  "computerName": "[variables('virtualMachineComputerName')]",
+                  "adminUsername": "[variables('adminUsername')]",
+                  "adminPassword": "[variables('adminPassword')]",
+                  "windowsConfiguration": {
+                    "enableAutomaticUpdates": true,
+                    "provisionVMAgent": true,
+                    "patchSettings": {
+                      "enableHotpatching": false,
+                      "patchMode": "AutomaticByOS"
+                    }
+                  }
+                }
+              },
+              "dependsOn": [
+                "[resourceId('Microsoft.Compute/disks', format('pvlab-{0}_DataDisk', parameters('randomString')))]",
+                "[resourceId('Microsoft.Network/networkInterfaces', format('pvlab-{0}-ni', parameters('randomString')))]"
+              ]
+            },
+            {
+              "type": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
+              "apiVersion": "2017-03-01-preview",
+              "name": "[variables('sqlVirtualMachineName')]",
+              "location": "[parameters('location')]",
+              "properties": {
+                "virtualMachineResourceId": "[resourceId('Microsoft.Compute/virtualMachines', variables('sqlVirtualMachineName'))]",
+                "sqlManagement": "Full",
+                "sqlServerLicenseType": "PAYG",
+                "autoPatchingSettings": {
+                  "enable": true,
+                  "dayOfWeek": "Sunday",
+                  "maintenanceWindowStartingHour": 2,
+                  "maintenanceWindowDuration": 60
+                },
+                "keyVaultCredentialSettings": {
+                  "enable": false,
+                  "credentialName": ""
+                },
+                "storageConfigurationSettings": {
+                  "diskConfigurationType": "NEW",
+                  "storageWorkloadType": "GENERAL",
+                  "sqlDataSettings": {
+                    "luns": [
+                      0
+                    ],
+                    "defaultFilePath": "F:\\data"
+                  },
+                  "sqlLogSettings": {
+                    "luns": [
+                      0
+                    ],
+                    "defaultFilePath": "F:\\log"
+                  },
+                  "sqlTempDbSettings": {
+                    "defaultFilePath": "F:\\tempDb",
+                    "luns": [
+                      0
+                    ]
+                  }
+                },
+                "serverConfigurationsManagementSettings": {
+                  "sqlConnectivityUpdateSettings": {
+                    "connectivityType": "PRIVATE",
+                    "port": 1433,
+                    "sqlAuthUpdateUserName": "",
+                    "sqlAuthUpdatePassword": ""
+                  },
+                  "additionalFeaturesServerConfigurations": {
+                    "isRServicesEnabled": false
+                  }
+                }
+              },
+              "dependsOn": [
+                "[resourceId('Microsoft.Compute/virtualMachines', variables('sqlVirtualMachineName'))]"
+              ]
+            }
+          ],
+          "outputs": {
+            "SQLVMadminUsername": {
+              "type": "string",
+              "value": "[variables('adminUsername')]"
+            },
+            "SQLVMadminPassword": {
+              "type": "string",
+              "value": "[variables('adminPassword')]"
+            }
+          }
+        }
+      }
     }
   ]
 }

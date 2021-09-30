@@ -86,6 +86,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
     ![Collections](../images/module01/_01.09-datamap-collections.png)
 
+    
 4. Select **Role assignments**.
 
     ![Role assignments](../images/module01/_01.10-collections-roleassignments.png)

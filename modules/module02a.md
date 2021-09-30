@@ -150,7 +150,7 @@ Before proceeding with the following steps, you will need to:
 
 ## 4. Create a Collection
 
-1. Open Purview Studio, navigate to **Sources** and click **New collection**.
+1. Open Purview Studio, navigate to **Data Map** and go to Collections and click  **New collection**.
 
     ![New Collection](../images/module02/02.18-sources-collection.png)
 
@@ -158,15 +158,16 @@ Before proceeding with the following steps, you will need to:
 
     > :bulb: **Did you know?**
     >
-    > **Collections** can be used to logically group data sources. Collections can also belong to other Collections to form a hierarchy (e.g. Organization Name > Business Unit). Collections can collapse or expand by clicking the circle attached to the arrow between levels.
+    > Collections in Azure Purview support organizational mapping of metadata. By using collections, you can manage and maintain data sources, scans, and assets in a hierarchy instead of a flat structure. Also provides a security boundary for your metadata in the data map.
+    >
+    > For more information, check out [Collection Architecture](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections).
 
-    ![Contoso Collection](../images/module02/02.19-sources-contoso.png)
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
 ## 5. Register a Source (ADLS Gen2)
 
-1. Open Purview Studio, navigate to **Sources** and click **Register**.
+1. Open Purview Studio, navigate to **Data Map** go to Sources and click on**Register**.
 
     ![Register](../images/module02/02.20-sources-register.png)
 

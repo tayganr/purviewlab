@@ -128,7 +128,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     B ) vCore Hours  
     C ) Neither
 
-2. Which of the following Azure Purview pricing meters is fixed, with consumption based on quantity provisioned?
+2. Which of the following Azure Purview pricing meters is always on, with consumption based on quantity provisioned?
 
     A ) Capacity Units  
     B ) vCore Hours  

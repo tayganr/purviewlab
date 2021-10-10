@@ -30,11 +30,11 @@ Azure Purview is a unified data governance service that helps you manage and gov
 
 ## :test_tube: Lab Environment Setup
 
-1. Right-click the button to open the Azure Portal in a new window.
+1. Right-click the button below to open the Azure Portal in a new window.
 
     [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftayganr%2Fpurviewlab%2Fmain%2Ftemplate%2Fazuredeploy.json)
 
-2. Click **Create new** to create a new resource group (e.g. `purviewlab-rg`), select a [valid location](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=purview&regions=all) (e.g. `West Europe`), and then click **Review + create**.
+2. Beneath the **Resource group** field, click **Create new** and provide a unique name (e.g. `purviewlab-rg`), select a [valid location](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=purview&regions=all) (e.g. `West Europe`), and then click **Review + create**.
 
     ![Deploy Template](./images/readme/00.01-deploy-lab.png)
 
@@ -50,9 +50,7 @@ Azure Purview is a unified data governance service that helps you manage and gov
 
     ![Deploy Template](./images/readme/00.04-deploy-resources.png)
 
-Note:
-
-* The Azure Purview account resource has been purposely **excluded** from the template so that participants have an opportunity to understand how to deploy an Azure Purview account via the Azure Portal.
+Note: The Azure Purview account resource has been purposely **excluded** from the template so that participants have an opportunity to understand how to deploy an Azure Purview account via the Azure Portal.
 
 <div align="right"><a href="#azure-purview-workshop">↥ back to top</a></div>
 

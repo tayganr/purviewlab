@@ -4,9 +4,15 @@
 
 Azure Purview is a unified data governance service that helps you manage and govern your on-premises, multicloud and software-as-a-service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification and end-to-end data lineage. Empower data consumers to find valuable, trustworthy data.
 
+
+## :thinking: Prerequisites
+
+* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* Your must have the necessary privleges within your Azure subscription to create resources, perform role assignments, register resource providers (if required), etc.
+* [Lab Environment](./modules/module00.md) << This must be setup prior to starting the learning modules.
+
 ## :books: Learning Modules
 
-0. [Lab Environment Setup](./modules/module00.md)
 1. [Create an Azure Purview Account](./modules/module01.md)
 2. Register & Scan: [2A. ADLS Gen2 (Managed Identity)](./modules/module02a.md) | [2B. Azure SQL DB (Azure Key Vault)](./modules/module02b.md)
 3. [Search & Browse](./modules/module03.md)

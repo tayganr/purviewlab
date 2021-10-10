@@ -56,7 +56,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     >
     > Capacity Units are required regardless of whether you plan to invoke the Azure Purview API endpoints directly (i.e. ISV scenario) or indirectly via Purview Studio (GUI).
     >
-    > Note: With the introduction of the **Elastic Data Map**, you no longer need to specify how many Capacity Units that you need. Azure Purview will scale capacity elastically based on the request load.
+    > Note: With the introduction of the [Elastic Data Map](https://docs.microsoft.com/en-us/azure/purview/concept-elastic-data-map), you no longer need to specify how many Capacity Units that you need. Azure Purview will scale capacity elastically based on the request load.
     > 
     > **vCore Hours** on the other hand, is the unit of measure for **serverless** compute that is needed to run a scan. You only pay per vCore Hour of scanning that you consume (rounded up to the nearest minute).
     >

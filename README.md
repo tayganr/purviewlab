@@ -48,7 +48,7 @@ Azure Purview is a unified data governance service that helps you manage and gov
 
 5. If successful, you should see a set of 15 resources, similar to the screenshot below.
 
-    ![Deploy Template](./images/readme/00.04-deploy-resources.png)
+    ![Resource Group](./images/readme/00.04-deploy-resources.png)
 
 Note: The Azure Purview account resource has been purposely **excluded** from the template so that participants have an opportunity to understand how to deploy an Azure Purview account via the Azure Portal.
 

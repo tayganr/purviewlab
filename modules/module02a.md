@@ -33,15 +33,16 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 ## 1. Grant the Azure Purview Managed Identity Access
 
-To scan a source, Azure Purview requires a set of credentials with the necessary permissions. For Azure Data Lake Storage Gen2, Azure Purview supports the following authentication methods.
+> :bulb: **Did you know?**
+> To scan a source, Azure Purview requires a set of **credentials**. For Azure Data Lake Storage Gen2, Azure Purview supports the following [authentication methods](https://docs.microsoft.com/en-gb/azure/purview/register-scan-adls-gen2#setting-up-authentication-for-a-scan).
+>
+> * Managed Identity (recommended)
+>* Service Principal
+> * Account Key
+> 
+> In this module we will walk through how to grant the Azure Purview Managed Identity the necessary access to successfully configure and run a scan.
 
-* Managed Identity (recommended)
-* Service Principal
-* Account Key
-
-In this module we will walk through how to grant the Azure Purview Managed Identity the necessary access to successfully configure and run a scan.
-
-1. From your Azure Data Lake Storage Gen2 account, select **Access Control (IAM)** from the left navigation menu.
+1. Navigate to your Azure Data Lake Storage Gen2 account (e.g. `pvlab{randomId}adls`) and select **Access Control (IAM)** from the left navigation menu.
 
     ![Azure Purview](../images/module02/02.06-storage-access.png)
 

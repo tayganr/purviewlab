@@ -50,19 +50,21 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![Azure Purview](../images/module02/02.07-storage-addrole.png)
 
-3. Populate the role assignment prompt as per the table below, select the Azure Purview managed from the list, click **Save**.
+3. Filter the list of roles by searching for `Storage Blob Data Reader`, click the row to select the role, and then click **Next**.
 
-    | Property  | Value |
-    | --- | --- |
-    | Role | `Storage Blob Data Reader` |
-    | Assign access to | `User, group, or service principal` |
-    | Select | `<purview-account-name>` |
+    ![Access Control Role](../images/module02/02.08-access-role.png)
 
-    ![Azure Purview](../images/module02/02.08-storage-assignment.png)
+4. Under **Assign access to**, select **Managed identity**, click **+ Select members**, select **Purview account** from the **Managed Identity** drop-down menu, select the managed identity for your Azure Purview account (e.g. `pvlab-{randomId}-pv`), click **Select**. Finally, click **Review + assign**.
 
-4. Navigate to the **Role assignments** tab and confirm the Azure Purview managed identity has been assigned the Storage Blob Data Reader role. Tip: Filter **Scope** to `This resource` to limit the results.
+    ![Access Control Members](../images/module02/02.09-access-members.png)
 
-    ![Azure Purview](../images/module02/02.09-storage-reader.png)
+5. Click **Review + assign** once more to perform the role assignment.
+
+    ![Access Control Assign](../images/module02/02.10-access-assign.png)
+
+4. To confirm the role has been assigned, navigate to the **Role assignments** tab and filter the **Scope** to `This resource`. You should be able to see that the Azure Purview managed identity has been granted the **Storage Blob Data Reader** role.
+
+    ![Role Assignment](../images/module02/02.11-role-assignment.png)
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 

@@ -189,7 +189,7 @@ Before proceeding with the following steps, you will need to:
 
     ![View Details](../images/module02/02.29-sources-details.png)
 
-8. Click **Refresh** to periodically update the status of the scan. Note: It will take approximately 5 minutes to complete.
+8. Click **Refresh** to periodically update the status of the scan. Note: It will take approximately 5 to 10 minutes to complete.
 
     ![Monitor Scan](../images/module02/02.30-sources-refresh.png)
 

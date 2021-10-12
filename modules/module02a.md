@@ -124,9 +124,9 @@ Before proceeding with the following steps, you will need to:
 
     > :bulb: **Did you know?**
     >
-    > Collections in Azure Purview support organizational mapping of metadata. By using collections, you can manage and maintain data sources, scans, and assets in a hierarchy instead of a flat structure. Also provides a security boundary for your metadata in the data map.
+    > Collections in Azure Purview support organizational mapping of metadata. By using collections, you can manage and maintain data sources, scans, and assets in a hierarchy instead of a flat structure. In addition, a collection also provides a security boundary for your metadata in the data map. 
     >
-    > For more information, check out [Collection Architecture](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections).
+    > For more information, check out [Collection Architectures and Best Practices](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections).
 
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>

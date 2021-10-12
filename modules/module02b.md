@@ -100,7 +100,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.55-vault-secrets.png)
 
-2. Under **Name** type `sql-secret`. Under **Value** provide the same password that was specified for the SQL Server admin account created earlier in step 7.5. Click **Create**.
+2. Under **Name** type `sql-secret`. Under **Value** type `sqlPassword!`. Click **Create**.
 
     ![](../images/module02/02.56-vault-sqlsecret.png)
 

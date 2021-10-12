@@ -17,8 +17,6 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 ## Table of Contents
 
-1. [Create an Azure SQL Database](#1-create-an-azure-sql-database)
-1. [Create an Azure Key Vault](#2-create-an-azure-key-vault)
 1. [Grant Access to Azure Purview using Key Vault Access Policy](#3-grant-access-to-azure-purview-using-key-vault-access-policy)
 1. [Generate a Secret](#4-generate-a-secret)
 1. [Add Credentials to Azure Purview](#5-add-credentials-to-azure-purview)
@@ -28,95 +26,6 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 1. Create an Azure SQL Database
-
-1. Sign in to the [Azure portal](https://portal.azure.com) with your Azure account and from the **Home** screen, click **Create a resource**.
-
-    ![Azure Purview](../images/module01/01.01-create-resource.png)  
-
-2.  Search for `Azure SQL` and click **Create**.
-
-    ![](../images/module02/02.31-create-sql.png)
-
-3. Select **Single database** and click **Create**.
-
-    ![](../images/module02/02.32-singledb-create.png)
-
-4. Under the **Basics** tab, select a **Resource group** (e.g. `resourcegroup-1`), provide a **Database name** (e.g. `sqldb-team01`) and under **Server** click **Create new**.
- 
-    ![](../images/module02/02.33-sqlsvr-create.png)
-
-5. Provide the necessary inputs and click **OK**.
-
-    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
-
-    | Property  | Example Value |
-    | --- | --- |
-    | Server name | `sqlsvr-team01` |
-    | Server admin login | `team01` |
-    | Password | `<your-sql-admin-password>` |
-    | Confirm password | `<your-sql-admin-password>` |
-    | Location | `East US 2` |
-
-    > Note: The **admin login** and **password** will be required later in the module. Make note of these two values.
-
-    ![](../images/module02/02.34-sqlsvr-new.png)
-
-6. Click **Configure database**.
-
-    ![](../images/module02/02.35-sqldb-configure.png)
-
-7. Select **Serverless** and click **Apply**.
-
-    ![](../images/module02/02.36-sqldb-serverless.png)
-
-8. Navigate to the **Additional settings** tab, select **Sample**, click **Review + create**.
-
-    ![Additional Settings](../images/module02/02.37-sqldb-sample.png)
-
-9. Click **Create**.
-
-    ![](../images/module02/02.38-sqldb-create.png)
-
-10. Once the deployment is complete, click **Go to resource**.
-
-    ![](../images/module02/02.39-sqldb-complete.png)
-
-11. Navigate to the **Server**.
-
-    ![](../images/module02/02.40-sqldb-server.png)
-
-12. Click **Firewalls and virtual networks**, set **Allow Azure services and resources to access this server** to **Yes**, click **Save**.
-
-    ![](../images/module02/02.41-sqlsvr-firewall.png)
-
-<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
-
-## 2. Create an Azure Key Vault
-
-1. From the **Home** screen of the Azure Portal, click **Create a resource**.
-
-    ![Azure Purview](../images/module01/01.01-create-resource.png)  
-
-2. Search for `Key Vault` and click **Create**.
-
-    ![](../images/module02/02.45-create-vault.png)
-
-3. Under the **Basics** tab, select a **Resource group** (e.g. `resourcegroup-1`), provide a **Key vault name** (e.g. `vault-team01`), select a Region (e.g. `East US 2`). 
-
-    ![](../images/module02/02.46-vault-basics.png)
-
-9. Click **Review + create**.
-
-10. Click **Create**.
-
-    ![](../images/module02/02.53-vault-create.png)
-
-11. Once your deployment is complete, click **Go to resource**.
-
-    ![](../images/module02/02.54-vault-goto.png)
-
-<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## 3. Grant Access to Azure Purview using Key Vault Access Policy 
 
@@ -132,7 +41,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.48-policy-select.png)
 
-4. Search for the name of your Azure Purview account (e.g. `purview-team01`), select the item, click **Select**.
+4. Search for the name of your Azure Purview account (e.g. `pvlab-{randomId}-pv`), select the item, click **Select**.
 
     ![](../images/module02/02.49-policy-principal.png)
 

@@ -24,7 +24,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 ##  :bookmark_tabs: Table of Contents
 
-| #  | Section | Targeted Role |
+| #  | Section | Role |
 | --- | --- | --- |
 | 1 | [Grant the Azure Purview Managed Identity Access](#1-grant-the-azure-purview-managed-identity-access) | Azure Administrator |
 | 2 | [Upload Data to Azure Data Lake Storage Gen2 Account](#2-upload-data-to-azure-data-lake-storage-gen2-account) | Azure Administrator |

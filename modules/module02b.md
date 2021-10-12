@@ -18,7 +18,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 ##  :bookmark_tabs: Table of Contents
 
-| #  | Section | Targeted Role |
+| #  | Section | Role |
 | --- | --- | --- |
 | 1 | [Key Vault Access Policy #1 (Grant Yourself Access)](#1-key-vault-access-policy-1-grant-yourself-access) | Azure Administrator |
 | 2 | [Key Vault Access Policy #2 (Grant Azure Purview Access)](#2-key-vault-access-policy-2-grant-azure-purview-access) | Azure Administrator |

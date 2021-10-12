@@ -19,7 +19,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
 ##  :bookmark_tabs: Table of Contents
 
-| #  | Section | Targeted Role |
+| #  | Section | Role |
 | --- | --- | --- |
 | 1 | [Create an Azure Purview Account](#1-create-an-azure-purview-account) | Azure Administrator |
 | 2 | [Grant Access to Azure Purview's Data Plane](#2-grant-access-to-azure-purviews-data-plane) | Collection Administrator |

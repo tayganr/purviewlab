@@ -98,27 +98,27 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 1. Navigate to **Secrets** and click **Generate/Import**.
 
-    ![](../images/module02/02.55-vault-secrets.png)
+    ![Generate Secret](../images/module02/02.55-vault-secrets.png)
 
 2. Under **Name** type `sql-secret`. Under **Value** type `sqlPassword!`. Click **Create**.
 
-    ![](../images/module02/02.56-vault-sqlsecret.png)
+    ![Create Secret](../images/module02/02.56-vault-sqlsecret.png)
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## 4. Add Credentials to Azure Purview
 
-1. To make the secret accessible to Azure Purview, we must establish a connection to Azure Key Vault. Open **Purview Studio**, navigate to **Management Center** > **Credentials**, click **Manage Key Vault connections**.
+1. To make the secret accessible to Azure Purview, we must first establish a connection to Azure Key Vault. Open **Purview Studio**, navigate to **Management Center** > **Credentials**, click **Manage Key Vault connections**.
 
-    ![](../images/module02/02.57-management-vault.png)
+    ![Manage Key Vault Connections](../images/module02/02.57-management-vault.png)
 
 2. Click **New**.
 
-    ![](../images/module02/02.58-vault-new.png)
+    ![New Key Vault Connection](../images/module02/02.58-vault-new.png)
 
-3. Use the drop-down menus to select the appropriate **Subscription** and **Key Vault name**. Click **Create**.
+3. Enter a unique name (e.g. `myKeyVault`) and use the drop-down menus to select the appropriate **Subscription** and **Key Vault name**. Click **Create**.
 
-    ![](../images/module02/02.59-vault-create.png)
+    ![Create Key Vault Connection](../images/module02/02.59-vault-create.png)
 
 4. Since we have already granted the Purview managed identity access to our Azure Key Vault, click **Confirm**.
 
@@ -136,7 +136,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     * Overwrite the **Name** to `credential-SQL`
     * Set the **Authentication method** to `SQL authentication`
-    * Set the **User name** to the SQL Server admin login specified earlier (e.g. `team01`)
+    * Set the **User name** to `sqladmin`.
     * Select the **Key Vault connection**
     * Set the **Secret name** to `sql-secret`
 
@@ -146,7 +146,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 ## 5. Register a Source (Azure SQL DB)
 
-1. Open Purview Studio, navigate to **Sources** and click **Register**.
+1. Open Purview Studio, navigate to **Data map** > **Sources**, and click **Register**.
 
     ![](../images/module02/02.42-sources-register.png)
 
@@ -162,7 +162,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 ## 6. Scan a Source with Azure Key Vault Credentials
 
-1. Open Purview Studio, navigate to **Sources**, and within the Azure SQL Database source tile, click the **New Scan** button.
+1. Open Purview Studio, navigate to **Data map** > **Sources**, and within the Azure SQL Database tile, click the **New Scan** button.
 
     ![](../images/module02/02.64-sources-scansql.png)
 

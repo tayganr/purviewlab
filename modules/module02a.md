@@ -114,11 +114,13 @@ Before proceeding with the following steps, you will need to:
 
 ## 3. Create a Collection
 
-1. Open Purview Studio, navigate to **Data Map** and go to Collections and click  **New collection**.
+1. Open Purview Studio, navigate to **Data Map** > **Collections**, and click  **Add a collection**.
 
     ![New Collection](../images/module02/02.18-sources-collection.png)
 
 2. Provide the collection a **Name** (e.g. Contoso) and click **Create**.
+
+    ![New Collection](../images/module02/02.76-collection-create.png)
 
     > :bulb: **Did you know?**
     >

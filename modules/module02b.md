@@ -190,7 +190,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.70-sqlscan-details.png)
 
-8. Click **Refresh** to periodically update the status of the scan. Note: It will take approximately 5 minutes to complete.
+8. Click **Refresh** to periodically update the status of the scan. Note: It will take approximately 5 to 10 minutes to complete.
 
     ![](../images/module02/02.71-sqlscan-refresh.png)
 

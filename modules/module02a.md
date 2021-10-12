@@ -18,16 +18,20 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 ## :dart: Objectives
 
+* Create a collection.
 * Register and scan an Azure Data Lake Storage Gen2 account using the Azure Purview managed identity.
 
-## Table of Contents
 
-1. [Grant the Azure Purview Managed Identity Access](#1-grant-the-azure-purview-managed-identity-access)
-1. [Upload Data to Azure Data Lake Storage Gen2 Account](#2-upload-data-to-azure-data-lake-storage-gen2-account)
-1. [Create a Collection](#3-create-a-collection)
-1. [Register a Source (ADLS Gen2)](#4-register-a-source-adls-gen2)
-1. [Scan a Source with the Azure Purview Managed Identity](#5-scan-a-source-with-the-azure-purview-managed-identity)
-1. [View Assets](#6-view-assets)
+##  :bookmark_tabs: Table of Contents
+
+| #  | Section | Targeted Role |
+| --- | --- | --- |
+| 1 | [Grant the Azure Purview Managed Identity Access](#1-grant-the-azure-purview-managed-identity-access) | Azure Administrator |
+| 2 | [Upload Data to Azure Data Lake Storage Gen2 Account](#2-upload-data-to-azure-data-lake-storage-gen2-account) | Azure Administrator |
+| 3 | [Create a Collection](#3-create-a-collection) | Collection Administrator |
+| 4 | [Register a Source (ADLS Gen2)](#4-register-a-source-adls-gen2) | Data Source Administrator |
+| 5 | [Scan a Source with the Azure Purview Managed Identity](#5-scan-a-source-with-the-azure-purview-managed-identity) | Data Source Administrator |
+| 6 | [View Assets](#6-view-assets) | Data Reader |
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 

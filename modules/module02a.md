@@ -137,7 +137,7 @@ Before proceeding with the following steps, you will need to:
 
 ## 4. Register a Source (ADLS Gen2)
 
-1. Open Purview Studio, navigate to **Data Map** go to Sources and click on**Register**.
+1. Open Purview Studio, navigate to **Data Map** > **Sources**, and click on **Register**.
 
     ![Register](../images/module02/02.20-sources-register.png)
 
@@ -145,7 +145,7 @@ Before proceeding with the following steps, you will need to:
 
     ![Sources](../images/module02/02.21-sources-adls.png)
 
-3. Select the **Azure subscription**, **Storage account name**, and **Collection**. Click **Register**.
+3. Select the **Azure subscription**, **Storage account name**, **Collection**, and click **Register**.
 
     > :bulb: **Did you know?**
     >

@@ -34,6 +34,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 ## 1. Grant the Azure Purview Managed Identity Access
 
 > :bulb: **Did you know?**
+>
 > To scan a source, Azure Purview requires a set of **credentials**. For Azure Data Lake Storage Gen2, Azure Purview supports the following [authentication methods](https://docs.microsoft.com/en-gb/azure/purview/register-scan-adls-gen2#setting-up-authentication-for-a-scan).
 >
 > * Managed Identity (recommended)

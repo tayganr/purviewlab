@@ -121,7 +121,7 @@ Before proceeding with the following steps, you will need to:
 
 > :bulb: **Did you know?**
 >
-> Collections in Azure Purview can be used to organize data sources, scans, and assets in a hierarchical model based on how your organization plans to use Azure Purview. The collection hierarchy also forms the security boundary for your metadata to ensure users don't have access to data they don't need (e.g. sensitive metadata). 
+> [Collections](https://docs.microsoft.com/en-us/azure/purview/how-to-create-and-manage-collections) in Azure Purview can be used to organize data sources, scans, and assets in a hierarchical model based on how your organization plans to use Azure Purview. The collection hierarchy also forms the security boundary for your metadata to ensure users don't have access to data they don't need (e.g. sensitive metadata). 
 >
 > For more information, check out [Collection Architectures and Best Practices](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections).
 

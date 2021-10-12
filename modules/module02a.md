@@ -119,6 +119,12 @@ Before proceeding with the following steps, you will need to:
 
 ## 3. Create a Collection
 
+> :bulb: **Did you know?**
+>
+> Collections in Azure Purview can be used to organize data sources, scans, and assets in a hierarchical model based on how your organization plans to use Azure Purview. The collection hierarchy also forms the security boundary for your metadata to ensure users don't have access to data they don't need (e.g. sensitive metadata). 
+>
+> For more information, check out [Collection Architectures and Best Practices](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections).
+
 1. Open Purview Studio, navigate to **Data Map** > **Collections**, and click  **Add a collection**.
 
     ![New Collection](../images/module02/02.18-sources-collection.png)
@@ -126,13 +132,6 @@ Before proceeding with the following steps, you will need to:
 2. Provide the collection a **Name** (e.g. Contoso) and click **Create**.
 
     ![New Collection](../images/module02/02.76-collection-create.png)
-
-    > :bulb: **Did you know?**
-    >
-    > Collections in Azure Purview support organizational mapping of metadata. By using collections, you can manage and maintain data sources, scans, and assets in a hierarchy instead of a flat structure. In addition, a collection also provides a security boundary for your metadata in the data map. 
-    >
-    > For more information, check out [Collection Architectures and Best Practices](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections).
-
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 

@@ -20,8 +20,8 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 | #  | Section | Targeted Role |
 | --- | --- | --- |
-| 1 | [Key Vault Access Policy #1 (Grant Yourself Access)](#1-grant-access-to-azure-purview-using-key-vault-access-policy) | Azure Administrator |
-| 2 | [Key Vault Access Policy #2 (Grant Azure Purview Access)](#2-key-vault-access-) | Azure Administrator |
+| 1 | [Key Vault Access Policy #1 (Grant Yourself Access)](#1-key-vault-access-policy-1-grant-yourself-access) | Azure Administrator |
+| 2 | [Key Vault Access Policy #2 (Grant Azure Purview Access)](#2-key-vault-access-policy-2-grant-azure-purview-access) | Azure Administrator |
 | 2 | [Generate a Secret](#3-generate-a-secret) | Azure Administrator |
 | 3 | [Add Credentials to Azure Purview](#4-add-credentials-to-azure-purview) | Azure Purview Administrator |
 | 4 | [Register a Source (Azure SQL DB)](#5-register-a-source-azure-sql-db) | Data Source Administrator |

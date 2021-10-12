@@ -16,20 +16,18 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 * Register and scan an Azure SQL Database using SQL authentication credentials stored in Azure Key Vault.
 
-
 ##  :bookmark_tabs: Table of Contents
 
 | #  | Section | Targeted Role |
 | --- | --- | --- |
-| 1 | [Grant Access to Azure Purview using Key Vault Access Policy](#1-grant-access-to-azure-purview-using-key-vault-access-policy) | Role |
-| 2 | [Generate a Secret](#2-generate-a-secret) | Role |
-| 3 | [Add Credentials to Azure Purview](#3-add-credentials-to-azure-purview) | Role |
-| 4 | [Register a Source (Azure SQL DB)](#4-register-a-source-azure-sql-db) | Role |
-| 5 | [Scan a Source with Azure Key Vault Credentials](#5-scan-a-source-with-azure-key-vault-credentials) | Role |
-| 6 | [View Assets](#6-view-assets) | Role |
+| 1 | [Grant Access to Azure Purview using Key Vault Access Policy](#1-grant-access-to-azure-purview-using-key-vault-access-policy) | Azure Administrator |
+| 2 | [Generate a Secret](#2-generate-a-secret) | Azure Administrator |
+| 3 | [Add Credentials to Azure Purview](#3-add-credentials-to-azure-purview) | Azure Purview Administrator |
+| 4 | [Register a Source (Azure SQL DB)](#4-register-a-source-azure-sql-db) | Data Source Administrator |
+| 5 | [Scan a Source with Azure Key Vault Credentials](#5-scan-a-source-with-azure-key-vault-credentials) | Data Source Administrator |
+| 6 | [View Assets](#6-view-assets) | Data Reader |
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
-
 
 ## 1. Grant Access to Azure Purview using Key Vault Access Policy 
 

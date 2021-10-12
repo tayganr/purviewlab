@@ -20,48 +20,81 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 | #  | Section | Targeted Role |
 | --- | --- | --- |
-| 1 | [Grant Access to Azure Purview using Key Vault Access Policy](#1-grant-access-to-azure-purview-using-key-vault-access-policy) | Azure Administrator |
-| 2 | [Generate a Secret](#2-generate-a-secret) | Azure Administrator |
-| 3 | [Add Credentials to Azure Purview](#3-add-credentials-to-azure-purview) | Azure Purview Administrator |
-| 4 | [Register a Source (Azure SQL DB)](#4-register-a-source-azure-sql-db) | Data Source Administrator |
-| 5 | [Scan a Source with Azure Key Vault Credentials](#5-scan-a-source-with-azure-key-vault-credentials) | Data Source Administrator |
-| 6 | [View Assets](#6-view-assets) | Data Reader |
+| 1 | [Key Vault Access Policy #1 (Grant Yourself Access)](#1-grant-access-to-azure-purview-using-key-vault-access-policy) | Azure Administrator |
+| 2 | [Key Vault Access Policy #2 (Grant Azure Purview Access)](#2-key-vault-access-) | Azure Administrator |
+| 2 | [Generate a Secret](#3-generate-a-secret) | Azure Administrator |
+| 3 | [Add Credentials to Azure Purview](#4-add-credentials-to-azure-purview) | Azure Purview Administrator |
+| 4 | [Register a Source (Azure SQL DB)](#5-register-a-source-azure-sql-db) | Data Source Administrator |
+| 5 | [Scan a Source with Azure Key Vault Credentials](#6-scan-a-source-with-azure-key-vault-credentials) | Data Source Administrator |
+| 6 | [View Assets](#7-view-assets) | Data Reader |
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 1. Grant Access to Azure Purview using Key Vault Access Policy 
+## 1. Key Vault Access Policy #1 (Grant Yourself Access)
 
 1. Navigate to your **Azure Key Vault** resource and click **Access policies**
     
-    ![](../images/module02/02.73-keyvault-policies.png)
+    ![Access Policies](../images/module02/02.73-keyvault-policies.png)
 
 2. Click **Add Access Policy**.
 
-    ![](../images/module02/02.74-keyvault-addpolicy.png)
+    ![Add Access Policy](../images/module02/02.74-keyvault-addpolicy.png)
 
 3. Under **Select principal**, click **None selected**.
 
-    ![](../images/module02/02.48-policy-select.png)
+    ![Select Principal](../images/module02/02.48-policy-select.png)
 
-4. Search for the name of your Azure Purview account (e.g. `pvlab-{randomId}-pv`), select the item, click **Select**.
+4. Search for your account name, select the item, click **Select**.
 
-    ![](../images/module02/02.49-policy-principal.png)
+    ![Search Principal](../images/module02/02.77-principal-select.png)
 
-5. Under **Secret permissions**, select **Get** and **List**.
+5. Under **Secret permissions**, click **Select all**.
 
-    ![](../images/module02/02.50-secret-permissions.png)
+    ![Secret Permissions](../images/module02/02.78-secret-permissions.png)
 
 6. Review your selections and click **Add**.
 
-    ![](../images/module02/02.51-policy-add.png)
+    ![Review Access Policy](../images/module02/02.79-review-permissions.png)
 
 7. Click **Save**.
 
-    ![](../images/module02/02.75-keyvault-savepolicy.png)
+    ![Save Access Policy](../images/module02/02.75-keyvault-savepolicy.png)
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 2. Generate a Secret
+## 2. Key Vault Access Policy #2 (Grant Azure Purview Access)
+
+1. Navigate to your **Azure Key Vault** resource and click **Access policies**
+    
+    ![Access Policies](../images/module02/02.73-keyvault-policies.png)
+
+2. Click **Add Access Policy**.
+
+    ![Add Access Policy](../images/module02/02.74-keyvault-addpolicy.png)
+
+3. Under **Select principal**, click **None selected**.
+
+    ![Select Principal](../images/module02/02.48-policy-select.png)
+
+4. Search for the name of your Azure Purview account (e.g. `pvlab-{randomId}-pv`), select the item, click **Select**.
+
+    ![Search Principal](../images/module02/02.49-policy-principal.png)
+
+5. Under **Secret permissions**, select **Get** and **List**.
+
+    ![Secret Permissions](../images/module02/02.50-secret-permissions.png)
+
+6. Review your selections and click **Add**.
+
+    ![Review Access Policy](../images/module02/02.51-policy-add.png)
+
+7. Click **Save**.
+
+    ![Save Access Policy](../images/module02/02.75-keyvault-savepolicy.png)
+
+<div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
+
+## 3. Generate a Secret
 
 1. Navigate to **Secrets** and click **Generate/Import**.
 
@@ -73,7 +106,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 3. Add Credentials to Azure Purview
+## 4. Add Credentials to Azure Purview
 
 1. To make the secret accessible to Azure Purview, we must establish a connection to Azure Key Vault. Open **Purview Studio**, navigate to **Management Center** > **Credentials**, click **Manage Key Vault connections**.
 
@@ -111,7 +144,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 4. Register a Source (Azure SQL DB)
+## 5. Register a Source (Azure SQL DB)
 
 1. Open Purview Studio, navigate to **Sources** and click **Register**.
 
@@ -127,7 +160,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 5. Scan a Source with Azure Key Vault Credentials
+## 6. Scan a Source with Azure Key Vault Credentials
 
 1. Open Purview Studio, navigate to **Sources**, and within the Azure SQL Database source tile, click the **New Scan** button.
 
@@ -163,7 +196,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 6. View Assets
+## 7. View Assets
 
 1. To view the assets that have materialised as an outcome of running the scans, perform a wildcard search by typing the asterisk character (`*`) into the search bar and hitting the Enter key to submit the query and return the search results.
 

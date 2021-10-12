@@ -157,7 +157,7 @@ Before proceeding with the following steps, you will need to:
 
 ## 5. Scan a Source with the Azure Purview Managed Identity
 
-1. Open Purview Studio, navigate to **Sources**, and within the Azure Data Lake Storage Gen2 source tile, click the **New Scan** button.
+1. Open Purview Studio, navigate to **Data Map** > **Sources**, and within the Azure Data Lake Storage Gen2 tile, click the **New Scan** button.
 
     ![New Scan](../images/module02/02.23-scan-new.png)
 
@@ -173,7 +173,7 @@ Before proceeding with the following steps, you will need to:
 
     > :bulb: **Did you know?**
     >
-    > **Scan Rule Sets** determine which **File Types** and **Classification Rules** are in scope. If you want to include a custom file type or custom classification rule as part of a scan, a custom scan rule set will need to be created.
+    > [Scan Rule Sets](https://docs.microsoft.com/en-us/azure/purview/create-a-scan-rule-set) determine which **File Types** and **Classification Rules** are in scope. If you want to include a custom file type or custom classification rule as part of a scan, a custom scan rule set will need to be created.
 
     ![Scan rule set](../images/module02/02.26-scan-ruleset.png)
 

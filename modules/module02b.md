@@ -5,6 +5,7 @@
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An Azure SQL Database (see [module 00](../modules/module00.md)).
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 
 ## :loudspeaker: Introduction
@@ -15,19 +16,22 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 * Register and scan an Azure SQL Database using SQL authentication credentials stored in Azure Key Vault.
 
-## Table of Contents
 
-1. [Grant Access to Azure Purview using Key Vault Access Policy](#3-grant-access-to-azure-purview-using-key-vault-access-policy)
-1. [Generate a Secret](#4-generate-a-secret)
-1. [Add Credentials to Azure Purview](#5-add-credentials-to-azure-purview)
-1. [Register a Source (Azure SQL DB)](#6-register-a-source-azure-sql-db)
-1. [Scan a Source with Azure Key Vault Credentials](#7-scan-a-source-with-azure-key-vault-credentials)
-1. [View Assets](#8-view-assets)
+##  :bookmark_tabs: Table of Contents
+
+| #  | Section | Targeted Role |
+| --- | --- | --- |
+| 1 | [Grant Access to Azure Purview using Key Vault Access Policy](#1-grant-access-to-azure-purview-using-key-vault-access-policy) | Role |
+| 2 | [Generate a Secret](#2-generate-a-secret) | Role |
+| 3 | [Add Credentials to Azure Purview](#3-add-credentials-to-azure-purview) | Role |
+| 4 | [Register a Source (Azure SQL DB)](#4-register-a-source-azure-sql-db) | Role |
+| 5 | [Scan a Source with Azure Key Vault Credentials](#5-scan-a-source-with-azure-key-vault-credentials) | Role |
+| 6 | [View Assets](#6-view-assets) | Role |
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 
-## 3. Grant Access to Azure Purview using Key Vault Access Policy 
+## 1. Grant Access to Azure Purview using Key Vault Access Policy 
 
 1. Navigate to your **Azure Key Vault** resource and click **Access policies**
     
@@ -59,7 +63,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 4. Generate a Secret
+## 2. Generate a Secret
 
 1. Navigate to **Secrets** and click **Generate/Import**.
 
@@ -71,7 +75,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 5. Add Credentials to Azure Purview
+## 3. Add Credentials to Azure Purview
 
 1. To make the secret accessible to Azure Purview, we must establish a connection to Azure Key Vault. Open **Purview Studio**, navigate to **Management Center** > **Credentials**, click **Manage Key Vault connections**.
 
@@ -109,7 +113,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 6. Register a Source (Azure SQL DB)
+## 4. Register a Source (Azure SQL DB)
 
 1. Open Purview Studio, navigate to **Sources** and click **Register**.
 
@@ -125,7 +129,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 7. Scan a Source with Azure Key Vault Credentials
+## 5. Scan a Source with Azure Key Vault Credentials
 
 1. Open Purview Studio, navigate to **Sources**, and within the Azure SQL Database source tile, click the **New Scan** button.
 
@@ -161,7 +165,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
-## 8. View Assets
+## 6. View Assets
 
 1. To view the assets that have materialised as an outcome of running the scans, perform a wildcard search by typing the asterisk character (`*`) into the search bar and hitting the Enter key to submit the query and return the search results.
 

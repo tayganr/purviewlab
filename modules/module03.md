@@ -1,6 +1,6 @@
 # Module 03 - Search & Browse
 
-[< Previous Module](../modules/module02.md) - **[Home](../README.md)** - [Next Module >](../modules/module04.md)
+[< Previous Module](../modules/module02b.md) - **[Home](../README.md)** - [Next Module >](../modules/module04.md)
 
 ## :thinking: Prerequisites
 

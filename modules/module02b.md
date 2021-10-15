@@ -127,7 +127,9 @@ In order to securely store our Azure SQL Database password, we need to generate 
 
 ## 4. Add Credentials to Azure Purview
 
-1. To make the secret accessible to Azure Purview, we must first establish a connection to Azure Key Vault. Open **Purview Studio**, navigate to **Management Center** > **Credentials**, click **Manage Key Vault connections**.
+To make the secret accessible to Azure Purview, we must first establish a connection to Azure Key Vault.
+
+1. Open **Purview Studio**, navigate to **Management Center** > **Credentials**, click **Manage Key Vault connections**.
 
     ![Manage Key Vault Connections](../images/module02/02.57-management-vault.png)
 

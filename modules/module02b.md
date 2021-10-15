@@ -32,7 +32,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 ## 1. Key Vault Access Policy #1 (Grant Yourself Access)
 
-1. Navigate to your **Azure Key Vault** resource and click **Access policies**
+1. Navigate to your **Azure Key Vault** resource and click **Access policies**.
     
     ![Access Policies](../images/module02/02.73-keyvault-policies.png)
 
@@ -44,7 +44,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![Select Principal](../images/module02/02.48-policy-select.png)
 
-4. Search for your account name, select the item, click **Select**.
+4. Search for your account name, select the item, then click **Select**.
 
     ![Search Principal](../images/module02/02.77-principal-select.png)
 
@@ -52,7 +52,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![Secret Permissions](../images/module02/02.78-secret-permissions.png)
 
-6. Review your selections and click **Add**.
+6. Review your selections then click **Add**.
 
     ![Review Access Policy](../images/module02/02.79-review-permissions.png)
 
@@ -64,7 +64,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 ## 2. Key Vault Access Policy #2 (Grant Azure Purview Access)
 
-1. Navigate to your **Azure Key Vault** resource and click **Access policies**
+1. Navigate to your **Azure Key Vault** resource and click **Access policies**.
     
     ![Access Policies](../images/module02/02.73-keyvault-policies.png)
 
@@ -76,7 +76,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![Select Principal](../images/module02/02.48-policy-select.png)
 
-4. Search for the name of your Azure Purview account (e.g. `pvlab-{randomId}-pv`), select the item, click **Select**.
+4. Search for the name of your Azure Purview account (e.g. `pvlab-{randomId}-pv`), select the item, then click **Select**.
 
     ![Search Principal](../images/module02/02.49-policy-principal.png)
 
@@ -84,7 +84,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![Secret Permissions](../images/module02/02.50-secret-permissions.png)
 
-6. Review your selections and click **Add**.
+6. Review your selections then click **Add**.
 
     ![Review Access Policy](../images/module02/02.51-policy-add.png)
 
@@ -101,6 +101,15 @@ To populate Azure Purview with assets for data discovery and understanding, we m
     ![Generate Secret](../images/module02/02.55-vault-secrets.png)
 
 2. Under **Name** type `sql-secret`. Under **Value** type `sqlPassword!`. Click **Create**.
+
+    * Name
+    ```
+    sql-secret
+    ```
+    * Value
+    ```
+    sqlPassword!
+    ```
 
     ![Create Secret](../images/module02/02.56-vault-sqlsecret.png)
 

@@ -100,13 +100,13 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![Generate Secret](../images/module02/02.55-vault-secrets.png)
 
-2. Under **Name** type `sql-secret`. Under **Value** type `sqlPassword!`. Click **Create**.
+2. Copy and paste the values below into the matching fields and then click **Create**.
 
-    * Name
+    **Name**
     ```
     sql-secret
     ```
-    * Value
+    **Value**
     ```
     sqlPassword!
     ```

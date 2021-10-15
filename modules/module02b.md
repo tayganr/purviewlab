@@ -133,7 +133,7 @@ In this next step, we are creating a second access policy which will provide Azu
 
     ![New Key Vault Connection](../images/module02/02.58-vault-new.png)
 
-3. **Copy** and **paste** the value below to set the name of your **Key Vault connection**, and then use the drop-down menus to select the appropriate **Subscription** and **Key Vault name**, then click **Create**.
+3. **Copy** and **paste** the value below to set the name of your **Key Vault connection**, and then use the drop-down menu items to select the appropriate **Subscription** and **Key Vault name**, then click **Create**.
 
     **Name**
     ```

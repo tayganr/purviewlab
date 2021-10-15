@@ -146,7 +146,7 @@ To make the secret accessible to Azure Purview, we must first establish a connec
 
     ![Create Key Vault Connection](../images/module02/02.59-vault-create.png)
 
-4. Since we have already granted the Purview managed identity access to our Azure Key Vault, click **Confirm**.
+4. Since we have already granted the Azure Purview managed identity access to our Azure Key Vault, click **Confirm**.
 
     ![](../images/module02/02.60-vault-access.png)
 

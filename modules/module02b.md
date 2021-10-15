@@ -36,7 +36,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 >
 > **Azure Key Vault** is a cloud service that provides a secure store for secrets. Azure Key Vault can be used to securely store keys, passwords, certificates, and other secrets. For more information, check out [About Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview).
 
-Before we can add secrets (such as passwords) to Azure Key Vault, we need to set up an [Access Policy](https://docs.microsoft.com/en-us/azure/key-vault/general/assign-access-policy?tabs=azure-portal). The access policy being created in this particular step, ensures that our account has sufficient permissions to create a secret which will securely store our password to the Azure SQL Database. Azure Purview will later use Azure Key Vault to securely retrieve this secret whenever it needs to perform a scan.
+Before we can add secrets (such as passwords) to Azure Key Vault, we need to set up an [Access Policy](https://docs.microsoft.com/en-us/azure/key-vault/general/assign-access-policy?tabs=azure-portal). The access policy being created in this particular step, ensures that our account has sufficient permissions to create a secret, which will later be used by Azure Purview to perform a scan.
 
 1. Navigate to your **Azure Key Vault** resource and click **Access policies**.
     

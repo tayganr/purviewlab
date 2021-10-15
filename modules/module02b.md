@@ -104,6 +104,8 @@ In this next step, we are creating a second access policy which will provide Azu
 
 ## 3. Generate a Secret
 
+In order to securely store our Azure SQL Database password, we need to generate a secret.
+
 1. Navigate to **Secrets** and click **Generate/Import**.
 
     ![Generate Secret](../images/module02/02.55-vault-secrets.png)

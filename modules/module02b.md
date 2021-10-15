@@ -31,6 +31,10 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## 1. Key Vault Access Policy #1 (Grant Yourself Access)
+    
+> :bulb: **Did you know?**
+>
+> **Azure Key Vault** is a cloud service that provides a secure store for secrets. Azure Key Vault can be used to securely store keys, passwords, certificates, and other secrets. For more information, check out [About Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview).
 
 1. Navigate to your **Azure Key Vault** resource and click **Access policies**.
     

@@ -100,7 +100,7 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![Generate Secret](../images/module02/02.55-vault-secrets.png)
 
-2. Copy and paste the values below into the matching fields and then click **Create**.
+2. **Copy** and **paste** the values below into the matching fields and then click **Create**.
 
     **Name**
     ```
@@ -125,7 +125,12 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![New Key Vault Connection](../images/module02/02.58-vault-new.png)
 
-3. Enter a unique name (e.g. `myKeyVault`) and use the drop-down menus to select the appropriate **Subscription** and **Key Vault name**. Click **Create**.
+3. **Copy** and **paste** the value below to set the name of your **Key Vault connection**, and then use the drop-down menus to select the appropriate **Subscription** and **Key Vault name**, then click **Create**.
+
+    **Name**
+    ```
+    myKeyVault
+    ```
 
     ![Create Key Vault Connection](../images/module02/02.59-vault-create.png)
 
@@ -141,13 +146,22 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
     ![](../images/module02/02.62-credentials-new.png)
 
-7. Provide the necessary details and click **Create**.
+7.  Using the drop-down menu items, set the **Authentication method** to `SQL authentication` and the **Key Vault connection** to `myKeyVault`. Once the drop-down menu items are set, **Copy** and **paste** the values below into the matching fields, and then click **Create**.
 
-    * Overwrite the **Name** to `credential-SQL`
-    * Set the **Authentication method** to `SQL authentication`
-    * Set the **User name** to `sqladmin`.
-    * Select the **Key Vault connection**
-    * Set the **Secret name** to `sql-secret`
+    **Name**
+    ```
+    credential-SQL
+    ```
+
+    **User name**
+    ```
+    sqladmin
+    ```
+
+    **Secret name**
+    ```
+    sql-secret
+    ```
 
     ![](../images/module02/02.63-credentials-create.png)
 

@@ -50,7 +50,7 @@ Before we can add secrets (such as passwords) to Azure Key Vault, we need to set
 
     ![Select Principal](../images/module02/02.48-policy-select.png)
 
-4. Search for your account name, select the item, then click **Select**.
+4. Search for your **account name**, select your account name from the **search results**, then click **Select**.
 
     ![Search Principal](../images/module02/02.77-principal-select.png)
 

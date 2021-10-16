@@ -36,13 +36,13 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## 1. Create an Azure Data Factory Connection in Azure Purview
 
-1. Open Purview Studio, navigate to **Management Center** > **Data Factory** and click **New**.
+1. Open Purview Studio, navigate to **Management** > **Data Factory** (under Lineage connections) and click **New**.
 
     > :warning: To view/add/remove Data Factory connections, you need to be assigned the **Collection admin** role on the root collection.
 
     ![](../images/module06/06.06-purview-management.png)
 
-2. Select your Azure Data Factory from the drop-down menu and click **OK**.
+2. Select your Azure Data Factory account instance from the drop-down menu (e.g. `pvlab-{randomId}-adf`) and click **OK**.
 
     > :bulb: **Did you know?**
     >
@@ -52,11 +52,11 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 3. Once finished, you should see the Data Factory in a **connected** state.
 
-    ![](../images/module06/06.08-adf-connected.png)
-
     > :bulb: **Did you know?**
     >
     > When a user registers an Azure Data Factory, behind the scenes the Data Factory managed identity is added to the Purview RBAC role: `Purview Data Curator`. From this point, pipeline executions from that instance of data factory will push lineage metadata back into Purview. See [supported Azure Data Factory activities](https://docs.microsoft.com/en-us/azure/purview/how-to-link-azure-data-factory#supported-azure-data-factory-activities).
+
+    ![](../images/module06/06.08-adf-connected.png)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

@@ -65,6 +65,8 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 4. Navigate to the **Schema** tab and update the **Asset description** for each column using the sample text below.
 
+    ![Update Schema](../images/module03/03.06-asset-schema.png)
+
     **Date**
     ```
     Date on which the query was issued.
@@ -93,8 +95,6 @@ Once sources have been registered and scanned, the underlying data catalog will 
     > :bulb: **Did you know?**
     >
     > **Classifications** and **Glossary Terms** can be assigned at the asset level (e.g. a Table within a Database) as well as at the schema level (e.g. a Column within a Table Schema).
-
-    ![Update Schema](../images/module03/03.06-asset-schema.png)
 
 5. Navigate to the **Contacts** tab and set someone within your organization to be an **Expert** and an **Owner**. Click **Save**.
 

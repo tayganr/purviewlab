@@ -52,11 +52,15 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 3. Once finished, you should see the Data Factory in a **connected** state.
 
+    ![](../images/module06/06.08-adf-connected.png)
+
+4. To confirm that Azure Data Factory has been provided the necessary access, navigate to **Data map** > **Collections** > `YOUR_ROOT_COLLECTION` > **Role assignments**, within **Data curators** you should be able to see the Azure Data Factory managed identity.
+
     > :bulb: **Did you know?**
     >
-    > When a user registers an Azure Data Factory, behind the scenes the Data Factory managed identity is added to the Purview RBAC role: `Purview Data Curator`. From this point, pipeline executions from that instance of data factory will push lineage metadata back into Purview. See [supported Azure Data Factory activities](https://docs.microsoft.com/en-us/azure/purview/how-to-link-azure-data-factory#supported-azure-data-factory-activities).
+    > When a user creates an Azure Data Factory connection, behind the scenes the Data Factory managed identity is added to the `Data Curator` role. This provides Azure Data Factory the necessary access to push lineage to Azure Purview during a pipeline execution. See [supported Azure Data Factory activities](https://docs.microsoft.com/en-us/azure/purview/how-to-link-azure-data-factory#supported-azure-data-factory-activities).
 
-    ![](../images/module06/06.08-adf-connected.png)
+    ![](../images/module06/06.35-adf-identity.png)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

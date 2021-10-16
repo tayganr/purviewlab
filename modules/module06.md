@@ -28,9 +28,9 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## Table of Contents
 
-1. [Create an Azure Data Factory Connection in Azure Purview](#2-create-an-azure-data-factory-connection-in-azure-purview)
-2. [Copy Data using Azure Data Factory](#3-copy-data-using-azure-data-factory)
-3. [View Lineage in Azure Purview](#4-view-lineage-in-azure-purview)
+1. [Create an Azure Data Factory Connection in Azure Purview](#1-create-an-azure-data-factory-connection-in-azure-purview)
+2. [Copy Data using Azure Data Factory](#2-copy-data-using-azure-data-factory)
+3. [View Lineage in Azure Purview](#3-view-lineage-in-azure-purview)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 
@@ -60,7 +60,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 
-## 3. Copy Data using Azure Data Factory
+## 2. Copy Data using Azure Data Factory
 
 1. Within the Azure Portal, navigate to your Azure Data Factory resource and click **Author & Monitor**.
 
@@ -143,7 +143,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 
-## 4. View Lineage in Azure Purview
+## 3. View Lineage in Azure Purview
 
 1. Open Purview Studio, from the Home screen click **Browse assets**.
 

@@ -202,7 +202,7 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 
     ![Run Scan](../images/module05/05.24-scan-saverun.png)
 
-9. To view the progress of the scan, navigate to **Sources** and click **View details** on the Azure Data Lake Storage Gen2 account.
+9. To view the progress of the scan, navigate to **Sources** and click **View details** on the Azure Data Lake Storage Gen2 tile.
 
     ![Source Details](../images/module05/05.25-source-viewdetails.png)
 

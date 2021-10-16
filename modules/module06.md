@@ -66,38 +66,30 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## 2. Copy Data using Azure Data Factory
 
-1. Within the [Azure Portal](https://portal.azure.com), navigate to your Azure Data Factory resource and click **Author & Monitor**.
+1. Within the [Azure Portal](https://portal.azure.com), navigate to your Azure Data Factory resource and click **Open Azure Data Factory Studio**.
 
     ![](../images/module06/06.09-adf-author.png)
 
-2. Click **Copy data**.
+2. Click **Ingest**.
     ![](../images/module06/06.10-adf-copywizard.png)
 
-3. Rename the task to **copyPipeline** and click **Next**.
+3. Select **Built-in copy task** and then click **Next**.
 
     ![](../images/module06/06.11-adf-pipelinename.png)
 
-4. Click **Create new connection**.
+4. Change the **Source type** to `Azure Data Lake Storage Gen2` and then click **New connection**.
     
     ![](../images/module06/06.12-adf-sourceconn.png)
 
-5. Filter the list of sources by clicking **Azure**, select **Azure Data Lake Storage Gen2** and click **Continue**.
-    
-    ![](../images/module06/06.13-adf-adlsgen2.png)
-
-6. Select your **Azure subscription** and **Storage account**, click **Test connection** and then click **Create**.
+5. Select your **Azure subscription** and **Storage account** (e.g. `pvlab{randomId}adls`), click **Test connection** and then click **Create**.
 
     ![](../images/module06/06.14-adf-linkedservice.png)
-
-7. Click **Next**.
-
-    ![](../images/module06/06.15-adf-sourceselect.png)
 
 8. Click **Browse**.
 
     ![](../images/module06/06.16-adf-browse.png)
 
-9. Navigate to `raw/BingCoronavirusQuerySet/2020/` and click **Choose**.
+9. Navigate to `raw/BingCoronavirusQuerySet/2020/` and click **OK**.
     
     ![](../images/module06/06.17-adf-choose.png)
 
@@ -105,19 +97,15 @@ This module steps through what is required for connecting an Azure Data Factory 
 
     ![](../images/module06/06.18-adf-input.png)
 
-11. Preview the sample data and click **Next**.
+11. Preview the sample data by clicking **Preview data**, and then click **Next**.
     
     ![](../images/module06/06.19-adf-preview.png)
 
-12. Select the same **AzureDataLakeStorage1** connection for the destination and click **Next**.
-
-    ![](../images/module06/06.20-adf-destination.png)
-
-13. Click **Browse**.
+13. Change the **Target type** to `Azure Data Lake Storage Gen2`, set the **Connection** to the existing connection (e.g. `AzureDataLakeStorage1`), and then click **Browse**.
 
     ![](../images/module06/06.21-adf-browseoutput.png)
 
-14. Navigate to `raw/` and click **Choose**.
+14. Navigate to `raw/` and click **OK**.
 
     ![](../images/module06/06.22-adf-chooseoutput.png)
 
@@ -149,11 +137,11 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## 3. View Lineage in Azure Purview
 
-1. Open Purview Studio, from the Home screen click **Browse assets**.
+1. Open Purview Studio, from the **Data catalog** screen click **Browse assets**.
 
     ![](../images/module06/06.29-purview-browse.png)
 
-2. Select **Azure Data Factory**.
+2. Switch to the **By source type** tab and then select **Azure Data Factory**.
 
     ![](../images/module06/06.30-browse-adf.png)
 
@@ -161,7 +149,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
     ![](../images/module06/06.31-browse-instance.png)
 
-4. Select the **copyPipeline** and click to open the **Copy Activity**.
+4. Select the **Copy Pipeline** and click to open the **Copy Activity**.
     
     ![](../images/module06/06.32-browse-pipeline.png)
 

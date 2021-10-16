@@ -45,7 +45,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     > :bulb: **Did you know?**
     >
-    > A **Term Template** determines the attributes for a term. The **System default** term template has the basic fields only (e.g. Name, Definition, Status, etc). **Custom** term templates can be used to capture additional custom attributes. For more information, check out [How to manage term templates for business glossary](https://docs.microsoft.com/en-us/azure/purview/how-to-manage-term-templates).
+    > A **Term Template** determines the attributes for a term. The **System default** term template has basic fields only (e.g. Name, Definition, Status, etc). **Custom** term templates on the other hand, can be used to capture additional custom attributes. For more information, check out [How to manage term templates for business glossary](https://docs.microsoft.com/en-us/azure/purview/how-to-manage-term-templates).
 
     ![System default term template](../images/module04/04.02-term-default.png)
 
@@ -175,6 +175,10 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 ## 4. Bulk Export Terms
 
 1. From the **Glossary** screen, we want to select ALL terms (top check box) and then de-select terms that do not belong to Workplace Analytics (i.e. Contoso Parent, Contoso Child). **All Workplace Analytics terms** should be selected. Click **Export terms**. Note: You can not export terms from different term templates.
+
+    > :bulb: **Did you know?**
+    >
+    > When using Purview Studio to **Export terms**, all terms selected for the export must be defined using the same **Term template**. Selecting terms from different term templates will result in the **Export terms** button being greyed out.
 
     ![Export Terms](../images/module04/04.17-glossary-export.png)
 

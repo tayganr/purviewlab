@@ -30,13 +30,18 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 ## 1. Search Catalog
 
-1. Open Purview Studio and from the **Home** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
+1. Open Purview Studio and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 
-2. Filter the search results by **Classification** (e.g. Country/Region) and click the hyperlinked asset name to view the details (e.g. QueriesByState).
+2. Filter the search results by **Classification** (e.g. Country/Region) and click the hyperlinked asset name to view the details (e.g. `QueriesByState`).
 
     ![Filter by Classification](../images/module03/03.02-search-filter.png)
+
+
+> :bulb: **Did you know?**
+>
+> While **Purview Studio** is provided as the default user experience, customers and partners can interface with the underlying platform using the [Azure Purview REST API](https://docs.microsoft.com/en-us/rest/api/purview/). The openness of the platform enables the possibility of integrating Azure Purview with custom user interfaces as well as the ability to perform read/write operations programmatically. 
 
 <div align="right"><a href="#module-03---search--browse">↥ back to top</a></div>
 

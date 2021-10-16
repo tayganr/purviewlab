@@ -5,8 +5,8 @@
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An Azure Data Lake Storage Gen2 Account (see [module 00](../modules/module00.md)).
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
-* An Azure Data Lake Storage Gen2 Account (see [module 02](../modules/module02.md)).
 
 ## :hammer: Tools
 

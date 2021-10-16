@@ -5,8 +5,9 @@
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An Azure Data Lake Storage Gen2 Account (see [module 00](../modules/module00.md)).
+* An Azure Data Factory Account (see [module 00](../modules/module00.md)).
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
-* An Azure Data Lake Storage Gen2 Account (see [module 02](../modules/module02.md)).
 
 ## :loudspeaker: Introduction
 
@@ -27,57 +28,17 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## Table of Contents
 
-1. [Create an Azure Data Factory Account](#1-create-an-azure-data-factory-account)
-2. [Create an Azure Data Factory Connection in Azure Purview](#2-create-an-azure-data-factory-connection-in-azure-purview)
-3. [Copy Data using Azure Data Factory](#3-copy-data-using-azure-data-factory)
-4. [View Lineage in Azure Purview](#4-view-lineage-in-azure-purview)
+1. [Create an Azure Data Factory Connection in Azure Purview](#2-create-an-azure-data-factory-connection-in-azure-purview)
+2. [Copy Data using Azure Data Factory](#3-copy-data-using-azure-data-factory)
+3. [View Lineage in Azure Purview](#4-view-lineage-in-azure-purview)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 
-## 1. Create an Azure Data Factory Account
-
-1. Sign in to the [Azure portal](https://portal.azure.com) with your Azure account and from the **Home** screen, click **Create a resource**.
-
-    ![Create a Resource](../images/module01/01.01-create-resource.png)  
-
-2. Search the Marketplace for "Data Factory" and click **Create**.
-    
-    ![Azure Marketplace](../images/module06/06.01-marketplace-create.png)
-
-3. Provide the necessary inputs on the **Basics** tab and then navigate to **Git configuration**.  
-
-    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
-
-    | Parameter  | Example Value |
-    | --- | --- |
-    | Subscription | `BuildEnv` |
-    | Resource group | `resourcegroup-1` |
-    | Region | `East US 2` |
-    | Name | `adf-team01` |
-
-    ![Azure Data Factory Basics](../images/module06/06.02-create-basics.png)
-
-4. Select **Configure Git later** and click **Review + create**.
-
-    ![Azure Data Factory Basics](../images/module06/06.03-create-git.png)
-
-5. Once validation has passed, click **Create**.
-
-    ![](../images/module06/06.04-create-adf.png)
-
-6. Wait until the deployment is complete, then return to Purview Studio.
-
-    ![Deployment Complete](../images/module06/06.05-adf-deployment.png)
-
-<div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
-
-## 2. Create an Azure Data Factory Connection in Azure Purview
+## 1. Create an Azure Data Factory Connection in Azure Purview
 
 1. Open Purview Studio, navigate to **Management Center** > **Data Factory** and click **New**.
 
-    > :warning: If you are unable to add Data Factory connections, you may need to assign one of the following roles: 
-    > * Owner
-    > * User Access Administrator
+    > :warning: To view/add/remove Data Factory connections, you need to be assigned the **Collection admin** role on the root collection.
 
     ![](../images/module06/06.06-purview-management.png)
 

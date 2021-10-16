@@ -114,21 +114,21 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 ## 3. Browse Assets
 
-While the search experience is ideal for keyword based discovery, Purview Studio also allows users to navigate the catalog by source.
+While the search experience is ideal for keyword based discovery, Purview Studio allows alternate methods of browsing assets (i.e. by collection OR by source type).
 
-1. Open Purview Studio and from the **Home** screen, click **Browse assets**.
+1. Open Purview Studio and from the **Data catlog** screen, click **Browse assets**.
 
     ![Browse Assets](../images/module03/03.09-home-browse.png)
 
-2. Select a **source** (e.g. Azure Data Lake Storage Gen2).
+2. Switch to the **By source type** tab and select a **source** (e.g. `Azure Data Lake Storage Gen2`).
 
     ![ADLS Gen2](../images/module03/03.10-browse-adls.png)
 
-3. Select an **account** (e.g. storage2486).
+3. Select an **account** (e.g. `pvlab{randomId}adls`).
 
     ![ADLS Gen2 Account](../images/module03/03.11-browse-account.png)
 
-4. Select a **container** (e.g. raw).
+4. Select a **container** (e.g. `raw`).
 
     ![ADLS Gen2 Container](../images/module03/03.12-browse-container.png)
 
@@ -139,7 +139,7 @@ While the search experience is ideal for keyword based discovery, Purview Studio
 Azure Purview allows us to perform certain operations (add/replace/remove) against a subset of attributes (Expert, Owner, Term, Classification) in bulk directly within Purview Studio.
 
 
-1. Open Purview Studio and from the **Home** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
+1. Open Purview Studio and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 
@@ -151,7 +151,7 @@ Azure Purview allows us to perform certain operations (add/replace/remove) again
 
     ![Bulk Edit](../images/module03/03.14-bulk-edit.png)
 
-4. Set the **Attribute** to `Owner`, set **Operation** to `Add`, select two users in your organization and click **Apply**.
+4. Set the **Attribute** to `Owner`, set **Operation** to `Add`, select one or more users in your organization, and click **Apply**.
  
     ![Apply Changes](../images/module03/03.15-bulk-apply.png)
 

@@ -56,7 +56,7 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
     ![Update Classification](../images/module03/03.05-asset-classification.png)
 
-4. Navigate to the **Schema** tab and update the **Asset description** using the sample text below.
+4. Navigate to the **Schema** tab and update the **Asset description** for each column using the sample text below.
 
     **Date**
     ```

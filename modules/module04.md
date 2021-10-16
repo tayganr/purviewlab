@@ -178,7 +178,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     > :bulb: **Did you know?**
     >
-    > When using Purview Studio to **Export terms**, all terms selected for the export must be defined using the same **Term template**. Selecting terms from different term templates will result in the **Export terms** button being greyed out.
+    > When using Purview Studio to **Export terms**, all terms selected for the export must use the same **Term template**. Selecting terms from different term templates will result in the **Export terms** button being greyed out.
 
     ![Export Terms](../images/module04/04.17-glossary-export.png)
 

@@ -40,8 +40,6 @@ Azure Purview provides a large set of default classifications that represent typ
 
 2. **Copy** and **paste** the values below into the appropriate fields and click **OK**.
 
-    ![Create Classification](../images/module05/05.02-classifications-create.png)
-
     **Name**
     ```
     Twitter Handle
@@ -50,6 +48,8 @@ Azure Purview provides a large set of default classifications that represent typ
     ```
     The username that appears at the end of your unique Twitter URL.
     ```
+
+    ![Create Classification](../images/module05/05.02-classifications-create.png)
 
 3. Navigate to the **Custom** tab to confirm the custom classification has been created.
 

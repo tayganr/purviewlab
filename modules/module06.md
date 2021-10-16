@@ -58,7 +58,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
     > :bulb: **Did you know?**
     >
-    > When a user creates an Azure Data Factory connection, behind the scenes the Data Factory managed identity is added to the `Data Curator` role. This provides Azure Data Factory the necessary access to push lineage to Azure Purview during a pipeline execution. See [supported Azure Data Factory activities](https://docs.microsoft.com/en-us/azure/purview/how-to-link-azure-data-factory#supported-azure-data-factory-activities).
+    > When a user creates an Azure Data Factory connection, behind the scenes the Data Factory managed identity is added to the `Data Curator` role. This provides Azure Data Factory the necessary access to push lineage to Azure Purview during a pipeline execution. See [supported Azure Data Factory activities](https://docs.microsoft.com/en-us/azure/purview/how-to-link-azure-data-factory#supported-azure-data-factory-activities) for more information.
 
     ![](../images/module06/06.35-adf-identity.png)
 
@@ -66,7 +66,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## 2. Copy Data using Azure Data Factory
 
-1. Within the Azure Portal, navigate to your Azure Data Factory resource and click **Author & Monitor**.
+1. Within the [Azure Portal](https://portal.azure.com), navigate to your Azure Data Factory resource and click **Author & Monitor**.
 
     ![](../images/module06/06.09-adf-author.png)
 

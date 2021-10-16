@@ -56,16 +56,32 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
     ![Update Classification](../images/module03/03.05-asset-classification.png)
 
-4. Navigate to the **Schema** tab and update the **column descriptions** using the sample text below.
+4. Navigate to the **Schema** tab and update the **Asset description** using the sample text below.
 
-    | Column Name  | Description |
-    | --- | --- |
-    | Date | `Date on which the query was issued.` |
-    | Query | `The actual search query issued by user(s).` |
-    | IsImplicitIntent | `True if query did not mention covid or coronavirus or sarsncov2 (e.g, “Shelter in place”). False otherwise.` |
-    | State | `State from where the query was issued.` |
-    | Country | `Country from where the query was issued.` |
-    | PopularityScore | `Value between 1 and 100 inclusive. 1 indicates least popular query on the day/State/Country with Coronavirus intent, and 100 indicates the most popular query for the same geography on the same day.` |
+    **Date**
+    ```
+    Date on which the query was issued.
+    ```
+    **Query**
+    ```
+    The actual search query issued by user(s).
+    ```
+    **IsImplicitIntent**
+    ```
+    True if query did not mention covid or coronavirus or sarsncov2 (e.g, “Shelter in place”). False otherwise.
+    ```
+    **State**
+    ```
+    State from where the query was issued.
+    ```
+    **Country**
+    ```
+    Country from where the query was issued.
+    ```
+    **PopularityScore**
+    ```
+    Value between 1 and 100 inclusive. 1 indicates least popular query on the day/State/Country with Coronavirus intent, and 100 indicates the most popular query for the same geography on the same day.
+    ```
 
     > :bulb: **Did you know?**
     >

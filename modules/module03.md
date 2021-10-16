@@ -34,7 +34,7 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 
-2. Filter the search results by **Classification** (e.g. Country/Region) and click the hyperlinked asset name to view the details (e.g. `QueriesByState`).
+2. Filter the search results by **Classification** (e.g. **Country/Region**) and click the hyperlinked asset name to view the details (e.g. `QueriesByState`).
 
     ![Filter by Classification](../images/module03/03.02-search-filter.png)
 
@@ -53,7 +53,9 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 2. Update the **Description** by copying and pasting the sample text below.
 
-    > This dataset was curated from the Bing search logs (desktop users only) over the period of Jan 1st, 2020 – (Current Month - 1). Only searches that were issued many times by multiple users were included. The dataset includes queries from all over the world that had an intent related to the Coronavirus or Covid-19. In some cases this intent is explicit in the query itself (e.g., “Coronavirus updates Seattle”), in other cases it is implicit , e.g. “Shelter in place”.
+    ```
+    This dataset was curated from the Bing search logs (desktop users only) over the period of Jan 1st, 2020 – (Current Month - 1). Only searches that were issued many times by multiple users were included. The dataset includes queries from all over the world that had an intent related to the Coronavirus or Covid-19. In some cases this intent is explicit in the query itself (e.g., “Coronavirus updates Seattle”), in other cases it is implicit , e.g. “Shelter in place”
+    ```
 
     ![Update Description](../images/module03/03.04-asset-description.png)
 

@@ -101,6 +101,8 @@ Once sources have been registered and scanned, the underlying data catalog will 
     > :bulb: **Did you know?**
     >
     > Assets can be related to two different types of contacts. **Experts** are often business process or subject matter experts. Where as **Owners** are often senior executives or business area owners that define governance or business processes over certain data areas.
+    >
+    > For assets in which you are tagged as a **Contact**, these will appear on the home screen (Data catalog), under **My items**.
 
     ![Update Contacts](../images/module03/03.07-asset-contacts.png)
 

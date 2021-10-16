@@ -65,6 +65,10 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 4. Navigate to the **Schema** tab and update the **Asset description** for each column using the sample text below.
 
+    > :bulb: **Did you know?**
+    >
+    > **Classifications** and **Glossary Terms** can be assigned at the asset level (e.g. a Table within a Database) as well as at the schema level (e.g. a Column within a Table Schema).
+
     ![Update Schema](../images/module03/03.06-asset-schema.png)
 
     **Date**
@@ -91,10 +95,6 @@ Once sources have been registered and scanned, the underlying data catalog will 
     ```
     Value between 1 and 100 inclusive. 1 indicates least popular query on the day/State/Country with Coronavirus intent, and 100 indicates the most popular query for the same geography on the same day.
     ```
-
-    > :bulb: **Did you know?**
-    >
-    > **Classifications** and **Glossary Terms** can be assigned at the asset level (e.g. a Table within a Database) as well as at the schema level (e.g. a Column within a Table Schema).
 
 5. Navigate to the **Contacts** tab and set someone within your organization to be an **Expert** and an **Owner**. Click **Save**.
 

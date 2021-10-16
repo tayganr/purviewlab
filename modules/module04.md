@@ -63,7 +63,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
     ```
     **Definition**
     ```
-    This will be the parent term.`
+    This will be the parent term.
     ```
     **Acronym**
     ```

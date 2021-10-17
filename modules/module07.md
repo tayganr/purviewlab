@@ -216,7 +216,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 [http://aka.ms/purviewlab/q07](http://aka.ms/purviewlab/q07)
 
-1. Which section would show the **number of discovered assets**?
+1. Which report would show the **number of assets**?
 
     A ) Assets  
     B ) Scans  
@@ -237,6 +237,6 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 ## :tada: Summary
 
-This module provided an overview of how to glean insights on Assets, Scans, Glossary Terms, Classifications, Sensitivity Labels, and File Extensions across your data estate.
+This module provided an overview of how to glean insights on Assets, Scans, Glossary Terms, Classifications and Sensitivity Labels across your data estate.
 
 [Continue >](../modules/module08.md)

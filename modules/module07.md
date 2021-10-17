@@ -8,6 +8,9 @@
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 * Set up and complete a scan (see [module 02](../modules/module02.md)).
 
+```diff
+! :dart: Testing 1... 2... 3...
+```
 > Note: Insights can take several hours post the completion of a scan to reflect new assets.
 
 ## :loudspeaker: Introduction

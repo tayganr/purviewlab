@@ -2,14 +2,8 @@
 
 [< Previous Module](../modules/module06.md) - **[Home](../README.md)** - [Next Module >](../modules/module08.md)
 
-## :thinking: Prerequisites
-
-* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
-* Set up and complete a scan (see [module 02](../modules/module02.md)).
-
 ```diff
-! << DISCLAIMER >>                                                                                 
+! << DISCLAIMER - PLEASE READ BEFORE PROCEEDING >>                                                 
 !                                                                                                  
 ! * Insights within Azure Purview can take several hours to surface post the completion of a scan. 
 ! * At this point of the workshop, only a limited number of data visualisations will be populated  
@@ -18,6 +12,12 @@
 ! * The screenshots and information that have been provided below is intended to provide an        
 ! understanding of the type of insights that can be gleaned from a fully populated environment.    
 ```
+
+## :thinking: Prerequisites
+
+* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* Set up and complete a scan (see [module 02](../modules/module02.md)).
 
 ## :loudspeaker: Introduction
 

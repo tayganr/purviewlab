@@ -40,7 +40,6 @@ Insights provides customers, a single pane of glass view into their catalog and 
 3. [Glossary Insights](#3-glossary-insights)
 4. [Classification Insights](#4-classification-insights)
 5. [Sensitivity Labels Insights](#5-sensitivity-labels-insights)
-6. [File Extensions Insights](#6-file-extensions-insights)
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
@@ -212,25 +211,6 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
-## 6. File Extensions Insights
-
-1. Open Purview Studio, navigate to **Insights** > **File Extensions**.
-
-    ![File Extensions Insights](../images/module07/07.26-fileext-insights.png)
-
-2. The File Extensions page displays the following **high-level metrics**.
-    * Unique Number of File Extensions Found
-
-    ![File Extensions KPI](../images/module07/07.27-fileext-kpi.png)
-
-3. The File Extensions page includes the following **graphs**:
-    
-    **Top File Extensions**
-
-    ![File Extensions Graph 01](../images/module07/07.28-fileext-graph01.png)
-   
-<div align="right"><a href="#module-07---insights">↥ back to top</a></div>
-
 ## :mortar_board: Knowledge Check
 
 [http://aka.ms/purviewlab/q07](http://aka.ms/purviewlab/q07)
@@ -239,7 +219,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
     A ) Assets  
     B ) Scans  
-    C ) File extensions
+    C ) Classification
 
 2. A glossary term that does not have a steward (i.e. an assigned contact), is shown as an **incomplete term**.
 

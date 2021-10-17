@@ -95,7 +95,7 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
     ![Add Diagnostic Setting](../images/module08/08.14-diagnostic-add.png)
 
-2. Provide the diagnostic setting a name (e.g. `Audit`), select **ScanStatusLogEvent**, select **Archive to a storage account**, select your storage account (e.g. `blob2486`) and click **Save**.
+2. Provide the diagnostic setting a name (e.g. `Audit`), select **ScanStatusLogEvent**, select **Archive to a storage account**, select an existing storage account (e.g. `pvlab{randomId}adls`) and click **Save**.
 
     > :bulb: **Did you know?**
     >
@@ -103,7 +103,7 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
     ![Save Diagnostic Setting](../images/module08/08.15-diagnostic-save.png)
 
-3. To test the capture of raw events, trigger a full scan by navigating to **Azure Purview Studio** > **Sources** and click **View details** on an existing source.
+3. To test the capture of raw events, trigger a full scan by navigating to **Azure Purview Studio** > **Data map** > **Sources** and click **View details** on an existing source.
 
     ![Source Details](../images/module08/08.16-sources-details.png)
 
@@ -115,15 +115,15 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
     ![Full Scan](../images/module08/08.18-scan-full.png)
 
-6. Monitor the scan status by periodically click the **Refresh** button.
+6. Monitor the scan status by periodically clicking the **Refresh** button.
 
     ![Scan Progress](../images/module08/08.19-scan-progress.png)
 
-7. Once the scan is complete, open your storage account within the Azure Portal and navigate to **Storage Explorer**. If the audit log has been captured, you should be able to navigate down the folder path until you find a JSON document that contains details about the scan. Note: You can also use [Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) as an alternative to the Azure Portal.
+7. Once the scan is complete, navigate to your storage account within the Azure Portal, select **Storage Explorer**, expand **CONTAINERS** and select **insights-logs-scanstatuslogevent**, navigate down the folder hierarchy until you reach a JSON document (e.g. `PT1H.json`).
 
     ![Storage Explorer](../images/module08/08.20-storage-explorer.png)
 
-8. Download and open a local copy of the JSON file to see the details (e.g. dataSourceName, dataSourceType, assetsDiscovered, scanTotalRunTimeInSeconds, etc).
+8. Download and open a local copy of the JSON document to see the details (e.g. dataSourceName, dataSourceType, assetsDiscovered, scanTotalRunTimeInSeconds, etc).
 
     ![Event JSON](../images/module08/08.21-event-json.png)
 

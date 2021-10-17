@@ -3,14 +3,14 @@
 [< Previous Module](../modules/module06.md) - **[Home](../README.md)** - [Next Module >](../modules/module08.md)
 
 ```diff
-! << DISCLAIMER - PLEASE READ BEFORE PROCEEDING >>                                                 
+!                      << DISCLAIMER - PLEASE READ BEFORE PROCEEDING >>                            
 !                                                                                                  
 ! * Insights within Azure Purview can take several hours to surface post the completion of a scan. 
 ! * At this point of the workshop, only a limited number of data visualisations will be populated  
 ! as this requires a variety of sources and assets to be scanned that is beyond the scope of this  
 ! workshop.                                                                                        
-! * The screenshots and information that have been provided below is intended to provide an        
-! understanding of the type of insights that can be gleaned from a fully populated environment.    
+! * The screenshots and information below, has been provided so that you can conceptualise the type
+! of insights that can be gleaned from a fully populated environment.                              
 ```
 
 ## :thinking: Prerequisites

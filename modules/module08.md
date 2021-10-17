@@ -6,6 +6,7 @@
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* Your subscription must have the **Microsoft.Insights** resource provider registered.
 
 ## :loudspeaker: Introduction
 
@@ -86,35 +87,7 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
 ## 3. Send Diagnostic Logs to Azure Storage
 
-1. Navigate to the Azure Portal, and **create** a **Storage account**.
-
-    ![Create Storage Account](../images/module08/08.10-storage-create.png)
-
-2. Provide the necessary inputs on the **Basics** tab and click **Review + create**.
-
-    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
-
-    | Parameter  | Example Value |
-    | --- | --- |
-    | Subscription | `Azure Internal Access` |
-    | Resource group | `purview-workshop` |
-    | Storage account name | `blob2486` |
-    | Location | `(South America) Brazil South` |
-    | Performance | `Standard` |
-    | Account kind | `StorageV2 (general purpose v2)` |
-    | Replication | `Locally-redundant storage (LRS)` |
-
-    ![Review Storage Account](../images/module08/08.11-storage-review.png)
-
-3. Click **Create**.
-
-    ![Provision Storage Account](../images/module08/08.12-storage-provision.png)
-
-4. Monitor your deployment until the status changes to **Your deployment is complete**.
-
-    ![Storage Account Ready](../images/module08/08.13-storage-complete.png)
-
-5. Navigate to your **Azure Purview** account instance, click **Diagnostic settings** and select **Add diagnostic setting**.
+1. Navigate to your **Azure Purview** account instance, click **Diagnostic settings** and select **Add diagnostic setting**.
 
     > :bulb: **Did you know?**
     >
@@ -122,7 +95,7 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
     ![Add Diagnostic Setting](../images/module08/08.14-diagnostic-add.png)
 
-6. Provide the diagnostic setting a name (e.g. `Audit`), select **ScanStatusLogEvent**, select **Archive to a storage account**, select your storage account (e.g. `blob2486`) and click **Save**.
+2. Provide the diagnostic setting a name (e.g. `Audit`), select **ScanStatusLogEvent**, select **Archive to a storage account**, select your storage account (e.g. `blob2486`) and click **Save**.
 
     > :bulb: **Did you know?**
     >
@@ -130,27 +103,27 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
     ![Save Diagnostic Setting](../images/module08/08.15-diagnostic-save.png)
 
-7. To test the capture of raw events, trigger a full scan by navigating to **Azure Purview Studio** > **Sources** and click **View details** on an existing source.
+3. To test the capture of raw events, trigger a full scan by navigating to **Azure Purview Studio** > **Sources** and click **View details** on an existing source.
 
     ![Source Details](../images/module08/08.16-sources-details.png)
 
-8. Navigate to the **Scans** tab and click the name of a previously run scan.
+4. Navigate to the **Scans** tab and click the name of a previously run scan.
 
     ![Source Scans](../images/module08/08.17-sources-scans.png)
 
-9. Open the **Run scan now** drop-down menu and select **Full Scan**.
+5. Open the **Run scan now** drop-down menu and select **Full Scan**.
 
     ![Full Scan](../images/module08/08.18-scan-full.png)
 
-10. Monitor the scan status by periodically click the **Refresh** button.
+6. Monitor the scan status by periodically click the **Refresh** button.
 
     ![Scan Progress](../images/module08/08.19-scan-progress.png)
 
-11. Once the scan is complete, open your storage account within the Azure Portal and navigate to **Storage Explorer**. If the audit log has been captured, you should be able to navigate down the folder path until you find a JSON document that contains details about the scan. Note: You can also use [Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) as an alternative to the Azure Portal.
+7. Once the scan is complete, open your storage account within the Azure Portal and navigate to **Storage Explorer**. If the audit log has been captured, you should be able to navigate down the folder path until you find a JSON document that contains details about the scan. Note: You can also use [Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) as an alternative to the Azure Portal.
 
     ![Storage Explorer](../images/module08/08.20-storage-explorer.png)
 
-12. Download and open a local copy of the JSON file to see the details (e.g. dataSourceName, dataSourceType, assetsDiscovered, scanTotalRunTimeInSeconds, etc).
+8. Download and open a local copy of the JSON file to see the details (e.g. dataSourceName, dataSourceType, assetsDiscovered, scanTotalRunTimeInSeconds, etc).
 
     ![Event JSON](../images/module08/08.21-event-json.png)
 

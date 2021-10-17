@@ -51,7 +51,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 2. The Assets page displays the following **high-level metrics**.
     * Number of Source Types
-    * Number of Discovered Assets
+    * Number of Assets
     * Number of Classified Assets
 
     ![Assets KPI](../images/module07/07.02-assets-kpi.png)

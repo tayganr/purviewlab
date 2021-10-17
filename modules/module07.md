@@ -9,11 +9,14 @@
 * Set up and complete a scan (see [module 02](../modules/module02.md)).
 
 ```diff
-! << DISCLAIMER >>
-!
-!  * Insights within Azure Purview can take several hours to surface post the completion of a scan.  
-!  * At this point of the workshop, only a limited number of data visualisations will be populated as this requires a variety of sources and assets to be scanned that is beyond the scope of this workshop. 
-! * The screenshots and information that have been provided below is intended to provide an understanding of the type of insights that can be gleaned from a fully populated environment. 
+! << DISCLAIMER >>                                                                                 
+!                                                                                                  
+! * Insights within Azure Purview can take several hours to surface post the completion of a scan. 
+! * At this point of the workshop, only a limited number of data visualisations will be populated  
+! as this requires a variety of sources and assets to be scanned that is beyond the scope of this  
+! workshop.                                                                                        
+! * The screenshots and information that have been provided below is intended to provide an        
+! understanding of the type of insights that can be gleaned from a fully populated environment.    
 ```
 
 ## :loudspeaker: Introduction

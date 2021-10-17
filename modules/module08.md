@@ -30,21 +30,15 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 * The person who created the Purview account automatically gets permissions to view metrics.
 * Other individuals can be provided access by adding them to the **Monitoring Reader** role.
 
-1. Sign in to the [Azure portal](https://portal.azure.com) and navigate to your **Azure Purview** > **Access Control** > **Role assignments**.
+1. Sign in to the [Azure portal](https://portal.azure.com), navigate to your **Azure Purview** account (e.g. `pvlab-{randomId}-pv`), select **Access Control** and click **Add role assignment**.
 
     ![Azure Purview Access Control](../images/module08/08.01-purview-access.png)
 
-2. Click **Add** and then select **Add role assignment**.
+2. Filter the list of roles by searching for `Monitoring Reader`, select the **Monitoring Reader** role and then click **Next**.
 
     ![Add Role Assignment](../images/module08/08.02-access-add.png)
 
-3. Populate the role assignment prompt as per the table below, select the member from the list, click **Save**.
-
-    | Property  | Value |
-    | --- | --- |
-    | Role | `Monitoring Reader` |
-    | Assign access to | `User, group, or service principal` |
-    | Select | `<account-name>` |
+3. Click **Select members**, search for a user within your Azure Active Directory, select that user from the list, and then click **Select**.
 
     > :bulb: **Did you know?**
     >
@@ -52,7 +46,7 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
 
     ![Assign Role](../images/module08/08.03-access-assign.png)
 
-4. Navigate to the **Role assignments** tab and confirm the identity has been assigned the **Monitoring Reader** role. Tip: Filter **Scope** to `This resource` to limit the results.
+4. Click **Review + assign** to progress to the final screen, then click **Review + assign** once more to add the role assignment.
 
     ![Verify Access](../images/module08/08.04-access-verify.png)
 

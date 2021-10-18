@@ -721,6 +721,8 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
     ![](../images/module10/10.09-postman-login.png)
 
+<div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+
 ## 6. Read data from Azure Purview
 
 1. Within the Azure portal, open the Azure Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.

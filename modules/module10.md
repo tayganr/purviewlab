@@ -731,15 +731,15 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 3. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below. 
 
-    * Paste the copied endpoint into the URL (e.g. `https://PURVIEW_ACCOUNT.catalog.purview.azure.com`)
+    * Paste the copied endpoint into the URL (e.g. `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog`)
     * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/types/typedefs`
 
-    > Note: Calling this particular endpoint will result in the bulk retrieval of all **type definitions**. A type definition in Azure Purview is the equivalent of a blueprint and determines how certain objects (e.g. entities, classifications, relationships, etc) need to be created.
+    > Note: Calling this particular endpoint will result in the bulk retrieval of all **type definitions**. While Azure Purview comes equippped with a number of system-built definitions, customers are able to creat their own custom definitions to cater for other scenarios (e.g. other data sources).
 
     | Property | Value |
     | --- | --- |
     | HTTP Method | `GET` |
-    | URL | `https://YOUR_PURVIEW_ACCOUNT.catalog.purview.azure.com/api/atlas/v2/types/typedefs` |
+    | URL | `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog/api/atlas/v2/types/typedefs` |
 
     Navigate to **Headers**, provide the following key value pair, click **Send**.
 
@@ -786,4 +786,4 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 ## :tada: Summary
 
-In this module, you learned how to get started with the Azure Purview REST API. To learn more about the Azure Purview REST API, check out the [Swagger documentation](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).
+In this module, you learned how to get started with the Azure Purview REST API. To learn more about the Azure Purview REST API, check out the Azure Purview [Swagger documentation](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).

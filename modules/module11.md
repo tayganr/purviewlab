@@ -5,6 +5,7 @@
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* A SQL Virtual Machine (see [module 00](../modules/module00.md)).
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 
 ## :loudspeaker: Introduction
@@ -13,151 +14,108 @@ To populate Azure Purview with assets from your on-premise data sources, we must
 
 ## :dart: Objectives
 
-* Connect to on premise data source and ingest data assets to Azure Purview.
+* Connect to on premise data source using a self-hosted integration runtime.
 
 ## Table of Contents
 
-1. [Install SHIR](#1-install-self-hosted-integration-runtime)
-2. [Generate a Client Secret](#2-generate-a-client-secret)
-3. [Provide Service Principal Access to Azure Purview](#3-provide-service-principal-access-to-azure-purview)
-4. [Use Postman to Call Azure Purview REST API](#4-use-postman-to-call-azure-purview-rest-api)
+1. [Connect to SQL Virtual Machine](#1-connect-to-sql-virtual-machine)
+2. [Install Self-Hosted Integration Runtime](#2-install-self-hosted-integration-runtime)
+3. [Authenticate to Azure Purview](#3-authenticate-to-azure-purview)
 
-<div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+<div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
 
-## 1. Install Self-Hosted Integration Runtime
+## 1. Connect to SQL Virtual Machine
 
-To invoke the REST API, we must first register an application (i.e. service principal) that will act as the identity that the Azure Purview platform reognizes and is configured to trust.    
+To invoke the install the self-hosted integration runtime, we must first log into our SQL virtual machine. For this example, we'll be using the RDP connection to complete this step. If you would like to use **Bastion** to connect, follow the [instructions here](https://docs.microsoft.com/en-gb/azure/bastion/quickstart-host-portal#createvmset) to get this set-up. 
+
+> :book: **Note** once the environment set-up is complete, your VM should already be in 'running' state. If this is not the case, you will need to 'start' your VM. 
+
+1. Navigate to your Virtual Machine resource in the [Azure portal](https://portal.azure.com/). In the **Overview** section (left blade), click on '**Connect**' and '**RDP**' from the drop-down menu.
+
+    ![](../images/module11/shir-install-13.png)
+
+2. In the next page, click '**Download RDP File**'. Once the file has downloaded, click '**Open**'.
+    ![](../images/module11/shir-install-14.png)
+    ![](../images/module11/shir-install-15.png)
+
+3. You will need to access the SQL username and password generated when deploying the lab environment from [module 00](../modules/module00.md). To find these details, navigate to the resource group in the [Azure portal](https://portal.azure.com/). Under '**Settings > Deployments**', click on '**SQLVMDeployment**'.
+
+    ![](../images/module11/shir-install-19b.png)
+    ![](../images/module11/shir-install-19.png)
+
+4. Navigate to the '**Outputs**' blade within the SQLVMDeployment area to find your SQL Admin username and password. 
+
+    ![](../images/module11/shir-install-20.png)
+
+5. In the Remote Desktop Connection pop-up window, click '**Connect**'.
+
+    ![](../images/module11/shir-install-16.png)
+    
+6. Here you need to log into the virtual machine using the credentials supplied in the '**Outputs**' blade in the deployment area of the resource group you created in [module 00](../modules/module00.md). You'll need to select the '**More Choices**' option and/or '**Use a different account**' options in the log in window. 
+
+    > :book: **Note** You'll need to log in using the format **username** = _vm name\sqladmin username_ and **password** = _sql password_
+
+    ![](../images/module11/shir-install-17.png)
+    ![](../images/module11/shir-install-18.png)
+
+7. You'll see a warning message, click **Yes** to continue. 
+
+    ![](../images/module11/shir-install-21.png)
+
+<div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
+
+## 2. Install Self-Hosted Integration Runtime
 
 > :bulb: **Did you know?**
 >
-> An Azure **service principal** is an identity created for use with applications, hosted services, and automated tools to access Azure resources.
+> The **integration runtime** (IR) is the compute infrastructure that Azure Services use to provide data-integration capabilities across different network environments. 
 
-1. Sign in to the [Azure portal](https://portal.azure.com/), navigate to **Azure Active Directory** > **App registrations**, and click **New registration**.
+1. In the virtual machine, open the browser and navigate to the [integration runtime download page](https://www.microsoft.com/en-us/download/confirmation.aspx?id=39717). If the download doesn't start automatically, download the latest version of the integraion runtime from the list presented. Click '**Run**' when the download begins. 
 
-    ![](../images/module10/10.01-azuread-appreg.png)
+    ![](../images/module11/shir-install-22.png)
+    ![](../images/module11/shir-install-23.png)
 
-2. Provide the application a **name**, select an **account type**, and click **Register**.
+2. Follow the instruction on screen to complete the installation process and click finish to proceed to the next step. 
 
-    | Property | Example Value |
-    | --- | --- |
-    | Name | `purview-spn` |
-    | Account Type | Accounts in this organizational directory only - Single tenant |
-    | Redirect URI (optional) | *Leave blank* |
+    ![](../images/module11/shir-install-1.png)
+    ![](../images/module11/shir-install-2.png)
+    ![](../images/module11/shir-install-3.png)
+    ![](../images/module11/shir-install-4.png)
+    ![](../images/module11/shir-install-5.png)
+    ![](../images/module11/shir-install-6.png)
 
-    ![](../images/module10/10.02-azuread-register.png)
+3. If the integration runtime manager doesn't open automatically, navigate to the **Start Menu** and click '**Microsoft Integration Runtime**'. Once the IR Manager window opens, we can move on to the next step to [authenticate to Azure Purview](#3-authenticate-to-azure-purview).
 
-3. **Copy** the following values for later use.
+    ![](../images/module11/shir-install-7.png)
 
-    * Application (client) ID
-    * Directory (tenant) ID
+<div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
 
-    ![](../images/module10/10.03-spn-copy.png)
+## 3. Authenticate to Azure Purview
 
-<div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+1. Within the Azure Purview Studio, navigate to the **Data Map** in the left blade, click **Integration Runtime** and click **+ New**.
 
-## 2. Generate a Client Secret
+    ![](../images/module11/shir-install-9.png)
 
-1. Navigate to **Certifications & secrets** and click **New client secret**.
+2. Ensure the **Self-Hosted** option is selected, then click **Continue**.
 
-    ![](../images/module10/10.04-spn-secret.png)
+    ![](../images/module11/shir-install-10.png)
 
-2. Provide a **Description** and set the **expiration** to `In 1 year`, click **Add**.
+3. Give your integration runtime a name _(mandatory)_ and a description _(optional)_, then click **Create**.
 
-    | Property | Example Value |
-    | --- | --- |
-    | Description | `purview-api` |
-    | Expires | `In 1 year` |
+    ![](../images/module11/shir-install-11.png)
 
-    ![](../images/module10/10.05-spn-secretadd.png)
+4. Copy one of the **keys** to your clipboard then open your virtual machine window and paste this key into the **integration runtime manager window**. Click **Register** when the button becomes active and then **Finish** in the next screen. 
 
-3. **Copy** the client secret value for later use.
+    ![](../images/module11/shir-install-12.png)
+    ![](../images/module11/shir-install-8.png)
+    ![](../images/module11/shir-install-8b.png)
 
+5. Once successfully registered, you should see a  green tick :heavy_check_mark: within the **integration runtime manager window** and the **Azure Purview Studio integration runtime manager area**.
 
-    > :bulb: **Did you know?**
-    >
-    > A **client secret** is a secret string that the application uses to prove its identity when requesting a token, this can also can be referred to as an application password.
+    ![](../images/module11/shir-install-24.png)
+    ![](../images/module11/shir-install-25.png)
 
-    ![](../images/module10/10.06-secret-copy.png)
-
-<div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
-
-## 3. Provide Service Principal Access to Azure Purview
-
-1. Under the Azure Purview account, navigate to **Access control (IAM)** and click **Add role assignments**.
-
-    ![](../images/module10/10.07-access-add.png)
-
-2. Select the **Purview Data Curator** role, select the service principal and click **Save**.
-
-    ![](../images/module10/10.08-rbac-assign.png)
-
-<div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
-
-## 4. Use Postman to Call Azure Purview REST API
-
-1. Open [Postman](https://www.postman.com/product/rest-client/), create a new **HTTP request** as per the details below.
-
-    > :bulb: **Did you know?**
-    >
-    > The OAuth2 service endpoint is used to gain access to protected resources such as Azure Purview. The HTTP request enables us to acquire an `access_token` in a way that is language agnostic, this will subsequently be used to query the Azure Purview API.
-    
-    | Property | Value |
-    | --- | --- |
-    | HTTP Method | `POST` |
-    | URL | `https://login.microsoftonline.com/YOUR_TENANT_ID/oauth2/token` |
-    | Body Type | `x-wwww-form-urlencoded` |
-
-    Navigate to **Body**, select `x-wwww-form-urlencoded` and provide the following key value pairs. Once HTTP request is ready, click **Send**. If successful, the response will contain an **access token**, copy this value for later use.
-
-    | Form Key | Form Value |
-    | --- | --- |
-    | grant_type | `client_credentials` |
-    | client_id | `YOUR_CLIENT_ID` |
-    | client_secret | `YOUR_CLIENT_SECRET` |
-    | resource | `https://purview.azure.net` |
-
-    ![](../images/module10/10.09-postman-login.png)
-
-2. Within the Azure portal, open the Azure Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.
-
-    > :bulb: **Did you know?**
-    >
-    > The Azure Purview catalog endpoint is largely based on the open source **Apache Atlas** project. Therefore many of the existing Apache Atlas resources (e.g. [swagger](https://atlas.apache.org/api/v2/ui/index.html)) is equally relevant for Azure Purview. There is also the official API Swagger documentation available for download - [PurviewCatalogAPISwagger.zip](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).
-
-    ![Purview Properties](../images/module10/10.11-purview-properties.png)
-
-3. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below. 
-
-    * Paste the copied endpoint into the URL (e.g. `https://PURVIEW_ACCOUNT.catalog.purview.azure.com`)
-    * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/types/typedefs`
-
-    > Note: Calling this particular endpoint will result in the bulk retrieval of all **type definitions**. A type definition in Azure Purview is the equivalent of a blueprint and determines how certain objects (e.g. entities, classifications, relationships, etc) need to be created.
-
-    | Property | Value |
-    | --- | --- |
-    | HTTP Method | `GET` |
-    | URL | `https://YOUR_PURVIEW_ACCOUNT.catalog.purview.azure.com/api/atlas/v2/types/typedefs` |
-
-    Navigate to **Headers**, provide the following key value pair, click **Send**.
-
-    | Header Key | Header Value |
-    | --- | --- |
-    | Authorization | `Bearer YOUR_ACCESS_TOKEN` |
-
-    > Note: You generated an `access_token` in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
-
-    ![](../images/module10/10.10-postman-get.png)
-
-4. If successful, Postman should return a JSON document in the body of the response. Click on the **magnifying glass** and search for the following phrase `"name": "azure_sql_table"` to jump down to the entity definition for an Azure SQL Table.
-
-    > :bulb: **Did you know?**
-    >
-    > While Azure Purview provides a number of system built type definitions for a variety of object types, Customers can use the API to create their own custom type definitions.
-
-    ![](../images/module10/10.12-typedef-search.png)
-
-
-<div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+<div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 
@@ -179,8 +137,9 @@ To invoke the REST API, we must first register an application (i.e. service prin
     A ) True  
     B ) False  
 
-<div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+<div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
 
 ## :tada: Summary
 
-In this module, you learned how to get started with the Azure Purview REST API. To learn more about the Azure Purview REST API, check out the [Swagger documentation](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).
+In this module, you learned how to install the self-hosted integration runtime to your virtual machine network and get it connected up to Azure Purview. If you'd like 
+get started with the Azure Purview REST API. To learn more about the Azure Purview REST API, check out the [Swagger documentation](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).

@@ -51,282 +51,287 @@ Azure Purview's **data catalog** is largely based on **Apache Atlas**, and there
 
 ![](../images/module10/10.11-purview-platform.png)
 
-**Atlas Concepts**
+**Atlas Endpoints**
 
 As can be seen in the [Apache Atlas Swagger](https://atlas.apache.org/api/v2/ui/index.html#/), Atlas has a variety of REST endpoints that handle different aspects of the catalog (e.g. types, entities, glossary, etc). 
 
 ![](../images/module10/10.13-atlas-endpoints.png)
 
-* **Types**: A definition (or blueprint) as to how a particular type of metadata object can be created. This is similar to the concept of a Class in object-oriented programming. For example: The type definition for an `azure_sql_table` is of category `ENTITY` and contains unique attributes such as `principalId`, `objectType`, etc, in addition to inherited attributes such as `name`, `qualifiedName`, and more.
+**Types**
 
-    <details><summary>JSON Code Snippet: Azure SQL Table (Type)</summary>
-    <p>
+A definition (or blueprint) as to how a particular type of metadata object can be created. This is similar to the concept of a Class in object-oriented programming. For example: The type definition for an `azure_sql_table` is of category `ENTITY` and contains unique attributes such as `principalId`, `objectType`, etc, in addition to inherited attributes such as `name`, `qualifiedName`, and more.
 
-    ```json
-    {
-        "attributeDefs":[
-            {
-                "cardinality":"SINGLE",
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isOptional":true,
-                "isUnique":false,
-                "name":"principalId",
-                "typeName":"int",
-                "valuesMaxCount":1,
-                "valuesMinCount":0
-            },
-            {
-                "cardinality":"SINGLE",
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isOptional":true,
-                "isUnique":false,
-                "name":"objectType",
-                "typeName":"string",
-                "valuesMaxCount":1,
-                "valuesMinCount":0
-            },
-            {
-                "cardinality":"SINGLE",
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isOptional":true,
-                "isUnique":false,
-                "name":"createTime",
-                "typeName":"date",
-                "valuesMaxCount":1,
-                "valuesMinCount":0
-            },
-            {
-                "cardinality":"SINGLE",
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isOptional":true,
-                "isUnique":false,
-                "name":"modifiedTime",
-                "typeName":"date",
-                "valuesMaxCount":1,
-                "valuesMinCount":0
-            }
-        ],
-        "category":"ENTITY",
-        "createTime":1616124550225,
-        "createdBy":"admin",
-        "description":"azure_sql_table",
-        "guid":"7d92a449-f7e8-812f-5fc8-ca6127ba90bd",
-        "lastModifiedTS":"1",
-        "name":"azure_sql_table",
-        "options":{
-            "purviewEntityExtDef":"{}",
-            "schemaElementsAttribute":"columns"
+<details><summary>JSON Code Snippet: Azure SQL Table (Type)</summary>
+<p>
+
+```json
+{
+    "attributeDefs":[
+        {
+            "cardinality":"SINGLE",
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isOptional":true,
+            "isUnique":false,
+            "name":"principalId",
+            "typeName":"int",
+            "valuesMaxCount":1,
+            "valuesMinCount":0
         },
-        "relationshipAttributeDefs":[
-            {
-                "cardinality":"SET",
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isLegacyAttribute":false,
-                "isOptional":true,
-                "isUnique":false,
-                "name":"schema",
-                "relationshipTypeName":"avro_schema_associatedEntities",
-                "typeName":"array<avro_schema>",
-                "valuesMaxCount":-1,
-                "valuesMinCount":-1
-            },
-            {
-                "cardinality":"SET",
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isLegacyAttribute":false,
-                "isOptional":true,
-                "isUnique":false,
-                "name":"inputToProcesses",
-                "relationshipTypeName":"dataset_process_inputs",
-                "typeName":"array<Process>",
-                "valuesMaxCount":-1,
-                "valuesMinCount":-1
-            },
-            {
-                "cardinality":"SINGLE",
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isLegacyAttribute":false,
-                "isOptional":false,
-                "isUnique":false,
-                "name":"dbSchema",
-                "relationshipTypeName":"azure_sql_schema_tables",
-                "typeName":"azure_sql_schema",
-                "valuesMaxCount":-1,
-                "valuesMinCount":-1
-            },
-            {
-                "cardinality":"SET",
-                "constraints":[
-                    {
-                    "type":"ownedRef"
-                    }
-                ],
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isLegacyAttribute":false,
-                "isOptional":true,
-                "isUnique":false,
-                "name":"columns",
-                "relationshipTypeName":"azure_sql_table_columns",
-                "typeName":"array<azure_sql_column>",
-                "valuesMaxCount":-1,
-                "valuesMinCount":-1
-            },
-            {
-                "cardinality":"SET",
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isLegacyAttribute":false,
-                "isOptional":true,
-                "isUnique":false,
-                "name":"attachedSchema",
-                "relationshipTypeName":"dataset_attached_schemas",
-                "typeName":"array<schema>",
-                "valuesMaxCount":-1,
-                "valuesMinCount":-1
-            },
-            {
-                "cardinality":"SET",
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isLegacyAttribute":false,
-                "isOptional":true,
-                "isUnique":false,
-                "name":"meanings",
-                "relationshipTypeName":"AtlasGlossarySemanticAssignment",
-                "typeName":"array<AtlasGlossaryTerm>",
-                "valuesMaxCount":-1,
-                "valuesMinCount":-1
-            },
-            {
-                "cardinality":"SET",
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isLegacyAttribute":false,
-                "isOptional":true,
-                "isUnique":false,
-                "name":"outputFromProcesses",
-                "relationshipTypeName":"process_dataset_outputs",
-                "typeName":"array<Process>",
-                "valuesMaxCount":-1,
-                "valuesMinCount":-1
-            },
-            {
-                "cardinality":"SINGLE",
-                "includeInNotification":false,
-                "isIndexable":false,
-                "isLegacyAttribute":false,
-                "isOptional":true,
-                "isUnique":false,
-                "name":"tabular_schema",
-                "relationshipTypeName":"tabular_schema_datasets",
-                "typeName":"tabular_schema",
-                "valuesMaxCount":-1,
-                "valuesMinCount":-1
-            }
-        ],
-        "serviceType":"Azure SQL Database",
-        "subTypes":[
-            
-        ],
-        "superTypes":[
-            "DataSet"
-        ],
-        "typeVersion":"1.0",
-        "updateTime":1616124550225,
-        "updatedBy":"admin",
-        "version":1
-    }
-    ```
-    </p>
-    </details>
-
-* **Entity**: An instance of an entity type (e.g. `azure_sql_table`). For example: An instance of an `azure_sql_table` contains the following example values:
-    * name: `Address`
-    * qualifiedName: `mssql://sqlsvr.database.windows.net/sqldb/SalesLT/Address`
-    * status: `ACTIVE`
-    * typeName: `azure_sql_table`
-    * ...
-
-    <details><summary>JSON Code Snippet: Azure SQL Table (Entity)</summary>
-    <p>
-
-    ```json
-    {
-        "typeName":"azure_sql_table",
-        "attributes":{
-            "owner":null,
-            "modifiedTime":1634050303000,
-            "replicatedTo":null,
-            "replicatedFrom":null,
-            "createTime":1634050301000,
-            "qualifiedName":"mssql://pvlab-6cceda-sqlsvr.database.windows.net/pvlab-6cceda-sqldb/SalesLT/Address",
-            "name":"Address",
-            "description":null,
-            "principalId":0,
-            "objectType":"U "
+        {
+            "cardinality":"SINGLE",
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isOptional":true,
+            "isUnique":false,
+            "name":"objectType",
+            "typeName":"string",
+            "valuesMaxCount":1,
+            "valuesMinCount":0
         },
-        "lastModifiedTS":"2",
-        "guid":"cdb7dd83-2212-4c62-af86-1bf6f6f60000",
-        "status":"ACTIVE",
-        "createdBy":"ServiceAdmin",
-        "updatedBy":"b4529527-3ef5-401d-b6b6-889d0c295d24",
-        "createTime":1634069153211,
-        "updateTime":1634383588977,
-        "version":0,
-        "collectionId":"pj8epk"
-    }
-    ```
-    </p>
-    </details>
-
-* **Glossary**: A hierarchical set of business terms that represents your business domain. For example:
-    * Term Name: `Focus Time`
-    * Term Definition: `Uninterrupted time blocks of two hours or more with no meetings.`
-
-    <details><summary>JSON Code Snippet: Focus Time (Glossary Term)</summary>
-    <p>
-
-    ```json
-    {
-        "guid":"7da365c4-078b-4e5f-8292-3c18534c0936",
-        "qualifiedName":"Workplace Analytics_Focus time@Glossary",
-        "name":"Workplace Analytics_Focus time",
-        "longDescription":"Uninterrupted time blocks of two hours or more with no meetings.",
-        "lastModifiedTS":"1",
-        "abbreviation":"FT",
-        "createdBy":"b4529527-3ef5-401d-b6b6-889d0c295d24",
-        "updatedBy":"b4529527-3ef5-401d-b6b6-889d0c295d24",
-        "createTime":1634389133979,
-        "updateTime":1634389133979,
-        "status":"Expired",
-        "nickName":"Focus time",
-        "anchor":{
-            "glossaryGuid":"2e703cb0-6b26-4cab-b4b6-285296f90dca",
-            "relationGuid":"9a53cbb8-e201-494e-b248-0d94f206fdfa"
+        {
+            "cardinality":"SINGLE",
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isOptional":true,
+            "isUnique":false,
+            "name":"createTime",
+            "typeName":"date",
+            "valuesMaxCount":1,
+            "valuesMinCount":0
         },
-        "parentTerm":{
-            "termGuid":"69bb145c-4217-413b-a771-2016b5975752",
-            "relationGuid":"548ea543-67de-4b00-85a5-92a554daa356",
-            "displayText":"Workplace Analytics"
+        {
+            "cardinality":"SINGLE",
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isOptional":true,
+            "isUnique":false,
+            "name":"modifiedTime",
+            "typeName":"date",
+            "valuesMaxCount":1,
+            "valuesMinCount":0
+        }
+    ],
+    "category":"ENTITY",
+    "createTime":1616124550225,
+    "createdBy":"admin",
+    "description":"azure_sql_table",
+    "guid":"7d92a449-f7e8-812f-5fc8-ca6127ba90bd",
+    "lastModifiedTS":"1",
+    "name":"azure_sql_table",
+    "options":{
+        "purviewEntityExtDef":"{}",
+        "schemaElementsAttribute":"columns"
+    },
+    "relationshipAttributeDefs":[
+        {
+            "cardinality":"SET",
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isLegacyAttribute":false,
+            "isOptional":true,
+            "isUnique":false,
+            "name":"schema",
+            "relationshipTypeName":"avro_schema_associatedEntities",
+            "typeName":"array<avro_schema>",
+            "valuesMaxCount":-1,
+            "valuesMinCount":-1
         },
-        "resources":[
-            {
-                "displayName":"Workspace Analytics",
-                "url":"https://docs.microsoft.com/en-us/workplace-analytics/use/glossary"
-            }
-        ]
-    }
-    ```
-    </p>
-    </details>
+        {
+            "cardinality":"SET",
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isLegacyAttribute":false,
+            "isOptional":true,
+            "isUnique":false,
+            "name":"inputToProcesses",
+            "relationshipTypeName":"dataset_process_inputs",
+            "typeName":"array<Process>",
+            "valuesMaxCount":-1,
+            "valuesMinCount":-1
+        },
+        {
+            "cardinality":"SINGLE",
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isLegacyAttribute":false,
+            "isOptional":false,
+            "isUnique":false,
+            "name":"dbSchema",
+            "relationshipTypeName":"azure_sql_schema_tables",
+            "typeName":"azure_sql_schema",
+            "valuesMaxCount":-1,
+            "valuesMinCount":-1
+        },
+        {
+            "cardinality":"SET",
+            "constraints":[
+                {
+                "type":"ownedRef"
+                }
+            ],
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isLegacyAttribute":false,
+            "isOptional":true,
+            "isUnique":false,
+            "name":"columns",
+            "relationshipTypeName":"azure_sql_table_columns",
+            "typeName":"array<azure_sql_column>",
+            "valuesMaxCount":-1,
+            "valuesMinCount":-1
+        },
+        {
+            "cardinality":"SET",
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isLegacyAttribute":false,
+            "isOptional":true,
+            "isUnique":false,
+            "name":"attachedSchema",
+            "relationshipTypeName":"dataset_attached_schemas",
+            "typeName":"array<schema>",
+            "valuesMaxCount":-1,
+            "valuesMinCount":-1
+        },
+        {
+            "cardinality":"SET",
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isLegacyAttribute":false,
+            "isOptional":true,
+            "isUnique":false,
+            "name":"meanings",
+            "relationshipTypeName":"AtlasGlossarySemanticAssignment",
+            "typeName":"array<AtlasGlossaryTerm>",
+            "valuesMaxCount":-1,
+            "valuesMinCount":-1
+        },
+        {
+            "cardinality":"SET",
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isLegacyAttribute":false,
+            "isOptional":true,
+            "isUnique":false,
+            "name":"outputFromProcesses",
+            "relationshipTypeName":"process_dataset_outputs",
+            "typeName":"array<Process>",
+            "valuesMaxCount":-1,
+            "valuesMinCount":-1
+        },
+        {
+            "cardinality":"SINGLE",
+            "includeInNotification":false,
+            "isIndexable":false,
+            "isLegacyAttribute":false,
+            "isOptional":true,
+            "isUnique":false,
+            "name":"tabular_schema",
+            "relationshipTypeName":"tabular_schema_datasets",
+            "typeName":"tabular_schema",
+            "valuesMaxCount":-1,
+            "valuesMinCount":-1
+        }
+    ],
+    "serviceType":"Azure SQL Database",
+    "subTypes":[
+        
+    ],
+    "superTypes":[
+        "DataSet"
+    ],
+    "typeVersion":"1.0",
+    "updateTime":1616124550225,
+    "updatedBy":"admin",
+    "version":1
+}
+```
+</p>
+</details>
+
+**Entity**
+
+An instance of an entity type (e.g. `azure_sql_table`). For example: An instance of an `azure_sql_table` contains the following example values:
+* name: `Address`
+* qualifiedName: `mssql://sqlsvr.database.windows.net/sqldb/SalesLT/Address`
+* status: `ACTIVE`
+* typeName: `azure_sql_table`
+
+<details><summary>JSON Code Snippet: Azure SQL Table (Entity)</summary>
+<p>
+
+```json
+{
+    "typeName":"azure_sql_table",
+    "attributes":{
+        "owner":null,
+        "modifiedTime":1634050303000,
+        "replicatedTo":null,
+        "replicatedFrom":null,
+        "createTime":1634050301000,
+        "qualifiedName":"mssql://pvlab-6cceda-sqlsvr.database.windows.net/pvlab-6cceda-sqldb/SalesLT/Address",
+        "name":"Address",
+        "description":null,
+        "principalId":0,
+        "objectType":"U "
+    },
+    "lastModifiedTS":"2",
+    "guid":"cdb7dd83-2212-4c62-af86-1bf6f6f60000",
+    "status":"ACTIVE",
+    "createdBy":"ServiceAdmin",
+    "updatedBy":"b4529527-3ef5-401d-b6b6-889d0c295d24",
+    "createTime":1634069153211,
+    "updateTime":1634383588977,
+    "version":0,
+    "collectionId":"pj8epk"
+}
+```
+</p>
+</details>
+
+**Glossary**
+
+A hierarchical set of business terms that represents your business domain. For example:
+* Term Name: `Focus Time`
+* Term Definition: `Uninterrupted time blocks of two hours or more with no meetings.`
+
+<details><summary>JSON Code Snippet: Focus Time (Glossary Term)</summary>
+<p>
+
+```json
+{
+    "guid":"7da365c4-078b-4e5f-8292-3c18534c0936",
+    "qualifiedName":"Workplace Analytics_Focus time@Glossary",
+    "name":"Workplace Analytics_Focus time",
+    "longDescription":"Uninterrupted time blocks of two hours or more with no meetings.",
+    "lastModifiedTS":"1",
+    "abbreviation":"FT",
+    "createdBy":"b4529527-3ef5-401d-b6b6-889d0c295d24",
+    "updatedBy":"b4529527-3ef5-401d-b6b6-889d0c295d24",
+    "createTime":1634389133979,
+    "updateTime":1634389133979,
+    "status":"Expired",
+    "nickName":"Focus time",
+    "anchor":{
+        "glossaryGuid":"2e703cb0-6b26-4cab-b4b6-285296f90dca",
+        "relationGuid":"9a53cbb8-e201-494e-b248-0d94f206fdfa"
+    },
+    "parentTerm":{
+        "termGuid":"69bb145c-4217-413b-a771-2016b5975752",
+        "relationGuid":"548ea543-67de-4b00-85a5-92a554daa356",
+        "displayText":"Workplace Analytics"
+    },
+    "resources":[
+        {
+            "displayName":"Workspace Analytics",
+            "url":"https://docs.microsoft.com/en-us/workplace-analytics/use/glossary"
+        }
+    ]
+}
+```
+</p>
+</details>
 
 Note: While Azure Purview has adopted Apache Atlas, there certain areas such as Discovery which is responsible for search, where Azure Purview has deviated and implemented a custom search API.
 

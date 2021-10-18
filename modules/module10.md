@@ -24,17 +24,18 @@ The primary focus of this module is the **catalog** which is based on the open-s
 
 ## :dart: Objectives
 
-* Set up an Azure Purview development environment.
+* Understand the high-level Apache Atlas concepts.
+* Generate an access token.
 * Read data from the Azure Purview platform.
-* Write data back to the Azure Purview platform.
 
 ## Table of Contents
 
 1. [Apache Atlas](#1-apache-atlas)
-2. [Register an Application](#1-register-an-application)
-2. [Generate a Client Secret](#2-generate-a-client-secret)
-3. [Provide Service Principal Access to Azure Purview](#3-provide-service-principal-access-to-azure-purview)
-4. [Use Postman to Call Azure Purview REST API](#4-use-postman-to-call-azure-purview-rest-api)
+2. [Register an Application](#2-register-an-application)
+3. [Generate a Client Secret](#3-generate-a-client-secret)
+4. [Provide Service Principal Access to Azure Purview](#4-provide-service-principal-access-to-azure-purview)
+5. [Get an Access Token](#5-get-an-access-token)
+6. [Read data from Azure Purview](#6-read-data-from-azure-purview)
 
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
@@ -626,7 +627,7 @@ Note: While Azure Purview is using Apache Atlas, there are certain areas such as
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
-## 1. Register an Application
+## 2. Register an Application
 
 To invoke the REST API, we must first register an application (i.e. service principal) that will act as the identity that the Azure Purview platform reognizes and is configured to trust.    
 
@@ -657,7 +658,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
-## 2. Generate a Client Secret
+## 3. Generate a Client Secret
 
 1. Navigate to **Certifications & secrets** and click **New client secret**.
 
@@ -683,25 +684,25 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
-## 3. Provide Service Principal Access to Azure Purview
+## 4. Provide Service Principal Access to Azure Purview
 
-1. Under the Azure Purview account, navigate to **Access control (IAM)** and click **Add role assignments**.
+1. Navigate to **Purview Studio** > **Data map** > **Collections** > **YOUR_ROOT_COLLECTION**, and then click **Add data curators**.
 
-    ![](../images/module10/10.07-access-add.png)
+    ![](../images/module10/10.14-spn-role.png)
 
-2. Select the **Purview Data Curator** role, select the service principal and click **Save**.
+2. Search for the name of the Service Principal (e.g. `purview-spn`), select the Service Principal from the search results, and then click **OK**.
 
-    ![](../images/module10/10.08-rbac-assign.png)
+    ![](../images/module10/10.15-spn-add.png)
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
-## 4. Use Postman to Call Azure Purview REST API
+## 5. Get an Access Token
 
 1. Open [Postman](https://www.postman.com/product/rest-client/), create a new **HTTP request** as per the details below.
 
     > :bulb: **Did you know?**
     >
-    > The OAuth2 service endpoint is used to gain access to protected resources such as Azure Purview. The HTTP request enables us to acquire an `access_token` in a way that is language agnostic, this will subsequently be used to query the Azure Purview API.
+    > The OAuth2 service endpoint is used to gain access to protected resources such as Azure Purview. The HTTP request enables us to acquire an `access_token`, this will subsequently be used to query the Azure Purview API.
     
     | Property | Value |
     | --- | --- |
@@ -720,11 +721,9 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
     ![](../images/module10/10.09-postman-login.png)
 
-2. Within the Azure portal, open the Azure Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.
+## 6. Read data from Azure Purview
 
-    > :bulb: **Did you know?**
-    >
-    > The Azure Purview catalog endpoint is largely based on the open source **Apache Atlas** project. Therefore many of the existing Apache Atlas resources (e.g. [swagger](https://atlas.apache.org/api/v2/ui/index.html)) is equally relevant for Azure Purview. There is also the official API Swagger documentation available for download - [PurviewCatalogAPISwagger.zip](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).
+1. Within the Azure portal, open the Azure Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.
 
     ![Purview Properties](../images/module10/10.11-purview-properties.png)
 

@@ -29,7 +29,7 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 
 > :bulb: **Did you know?**
 >
-> One of the key benefits of integrating with Azure Synapse Analytics, is the ability to discover Azure Purview assets from within Synapse Studio (i.e. no need to swtich between user experiences), with added abilities using Synapse specific capabilities (e.g. SELECT TOP 100). 
+> One of the key benefits of integrating Azure Synapse Analytics with Azure Purview, is the ability to discover Azure Purview assets from within Synapse Studio (i.e. no need to swtich between user experiences), with added abilities using Synapse specific capabilities (e.g. SELECT TOP 100). 
 >
 > Note: Before we can demonstrate the ability to query external data sources from Azure Synapse Analytics, we need to ensure our account has the appropriate level of access (i.e. `Storage Blob Data Reader`).
 

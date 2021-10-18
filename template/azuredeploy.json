@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.613.9944",
-      "templateHash": "7802308096273950817"
+      "version": "0.4.1008.15138",
+      "templateHash": "9793918288323323264"
     }
   },
   "functions": [],
@@ -204,7 +204,7 @@
     },
     {
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2019-10-01",
+      "apiVersion": "2020-06-01",
       "name": "SQLVMDeployment",
       "properties": {
         "expressionEvaluationOptions": {
@@ -225,8 +225,8 @@
           "metadata": {
             "_generator": {
               "name": "bicep",
-              "version": "0.4.613.9944",
-              "templateHash": "14891450055380168942"
+              "version": "0.4.1008.15138",
+              "templateHash": "2084525474919137556"
             }
           },
           "parameters": {
@@ -360,7 +360,7 @@
               "location": "[parameters('location')]",
               "properties": {
                 "hardwareProfile": {
-                  "vmSize": "Standard_B1ms"
+                  "vmSize": "Standard_B2ms"
                 },
                 "storageProfile": {
                   "osDisk": {
@@ -380,7 +380,7 @@
                       "lun": 0,
                       "createOption": "Attach",
                       "caching": "ReadOnly",
-                      "diskSizeGB": null,
+                      "diskSizeGB": 8,
                       "managedDisk": {
                         "id": "[resourceId('Microsoft.Compute/disks', format('pvlab-{0}_DataDisk', parameters('randomString')))]",
                         "storageAccountType": "StandardSSD_LRS"

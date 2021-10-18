@@ -29,4 +29,5 @@ Azure Purview is a unified data governance service that helps you manage and gov
 <div align="right"><a href="#azure-purview-workshop">↥ back to top</a></div>
 
 ## :link: Workshop URL
+
 [aka.ms/purviewlab](https://aka.ms/purviewlab)

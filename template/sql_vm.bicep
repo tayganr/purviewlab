@@ -110,7 +110,7 @@ resource virtualMachineName_resource 'Microsoft.Compute/virtualMachines@2021-03-
   location: location
   properties: {
     hardwareProfile: {
-      vmSize: 'Standard_B1ms'
+      vmSize: 'Standard_B2ms'
     }
     storageProfile: {
       osDisk: {
@@ -130,7 +130,7 @@ resource virtualMachineName_resource 'Microsoft.Compute/virtualMachines@2021-03-
         lun: 0
         createOption: 'Attach'
         caching: 'ReadOnly'
-        diskSizeGB: null
+        diskSizeGB: 8
         managedDisk: {
           id: dataDiskResources_name.id
           storageAccountType: 'StandardSSD_LRS'

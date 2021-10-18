@@ -148,3 +148,5 @@ In this module, you learned how to install the self-hosted integration runtime t
 - [Register SQL Server on VM as a data source in Purview](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#register-a-sql-server-data-source)
 - [Upload same data to the SQL Server on the VM ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers)
 - [Trigger a scan of the on-premise data source](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#creating-and-running-a-scan)
+
+[Back to Home >](../README.md)

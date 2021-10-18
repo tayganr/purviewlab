@@ -63,11 +63,13 @@ The primary focus of this module is the **catalog** which is based on the open-s
 >
 > Source: [Apache.org](https://atlas.apache.org/#/)
 
-Azure Purview's data catalog is largely based on Apache Atlas, and therefore shares much of the same surface area that allows users to programmatically perform CRUD (CREATE/READ/UPDATE/DELETE) operations over Azure Purview assets. Check out the official.
+Azure Purview's data catalog is largely based on Apache Atlas, and therefore shares much of the same surface area that allows users to programmatically perform CRUD (CREATE/READ/UPDATE/DELETE) operations over Azure Purview assets.
 
 **Atlas Concepts**
 
 As can be seen in the [Apache Atlas Swagger](https://atlas.apache.org/api/v2/ui/index.html#/), Atlas has a variety of REST endpoints that handle different aspects of the catalog (e.g. types, entities, glossary, etc). 
+
+![](../images/module10/10.13-atlas-endpoints.png)
 
 * **Types**: A definition (or blueprint) as to how a particular type of metadata object can be created. This is similar to the concept of a Class in object-oriented programming. For example: The type definition for an `azure_sql_table` is of category `ENTITY` and contains unique attributes such as `principalId`, `objectType`, etc, in addition to inherited attributes such as `name`, `qualifiedName`, and more.
 
@@ -342,7 +344,7 @@ As can be seen in the [Apache Atlas Swagger](https://atlas.apache.org/api/v2/ui/
 
 Note: While Azure Purview has adopted Apache Atlas, there certain areas such as Discovery which is responsible for search, where Azure Purview has deviated and implemented a custom search API.
 
-![](../images/module10/10.13-atlas-endpoints.png)
+
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 

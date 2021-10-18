@@ -73,7 +73,7 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 
     ![Purview Account Registered](../images/module09/09.11-synapse-success.png)
 
-5. To validate that Synapse was able to succesfully add the Synapse managed identity to the Data Curator role, navigate to **Purview Studio** > **Data map** > **Collections** > **YOUR_ROOT_COLLECTION**, switch to the **Role assignments** tab and expand **Data curators**. You should be able to see the Synapse service principal listed as one of the Data curators. This will provide Synapse read/write access to the catalog.
+5. To validate that Synapse was able to succesfully add the Synapse managed identity to the Data Curator role, navigate to **Purview Studio** > **Data map** > **Collections** > **YOUR_ROOT_COLLECTION**, switch to the **Role assignments** tab and expand **Data curators**. You should be able to see the Synapse Service Principal listed as one of the Data curators. This will provide Synapse read/write access to the catalog.
 
     ![](../images/module09/09.18-synapsemi-curator.png)
 

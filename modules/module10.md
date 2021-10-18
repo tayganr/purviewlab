@@ -71,10 +71,9 @@ As can be seen in the [Apache Atlas Swagger](https://atlas.apache.org/api/v2/ui/
 
 * **Types**: A definition (or blueprint) as to how a particular type of metadata object can be created. This is similar to the concept of a Class in object-oriented programming. For example: The type definition for an `azure_sql_table` is of category `ENTITY` and contains unique attributes such as `principalId`, `objectType`, etc in addition to inherited attributes such as `name`, `qualifiedName`, etc .
 
-```html
 <details>
   <summary>
-    summary
+    Example: Azure SQL Table (Type)
   </summary>
   <div>
 ```json
@@ -262,7 +261,6 @@ As can be seen in the [Apache Atlas Swagger](https://atlas.apache.org/api/v2/ui/
 ```
 </div>
 </details>
-```
 
 * **Entity**: An instance of an entity "type" (e.g. `azure_sql_table`). For example
 

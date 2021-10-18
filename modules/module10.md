@@ -734,7 +734,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
     * Paste the copied endpoint into the URL (e.g. `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog`)
     * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/types/typedefs`
 
-    > Note: Calling this particular endpoint will result in the bulk retrieval of all **type definitions**. While Azure Purview comes equippped with a number of system-built definitions, customers are able to creat their own custom definitions to cater for other scenarios (e.g. other data sources).
+    Note: Calling this particular endpoint will result in the bulk retrieval of all **type definitions**.
 
     | Property | Value |
     | --- | --- |

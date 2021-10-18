@@ -68,7 +68,9 @@ To invoke the install the self-hosted integration runtime, we must first log int
 
 > :bulb: **Did you know?**
 >
-> The **integration runtime** (IR) is the compute infrastructure that Azure Services use to provide data-integration capabilities across different network environments. 
+>  Integration Runtime (IR) is a secure compute infrastructure that is used to provide the data integration capabilities across the different network environments and make sure that these activities will be executed in the closest possible region to the data store.
+>
+> Self-hosted Integration Runtime (SHIR) is an implementation of IR that is installed on an on-premises machine or virtual machine within a virtual network.
 
 1. In the virtual machine, open the browser and navigate to the [integration runtime download page](https://www.microsoft.com/en-us/download/confirmation.aspx?id=39717). If the download doesn't start automatically, download the latest version of the integraion runtime from the list presented. Click '**Run**' when the download begins. 
 
@@ -91,6 +93,10 @@ To invoke the install the self-hosted integration runtime, we must first log int
 <div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
 
 ## 3. Authenticate to Azure Purview
+
+> :bulb: **Did you know?**
+>
+> The Purview Integration Runtime cannot be shared with an Azure Synapse Analytics or Azure Data Factory Integration Runtime on the same machine. It needs to be installed on a separated machine.
 
 1. Within the Azure Purview Studio, navigate to the **Data Map** in the left blade, click **Integration Runtime** and click **+ New**.
 
@@ -119,20 +125,15 @@ To invoke the install the self-hosted integration runtime, we must first log int
 
 ## :mortar_board: Knowledge Check
 
-[http://aka.ms/purviewlab/q10](http://aka.ms/purviewlab/q10)
+[http://aka.ms/purviewlab/q11](http://aka.ms/purviewlab/q11)
 
-1. The Azure Purview API is largely based on which open source project?
+1. What is an Self-Hosted Integration Runtime used for?
 
-    A ) Apache Maven  
-    B ) Apache Spark  
-    C ) Apache Atlas
+    A ) It's used for copying data from or to an on-premises data store or networks with access control
+    B ) It's used for copying data between cloud based data stores or networks with access control
+    C ) It's used for copying data between managed environments
 
-2. The Azure Purview API only works with Python.
-
-    A ) True  
-    B ) False  
-
-3. The Azure Purview API can be used to create custom lineage between data processes and data assets.
+2. Self-Hosted Integration Runtime can be shared across multiple services when installed on one machine/VM.
 
     A ) True  
     B ) False  
@@ -141,5 +142,9 @@ To invoke the install the self-hosted integration runtime, we must first log int
 
 ## :tada: Summary
 
-In this module, you learned how to install the self-hosted integration runtime to your virtual machine network and get it connected up to Azure Purview. If you'd like 
-get started with the Azure Purview REST API. To learn more about the Azure Purview REST API, check out the [Swagger documentation](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).
+In this module, you learned how to install the self-hosted integration runtime to your virtual machine network and get it connected up to Azure Purview. If you'd like continue with this module to complete further tasks, please feel free to complete the tutorial links below:
+
+- [Setting up authentication for a scan](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#setting-up-authentication-for-a-scan)
+- [Register SQL Server on VM as a data source in Purview](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#register-a-sql-server-data-source)
+- [Upload same data to the SQL Server on the VM ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers)
+- [Trigger a scan of the on-premise data source](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#creating-and-running-a-scan)

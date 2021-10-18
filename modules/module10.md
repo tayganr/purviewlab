@@ -29,9 +29,9 @@ Within the Azure Purview platform, there are API endpoints which are open and ac
 
 | Application | Endpoint |
 | --- | --- |
-| Catalog | https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/**catalog** |
-| Scan | https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/**scan** |
-| Insight | https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/**mapanddiscover** |
+| Catalog | YOUR_PURVIEW_ACCOUNT.purview.azure.com/**catalog** |
+| Scan | YOUR_PURVIEW_ACCOUNT.purview.azure.com/**scan** |
+| Insight | YOUR_PURVIEW_ACCOUNT.purview.azure.com/**mapanddiscover** |
 
 The primary focus of this module is the **catalog** which is based on the open-source [Apache Atlas](https://atlas.apache.org/) project. Read below for more details on Apache Atlas and how it relates to Azure Purview.
 

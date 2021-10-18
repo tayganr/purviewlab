@@ -21,22 +21,7 @@ While Purview Studio is the default method of interfacing with Azure Purview, th
   * Triggering Azure Purview scans to run off the back of a custom event.
   * etc.
 
-Conceptually, Azure Purview has two high-level components:
-1. The Interface (e.g. Purview Studio)
-2. The Platform (e.g. REST API)
-
-Within the Azure Purview platform, there are API endpoints which are open and accessible, each responsible for different aspects of the Azure Purview service. For example:
-
-| Application | Endpoint |
-| --- | --- |
-| Catalog | YOUR_PURVIEW_ACCOUNT.purview.azure.com/**catalog** |
-| Scan | YOUR_PURVIEW_ACCOUNT.purview.azure.com/**scan** |
-| Insight | YOUR_PURVIEW_ACCOUNT.purview.azure.com/**mapanddiscover** |
-
 The primary focus of this module is the **catalog** which is based on the open-source [Apache Atlas](https://atlas.apache.org/) project. Read below for more details on Apache Atlas and how it relates to Azure Purview.
-
-![](../images/module10/10.11-purview-platform.png)
-
 
 ## :dart: Objectives
 
@@ -63,7 +48,9 @@ The primary focus of this module is the **catalog** which is based on the open-s
 >
 > Source: [Apache.org](https://atlas.apache.org/#/)
 
-Azure Purview's data catalog is largely based on Apache Atlas, and therefore shares much of the same surface area that allows users to programmatically perform CRUD (CREATE/READ/UPDATE/DELETE) operations over Azure Purview assets.
+Azure Purview's **data catalog** is largely based on **Apache Atlas**, and therefore shares much of the same surface area that allows users to programmatically perform CRUD (CREATE/READ/UPDATE/DELETE) operations over Azure Purview assets.
+
+![](../images/module10/10.11-purview-platform.png)
 
 **Atlas Concepts**
 

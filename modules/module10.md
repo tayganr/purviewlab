@@ -13,7 +13,7 @@
 
 ## :loudspeaker: Introduction
 
-While Purview Studio is the default method of interfacing with Azure Purview, the underlying platform can be accessed via a set of API's. This opens up the possibility of a variety of scenarios including (but not limited to):  
+While Purview Studio is the default method of interfacing with Azure Purview, the underlying platform can be accessed via a set of API's. This opens up the possibility of a variety of scenarios including:  
   * Working with Azure Purview assets programmatically (e.g. bulk create/read/update/delete).
   * Adding support for other data sources beyond those supported out of the box.
   * Extending the lineage functionality to other ETL processes.

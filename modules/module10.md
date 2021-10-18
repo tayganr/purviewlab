@@ -13,18 +13,55 @@
 
 ## :loudspeaker: Introduction
 
-In addition to Purview Studio, the Azure Purview platform can be accessed via an API. This enables users to submit data directly to the catalog, include the catalog as part of an automated process, or build their own user experience on top of the catalog.
+While Purview Studio is the default method of interfacing with Azure Purview, the underlying platform can be accessed via a set of API's. This opens up the possibility of a variety of scenarios including (but not limited to):  
+  * Working with Azure Purview assets programmatically (e.g. bulk create/read/update/delete).
+  * Adding support for other data sources beyond those supported out of the box.
+  * Extending the lineage functionality to other ETL processes.
+  * Embedding Azure Purview asset data within custom user experiences.
+  * Triggering Azure Purview scans to run off the back of a custom event.
+  * etc.
+
+Conceptually, Azure Purview has two high-level components:
+1. The Interface (e.g. Purview Studio)
+2. The Platform (e.g. REST API)
+
+Within the Azure Purview platform, there are API endpoints which are open and accessible, each responsible for different aspects of the Azure Purview service. For example:
+
+| Application | Endpoint |
+| --- | --- |
+| Catalog | https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/**catalog** |
+| Scan | https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/**scan** |
+| Insight | https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/**mapanddiscover** |
+
+The primary focus of this module is the **catalog** which is based on the open-source [Apache Atlas](https://atlas.apache.org/) project. Read below for more details on Apache Atlas and how it relates to Azure Purview.
+
+![](../images/module10/10.11-purview-platform.png)
+
 
 ## :dart: Objectives
 
-* Return data from the Azure Purview REST API.
+* Set up an Azure Purview development environment.
+* Read data from the Azure Purview platform.
+* Write data back to the Azure Purview platform.
 
 ## Table of Contents
 
-1. [Register an Application](#1-register-an-application)
+1. [Apache Atlas](#1-apache-atlas)
+2. [Register an Application](#1-register-an-application)
 2. [Generate a Client Secret](#2-generate-a-client-secret)
 3. [Provide Service Principal Access to Azure Purview](#3-provide-service-principal-access-to-azure-purview)
 4. [Use Postman to Call Azure Purview REST API](#4-use-postman-to-call-azure-purview-rest-api)
+
+
+<div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+
+## 1. Apache Atlas
+
+What is Apache Atlas?
+
+> :map: What is Apache Atlas?
+>
+> Apache Atlas provides open metadata management and governance capabilities for organizations to build a catalog of their data assets, classify and govern these assets and provide collaboration capabilities around these data assets for data scientists, analysts and the data governance team. Source: [Apache.org](https://atlas.apache.org/#/)
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 

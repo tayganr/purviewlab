@@ -76,6 +76,8 @@ As can be seen in the [Apache Atlas Swagger](https://atlas.apache.org/api/v2/ui/
   <summary>
     summary
   </summary>
+  <div>
+```json
 {
    "attributeDefs":[
       {
@@ -257,6 +259,8 @@ As can be seen in the [Apache Atlas Swagger](https://atlas.apache.org/api/v2/ui/
    "updatedBy":"admin",
    "version":1
 }
+```
+</div>
 </details>
 ```
 

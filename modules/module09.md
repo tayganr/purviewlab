@@ -20,9 +20,8 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 ## Table of Contents
 
 1. [Azure Data Lake Storage Gen2 Account Access](#1-azure-data-lake-storage-gen2-account-access)
-2. [Create an Azure Synapse Analytics Workspace](#2-create-an-azure-synapse-analytics-workspace)
-3. [Connect to a Purview Account](#3-connect-to-a-purview-account)
-4. [Search a Purview Account](#4-search-a-purview-account)
+2. [Connect to a Purview Account](#3-connect-to-a-purview-account)
+3. [Search a Purview Account](#4-search-a-purview-account)
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 
@@ -50,7 +49,7 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 
-## 3. Connect to a Purview Account
+## 2. Connect to a Purview Account
 
 1. Within the Azure portal, open the Synapse workspace and click **Open Synapse Studio**.
 
@@ -70,7 +69,7 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 
-## 4. Search a Purview Account
+## 3. Search a Purview Account
 
 1. Within the Synapse workspace, navigate to the **Data** screen and perform a **keyword search** (e.g. `parquet`). Notice that the search bar now defaults to searching the entire Purview catalog as opposed to the Synapse workspace only.
 

@@ -33,19 +33,21 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 >
 > Note: Before we can demonstrate the ability to query external data sources from Azure Synapse Analytics, we need to ensure our account has the appropriate level of access (i.e. `Storage Blob Data Reader`).
 
-1. Navigate to the **Access Control (IAM)** screen within the Azure Data Lake Storage Gen2 account provisioned in [module 02](../modules/module02.md) and click **Add role assignments**.
+1. Navigate to the **Azure Data Lake Storage Gen2 account** (e.g. `pvlab{randomId}adls`), select **Access Control (IAM)**, and then click **Add role assignment**.
 
     ![Storage Access Control](../images/module09/09.01-storage-access.png)
 
-2. Select the **Storage Blob Data Reader** role and assign this to the account that will query the external data source via Synapse Workspace (i.e. your account). Click **Save**.
-
-    | Property  | Value |
-    | --- | --- |
-    | Role | `Storage Blob Data Reader` |
-    | Assign access to | `User, group, or service principal` |
-    | Select | `<account-name>` |
+2. Filter the list of roles available by searching for `Storage Blob Data Reader`, select the **Storage Blob Data Reader** role from the list, and click **Next**.
 
     ![Storage RBAC Assignment](../images/module09/09.02-storage-rbac.png)
+
+3. To add your account click **Select members**, search for your account by typing your username into the text box, select your account from the list, and click **Select**.
+
+    ![Storage RBAC Assignment](../images/module09/09.16-rbac-members.png)
+
+4. Click **Review + assign** to progress to the final confirmation screen and then click **Review + assign** once more.
+
+    ![Storage RBAC Assignment](../images/module09/09.17-rbac-review.png)
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 

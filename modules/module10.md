@@ -747,7 +747,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
     | --- | --- |
     | Authorization | `Bearer YOUR_ACCESS_TOKEN` |
 
-    > Note: You generated an `access_token` in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
+    Note: You generated an `access_token` in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
 
     ![](../images/module10/10.10-postman-get.png)
 

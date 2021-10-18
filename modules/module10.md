@@ -63,6 +63,202 @@ The primary focus of this module is the **catalog** which is based on the open-s
 >
 > Source: [Apache.org](https://atlas.apache.org/#/)
 
+Azure Purview's data catalog is largely based on Apache Atlas, and therefore shares much of the same surface area that allows users to programmatically perform CRUD (CREATE/READ/UPDATE/DELETE) operations over Azure Purview assets. Check out the official.
+
+**Atlas Concepts**
+
+As can be seen in the [Apache Atlas Swagger](https://atlas.apache.org/api/v2/ui/index.html#/), Atlas has a variety of REST endpoints that handle different aspects of the catalog (e.g. types, entities, glossary, etc). 
+
+* **Types**: A definition (or blueprint) as to how a particular type of metadata object can be created. This is similar to the concept of a Class in object-oriented programming. For example: The type definition for an `azure_sql_table` is of category `ENTITY` and contains unique attributes such as `principalId`, `objectType`, etc in addition to inherited attributes such as `name`, `qualifiedName`, etc .
+
+```json
+{
+            "attributeDefs": [
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "principalId",
+                    "typeName": "int",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "objectType",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "createTime",
+                    "typeName": "date",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "modifiedTime",
+                    "typeName": "date",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                }
+            ],
+            "category": "ENTITY",
+            "createTime": 1616124550225,
+            "createdBy": "admin",
+            "description": "azure_sql_table",
+            "guid": "7d92a449-f7e8-812f-5fc8-ca6127ba90bd",
+            "lastModifiedTS": "1",
+            "name": "azure_sql_table",
+            "options": {
+                "purviewEntityExtDef": "{}",
+                "schemaElementsAttribute": "columns"
+            },
+            "relationshipAttributeDefs": [
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "schema",
+                    "relationshipTypeName": "avro_schema_associatedEntities",
+                    "typeName": "array<avro_schema>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "inputToProcesses",
+                    "relationshipTypeName": "dataset_process_inputs",
+                    "typeName": "array<Process>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": false,
+                    "isUnique": false,
+                    "name": "dbSchema",
+                    "relationshipTypeName": "azure_sql_schema_tables",
+                    "typeName": "azure_sql_schema",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "constraints": [
+                        {
+                            "type": "ownedRef"
+                        }
+                    ],
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "columns",
+                    "relationshipTypeName": "azure_sql_table_columns",
+                    "typeName": "array<azure_sql_column>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "attachedSchema",
+                    "relationshipTypeName": "dataset_attached_schemas",
+                    "typeName": "array<schema>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "meanings",
+                    "relationshipTypeName": "AtlasGlossarySemanticAssignment",
+                    "typeName": "array<AtlasGlossaryTerm>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "outputFromProcesses",
+                    "relationshipTypeName": "process_dataset_outputs",
+                    "typeName": "array<Process>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "tabular_schema",
+                    "relationshipTypeName": "tabular_schema_datasets",
+                    "typeName": "tabular_schema",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                }
+            ],
+            "serviceType": "Azure SQL Database",
+            "subTypes": [],
+            "superTypes": [
+                "DataSet"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1616124550225,
+            "updatedBy": "admin",
+            "version": 1
+        }
+```
+
+* **Entity**: An instance of an entity "type" (e.g. `azure_sql_table`). For example
+
+Note: While Azure Purview has adopted Apache Atlas, there certain areas such as Discovery which is responsible for search, where Azure Purview has deviated and implemented a custom search API.
+
+![](../images/module10/10.13-atlas-endpoints.png)
+
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
 ## 1. Register an Application

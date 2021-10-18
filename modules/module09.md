@@ -65,7 +65,7 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 
     ![Select a Purview Account](../images/module09/09.10-synapse-purview.png)
 
-4. Once the connection has been established, you will receive a notification that **Registration succeeded**. Switch to the **Purview account** tab to confirm that the Purview account is connected. On this page you will also see a list of integration capabilities that are now available (e.g. Azure Purview search, Synapse Pipeline lineage, etc).
+4. Once the connection has been established, you will receive a notification that **Registration succeeded**. Switch to the **Purview account** tab to confirm that the Purview account is connected. On this page, you will also see a list of integration capabilities that are now available (e.g. Azure Purview search, Synapse Pipeline lineage, etc).
 
     > :bulb: **Did you know?**
     >

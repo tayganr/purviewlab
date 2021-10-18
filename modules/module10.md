@@ -71,186 +71,193 @@ As can be seen in the [Apache Atlas Swagger](https://atlas.apache.org/api/v2/ui/
 
 * **Types**: A definition (or blueprint) as to how a particular type of metadata object can be created. This is similar to the concept of a Class in object-oriented programming. For example: The type definition for an `azure_sql_table` is of category `ENTITY` and contains unique attributes such as `principalId`, `objectType`, etc in addition to inherited attributes such as `name`, `qualifiedName`, etc .
 
-```json
+```html
+<details>
+  <summary>
+    summary
+  </summary>
 {
-            "attributeDefs": [
-                {
-                    "cardinality": "SINGLE",
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isOptional": true,
-                    "isUnique": false,
-                    "name": "principalId",
-                    "typeName": "int",
-                    "valuesMaxCount": 1,
-                    "valuesMinCount": 0
-                },
-                {
-                    "cardinality": "SINGLE",
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isOptional": true,
-                    "isUnique": false,
-                    "name": "objectType",
-                    "typeName": "string",
-                    "valuesMaxCount": 1,
-                    "valuesMinCount": 0
-                },
-                {
-                    "cardinality": "SINGLE",
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isOptional": true,
-                    "isUnique": false,
-                    "name": "createTime",
-                    "typeName": "date",
-                    "valuesMaxCount": 1,
-                    "valuesMinCount": 0
-                },
-                {
-                    "cardinality": "SINGLE",
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isOptional": true,
-                    "isUnique": false,
-                    "name": "modifiedTime",
-                    "typeName": "date",
-                    "valuesMaxCount": 1,
-                    "valuesMinCount": 0
-                }
-            ],
-            "category": "ENTITY",
-            "createTime": 1616124550225,
-            "createdBy": "admin",
-            "description": "azure_sql_table",
-            "guid": "7d92a449-f7e8-812f-5fc8-ca6127ba90bd",
-            "lastModifiedTS": "1",
-            "name": "azure_sql_table",
-            "options": {
-                "purviewEntityExtDef": "{}",
-                "schemaElementsAttribute": "columns"
-            },
-            "relationshipAttributeDefs": [
-                {
-                    "cardinality": "SET",
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isLegacyAttribute": false,
-                    "isOptional": true,
-                    "isUnique": false,
-                    "name": "schema",
-                    "relationshipTypeName": "avro_schema_associatedEntities",
-                    "typeName": "array<avro_schema>",
-                    "valuesMaxCount": -1,
-                    "valuesMinCount": -1
-                },
-                {
-                    "cardinality": "SET",
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isLegacyAttribute": false,
-                    "isOptional": true,
-                    "isUnique": false,
-                    "name": "inputToProcesses",
-                    "relationshipTypeName": "dataset_process_inputs",
-                    "typeName": "array<Process>",
-                    "valuesMaxCount": -1,
-                    "valuesMinCount": -1
-                },
-                {
-                    "cardinality": "SINGLE",
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isLegacyAttribute": false,
-                    "isOptional": false,
-                    "isUnique": false,
-                    "name": "dbSchema",
-                    "relationshipTypeName": "azure_sql_schema_tables",
-                    "typeName": "azure_sql_schema",
-                    "valuesMaxCount": -1,
-                    "valuesMinCount": -1
-                },
-                {
-                    "cardinality": "SET",
-                    "constraints": [
-                        {
-                            "type": "ownedRef"
-                        }
-                    ],
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isLegacyAttribute": false,
-                    "isOptional": true,
-                    "isUnique": false,
-                    "name": "columns",
-                    "relationshipTypeName": "azure_sql_table_columns",
-                    "typeName": "array<azure_sql_column>",
-                    "valuesMaxCount": -1,
-                    "valuesMinCount": -1
-                },
-                {
-                    "cardinality": "SET",
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isLegacyAttribute": false,
-                    "isOptional": true,
-                    "isUnique": false,
-                    "name": "attachedSchema",
-                    "relationshipTypeName": "dataset_attached_schemas",
-                    "typeName": "array<schema>",
-                    "valuesMaxCount": -1,
-                    "valuesMinCount": -1
-                },
-                {
-                    "cardinality": "SET",
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isLegacyAttribute": false,
-                    "isOptional": true,
-                    "isUnique": false,
-                    "name": "meanings",
-                    "relationshipTypeName": "AtlasGlossarySemanticAssignment",
-                    "typeName": "array<AtlasGlossaryTerm>",
-                    "valuesMaxCount": -1,
-                    "valuesMinCount": -1
-                },
-                {
-                    "cardinality": "SET",
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isLegacyAttribute": false,
-                    "isOptional": true,
-                    "isUnique": false,
-                    "name": "outputFromProcesses",
-                    "relationshipTypeName": "process_dataset_outputs",
-                    "typeName": "array<Process>",
-                    "valuesMaxCount": -1,
-                    "valuesMinCount": -1
-                },
-                {
-                    "cardinality": "SINGLE",
-                    "includeInNotification": false,
-                    "isIndexable": false,
-                    "isLegacyAttribute": false,
-                    "isOptional": true,
-                    "isUnique": false,
-                    "name": "tabular_schema",
-                    "relationshipTypeName": "tabular_schema_datasets",
-                    "typeName": "tabular_schema",
-                    "valuesMaxCount": -1,
-                    "valuesMinCount": -1
-                }
-            ],
-            "serviceType": "Azure SQL Database",
-            "subTypes": [],
-            "superTypes": [
-                "DataSet"
-            ],
-            "typeVersion": "1.0",
-            "updateTime": 1616124550225,
-            "updatedBy": "admin",
-            "version": 1
-        }
+   "attributeDefs":[
+      {
+         "cardinality":"SINGLE",
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isOptional":true,
+         "isUnique":false,
+         "name":"principalId",
+         "typeName":"int",
+         "valuesMaxCount":1,
+         "valuesMinCount":0
+      },
+      {
+         "cardinality":"SINGLE",
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isOptional":true,
+         "isUnique":false,
+         "name":"objectType",
+         "typeName":"string",
+         "valuesMaxCount":1,
+         "valuesMinCount":0
+      },
+      {
+         "cardinality":"SINGLE",
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isOptional":true,
+         "isUnique":false,
+         "name":"createTime",
+         "typeName":"date",
+         "valuesMaxCount":1,
+         "valuesMinCount":0
+      },
+      {
+         "cardinality":"SINGLE",
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isOptional":true,
+         "isUnique":false,
+         "name":"modifiedTime",
+         "typeName":"date",
+         "valuesMaxCount":1,
+         "valuesMinCount":0
+      }
+   ],
+   "category":"ENTITY",
+   "createTime":1616124550225,
+   "createdBy":"admin",
+   "description":"azure_sql_table",
+   "guid":"7d92a449-f7e8-812f-5fc8-ca6127ba90bd",
+   "lastModifiedTS":"1",
+   "name":"azure_sql_table",
+   "options":{
+      "purviewEntityExtDef":"{}",
+      "schemaElementsAttribute":"columns"
+   },
+   "relationshipAttributeDefs":[
+      {
+         "cardinality":"SET",
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isLegacyAttribute":false,
+         "isOptional":true,
+         "isUnique":false,
+         "name":"schema",
+         "relationshipTypeName":"avro_schema_associatedEntities",
+         "typeName":"array<avro_schema>",
+         "valuesMaxCount":-1,
+         "valuesMinCount":-1
+      },
+      {
+         "cardinality":"SET",
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isLegacyAttribute":false,
+         "isOptional":true,
+         "isUnique":false,
+         "name":"inputToProcesses",
+         "relationshipTypeName":"dataset_process_inputs",
+         "typeName":"array<Process>",
+         "valuesMaxCount":-1,
+         "valuesMinCount":-1
+      },
+      {
+         "cardinality":"SINGLE",
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isLegacyAttribute":false,
+         "isOptional":false,
+         "isUnique":false,
+         "name":"dbSchema",
+         "relationshipTypeName":"azure_sql_schema_tables",
+         "typeName":"azure_sql_schema",
+         "valuesMaxCount":-1,
+         "valuesMinCount":-1
+      },
+      {
+         "cardinality":"SET",
+         "constraints":[
+            {
+               "type":"ownedRef"
+            }
+         ],
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isLegacyAttribute":false,
+         "isOptional":true,
+         "isUnique":false,
+         "name":"columns",
+         "relationshipTypeName":"azure_sql_table_columns",
+         "typeName":"array<azure_sql_column>",
+         "valuesMaxCount":-1,
+         "valuesMinCount":-1
+      },
+      {
+         "cardinality":"SET",
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isLegacyAttribute":false,
+         "isOptional":true,
+         "isUnique":false,
+         "name":"attachedSchema",
+         "relationshipTypeName":"dataset_attached_schemas",
+         "typeName":"array<schema>",
+         "valuesMaxCount":-1,
+         "valuesMinCount":-1
+      },
+      {
+         "cardinality":"SET",
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isLegacyAttribute":false,
+         "isOptional":true,
+         "isUnique":false,
+         "name":"meanings",
+         "relationshipTypeName":"AtlasGlossarySemanticAssignment",
+         "typeName":"array<AtlasGlossaryTerm>",
+         "valuesMaxCount":-1,
+         "valuesMinCount":-1
+      },
+      {
+         "cardinality":"SET",
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isLegacyAttribute":false,
+         "isOptional":true,
+         "isUnique":false,
+         "name":"outputFromProcesses",
+         "relationshipTypeName":"process_dataset_outputs",
+         "typeName":"array<Process>",
+         "valuesMaxCount":-1,
+         "valuesMinCount":-1
+      },
+      {
+         "cardinality":"SINGLE",
+         "includeInNotification":false,
+         "isIndexable":false,
+         "isLegacyAttribute":false,
+         "isOptional":true,
+         "isUnique":false,
+         "name":"tabular_schema",
+         "relationshipTypeName":"tabular_schema_datasets",
+         "typeName":"tabular_schema",
+         "valuesMaxCount":-1,
+         "valuesMinCount":-1
+      }
+   ],
+   "serviceType":"Azure SQL Database",
+   "subTypes":[
+      
+   ],
+   "superTypes":[
+      "DataSet"
+   ],
+   "typeVersion":"1.0",
+   "updateTime":1616124550225,
+   "updatedBy":"admin",
+   "version":1
+}
+</details>
 ```
 
 * **Entity**: An instance of an entity "type" (e.g. `azure_sql_table`). For example

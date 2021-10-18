@@ -59,7 +59,7 @@ As can be seen in the [Apache Atlas Swagger](https://atlas.apache.org/api/v2/ui/
 
 **Types**
 
-A definition (or blueprint) as to how a particular type of metadata object can be created. This is similar to the concept of a Class in object-oriented programming. For example: The type definition for an `azure_sql_table` is of category `ENTITY` and contains unique attributes such as `principalId`, `objectType`, etc, in addition to inherited attributes such as `name`, `qualifiedName`, and more.
+A definition (or blueprint) as to how a particular type of metadata object can be created. This is similar to the concept of a Class in object-oriented programming. For example: The type definition for an `azure_sql_table` is of category `ENTITY` and contains attributes such as `guid`, `qualifiedName`, `description`, etc.
 
 <details><summary>JSON Code Snippet: Azure SQL Table (Type)</summary>
 <p>
@@ -333,9 +333,296 @@ A hierarchical set of business terms that represents your business domain. For e
 </p>
 </details>
 
-Note: While Azure Purview has adopted Apache Atlas, there certain areas such as Discovery which is responsible for search, where Azure Purview has deviated and implemented a custom search API.
+**Relationship**
 
+An object that defines the relationship between objects. For example: A relationship of type `AtlasGlossarySemanticAssignment` describes the relationship between an `AtlasGlossaryTerm` and an asset (e.g. `azure_datalake_gen2_path`).
 
+<details><summary>JSON Code Snippet: AtlasGlossarySemanticAssignment (Relationship)</summary>
+<p>
+
+```json
+{
+   "relationship":{
+      "end1":{
+         "guid":"cde39a38-880c-42a8-a3cf-ba9958aee4ec",
+         "typeName":"AtlasGlossaryTerm",
+         "uniqueAttributes":{
+            "qualifiedName":"Workplace Analytics_Attendee@Glossary"
+         }
+      },
+      "end2":{
+         "guid":"b04758fd-e93b-4de5-b9b8-8fd9873941e3",
+         "typeName":"azure_datalake_gen2_path",
+         "uniqueAttributes":{
+            "qualifiedName":"https://pvdemofm2ieadls.dfs.core.windows.net/bing/data/merged.parquet"
+         }
+      },
+      "guid":"335b31c2-5396-4efb-ba8a-f525db699a20",
+      "label":"r:AtlasGlossarySemanticAssignment",
+      "status":"ACTIVE",
+      "typeName":"AtlasGlossarySemanticAssignment",
+      "version":0
+   }
+}
+```
+</p>
+</details>
+
+**Lineage**
+
+Returns lineage information about an entity (e.g. `Azure Data Factory Copy Activity`). Lineage details where data originated from, where it moved, and where it was processed.
+
+<details><summary>JSON Code Snippet: Azure Data Factory Copy Activity (Lineage)</summary>
+<p>
+
+```json
+{
+   "baseEntityGuid":"5e7c0c96-7f71-48f5-a2b5-fe20d13e279b",
+   "childrenCount":1,
+   "guidEntityMap":{
+      "1dff011b-5f2c-4a02-9d72-978a4db7a2ac":{
+         "attributes":{
+            "name":"copyPipeline",
+            "qualifiedName":"/subscriptions/2c334b6c-e556-40ac-a4c0-c0d1d2e08ca0/resourceGroups/pvdemo-rg-fm2ie/providers/Microsoft.DataFactory/factories/pvdemofm2ie-adf/pipelines/copyPipeline"
+         },
+         "classificationNames":[
+            
+         ],
+         "displayText":"copyPipeline",
+         "guid":"1dff011b-5f2c-4a02-9d72-978a4db7a2ac",
+         "lastModifiedTS":"1",
+         "meaningNames":[
+            
+         ],
+         "meanings":[
+            
+         ],
+         "status":"ACTIVE",
+         "typeName":"adf_pipeline"
+      },
+      "2788b71f-eb02-49c6-a776-77152db8e9e7":{
+         "attributes":{
+            "modifiedTime":0,
+            "name":"QueriesByCountry",
+            "partitionCount":0,
+            "qualifiedName":"https://pvdemofm2ieadls.dfs.core.windows.net/bing/data/{N}/QueriesByCountry_{Year}-{Month}-{Day}_{N}-{N}-{N}.tsv",
+            "schemaCount":0,
+            "totalSizeBytes":0
+         },
+         "classificationNames":[
+            
+         ],
+         "collectionId":"nkmsyh",
+         "displayText":"QueriesByCountry",
+         "guid":"2788b71f-eb02-49c6-a776-77152db8e9e7",
+         "lastModifiedTS":"1",
+         "meaningNames":[
+            
+         ],
+         "meanings":[
+            
+         ],
+         "status":"ACTIVE",
+         "typeName":"azure_datalake_gen2_resource_set"
+      },
+      "5254b2a1-ec08-4a5f-9bb8-ada1c848d83f":{
+         "attributes":{
+            "createTime":0,
+            "name":"pvdemofm2ie-adf",
+            "qualifiedName":"/subscriptions/2c334b6c-e556-40ac-a4c0-c0d1d2e08ca0/resourceGroups/pvdemo-rg-fm2ie/providers/Microsoft.DataFactory/factories/pvdemofm2ie-adf",
+            "resourceGroupName":"pvdemo-rg-fm2ie",
+            "subscriptionId":"2c334b6c-e556-40ac-a4c0-c0d1d2e08ca0"
+         },
+         "classificationNames":[
+            
+         ],
+         "displayText":"pvdemofm2ie-adf",
+         "guid":"5254b2a1-ec08-4a5f-9bb8-ada1c848d83f",
+         "lastModifiedTS":"1",
+         "meaningNames":[
+            
+         ],
+         "meanings":[
+            
+         ],
+         "status":"ACTIVE",
+         "typeName":"azure_data_factory"
+      },
+      "5e7c0c96-7f71-48f5-a2b5-fe20d13e279b":{
+         "attributes":{
+            "dataSize":174159331,
+            "errorMessage":"",
+            "lastRunTime":1634036502127,
+            "name":"Copy_a9c",
+            "qualifiedName":"/subscriptions/2c334b6c-e556-40ac-a4c0-c0d1d2e08ca0/resourceGroups/pvdemo-rg-fm2ie/providers/Microsoft.DataFactory/factories/pvdemofm2ie-adf/pipelines/copyPipeline/activities/Copy_a9c",
+            "rowCount":10907915,
+            "status":"Completed"
+         },
+         "classificationNames":[
+            
+         ],
+         "displayText":"Copy_a9c",
+         "guid":"5e7c0c96-7f71-48f5-a2b5-fe20d13e279b",
+         "lastModifiedTS":"2",
+         "meaningNames":[
+            
+         ],
+         "meanings":[
+            
+         ],
+         "status":"ACTIVE",
+         "typeName":"adf_copy_activity"
+      },
+      "8050c208-88a7-4521-b64f-2b1b82e12d70":{
+         "attributes":{
+            "columnMapping":"[{\"DatasetMapping\":{\"Source\":\"*\",\"Sink\":\"https://pvdemofm2ieadls.dfs.core.windows.net/bing/data/merged.parquet\"},\"ColumnMapping\":[{\"Source\":\"Date\",\"Sink\":\"Date\"},{\"Source\":\"Query\",\"Sink\":\"Query\"},{\"Source\":\"IsImplicitIntent\",\"Sink\":\"IsImplicitIntent\"},{\"Source\":\"State\",\"Sink\":\"State\"},{\"Source\":\"Country\",\"Sink\":\"Country\"},{\"Source\":\"PopularityScore\",\"Sink\":\"PopularityScore\"}]}]",
+            "name":"Copy_a9c",
+            "qualifiedName":"/subscriptions/2c334b6c-e556-40ac-a4c0-c0d1d2e08ca0/resourceGroups/pvdemo-rg-fm2ie/providers/Microsoft.DataFactory/factories/pvdemofm2ie-adf/pipelines/copyPipeline/activities/Copy_a9c#https://pvdemofm2ieadls.dfs.core.windows.net/bing/data/merged.parquet#azure_datalake_gen2_path"
+         },
+         "classificationNames":[
+            
+         ],
+         "displayText":"Copy_a9c",
+         "guid":"8050c208-88a7-4521-b64f-2b1b82e12d70",
+         "lastModifiedTS":"14",
+         "meaningNames":[
+            
+         ],
+         "meanings":[
+            
+         ],
+         "status":"ACTIVE",
+         "typeName":"adf_copy_operation"
+      },
+      "b04758fd-e93b-4de5-b9b8-8fd9873941e3":{
+         "attributes":{
+            "isFile":true,
+            "modifiedTime":0,
+            "name":"merged.parquet",
+            "path":"/bing/data/merged.parquet",
+            "qualifiedName":"https://pvdemofm2ieadls.dfs.core.windows.net/bing/data/merged.parquet",
+            "size":174159331
+         },
+         "classificationNames":[
+            
+         ],
+         "displayText":"merged.parquet",
+         "guid":"b04758fd-e93b-4de5-b9b8-8fd9873941e3",
+         "lastModifiedTS":"2",
+         "meaningNames":[
+            "Workplace Analytics_Attendee"
+         ],
+         "meanings":[
+            {
+               "confidence":0,
+               "displayText":"Workplace Analytics_Attendee",
+               "relationGuid":"335b31c2-5396-4efb-ba8a-f525db699a20",
+               "termGuid":"cde39a38-880c-42a8-a3cf-ba9958aee4ec"
+            }
+         ],
+         "status":"ACTIVE",
+         "typeName":"azure_datalake_gen2_path"
+      },
+      "dde518e1-ac6f-4919-8c08-5c848eddf3ca":{
+         "attributes":{
+            "modifiedTime":0,
+            "name":"QueriesByState",
+            "partitionCount":0,
+            "qualifiedName":"https://pvdemofm2ieadls.dfs.core.windows.net/bing/data/{N}/QueriesByState_{Year}-{Month}-{Day}_{N}-{N}-{N}.tsv",
+            "schemaCount":0,
+            "totalSizeBytes":0
+         },
+         "classificationNames":[
+            
+         ],
+         "collectionId":"nkmsyh",
+         "displayText":"QueriesByState",
+         "guid":"dde518e1-ac6f-4919-8c08-5c848eddf3ca",
+         "lastModifiedTS":"2",
+         "meaningNames":[
+            "Workplace Analytics_Attendee",
+            "Workplace Analytics_Attended",
+            "Workplace Analytics_Aggregation"
+         ],
+         "meanings":[
+            {
+               "confidence":0,
+               "displayText":"Workplace Analytics_Attendee",
+               "relationGuid":"6c792ca6-b329-4544-b3b9-7f6b2e6ddee2",
+               "termGuid":"cde39a38-880c-42a8-a3cf-ba9958aee4ec"
+            },
+            {
+               "confidence":0,
+               "displayText":"Workplace Analytics_Attended",
+               "relationGuid":"0e88c276-8d1e-4279-b459-d5280ae96c8c",
+               "termGuid":"77672fe5-25eb-40ca-9861-9b0466bc5ed7"
+            },
+            {
+               "confidence":0,
+               "displayText":"Workplace Analytics_Aggregation",
+               "relationGuid":"e66c8221-ba0c-451d-b73b-8728be2bdc58",
+               "termGuid":"49beee56-4143-4654-a906-6646e6f5b9ac"
+            }
+         ],
+         "status":"ACTIVE",
+         "typeName":"azure_datalake_gen2_resource_set"
+      }
+   },
+   "includeParent":true,
+   "lineageDepth":3,
+   "lineageDirection":"BOTH",
+   "lineageWidth":6,
+   "parentRelations":[
+      {
+         "childEntityId":"1dff011b-5f2c-4a02-9d72-978a4db7a2ac",
+         "parentEntityId":"5254b2a1-ec08-4a5f-9bb8-ada1c848d83f",
+         "relationshipId":"28ea8137-b998-4d0b-b6a3-197dbbefa179"
+      },
+      {
+         "childEntityId":"5e7c0c96-7f71-48f5-a2b5-fe20d13e279b",
+         "parentEntityId":"1dff011b-5f2c-4a02-9d72-978a4db7a2ac",
+         "relationshipId":"82f5a59f-ee4b-48da-83da-03d1694e91d9"
+      },
+      {
+         "childEntityId":"8050c208-88a7-4521-b64f-2b1b82e12d70",
+         "parentEntityId":"5e7c0c96-7f71-48f5-a2b5-fe20d13e279b",
+         "relationshipId":"c66e74f6-4eff-4c09-83b9-98912a5813dc"
+      }
+   ],
+   "relations":[
+      {
+         "fromEntityId":"dde518e1-ac6f-4919-8c08-5c848eddf3ca",
+         "relationshipId":"c2636ed1-74ec-49b1-8e61-b8537ee2e402",
+         "toEntityId":"8050c208-88a7-4521-b64f-2b1b82e12d70"
+      },
+      {
+         "fromEntityId":"8050c208-88a7-4521-b64f-2b1b82e12d70",
+         "relationshipId":"315076f3-6dd0-4e03-95c1-70342e164bd7",
+         "toEntityId":"b04758fd-e93b-4de5-b9b8-8fd9873941e3"
+      },
+      {
+         "fromEntityId":"2788b71f-eb02-49c6-a776-77152db8e9e7",
+         "relationshipId":"831d9fbb-c3cf-44be-964b-6f1773512326",
+         "toEntityId":"8050c208-88a7-4521-b64f-2b1b82e12d70"
+      }
+   ],
+   "widthCounts":{
+      "INPUT":{
+         "2788b71f-eb02-49c6-a776-77152db8e9e7":0,
+         "8050c208-88a7-4521-b64f-2b1b82e12d70":2,
+         "dde518e1-ac6f-4919-8c08-5c848eddf3ca":0
+      },
+      "OUTPUT":{
+         "8050c208-88a7-4521-b64f-2b1b82e12d70":1,
+         "b04758fd-e93b-4de5-b9b8-8fd9873941e3":0
+      }
+   }
+}
+```
+</p>
+</details>
+
+Note: While Azure Purview is using Apache Atlas, there are certain areas such as Discovery which is responsible for search, where Azure Purview has deviated and implemented a custom search API.
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 

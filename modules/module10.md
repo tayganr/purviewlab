@@ -19,7 +19,6 @@ While Purview Studio is the default method of interfacing with Azure Purview, th
   * Extending the lineage functionality to other ETL processes.
   * Embedding Azure Purview asset data within custom user experiences.
   * Triggering Azure Purview scans to run off the back of a custom event.
-  * etc.
 
 The primary focus of this module is the **catalog** which is based on the open-source [Apache Atlas](https://atlas.apache.org/) project. Read below for more details on Apache Atlas and how it relates to Azure Purview.
 

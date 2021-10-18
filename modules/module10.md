@@ -57,9 +57,7 @@ The primary focus of this module is the **catalog** which is based on the open-s
 
 ## 1. Apache Atlas
 
-What is Apache Atlas?
-
-> :world_map: What is Apache Atlas?
+> :world_map: **What is Apache Atlas?**
 >
 > Apache Atlas provides open metadata management and governance capabilities for organizations to build a catalog of their data assets, classify and govern these assets and provide collaboration capabilities around these data assets for data scientists, analysts and the data governance team. Source: [Apache.org](https://atlas.apache.org/#/)
 

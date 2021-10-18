@@ -5,8 +5,8 @@
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An Azure Data Lake Storage Gen2 Account (see [module 00](../modules/module00.md)).
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
-* An Azure Data Lake Storage Gen2 Account (see [module 02](../modules/module02.md)).
 
 ## :hammer: Tools
 
@@ -34,16 +34,20 @@ Azure Purview provides a large set of default classifications that represent typ
 
 ## 1. Create a Classification
 
-1. Open Purview Studio, navigate to **Management Center** > **Classifications** (under Metadata management) and click **New**.
+1. Open Purview Studio, navigate to **Data map** > **Classifications** (under Annotation management) and click **New**.
 
     ![New Classification](../images/module05/05.01-classifications-new.png)
 
-2. Populate the classification fields as per the example below and click **OK**.
+2. **Copy** and **paste** the values below into the appropriate fields and click **OK**.
 
-    | Field  | Example Value |
-    | --- | --- |
-    | Name | `Twitter_Handle` |
-    | Description | `The username that appears at the end of your unique Twitter URL.` |
+    **Name**
+    ```
+    Twitter Handle
+    ```
+    **Description**
+    ```
+    The username that appears at the end of your unique Twitter URL.
+    ```
 
     ![Create Classification](../images/module05/05.02-classifications-create.png)
 
@@ -55,7 +59,7 @@ Azure Purview provides a large set of default classifications that represent typ
 
 ## 2. Create a Custom Classification Rule (Regular Expression)
 
-1. Navigate to **Management Center** > **Classification rules** (under Metadata management) and click **New**.
+1. Navigate to **Data map** > **Classification rules** (under Annotation management) and click **New**.
 
     ![New Classification Rule](../images/module05/05.04-classificationrules-new.png)
 
@@ -63,7 +67,7 @@ Azure Purview provides a large set of default classifications that represent typ
 
     | Field  | Example Value |
     | --- | --- |
-    | Name | `Twitter_Handle` |
+    | Name | `twitter_handle` |
     | Description | `The username that appears at the end of your unique Twitter URL.` |
     | Classification name | `Twitter Handle` |
     | State | `Enabled` |
@@ -75,15 +79,15 @@ Azure Purview provides a large set of default classifications that represent typ
 
     ![Regular Expression Classification Rule](../images/module05/05.05-classificationrules-regex.png)
 
-3. Download a copy of **[twitter_handles.csv](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.csv)** to your local machine.
+3. Download a copy of **[twitter_handles.csv](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.csv)** to your local machine by opening the link in a new tab, right-click within the body of the content, and click **Save as**.
 
-4. Click the **Browse** icon and open the local copy of **[twitter_handles.csv](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.csv)**.
+4. Click the **Browse** icon and open the local copy of **twitter_handles.csv**.
 
 5. Select the data pattern associated to the **Handle** column and click **Add to patterns**.
 
     > :bulb: **Did you know?**
     >
-    > **Thresholds** help minimise the possibility of false-positive classifications. **Distinct data values threshold** is the total number of distinct data values that need to be found in a column before the scanner will run the data pattern on it. **Minimum match threshold** is the minimum percentage of data value matches in a column that needs to be found by the scanner for the classification to be applied.
+    > **Thresholds** help minimise the possibility of false-positive classifications. **Minimum match threshold** is the minimum percentage of data value matches in a column that needs to be found by the scanner for the classification to be applied.
 
     ![Pattern Detection](../images/module05/05.06-regex-file.png)
 
@@ -100,7 +104,7 @@ Azure Purview provides a large set of default classifications that represent typ
 
 ## 3. Create a Scan Rule Set
 
-1. Navigate to **Management Center** > **Scan rule sets** (under General) and click **New**.
+1. Navigate to **Data map** > **Scan rule sets** (under Source management) and click **New**.
 
     > :bulb: **Did you know?**
     >
@@ -108,13 +112,16 @@ Azure Purview provides a large set of default classifications that represent typ
 
     ![New Scan Rule Set](../images/module05/05.08-scanruleset-new.png)
 
-2. Populate the scan rule set fields as per the example below and click **Continue**.
+2. Change the **Source Type** to `Azure Data Lake Storage Gen2` then **copy** and **paste** the values below into the appropriate fields. Click **Continue**.
 
-    | Field  | Example Value |
-    | --- | --- |
-    | Source Type | `Azure Data Lake Storage Gen2` |
-    | Scan rule set name | `twitter_scan_rule_set` |
-    | Scan rule description | `Custom scan rule set to detect parquet files and classify twitter handles.` |
+    **Scan rule set name**
+    ```
+    twitter_scan_rule_set
+    ```
+    **Scan rule description**
+    ```
+    Custom scan rule set to detect parquet files and classify twitter handles.
+    ```
 
     ![Scan Rule Set Name](../images/module05/05.09-scanruleset-create.png)
 
@@ -122,7 +129,7 @@ Azure Purview provides a large set of default classifications that represent typ
 
     ![Scan Rule Set File Type](../images/module05/05.10-scanruleset-filetype.png)
 
-4. Clear all selected System rules and select the custom classification rule **Twitter_Handle** and click **Create**.
+4. Clear all selected **System rules** and select the custom classification rule **twitter_handle** and click **Create**.
 
     ![Scan Rule Set Classification](../images/module05/05.11-scanruleset-rules.png)
 
@@ -137,7 +144,7 @@ Before proceeding with the following steps, you will need to:
 
 Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [module 02](../modules/module02.md).
 
-1. Download a copy of **[twitter_handles.parquet](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.parquet)** to your local machine. 
+1. Download a copy of **[twitter_handles.parquet](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.parquet)** to your local machine by opening the link in a new tab, right-click within the body of the content, and click **Save as**. 
 
 1. Navigate to your Azure Data Lake Storage Gen2 Account, expand **Blob Containers**, and **Open** the **raw** container. Note: If a raw container does not exist, create one.
 
@@ -155,7 +162,7 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 
     ![Upload File](../images/module05/05.15-explorer-upload.png)
 
-5. Select the local copy of **[twitter_handles.parquet](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.parquet)** and click **Upload**.
+5. Select the local copy of **twitter_handles.parquet** and click **Upload**.
 
     ![Upload Parquet](../images/module05/05.16-explorer-parquet.png)
 
@@ -163,7 +170,7 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 
 ## 5. Scan an Azure Data Lake Storage Gen2 Account
 
-1. Open Purview Studio, navigate to **Sources** and click **New Scan**. Note: If you have not registered your Azure Data Lake Storage Gen2 Account, see [module 02](../modules/module02.md).
+1. Open Purview Studio, navigate to **Data map** > **Sources** and click **New Scan** within the Azure Data Lake Storage Gen2 tile. Note: If you have not registered your Azure Data Lake Storage Gen2 Account, see [module 02](../modules/module02.md).
 
     ![New Scan](../images/module05/05.17-sources-newscan.png)
 
@@ -171,7 +178,7 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 
     ![Test Connection](../images/module05/05.18-scan-test.png)
 
-3. By default, Azure Purview will have the parent Azure Data Lake Storage Gen2 account selected and therefore include all paths in scope. To reduce the scope, deselect the parent and select the **Twitter** folder only.
+3. By default, Azure Purview will have the parent Azure Data Lake Storage Gen2 account selected and therefore include all paths in scope. To reduce the scope, deselect the parent and select the **Twitter** folder only. Click **Continue**.
 
     ![Scope Scan](../images/module05/05.19-scan-scope.png)
 
@@ -179,7 +186,7 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 
     ![Scan Rule Set Details](../images/module05/05.20-scanruleset-viewdetail.png)
 
-5. Confirm that the custom scan rule set includes the **PARQUET** file type and the custom classification rule **Twitter_Handle**. Click **OK**.
+5. Confirm that the custom scan rule set includes the **PARQUET** file type and the custom classification rule **twitter_handle**. Click **OK**.
 
     ![Verify Scan Rule Set](../images/module05/05.21-scanruleset-verify.png)
 
@@ -195,11 +202,11 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 
     ![Run Scan](../images/module05/05.24-scan-saverun.png)
 
-9. To view the progress of the scan, navigate to **Sources** and click **View details** on the Azure Data Lake Storage Gen2 account.
+9. To view the progress of the scan, navigate to **Sources** and click **View details** on the Azure Data Lake Storage Gen2 tile.
 
     ![Source Details](../images/module05/05.25-source-viewdetails.png)
 
-10. Periodically click **Refresh** to update the scan status until **Complete**. Note: This will take approximately 5 minutes.
+10. Periodically click **Refresh** to update the scan status until **Complete**. Note: This will take approximately 5 to 10 minutes.
 
     ![Scan Progress](../images/module05/05.26-source-progress.png)
 

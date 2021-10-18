@@ -1,6 +1,6 @@
 # Module 01 - Create an Azure Purview Account
 
-**[Home](../README.md)** - [Next Module >](../modules/module02a.md)
+[< Previous Module](../modules/module00.md) - **[Home](../README.md)** - [Next Module >](../modules/module02a.md)
 
 ## :thinking: Prerequisites
 
@@ -19,7 +19,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
 ##  :bookmark_tabs: Table of Contents
 
-| #  | Section | Targeted Role |
+| #  | Section | Role |
 | --- | --- | --- |
 | 1 | [Create an Azure Purview Account](#1-create-an-azure-purview-account) | Azure Administrator |
 | 2 | [Grant Access to Azure Purview's Data Plane](#2-grant-access-to-azure-purviews-data-plane) | Collection Administrator |
@@ -52,9 +52,13 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
     > :bulb: **Did you know?**
     >
-    > **Capacity Units** determine the size of the platform and is a **provisioned** (fixed) set of resources that is needed to keep the Azure Purview platform up and running. 1 Capacity Unit is able to support approximately 25 data map operations per second. Capacity Units are required regardless of whether you plan to invoke the Azure Purview API endpoints directly (i.e. ISV scenario) or indirectly via Purview Studio (GUI).
+    > **Capacity Units** determine the size of the platform and is a **provisioned** (always on) set of resources that is needed to keep the Azure Purview platform up and running. 1 Capacity Unit is able to support approximately 25 data map operations per second and includes up to 2GB of metadata storage about data assets.
+    >
+    > Capacity Units are required regardless of whether you plan to invoke the Azure Purview API endpoints directly (i.e. ISV scenario) or indirectly via Purview Studio (GUI).
+    >
+    > Note: With the introduction of the [Elastic Data Map](https://docs.microsoft.com/en-us/azure/purview/concept-elastic-data-map), you no longer need to specify how many Capacity Units that you need. Azure Purview will scale capacity elastically based on the request load.
     > 
-    > **vCore Hours** on the other hand is the unit used to measure **serverless** compute that is needed to run a scan. You only pay per vCore Hour of scanning that you consume (rounded up to the nearest minute).
+    > **vCore Hours** on the other hand, is the unit of measure for **serverless** compute that is needed to run a scan. You only pay per vCore Hour of scanning that you consume (rounded up to the nearest minute).
     >
     > For more information, check out the [Azure Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/azure-purview/) page.
 
@@ -86,6 +90,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 
     ![Collections](../images/module01/_01.09-datamap-collections.png)
 
+    
 4. Select **Role assignments**.
 
     ![Role assignments](../images/module01/_01.10-collections-roleassignments.png)
@@ -123,7 +128,7 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     B ) vCore Hours  
     C ) Neither
 
-2. Which of the following Azure Purview pricing meters is fixed, with consumption based on quantity provisioned?
+2. Which of the following Azure Purview pricing meters is always on, with consumption based on quantity provisioned?
 
     A ) Capacity Units  
     B ) vCore Hours  

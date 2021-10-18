@@ -10,7 +10,7 @@
 
 ## :loudspeaker: Introduction
 
-Registering an Azure Purview account to a Synapse workspace allows you to discover Azure Purview assets and interact with them through Synapse specific capabilities.
+Registering an Azure Purview account to a Synapse workspace allows you to discover Azure Purview assets, interact with them through Synapse specific capabilities, and push lineage information to Azure Purview.
 
 ## :dart: Objectives
 
@@ -20,69 +20,38 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 ## Table of Contents
 
 1. [Azure Data Lake Storage Gen2 Account Access](#1-azure-data-lake-storage-gen2-account-access)
-2. [Create an Azure Synapse Analytics Workspace](#2-create-an-azure-synapse-analytics-workspace)
-3. [Connect to a Purview Account](#3-connect-to-a-purview-account)
-4. [Search a Purview Account](#4-search-a-purview-account)
+2. [Connect to a Purview Account](#2-connect-to-a-purview-account)
+3. [Search a Purview Account](#3-search-a-purview-account)
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 
 ## 1. Azure Data Lake Storage Gen2 Account Access
 
-* This particular unit builds upon  previous modules (e.g. pre-provisioned Azure Purview account with an Azure Data Lake Storage Gen2 account registered and scanned, see prerequisites for more details).
-* While this exercise will focus on how to integrate Azure Purview with Azure Synapse Analytics, if you would like to test the ability to connect to external sources within Synapse Studio, you will need to ensure the account being used to perform ad-hoc queries has sufficient privileges (e.g. Storage Blob Data Reader).
+> :bulb: **Did you know?**
+>
+> One of the key benefits of integrating Azure Synapse Analytics with Azure Purview, is the ability to discover Azure Purview assets from within Synapse Studio (i.e. no need to swtich between user experiences), with added abilities using Synapse specific capabilities (e.g. SELECT TOP 100). 
+>
+> Note: Before we can demonstrate the ability to query external data sources from Azure Synapse Analytics, we need to ensure our account has the appropriate level of access (i.e. `Storage Blob Data Reader`).
 
-1. Navigate to the **Access Control (IAM)** screen within the Azure Data Lake Storage Gen2 account provisioned in [module 02](../modules/module02.md) and click **Add role assignments**.
+1. Navigate to the **Azure Data Lake Storage Gen2 account** (e.g. `pvlab{randomId}adls`), select **Access Control (IAM)**, and then click **Add role assignment**.
 
     ![Storage Access Control](../images/module09/09.01-storage-access.png)
 
-2. Select the **Storage Blob Data Reader** role and assign this to the account that will query the external data source via Synapse Workspace (i.e. your account). Click **Save**.
-
-    | Property  | Value |
-    | --- | --- |
-    | Role | `Storage Blob Data Reader` |
-    | Assign access to | `User, group, or service principal` |
-    | Select | `<account-name>` |
+2. Filter the list of roles available by searching for `Storage Blob Data Reader`, select the **Storage Blob Data Reader** role from the list, and click **Next**.
 
     ![Storage RBAC Assignment](../images/module09/09.02-storage-rbac.png)
 
-<div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
+3. To add your account click **Select members**, search for your account by typing your username into the text box, select your account from the list, and click **Select**.
 
-## 2. Create an Azure Synapse Analytics Workspace
+    ![Storage RBAC Assignment](../images/module09/09.16-rbac-members.png)
 
-1. Navigate to the Azure Portal and create an **Azure Synapse Analytics** resource.
+4. Click **Review + assign** to progress to the final confirmation screen and then click **Review + assign** once more.
 
-    ![Azure Marketplace Synapse](../images/module09/09.03-marketplace-synapse.png)
-
-2. Provide the necessary inputs on the **Basics** tab and click **Next: Security >**.
-
-    > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment.
-
-    | Parameter  | Example Value |
-    | --- | --- |
-    | Subscription | `Azure Internal Access` |
-    | Resource group | `purview-workshop` |
-    | Workspace name | `synapse2486` |
-    | Region | `Brazil South` |
-    | (ADLS Gen2) Account name | `(Create new) synapseadls2486` |
-    | (ADLS Gen2)  File system name | `(Create new) synapsefs2486` |
-
-    ![Create Synapse Workspace](../images/module09/09.04-synapse-basics.png)
-
-3. Enter a **password** for the SQL administrator and click **Review + create**.
-
-    ![Synapse Workspace Security](../images/module09/09.05-synapse-security.png)
-
-4. Click **Create**.
-
-    ![Validate Synapse Workspace](../images/module09/09.06-synapse-validate.png)
-
-5. Monitor your deployment until the status changes to **Your deployment is complete**.
-
-    ![Synapse Workspace Deployment Complete](../images/module09/09.07-synapse-deployment.png)
+    ![Storage RBAC Assignment](../images/module09/09.17-rbac-review.png)
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 
-## 3. Connect to a Purview Account
+## 2. Connect to a Purview Account
 
 1. Within the Azure portal, open the Synapse workspace and click **Open Synapse Studio**.
 
@@ -96,13 +65,21 @@ Registering an Azure Purview account to a Synapse workspace allows you to discov
 
     ![Select a Purview Account](../images/module09/09.10-synapse-purview.png)
 
-4. Once the connection has been established, you will receive a notification that **Registration succeeded**.
+4. Once the connection has been established, you will receive a notification that **Registration succeeded**. Switch to the **Purview account** tab to confirm that the Purview account is connected. On this page, you will also see a list of integration capabilities that are now available (e.g. Azure Purview search, Synapse Pipeline lineage, etc).
+
+    > :bulb: **Did you know?**
+    >
+    > When connecting a Synapse workspace to Purview, Synapse will attempt to add the necessary Purview role assignment (i.e. `Data Curator`) to the Synapse managed identity automatically. This operation will be successful if you belong to the **Collection admins** role on the Purview root collection and have access to the Azure Purview account. For more information, check out [Connect a Synapse workspace to an Azure Purview account](https://docs.microsoft.com/en-us/azure/synapse-analytics/catalog-and-governance/quickstart-connect-azure-purview).
 
     ![Purview Account Registered](../images/module09/09.11-synapse-success.png)
 
+5. To validate that Synapse was able to succesfully add the Synapse managed identity to the Data Curator role, navigate to **Purview Studio** > **Data map** > **Collections** > **YOUR_ROOT_COLLECTION**, switch to the **Role assignments** tab and expand **Data curators**. You should be able to see the Synapse Service Principal listed as one of the Data curators. This will provide Synapse read/write access to the catalog.
+
+    ![](../images/module09/09.18-synapsemi-curator.png)
+
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 
-## 4. Search a Purview Account
+## 3. Search a Purview Account
 
 1. Within the Synapse workspace, navigate to the **Data** screen and perform a **keyword search** (e.g. `parquet`). Notice that the search bar now defaults to searching the entire Purview catalog as opposed to the Synapse workspace only.
 

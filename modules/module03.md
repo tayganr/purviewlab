@@ -1,6 +1,6 @@
 # Module 03 - Search & Browse
 
-[< Previous Module](../modules/module02.md) - **[Home](../README.md)** - [Next Module >](../modules/module04.md)
+[< Previous Module](../modules/module02b.md) - **[Home](../README.md)** - [Next Module >](../modules/module04.md)
 
 ## :thinking: Prerequisites
 
@@ -30,13 +30,18 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 ## 1. Search Catalog
 
-1. Open Purview Studio and from the **Home** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
+1. Open Purview Studio and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 
-2. Filter the search results by **Classification** (e.g. Country/Region) and click the hyperlinked asset name to view the details (e.g. QueriesByState).
+2. Filter the search results by **Classification** (e.g. **Country/Region**) and click the hyperlinked asset name to view the details (e.g. `QueriesByState`).
 
     ![Filter by Classification](../images/module03/03.02-search-filter.png)
+
+
+> :bulb: **Did you know?**
+>
+> While **Purview Studio** is provided as the default user experience, customers and partners can interface with the underlying platform using the [Azure Purview REST API](https://docs.microsoft.com/en-us/rest/api/purview/). The openness of the platform enables the possibility of integrating Azure Purview with custom user interfaces as well as the ability to perform read/write operations programmatically. 
 
 <div align="right"><a href="#module-03---search--browse">↥ back to top</a></div>
 
@@ -48,7 +53,9 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 2. Update the **Description** by copying and pasting the sample text below.
 
-    > This dataset was curated from the Bing search logs (desktop users only) over the period of Jan 1st, 2020 – (Current Month - 1). Only searches that were issued many times by multiple users were included. The dataset includes queries from all over the world that had an intent related to the Coronavirus or Covid-19. In some cases this intent is explicit in the query itself (e.g., “Coronavirus updates Seattle”), in other cases it is implicit , e.g. “Shelter in place”.
+    ```
+    This dataset was curated from the Bing search logs (desktop users only) over the period of Jan 1st, 2020 – (Current Month - 1). Only searches that were issued many times by multiple users were included. The dataset includes queries from all over the world that had an intent related to the Coronavirus or Covid-19. In some cases this intent is explicit in the query itself (e.g., “Coronavirus updates Seattle”), in other cases it is implicit , e.g. “Shelter in place”
+    ```
 
     ![Update Description](../images/module03/03.04-asset-description.png)
 
@@ -56,16 +63,7 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
     ![Update Classification](../images/module03/03.05-asset-classification.png)
 
-4. Navigate to the **Schema** tab and update the **column descriptions** using the sample text below.
-
-    | Column Name  | Description |
-    | --- | --- |
-    | Date | `Date on which the query was issued.` |
-    | Query | `The actual search query issued by user(s).` |
-    | IsImplicitIntent | `True if query did not mention covid or coronavirus or sarsncov2 (e.g, “Shelter in place”). False otherwise.` |
-    | State | `State from where the query was issued.` |
-    | Country | `Country from where the query was issued.` |
-    | PopularityScore | `Value between 1 and 100 inclusive. 1 indicates least popular query on the day/State/Country with Coronavirus intent, and 100 indicates the most popular query for the same geography on the same day.` |
+4. Navigate to the **Schema** tab and update the **Asset description** for each column using the sample text below.
 
     > :bulb: **Did you know?**
     >
@@ -73,11 +71,38 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
     ![Update Schema](../images/module03/03.06-asset-schema.png)
 
+    **Date**
+    ```
+    Date on which the query was issued.
+    ```
+    **Query**
+    ```
+    The actual search query issued by user(s).
+    ```
+    **IsImplicitIntent**
+    ```
+    True if query did not mention covid or coronavirus or sarsncov2 (e.g, “Shelter in place”). False otherwise.
+    ```
+    **State**
+    ```
+    State from where the query was issued.
+    ```
+    **Country**
+    ```
+    Country from where the query was issued.
+    ```
+    **PopularityScore**
+    ```
+    Value between 1 and 100 inclusive. 1 indicates least popular query on the day/State/Country with Coronavirus intent, and 100 indicates the most popular query for the same geography on the same day.
+    ```
+
 5. Navigate to the **Contacts** tab and set someone within your organization to be an **Expert** and an **Owner**. Click **Save**.
 
     > :bulb: **Did you know?**
     >
     > Assets can be related to two different types of contacts. **Experts** are often business process or subject matter experts. Where as **Owners** are often senior executives or business area owners that define governance or business processes over certain data areas.
+    >
+    > For assets in which you are tagged as a **Contact**, these will appear on the home screen (Data catalog), under **My items**.
 
     ![Update Contacts](../images/module03/03.07-asset-contacts.png)
 
@@ -89,21 +114,21 @@ Once sources have been registered and scanned, the underlying data catalog will 
 
 ## 3. Browse Assets
 
-While the search experience is ideal for keyword based discovery, Purview Studio also allows users to navigate the catalog by source.
+While the search experience is ideal for keyword based discovery, Purview Studio allows alternate methods of browsing assets (i.e. by collection OR by source type).
 
-1. Open Purview Studio and from the **Home** screen, click **Browse assets**.
+1. Open Purview Studio and from the **Data catlog** screen, click **Browse assets**.
 
     ![Browse Assets](../images/module03/03.09-home-browse.png)
 
-2. Select a **source** (e.g. Azure Data Lake Storage Gen2).
+2. Switch to the **By source type** tab and select a **source** (e.g. `Azure Data Lake Storage Gen2`).
 
     ![ADLS Gen2](../images/module03/03.10-browse-adls.png)
 
-3. Select an **account** (e.g. storage2486).
+3. Select an **account** (e.g. `pvlab{randomId}adls`).
 
     ![ADLS Gen2 Account](../images/module03/03.11-browse-account.png)
 
-4. Select a **container** (e.g. raw).
+4. Select a **container** (e.g. `raw`).
 
     ![ADLS Gen2 Container](../images/module03/03.12-browse-container.png)
 
@@ -114,7 +139,7 @@ While the search experience is ideal for keyword based discovery, Purview Studio
 Azure Purview allows us to perform certain operations (add/replace/remove) against a subset of attributes (Expert, Owner, Term, Classification) in bulk directly within Purview Studio.
 
 
-1. Open Purview Studio and from the **Home** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
+1. Open Purview Studio and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 
@@ -126,7 +151,7 @@ Azure Purview allows us to perform certain operations (add/replace/remove) again
 
     ![Bulk Edit](../images/module03/03.14-bulk-edit.png)
 
-4. Set the **Attribute** to `Owner`, set **Operation** to `Add`, select two users in your organization and click **Apply**.
+4. Set the **Attribute** to `Owner`, set **Operation** to `Add`, select one or more users in your organization, and click **Apply**.
  
     ![Apply Changes](../images/module03/03.15-bulk-apply.png)
 

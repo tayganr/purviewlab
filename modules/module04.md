@@ -33,49 +33,72 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 ## 1. Create a Term (System Default Term Template)
 
-1. Open Purview Studio and from the **Glossary** screen, click **New term**.
+1. Open Purview Studio and from the **Data catalog**, click **Manage glossary**.
+
+    ![](../images/module04/04.00-manage-glossary.png)
+
+2. Click **New term**.
 
     ![New Glossary Term](../images/module04/04.01-glossary-new.png)
 
-2. Select the **System default** term template and click **Continue**.
+3. Select the **System default** term template and click **Continue**.
 
     > :bulb: **Did you know?**
     >
-    > A **Term Template** determines the attributes for a term. The **System default** term template has the basic fields only (e.g. Name, Definition, Status, etc). **Custom** term templates can be used to capture additional custom attributes.
+    > A **Term Template** determines the attributes for a term. The **System default** term template has basic fields only (e.g. Name, Definition, Status, etc). **Custom** term templates on the other hand, can be used to capture additional custom attributes. For more information, check out [How to manage term templates for business glossary](https://docs.microsoft.com/en-us/azure/purview/how-to-manage-term-templates).
 
     ![System default term template](../images/module04/04.02-term-default.png)
 
-3. Populate the term fields as per the examples below and click **Create**.
-
-    | Field  | Example Value |
-    | --- | --- |
-    | Status | `Approved` |
-    | Name | `Contoso Parent` |
-    | Definition | `This will be the parent term.` |
-    | Parent | `None` |
-    | Acronym | `CP` |
-    | Resource Name | `Azure Purview` |
-    | Resource Link | `https://aka.ms/Azure-Purview` |
+4. Change the **Status** of the term to `Approved` and then **copy** and **paste** the values below into the appropriate field, then click **Create**.
 
     ![New Term](../images/module04/04.03-term-create.png)
+
+    **Status**
+    ```
+    Approved
+    ```
+    **Name**
+    ```
+    Contoso Parent
+    ```
+    **Definition**
+    ```
+    This will be the parent term.
+    ```
+    **Acronym**
+    ```
+    CP
+    ```
+    **Resource Name**
+    ```
+    Azure Purview
+    ```
+    **Resource Link**
+    ```
+    https://aka.ms/Azure-Purview
+    ```
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
 ## 2. Create a Term (Custom Term Template)
 
-1. Open Purview Studio and from the **Glossary** screen, click **New term**.
+1. Open Purview Studio and from the **Data catalog**, click **Manage glossary**.
+
+    ![](../images/module04/04.00-manage-glossary.png)
+
+2. Click **New term**.
 
     ![New Term](../images/module04/04.04-glossary-new2.png)
 
-2. Click **New term template**.
+3. Click **New term template**.
 
     ![New term template](../images/module04/04.05-template-new.png)
 
-3. Provide the Term Template a **Name** (e.g. `Contoso Template`) and click **New attribute**.
+4. Provide the Term Template a **Name** (e.g. `Contoso Template`) and click **New attribute**.
 
     ![Term template](../images/module04/04.06-attribute-new.png)
 
-4. Populate the attribute fields as per the examples below and click **Apply**.
+5. Populate the attribute fields as per the examples below and click **Apply**.
 
     | Field  | Example Value |
     | --- | --- |
@@ -85,27 +108,36 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     ![Attribute](../images/module04/04.07-attribute-properties.png)
 
-5. Click **Create**.
+6. Click **Create**.
 
     ![Create term template](../images/module04/04.08-template-create.png)
 
-6. Select **Contoso Template** and click **Continue**.
+7. Select **Contoso Template** and click **Continue**.
     
     ![Custom Term Template](../images/module04/04.09-term-custom.png)
 
-9. Populate the term fields as per the examples below and click **Create**.
-
-    | Field  | Example Value |
-    | --- | --- |
-    | Status | `Approved` |
-    | Name | `Contoso Child` |
-    | Definition | `This will be the long description for the child glossary term.` |
-    | Parent | `Contoso Parent` |
-    | Business Unit | `Marketing` |
+8. Change the **Status** of the term to `Approved` and then **copy** and **paste** the values below into the appropriate field, then click **Create**.
 
     ![](../images/module04/04.10-term-create2.png)
 
-10. From the **Glossary** screen, change the view to **Hierarchical view** to see the hierarchical glossary.
+    **Name**
+    ```
+    Contoso Child
+    ```
+    **Definition**
+    ```
+    This will be the long description for the child glossary term.
+    ```
+    **Parent**
+    ```
+    Contoso Parent
+    ```
+    **Business Unit**
+    ```
+    Marketing
+    ```
+
+9. From the **Glossary** screen, change the view to **Hierarchical view** to see the hierarchical glossary.
 
     ![](../images/module04/04.11-glossary-table.png)
 
@@ -114,7 +146,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
 ## 3. Bulk Import Terms
 
-1. Download a copy of **[import-terms-sample.csv](https://github.com/tayganr/purviewlab/raw/main/assets/import-terms-sample.csv)** to your local machine.
+1. Download a copy of **[import-terms-sample.csv](https://github.com/tayganr/purviewlab/raw/main/assets/import-terms-sample.csv)** to your local machine by opening the link in a new tab, right-click within the body of the content, click **Save as** .
 
     ![Import terms](../images/module04/04.29-sample-saveas.png)
 
@@ -122,11 +154,11 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     ![Import terms](../images/module04/04.12-glossary-import.png)
 
-3. Selec the **System default** term template and click **Continue**.
+3. Select the **System default** term template and click **Continue**.
 
     ![Term Template](../images/module04/04.13-import-default.png)
 
-4. Click **Browse** and open the local copy of **[import-terms-sample.csv](https://github.com/tayganr/purviewlab/raw/main/assets/import-terms-sample.csv)**.
+4. Click **Browse** and open the local copy of **import-terms-sample.csv**.
 
     ![Browse](../images/module04/04.14-import-browse.png)
 
@@ -143,6 +175,10 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 ## 4. Bulk Export Terms
 
 1. From the **Glossary** screen, we want to select ALL terms (top check box) and then de-select terms that do not belong to Workplace Analytics (i.e. Contoso Parent, Contoso Child). **All Workplace Analytics terms** should be selected. Click **Export terms**. Note: You can not export terms from different term templates.
+
+    > :bulb: **Did you know?**
+    >
+    > When using Purview Studio to **Export terms**, all terms selected for the export must use the same **Term template**. Selecting terms from different term templates will result in the **Export terms** button being greyed out.
 
     ![Export Terms](../images/module04/04.17-glossary-export.png)
 
@@ -162,7 +198,7 @@ A glossary is an important tool for maintaining and organizing your catalog. You
 
     ![Edit Asset](../images/module04/04.20-asset-edit.png)
 
-3. Open the **Glossary terms** drop-down and select a glossary term (e.g. `Contoso Child`). Click **Save**.
+3. Open the **Glossary terms** drop-down menu and select a glossary term (e.g. `Contoso Child`). Click **Save**.
 
     ![Assign Term](../images/module04/04.21-asset-term.png)
 

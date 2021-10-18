@@ -5,6 +5,7 @@
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An Azure Data Lake Storage Gen2 account (see [module 00](../modules/module00.md)).
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 
 ## :hammer: Tools
@@ -17,70 +18,36 @@ To populate Azure Purview with assets for data discovery and understanding, we m
 
 ## :dart: Objectives
 
+* Create a collection.
 * Register and scan an Azure Data Lake Storage Gen2 account using the Azure Purview managed identity.
 
-## Table of Contents
 
-1. [Create an Azure Data Lake Storage Gen2 Account](#1-create-an-azure-data-lake-storage-gen2-account)
-1. [Grant the Azure Purview Managed Identity Access](#2-grant-the-azure-purview-managed-identity-access)
-1. [Upload Data to Azure Data Lake Storage Gen2 Account](#3-upload-data-to-azure-data-lake-storage-gen2-account)
-1. [Create a Collection](#4-create-a-collection)
-1. [Register a Source (ADLS Gen2)](#5-register-a-source-adls-gen2)
-1. [Scan a Source with the Azure Purview Managed Identity](#6-scan-a-source-with-the-azure-purview-managed-identity)
-1. [View Assets](#6-view-assets)
+##  :bookmark_tabs: Table of Contents
 
-<div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
-
-## 1. Create an Azure Data Lake Storage Gen2 Account
-
-1. Sign in to the [Azure portal](https://portal.azure.com) with your Azure account and from the **Home** screen, click **Create a resource**.
-
-    ![Azure Purview](../images/module01/01.01-create-resource.png)  
-
-2. Under "Popular", click **Storage account**.
-
-    ![Azure Purview](../images/module02/02.01-create-storage.png)
-
-3. Provide the necessary inputs on the **Basics** tab.  
-    > Note: The table below provides example values for Subscription, Resource Group, Purview account name, and Location for illustrative purposes only, ensure to specify values that make sense for your deployment.
-
-    | Parameter  | Example Value |
-    | --- | --- |
-    | Subscription | `Azure Internal Access` |
-    | Resource group | `purviewlab` |
-    | Storage account name | `storage69426` |
-    | Location | `(South America) Brazil South` |
-    | Performance | `Standard` |
-    | Account kind | `StorageV2 (general purpose v2)` |
-    | Replication | `Locally-redundant storage (LRS)` |
-
-    ![Azure Purview](../images/module02/02.02-storage-basics.png)
-
-4. On the **Advanced** tab, set the **Hierarchal namespace** to **Enabled**.
-
-    ![Azure Purview](../images/module02/02.03-storage-adls.png)
-
-5. On the **Review + Create** tab, once the message in the ribbon returns "Validation passed", verify your selections and click **Create**.
-
-    ![Azure Purview](../images/module02/02.04-storage-validate.png)
-
-6. Wait several minutes while your deployment is in progress. Once complete, click **Go to resource**.
-
-    ![Azure Purview](../images/module02/02.05-storage-goto.png)
+| #  | Section | Role |
+| --- | --- | --- |
+| 1 | [Grant the Azure Purview Managed Identity Access](#1-grant-the-azure-purview-managed-identity-access) | Azure Administrator |
+| 2 | [Upload Data to Azure Data Lake Storage Gen2 Account](#2-upload-data-to-azure-data-lake-storage-gen2-account) | Azure Administrator |
+| 3 | [Create a Collection](#3-create-a-collection) | Collection Administrator |
+| 4 | [Register a Source (ADLS Gen2)](#4-register-a-source-adls-gen2) | Data Source Administrator |
+| 5 | [Scan a Source with the Azure Purview Managed Identity](#5-scan-a-source-with-the-azure-purview-managed-identity) | Data Source Administrator |
+| 6 | [View Assets](#6-view-assets) | Data Reader |
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
-## 2. Grant the Azure Purview Managed Identity Access
+## 1. Grant the Azure Purview Managed Identity Access
 
-To scan a source, Azure Purview requires a set of credentials with the necessary permissions. For Azure Data Lake Storage Gen2, Azure Purview supports the following authentication methods.
+> :bulb: **Did you know?**
+>
+> To scan a source, Azure Purview requires a set of **credentials**. For Azure Data Lake Storage Gen2, Azure Purview supports the following [authentication methods](https://docs.microsoft.com/en-gb/azure/purview/register-scan-adls-gen2#setting-up-authentication-for-a-scan).
+>
+> * Managed Identity (recommended)
+>* Service Principal
+> * Account Key
+> 
+> In this module we will walk through how to grant the Azure Purview Managed Identity the necessary access to successfully configure and run a scan.
 
-* Managed Identity (recommended)
-* Service Principal
-* Account Key
-
-In this module we will walk through how to grant the Azure Purview Managed Identity the necessary access to successfully configure and run a scan.
-
-1. From your Azure Data Lake Storage Gen2 account, select **Access Control (IAM)** from the left navigation menu.
+1. Navigate to your Azure Data Lake Storage Gen2 account (e.g. `pvlab{randomId}adls`) and select **Access Control (IAM)** from the left navigation menu.
 
     ![Azure Purview](../images/module02/02.06-storage-access.png)
 
@@ -88,23 +55,25 @@ In this module we will walk through how to grant the Azure Purview Managed Ident
 
     ![Azure Purview](../images/module02/02.07-storage-addrole.png)
 
-3. Populate the role assignment prompt as per the table below, select the Azure Purview managed from the list, click **Save**.
+3. Filter the list of roles by searching for `Storage Blob Data Reader`, click the row to select the role, and then click **Next**.
 
-    | Property  | Value |
-    | --- | --- |
-    | Role | `Storage Blob Data Reader` |
-    | Assign access to | `User, group, or service principal` |
-    | Select | `<purview-account-name>` |
+    ![Access Control Role](../images/module02/02.08-access-role.png)
 
-    ![Azure Purview](../images/module02/02.08-storage-assignment.png)
+4. Under **Assign access to**, select **Managed identity**, click **+ Select members**, select **Purview account** from the **Managed Identity** drop-down menu, select the managed identity for your Azure Purview account (e.g. `pvlab-{randomId}-pv`), click **Select**. Finally, click **Review + assign**.
 
-4. Navigate to the **Role assignments** tab and confirm the Azure Purview managed identity has been assigned the Storage Blob Data Reader role. Tip: Filter **Scope** to `This resource` to limit the results.
+    ![Access Control Members](../images/module02/02.09-access-members.png)
 
-    ![Azure Purview](../images/module02/02.09-storage-reader.png)
+5. Click **Review + assign** once more to perform the role assignment.
+
+    ![Access Control Assign](../images/module02/02.10-access-assign.png)
+
+4. To confirm the role has been assigned, navigate to the **Role assignments** tab and filter the **Scope** to `This resource`. You should be able to see that the Azure Purview managed identity has been granted the **Storage Blob Data Reader** role.
+
+    ![Role Assignment](../images/module02/02.11-role-assignment.png)
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
-## 3. Upload Data to Azure Data Lake Storage Gen2 Account
+## 2. Upload Data to Azure Data Lake Storage Gen2 Account
 
 Before proceeding with the following steps, you will need to:
 
@@ -148,25 +117,27 @@ Before proceeding with the following steps, you will need to:
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
-## 4. Create a Collection
+## 3. Create a Collection
 
-1. Open Purview Studio, navigate to **Sources** and click **New collection**.
+> :bulb: **Did you know?**
+>
+> [Collections](https://docs.microsoft.com/en-us/azure/purview/how-to-create-and-manage-collections) in Azure Purview can be used to organize data sources, scans, and assets in a hierarchical model based on how your organization plans to use Azure Purview. The collection hierarchy also forms the security boundary for your metadata to ensure users don't have access to data they don't need (e.g. sensitive metadata). 
+>
+> For more information, check out [Collection Architectures and Best Practices](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections).
+
+1. Open Purview Studio, navigate to **Data Map** > **Collections**, and click  **Add a collection**.
 
     ![New Collection](../images/module02/02.18-sources-collection.png)
 
 2. Provide the collection a **Name** (e.g. Contoso) and click **Create**.
 
-    > :bulb: **Did you know?**
-    >
-    > **Collections** can be used to logically group data sources. Collections can also belong to other Collections to form a hierarchy (e.g. Organization Name > Business Unit). Collections can collapse or expand by clicking the circle attached to the arrow between levels.
-
-    ![Contoso Collection](../images/module02/02.19-sources-contoso.png)
+    ![New Collection](../images/module02/02.76-collection-create.png)
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
-## 5. Register a Source (ADLS Gen2)
+## 4. Register a Source (ADLS Gen2)
 
-1. Open Purview Studio, navigate to **Sources** and click **Register**.
+1. Open Purview Studio, navigate to **Data Map** > **Sources**, and click on **Register**.
 
     ![Register](../images/module02/02.20-sources-register.png)
 
@@ -174,7 +145,7 @@ Before proceeding with the following steps, you will need to:
 
     ![Sources](../images/module02/02.21-sources-adls.png)
 
-3. Select the **Azure subscription**, **Storage account name**, and **Collection**. Click **Register**.
+3. Select the **Azure subscription**, **Storage account name**, **Collection**, and click **Register**.
 
     > :bulb: **Did you know?**
     >
@@ -184,9 +155,9 @@ Before proceeding with the following steps, you will need to:
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
-## 6. Scan a Source with the Azure Purview Managed Identity
+## 5. Scan a Source with the Azure Purview Managed Identity
 
-1. Open Purview Studio, navigate to **Sources**, and within the Azure Data Lake Storage Gen2 source tile, click the **New Scan** button.
+1. Open Purview Studio, navigate to **Data Map** > **Sources**, and within the Azure Data Lake Storage Gen2 tile, click the **New Scan** button.
 
     ![New Scan](../images/module02/02.23-scan-new.png)
 
@@ -202,7 +173,7 @@ Before proceeding with the following steps, you will need to:
 
     > :bulb: **Did you know?**
     >
-    > **Scan Rule Sets** determine which **File Types** and **Classification Rules** are in scope. If you want to include a custom file type or custom classification rule as part of a scan, a custom scan rule set will need to be created.
+    > [Scan Rule Sets](https://docs.microsoft.com/en-us/azure/purview/create-a-scan-rule-set) determine which **File Types** and **Classification Rules** are in scope. If you want to include a custom file type or custom classification rule as part of a scan, a custom scan rule set will need to be created.
 
     ![Scan rule set](../images/module02/02.26-scan-ruleset.png)
 
@@ -218,13 +189,13 @@ Before proceeding with the following steps, you will need to:
 
     ![View Details](../images/module02/02.29-sources-details.png)
 
-8. Click **Refresh** to periodically update the status of the scan. Note: It will take approximately 5 minutes to complete.
+8. Click **Refresh** to periodically update the status of the scan. Note: It will take approximately 5 to 10 minutes to complete.
 
     ![Monitor Scan](../images/module02/02.30-sources-refresh.png)
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>
 
-## 7. View Assets
+## 6. View Assets
 
 1. To view the assets that have materialised as an outcome of running the scan, perform a wildcard search by typing the asterisk character (`*`) into the search bar and hitting the Enter key to submit the query and return the search results.
 

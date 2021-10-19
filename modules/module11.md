@@ -121,6 +121,10 @@ To invoke the install the self-hosted integration runtime, we must first log int
     ![](../images/module11/shir-install-24.png)
     ![](../images/module11/shir-install-25.png)
 
+> :bulb: **Did you know?**
+>
+> The Purview Integration Runtime can also be used to scan and ingest metadata assets from Azure cloud services that are hidden behind private endpoints, such as Azure Data Lake, Azure SQL Database, Azure Cosmos DB [and more](https://docs.microsoft.com/en-us/azure/purview/catalog-private-link#support-matrix-for-scanning-data-sources-through-ingestion-private-endpoint). 
+
 <div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
@@ -138,6 +142,14 @@ To invoke the install the self-hosted integration runtime, we must first log int
     A ) True  
     B ) False  
 
+3. Which Azure services can be scanned and have metadata assets ingested from using the self-hosted integration runtime?
+
+    A) Azure Blob Storage
+    B) Azure SQL Database
+    C) Azure Synapse Analytics
+    D) All of these
+    E) None of these
+
 <div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
 
 ## :tada: Summary
@@ -146,7 +158,9 @@ In this module, you learned how to install the self-hosted integration runtime t
 
 - [Setting up authentication for a scan](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#setting-up-authentication-for-a-scan)
 - [Register SQL Server on VM as a data source in Purview](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#register-a-sql-server-data-source)
-- [Upload same data to the SQL Server on the VM ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers)
+- Upload same data to the SQL Server on the VM
+    - [World Wide Importers dataset](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers)
+    - [Contoso BI dataset](https://www.microsoft.com/en-us/download/details.aspx?id=18279)
 - [Trigger a scan of the on-premise data source](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#creating-and-running-a-scan)
 
 [Back to Home >](../README.md)

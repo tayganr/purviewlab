@@ -22,7 +22,7 @@ In order to follow along with the Azure Purview lab exercises, we need to provis
 
 ## :test_tube: Lab Environment Setup
 
-1. Right-click the button below to open the Azure Portal in a new window.
+1. Right-click or `Ctrl + click` the button below to open the Azure Portal in a new window.
 
     [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftayganr%2Fpurviewlab%2Fmain%2Ftemplate%2Fazuredeploy.json)
 

@@ -146,7 +146,9 @@ In this module, you learned how to install the self-hosted integration runtime t
 
 - [Setting up authentication for a scan](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#setting-up-authentication-for-a-scan)
 - [Register SQL Server on VM as a data source in Purview](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#register-a-sql-server-data-source)
-- [Upload same data to the SQL Server on the VM ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers)
+- Upload same data to the SQL Server on the VM
+    - [World Wide Importers dataset](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers)
+    - [Contoso BI dataset](https://www.microsoft.com/en-us/download/details.aspx?id=18279)
 - [Trigger a scan of the on-premise data source](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#creating-and-running-a-scan)
 
 [Back to Home >](../README.md)

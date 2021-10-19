@@ -121,6 +121,10 @@ To invoke the install the self-hosted integration runtime, we must first log int
     ![](../images/module11/shir-install-24.png)
     ![](../images/module11/shir-install-25.png)
 
+> :bulb: **Did you know?**
+>
+> The Purview Integration Runtime can also be used to scan and ingest metadata assets from Azure cloud services that are hidden behind private endpoints, such as Azure Data Lake, Azure SQL Database, Azure Cosmos DB [and more](https://docs.microsoft.com/en-us/azure/purview/catalog-private-link#support-matrix-for-scanning-data-sources-through-ingestion-private-endpoint). 
+
 <div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
@@ -137,6 +141,14 @@ To invoke the install the self-hosted integration runtime, we must first log int
 
     A ) True  
     B ) False  
+
+3. Which Azure services can be scanned and have metadata assets ingested from using the self-hosted integration runtime?
+
+    A) Azure Blob Storage
+    B) Azure SQL Database
+    C) Azure Synapse Analytics
+    D) All of these
+    E) None of these
 
 <div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
 

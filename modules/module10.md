@@ -787,3 +787,5 @@ To invoke the REST API, we must first register an application (i.e. service prin
 ## :tada: Summary
 
 In this module, you learned how to get started with the Azure Purview REST API. To learn more about the Azure Purview REST API, check out the Azure Purview [Swagger documentation](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).
+
+[Continue >](../modules/module11.md)

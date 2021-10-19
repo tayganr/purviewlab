@@ -197,7 +197,11 @@ Before proceeding with the following steps, you will need to:
 
 ## 6. View Assets
 
-1. To view the assets that have materialised as an outcome of running the scan, perform a wildcard search by typing the asterisk character (`*`) into the search bar and hitting the Enter key to submit the query and return the search results.
+1. Navigate to **Purview Studio** > **Data catalog**, and perform a wildcard search by typing the asterisk character (`*`) into the search box and hitting the Enter key to submit the query.
+
+    ![](../images/module02/02.80-wildcard-search.png)
+
+2. You should be able to see a list of assets within the search results, which is a result of the scan.
 
     ![](../images/module02/02.72-search-wildcard.png)
 

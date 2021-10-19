@@ -78,7 +78,7 @@ In this next step, we are creating a second access policy which will provide Azu
 
 2. Click **Add Access Policy**.
 
-    ![Add Access Policy](../images/module02/02.74-keyvault-addpolicy.png)
+    ![Add Access Policy](../images/module02/02.81-keyvault-addpolicy2.png)
 
 3. Under **Select principal**, click **None selected**.
 

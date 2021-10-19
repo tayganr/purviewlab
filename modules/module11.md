@@ -133,8 +133,8 @@ To invoke the install the self-hosted integration runtime, we must first log int
 
 1. What is an Self-Hosted Integration Runtime used for?
 
-    A ) It's used for copying data from or to an on-premises data store or networks with access control
-    B ) It's used for copying data between cloud based data stores or networks with access control
+    A ) It's used for copying data from or to an on-premises data store or networks with access control  
+    B ) It's used for copying data between cloud based data stores or networks with access control  
     C ) It's used for copying data between managed environments
 
 2. Self-Hosted Integration Runtime can be shared across multiple services when installed on one machine/VM.
@@ -144,10 +144,10 @@ To invoke the install the self-hosted integration runtime, we must first log int
 
 3. Which Azure services can be scanned and have metadata assets ingested from using the self-hosted integration runtime?
 
-    A) Azure Blob Storage
-    B) Azure SQL Database
-    C) Azure Synapse Analytics
-    D) All of these
+    A) Azure Blob Storage  
+    B) Azure SQL Database  
+    C) Azure Synapse Analytics  
+    D) All of these  
     E) None of these
 
 <div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>

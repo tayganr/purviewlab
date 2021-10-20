@@ -134,7 +134,7 @@ To invoke the install the self-hosted integration runtime, we must first log int
 1. What is an Self-Hosted Integration Runtime used for?
 
     A ) It's used for copying data from or to an on-premises data store or networks with access control
-    B ) It's used for copying data between cloud based data stores or networks with access control
+    B ) It's used for copying data between cloud based data stores or networks with public endpoints
     C ) It's used for copying data between managed environments
 
 2. Self-Hosted Integration Runtime can be shared across multiple services when installed on one machine/VM.

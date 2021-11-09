@@ -144,10 +144,10 @@ To invoke the install the self-hosted integration runtime, we must first log int
 
 3. Which Azure services can be scanned and have metadata assets ingested from using the self-hosted integration runtime?
 
-    A) Azure Blob Storage
-    B) Azure SQL Database
-    C) Azure Synapse Analytics
-    D) All of these
+    A) Azure Blob Storage  
+    B) Azure SQL Database  
+    C) Azure Synapse Analytics  
+    D) All of these  
     E) None of these
 
 <div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>

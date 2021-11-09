@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.4.1008.15138",
-      "templateHash": "9793918288323323264"
+      "templateHash": "8599240671981338639"
     }
   },
   "functions": [],
@@ -226,7 +226,7 @@
             "_generator": {
               "name": "bicep",
               "version": "0.4.1008.15138",
-              "templateHash": "2084525474919137556"
+              "templateHash": "11748226318447838654"
             }
           },
           "parameters": {
@@ -246,7 +246,8 @@
             "virtualMachineComputerName": "[format('pvlab{0}com', parameters('randomString'))]",
             "sqlVirtualMachineName": "[format('pvlab-{0}-sqlvm', parameters('randomString'))]",
             "adminUsername": "[format('sqladmin{0}', parameters('randomString'))]",
-            "adminPassword": "[format('{0}!{1}', parameters('randomString'), parameters('randomString'))]"
+            "upperString": "[toUpper(parameters('randomString'))]",
+            "adminPassword": "[format('{0}!{1}@{2}', parameters('randomString'), variables('upperString'), parameters('randomString'))]"
           },
           "resources": [
             {

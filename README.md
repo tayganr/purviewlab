@@ -7,7 +7,7 @@ Azure Purview is a unified data governance service that helps you manage and gov
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription. Note: If you don't have access to an Azure subscription, you may be able to start with a [free account](https://www.azure.com/free).
-* Your must have the necessary privileges within your Azure subscription to create resources, perform role assignments, register resource providers (if required), etc.
+* You must have the necessary privileges within your Azure subscription to create resources, perform role assignments, register resource providers (if required), etc.
 
 ## :test_tube: Lab Environment Setup
 * [Lab Environment](./modules/module00.md)

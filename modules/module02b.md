@@ -201,7 +201,9 @@ To make the secret accessible to Azure Purview, we must first establish a connec
 
     ![](../images/module02/02.64-sources-scansql.png)
 
-2. Select the **Database** and **Credential** from the drop-down menus. Click **Test connection**. Click **Continue**.
+2. Select the **Database** and **Credential** from the drop-down menus. Click **Test connection**. Click **Continue**. 
+
+    > Note: If the "Test connection" appears to be hanging, click Cancel and re-try.
 
     ![](../images/module02/02.65-sqlscan-credentials.png)
 
@@ -240,6 +242,8 @@ To make the secret accessible to Azure Purview, we must first establish a connec
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
+
+> Note: This is the same knowledge check referenced in Module 2A. If you have already completed the knowledge check from the previous module, please skip this step.
 
 [http://aka.ms/purviewlab/q02](http://aka.ms/purviewlab/q02)
 

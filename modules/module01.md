@@ -48,6 +48,8 @@ To create and use the Azure Purview platform, you will need to provision an Azur
     | Location | `YOUR_LOCATION` |
     | Managed Resource Group Name | `pvlab-rg-managed` |
 
+    > Note: The
+
     ![Purview Account Basics](../images/module01/_01.03-create-basic.png)
 
     > :bulb: **Did you know?**
@@ -77,6 +79,8 @@ To create and use the Azure Purview platform, you will need to provision an Azur
 <div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
 
 ## 2. Grant Access to Azure Purview's Data Plane
+
+By default, the identity used to create the Azure Purview account resource will have full access to Purview Studio. The following instructions detail how to provide access to additional users within your Azure Active Directory.
 
 1. Navigate to your Azure Purview account and click **Open** within the **Open Purview Studio** tile.
 

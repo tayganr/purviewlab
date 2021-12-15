@@ -64,6 +64,8 @@ Metrics can be accessed from the Azure Portal for an Azure Purview account insta
     **Available Metrics**
     | Metric ID  | Metric Name | Metric Description |
     | --- | --- | --- |
+    | DataMapCapacityUnits | `Data Map Capacity Units` | Indicates the number of capacity units consumed. |
+    | DataMapStorageSize | `Data Map Storage Size` | Indicates the data map storage size. |
     | ScanCancelled | `Scan Cancelled` | Indicates the number of scans cancelled. |
     | ScanCompleted | `Scan Completed` | Indicates the number of scans completed successfully. |
     | ScanFailed | `Scan Failed` | Indicates the number of scans failed. |

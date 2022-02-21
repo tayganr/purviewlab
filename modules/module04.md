@@ -2,14 +2,16 @@
 
 [< Previous Module](../modules/module03.md) - **[Home](../README.md)** - [Next Module >](../modules/module05.md)
 
+## :loudspeaker: Introduction
+
+A Glossary is an important tool for maintaining and organizing your catalog. It is used for capturing domain knowledge of information that is commonly used, communicated, and shared in organizations as they are conducting business. You build your glossary by defining new terms or importing a term list and then applying those terms to your assets.
+
+When implementing your Glossary it is important to think about how you would like to structure your business terms and definitions. For example you could use hierarchies and align these with business domains such as: Finance, Marketing, Sales, HR, etc. You could think of naming standards or introduce term templates for capturing additional information about your business metadata. You could also use relationships for linking business terms, such as Acronyms, Related terms and Synonyms. These relationships could help to avoid creating  terms with duplicated names.
+
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
-
-## :loudspeaker: Introduction
-
-A glossary is an important tool for maintaining and organizing your catalog. You build your glossary by defining new terms or importing a term list and then applying those terms to your assets.
 
 ## :dart: Objectives
 

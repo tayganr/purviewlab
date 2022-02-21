@@ -2,6 +2,12 @@
 
 [< Previous Module](../modules/module04.md) - **[Home](../README.md)** - [Next Module >](../modules/module06.md)
 
+## :loudspeaker: Introduction
+
+In Azure Purview, classifications are similar to subject tags, and are used to mark and identify data of a specific type that's found within your data estate during scanning. Classifications help you to better manage your data. You can use them for prioritizing your data efforts or improve data security and regulatory compliance. Classifications also improve user productivity and decision-making, and allow you to reduce costs by classifying and finding unused data.
+
+Azure Purview provides a large set of default classifications that represent typical data types that might exist in your data estate (e.g. email address, credit card number, passport number, etc). In this module you learn how to create a custom classification, which can be an alternative to default classifications when they don't meet your needs.
+
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
@@ -11,10 +17,6 @@
 ## :hammer: Tools
 
 * [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
-
-## :loudspeaker: Introduction
-
-Azure Purview provides a large set of default classifications that represent typical data types that might exist in your data estate (e.g. email address, credit card number, passport number, etc). You also have the ability to create custom classifications if any of the default classifications don't meet your needs.
 
 ## :dart: Objectives
 

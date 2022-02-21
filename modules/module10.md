@@ -2,6 +2,18 @@
 
 [< Previous Module](../modules/module09.md) - **[Home](../README.md)** - [Next Module >](../modules/module11.md)
 
+## :loudspeaker: Introduction
+
+While Purview Studio is the default interface for Azure Purview, the underlying platform can be accessed via a set of APIs. This opens up the possibility of a variety of scenarios including:
+
+  * Working with Azure Purview assets programmatically (e.g. bulk create/read/update/delete).
+  * Adding support for other data sources beyond those supported out of the box.
+  * Extending the lineage functionality to other ETL processes.
+  * Embedding Azure Purview asset data within custom user experiences.
+  * Triggering Azure Purview scans to run off the back of a custom event.
+
+The primary focus of this module is the **catalog** which is based on the open-source [Apache Atlas](https://atlas.apache.org/) project. Read below for more details on Apache Atlas and how it relates to Azure Purview.
+
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
@@ -10,17 +22,6 @@
 ## :hammer: Tools
 
 * [Postman](https://www.postman.com/product/rest-client/) (Download and Install)
-
-## :loudspeaker: Introduction
-
-While Purview Studio is the default method of interfacing with Azure Purview, the underlying platform can be accessed via a set of API's. This opens up the possibility of a variety of scenarios including:  
-  * Working with Azure Purview assets programmatically (e.g. bulk create/read/update/delete).
-  * Adding support for other data sources beyond those supported out of the box.
-  * Extending the lineage functionality to other ETL processes.
-  * Embedding Azure Purview asset data within custom user experiences.
-  * Triggering Azure Purview scans to run off the back of a custom event.
-
-The primary focus of this module is the **catalog** which is based on the open-source [Apache Atlas](https://atlas.apache.org/) project. Read below for more details on Apache Atlas and how it relates to Azure Purview.
 
 ## :dart: Objectives
 

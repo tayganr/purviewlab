@@ -12,7 +12,7 @@ Azure Purview is a unified data governance service that helps you manage and gov
 ## :test_tube: Lab Environment Setup
 * [Lab Environment](./modules/module00.md)
 
-## :books: Learning Modules
+## :books: Preface
 
 * [Preface: Introduction to Data Governance and Purview](./modules/preface.md)
 

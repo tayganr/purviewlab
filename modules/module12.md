@@ -2,7 +2,7 @@
 
 ## :loudspeaker: Introduction
 
-An integration runtime (IR) is compute infrastructure that Azure Purview uses to power data scan across different network environments. These integration runtimes come in different flavors. One of them is using managed private endpoints, which Microsoft recently added. With this new set of features you can better manage and secure your data scanning within Purview. As a result your metadata traffic is distributed via Azure Private Link, which eliminated any exposure to the internet. This protects against data exfiltration.
+An integration runtime (IR) is compute infrastructure that Azure Purview uses to power data scan across different network environments. These integration runtimes come in different flavors. One of them is using managed private endpoints, which Microsoft recently added. With this new set of features you can better manage and secure your data scanning within Purview. As a result your metadata traffic is distributed via Azure Private Link, which eliminated any exposure to the internet. This protects you from any data exfiltration risks.
 
 In this lab you'll learn how to make use a managed private endpoints. You'll learn how to configure them.
 
@@ -18,9 +18,13 @@ In this lab you'll learn how to make use a managed private endpoints. You'll lea
 
 ## Table of Contents
 
-1. [Connect to SQL Virtual Machine](#1-connect-to-sql-virtual-machine)
-2. [Install Self-Hosted Integration Runtime](#2-install-self-hosted-integration-runtime)
-3. [Authenticate to Azure Purview](#3-authenticate-to-azure-purview)
+1. [Resource group creation](#1-resource-group-creation)
+2. [Storage account creation](#2-storage-account-creation)
+3. [Azure Purview creation](#3-azure-purview-creation)
+4. [Authentication for a scan](#4-authenticate-for-a-scan)
+5. [Managed Virtual Network Integration Runtime](#5-managed-virtual-network-integration-runtime)
+6. [Private endpoint for Azure Blob Storage](#6-private-endpoint-for-azure-blob-storage)
+7. [Configure source and scanning](#7-configure-source-and-scanning)
 
 <div align="right"><a href="#module-12---managed-private-endpoints">↥ back to top</a></div>
 
@@ -141,8 +145,6 @@ If everything goes well you’ll notice new metadata will be added to Purview. T
 <div align="right"><a href="#module-12---managed-private-endpoints">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
-
-[http://aka.ms/purviewlab/q11](http://aka.ms/purviewlab/q11)
 
 1. By using managed private endpoints you're protected from any data exfiltration risks.
 

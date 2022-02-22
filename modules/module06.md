@@ -6,7 +6,7 @@
 
 One of the features of Azure Purview is the ability to show the lineage between datasets created by data processes. Data lineage shows how data moves over time and enables you to see how data is used and what changes to data have been made. This visibility helps you to understand, trace back and correct data at the source of origin. Lineage, thus also results into better data quality.
 
-Lineage is typically captured from tools that extract, transform and load data. These ETL tools are, for example, Data Factory, Data Share, and Power BI. They capture the lineage of data as it moves. By scanning these ETL tools you can capture and vizualise the lineage in Azure Purview. 
+Lineage is typically captured from tools that extract, transform and load data. These ETL tools are, for example, Data Factory, Data Share, and Power BI. They capture the lineage of data as it moves. By scanning these ETL tools you can capture and visualize the lineage in Azure Purview. 
 
 Within Azure Purview also custom lineage is supported. Custom lineage is lineage that you created yourself, for example by uploading metadata using the Azure Purview's Atlas hooks or REST APIs. Lineage in Purview includes datasets and processes.
 

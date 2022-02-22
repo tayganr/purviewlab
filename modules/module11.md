@@ -6,7 +6,7 @@
 
 An integration runtime (IR) is compute infrastructure that Azure Purview uses to power data scan across different network environments. These integration runtimes come in different flavors. One of them is a self-hosted integration runtime (SHIR), which is typically used to scan data sources in more complex environments, such on-premises networks or virtual networks. The installation of a self-hosted integration runtime needs on a virtual machine.
 
-In this lab you'll learn how to make use a self-hosted integrastion runtime agent. You'll learn how to install a self-hosted integration runtime, register and scan an on-premise SQL server.
+In this lab you'll learn how to make use a self-hosted integration runtime agent. You'll learn how to install a self-hosted integration runtime, register and scan an on-premise SQL server.
 
 ## :thinking: Prerequisites
 

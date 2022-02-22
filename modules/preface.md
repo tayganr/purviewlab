@@ -32,8 +32,8 @@ When planning your Azure Purview deployment and aligning your data governance ac
 
 The collection metadata, as you can see in the image from the previous section, mostly sits on a technical level. This also often implies a more technical-oriented data ownership. The contact persons assigned to your data assets are typically application- or database owners, knowing how these systems are designed. You can support these users also with additional roles in Purview:
 
-- Collection Admins can edit Azure Purview collections and their details and add sub-collections. They can also add users to other Azure Purview roles on collections where they're admins.
-- Data Source Admins can manage data sources and data scans.
+- **Collection Admins** can edit Azure Purview collections and their details and add sub-collections. They can also add users to other Azure Purview roles on collections where they're admins.
+- **Data Source Admins** can manage data sources and data scans.
 
 Assigning users to roles enables them to maintain technical metadata themselves without any help from a central departments. Enabling them with these roles makes your metadata activities more self-service.
 
@@ -50,6 +50,8 @@ Within Azure Purview, the Glossary supports several features:
 - Bulk import and exports of terms.
 - Allows terms to be mapped to assets like a database, tables, columns etc.
 
-Because business terms provide vocabulary for business users, it's also logical to assign business-oriented ownership. Purview uses data experts and data stewards. Data experts are typically the knowledge holder. They know a particular domain or business unit very well. Data stewards are often the people accountable. They oversee completeness and correctness.
+Because business terms provide vocabulary for business users, it's also logical to assign business-oriented ownership. Purview uses data experts and data stewards. Data experts are typically the knowledge holder. They know a particular domain or business unit very well. Data stewards are often the people accountable. They oversee completeness and correctness. You can support these users also with additional roles in Purview:
 
-Business terms and information from your collections can also be linked together. This method of bringing information from your source systems together by linking it to the same business terms, gives a richer experience to your organization. It helps you to understand how concepts and business terms have been translated to technical designs. It also enables you to correlate data across different systems and applications. Customer data, for example, often is stored across many different systems. By linking to business terms you can oversee and manage your data landscape.
+- **Data curators** - a role that provides access to the data catalog to manage assets, configure custom classifications, set up glossary terms, and view insights. Data curators can create, read, modify, move, and delete assets. They can also apply annotations to assets.
+
+Business terms and information from your collections can also be linked together. This method of bringing information from your source systems together by linking it to the same business terms, gives a richer experience to your organization. It helps you to understand how concepts and business terms have been translated to technical designs. It also enables you to correlate data across different systems and applications. Customer data, for example, often is stored across many different systems. By linking to business terms you can better oversee and more efficiently manage your data landscape.

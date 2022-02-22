@@ -1,17 +1,14 @@
-# Module 11 - Self-Hosted Integration Runtime
-
-[< Previous Module](../modules/module10.md) - **[Home](../README.md)** - [Next Module >](../modules/module12.md)
+# Module 11 - Securely scan sources using Self-Hosted Integration Runtimes
 
 ## :loudspeaker: Introduction
 
-An integration runtime (IR) is compute infrastructure that Azure Purview uses to power data scan across different network environments. These integration runtimes come in different flavors. One of them is a self-hosted integration runtime (SHIR), which is typically used to scan data sources in more complex environments, such on-premises networks or virtual networks. The installation of a self-hosted integration runtime needs on a virtual machine.
+Azure Purview comes with a managed infrastructure component called AutoResolveIntegrationRuntime. This component is required when scanning sources and most useful when connecting to data stores and computes services with public accessible endpoints. However some of your sources might be VM-based or can be applications that either sit in a private network (VNET) or other networks, such as on-premises. For these kind of scenarios a Self-Hosted Integration Runtime (SHIR) is recommended.
 
-In this lab you'll learn how to make use a self-hosted integration runtime agent. You'll learn how to install a self-hosted integration runtime, register and scan an on-premise SQL server.
+In this lab you learn how to setup a more complex scenario of using a SHIR and private virtual network. First, you'll deploy a virtual network and storage account, then you will deploy and use private endpoints to route all traffic securely, without using any public accessible endpoints. Lastly, you configure the SHIR, Azure Key Vault and configure everything in Azure Purview.
 
 ## :thinking: Prerequisites
 
 - An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-- A SQL Virtual Machine (see [module 00](../modules/module00.md)).
 - An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 
 ## :dart: Objectives
@@ -20,114 +17,177 @@ In this lab you'll learn how to make use a self-hosted integration runtime agent
 
 ## Table of Contents
 
-1. [Connect to SQL Virtual Machine](#1-connect-to-sql-virtual-machine)
-2. [Install Self-Hosted Integration Runtime](#2-install-self-hosted-integration-runtime)
-3. [Authenticate to Azure Purview](#3-authenticate-to-azure-purview)
+1. [Virtual network creation](#1-virtual-network-creation)
+2. [Storage account creation](#2-storage-account-creation)
+3. [Private endpoint creation](#3-private-endpoint-creation)
+4. [Self-hosted integration runtime installation](#4-self-hosted-integration-runtime-installation)
+5. [Key vault creation](#5-key-vault-creation)
+6. [Key Vault configuration within Azure Purview](#6-key-vault-configuration-within-purview)
+7. [Summary](#7-summary)
 
-<div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
+<div align="right"><a href="#module-11---securely-scan-sources-using-self-hosted-integration-runtimes">↥ back to top</a></div>
 
-## 1. Connect to SQL Virtual Machine
+## 1. Virtual network creation
 
-To invoke the install the self-hosted integration runtime, we must first log into our SQL virtual machine. For this example, we'll be using the RDP connection to complete this step. If you would like to use **Bastion** to connect, follow the [instructions here](https://docs.microsoft.com/en-gb/azure/bastion/quickstart-host-portal#createvmset) to get this set-up.
+1. For deploying your Self-Hosted Integration Runtime you first need to create a new virtual network. This is needed for the virtual machine and private endpoint to be created. Open the Azure Portal, search for Virtual Network and click Create. First you need to give your new network a name. I’m using the same resource group that is used for Azure Purview.
 
-> :book: **Note** once the environment set-up is complete, your VM should already be in 'running' state. If this is not the case, you will need to 'start' your VM.
+   ![](../images/module12/pic01.png)
 
-1. Navigate to your Virtual Machine resource in the [Azure portal](https://portal.azure.com/). In the **Overview** section (left blade), click on '**Connect**' and '**RDP**' from the drop-down menu.
+2. Next you need to define your address spaces. If the proposed 10.0.0.0 is what you like, you can continue and hit next.
 
-   ![](../images/module11/shir-install-13.png)
+   ![](../images/module12/pic02.png)
 
-2. In the next page, click '**Download RDP File**'. Once the file has downloaded, click '**Open**'.
-   ![](../images/module11/shir-install-14.png)
-   ![](../images/module11/shir-install-15.png)
+## 2. Storage account creation
 
-3. You will need to access the SQL username and password generated when deploying the lab environment from [module 00](../modules/module00.md). To find these details, navigate to the resource group in the [Azure portal](https://portal.azure.com/). Under '**Settings > Deployments**', click on '**SQLVMDeployment**'.
+1. Next we will setup a storage account for demonstration. This is the resource that will be scanned during this demo. Select create new resource, choose Storage Account, select the resource group you just created, provide a unique name, and hit next.
 
-   ![](../images/module11/shir-install-19b.png)
-   ![](../images/module11/shir-install-19.png)
+   ![](../images/module12/pic02.png)
 
-4. Navigate to the '**Outputs**' blade within the SQLVMDeployment area to find your SQL Admin username and password.
+2. For the Storage Account we will ensure that hierarchical namespaces are selected. Click next to jump over to the Networking tab.
 
-   ![](../images/module11/shir-install-20.png)
+   ![](../images/module12/pic02.png)
 
-5. In the Remote Desktop Connection pop-up window, click '**Connect**'.
+3. For networking, select Private endpoint as the connectivity method. Don’t create any private endpoints at this stage. This comes later.
 
-   ![](../images/module11/shir-install-16.png)
+   ![](../images/module12/pic02.png)
 
-6. Here you need to log into the virtual machine using the credentials supplied in the '**Outputs**' blade in the deployment area of the resource group you created in [module 00](../modules/module00.md). You'll need to select the '**More Choices**' option and/or '**Use a different account**' options in the log in window.
+4. After this step you can hit review + create, finalize and wait for the storage account to be created.
 
-   > :book: **Note** You'll need to log in using the format **username** = _vm name\sqladmin username_ and **password** = _sql password_
+## 3. Private endpoint creation
 
-   ![](../images/module11/shir-install-17.png)
-   ![](../images/module11/shir-install-18.png)
+Your next step is creating a private endpoint: a network interface that uses a private IP address from your virtual network. This network interface connects you privately and securely to your storage account. It also means all network traffic is routed internally, which is useful to mitigate network exfiltration risks.
 
-7. You'll see a warning message, click **Yes** to continue.
+1. For creating a new private endpoint, go to your storage account. Click on networking on the left side. Go to private endpoints and click on the + icon.
 
-   ![](../images/module11/shir-install-21.png)
+   ![](../images/module12/pic02.png)
 
-<div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
+2. Start with the basics by providing a name. This will be name of your network interface created in the virtual network.
 
-## 2. Install Self-Hosted Integration Runtime
+   ![](../images/module12/pic02.png)
 
-> :bulb: **Did you know?**
->
-> Integration Runtime (IR) is a secure compute infrastructure that is used to provide the data integration capabilities across the different network environments and make sure that these activities will be executed in the closest possible region to the data store.
->
-> Self-hosted Integration Runtime (SHIR) is an implementation of IR that is installed on an on-premises machine or virtual machine within a virtual network.
+3. Next, you need to select which resource type you want to expose. For this demo we will use blob.
 
-1. In the virtual machine, open the browser and navigate to the [integration runtime download page](https://www.microsoft.com/en-us/download/confirmation.aspx?id=39717). If the download doesn't start automatically, download the latest version of the integraion runtime from the list presented. Click '**Run**' when the download begins.
+   ![](../images/module12/pic02.png)
 
-   ![](../images/module11/shir-install-22.png)
-   ![](../images/module11/shir-install-23.png)
+4. The last configuration is selecting which virtual network the private endpoint must be deployed within. You should use the virtual network which you created in the previous steps. For the Private IP configuration you can select to dynamically allocate IP addresses.
 
-2. Follow the instruction on screen to complete the installation process and click finish to proceed to the next step.
+   ![](../images/module12/pic02.png)
 
-   ![](../images/module11/shir-install-1.png)
-   ![](../images/module11/shir-install-2.png)
-   ![](../images/module11/shir-install-3.png)
-   ![](../images/module11/shir-install-4.png)
-   ![](../images/module11/shir-install-5.png)
-   ![](../images/module11/shir-install-6.png)
+5. When returning to the network overview settings, there is one additional step: allowing network traffic from your subnet. Go back to the firewall and virtual networks settings within your Storage Account. Add an existing virtual network, select your subnet from the list, and click Add.
 
-3. If the integration runtime manager doesn't open automatically, navigate to the **Start Menu** and click '**Microsoft Integration Runtime**'. Once the IR Manager window opens, we can move on to the next step to [authenticate to Azure Purview](#3-authenticate-to-azure-purview).
+   ![](../images/module12/pic02.png)
 
-   ![](../images/module11/shir-install-7.png)
+6. The virtual network should be added to the list. Don’t forget to hit the ‘save’ button!
 
-<div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
+   ![](../images/module12/pic02.png)
 
-## 3. Authenticate to Azure Purview
+7. After this configuration you’re set. Let’s continue and setup your virtual machine.
 
-> :bulb: **Did you know?**
->
-> The Purview Integration Runtime cannot be shared with an Azure Synapse Analytics or Azure Data Factory Integration Runtime on the same machine. It needs to be installed on a separated machine.
+## 4. Self-hosted integration runtime installation
 
-1. Within the Azure Purview Studio, navigate to the **Data Map** in the left blade, click **Integration Runtime** and click **+ New**.
+A self-hosted integration runtime is a software component that scans for metadata. You can install on many different types of (virtual) machines. You can download it from the following location: [https://www.microsoft.com/en-us/download/details.aspx?id=39717](https://www.microsoft.com/en-us/download/details.aspx?id=39717)
 
-   ![](../images/module11/shir-install-9.png)
+For this demo you will be using Windows 10. Open the Azure Portal again to search for virtual machines. 
 
-2. Ensure the **Self-Hosted** option is selected, then click **Continue**.
+1. Create new and select Windows 10 Pro as the image version. Remember to enter a username and password. Click next to examine the network settings. The newly created virtual network using the 10.0.0.0 space should be selected here.
 
-   ![](../images/module11/shir-install-10.png)
+   ![](../images/module12/pic02.png)
 
-3. Give your integration runtime a name _(mandatory)_ and a description _(optional)_, then click **Create**.
+2. After the virtual machine has been created, download the RDP file for easily taking over remote control.
 
-   ![](../images/module11/shir-install-11.png)
+   ![](../images/module12/pic02.png)
 
-4. Copy one of the **keys** to your clipboard then open your virtual machine window and paste this key into the **integration runtime manager window**. Click **Register** when the button becomes active and then **Finish** in the next screen.
+3. After downloading your RDP file, open it and enter your username and password from the previous section. If everything goes well, you should be connected and see the virtual machine’s desktop. To validate that your private endpoint works correctly, open CMD and type:
 
-   ![](../images/module11/shir-install-12.png)
-   ![](../images/module11/shir-install-8.png)
-   ![](../images/module11/shir-install-8b.png)
+   ```
+   nslookup storageaccountname.blob.core.windows.net
+   ```
 
-5. Once successfully registered, you should see a green tick :heavy_check_mark: within the **integration runtime manager window** and the **Azure Purview Studio integration runtime manager area**.
+4. If everything works correctly, the privatelink.blob.core.windows.net should show up in the list. This means is that your default access location has become an alias for an internal address. Although you use a public name, network is routed internally via the virtual network.
 
-   ![](../images/module11/shir-install-24.png)
-   ![](../images/module11/shir-install-25.png)
+   ![](../images/module12/pic02.png)
+
+5. When everything is working, you must download the self-hosted integration runtime package. The installation is straight forward. Just hit next and wait for the service to show up. While waiting, you should open Azure Purview. Open the data map and go to integration runtimes. Hit + new and select the self-hosted from the panel and continue.
+
+   ![](../images/module12/pic02.png)
+
+6. After completing the wizard, you see a link where you can download the latest version of the runtime. You also find two keys. Copy the first one to your clipboard.
+
+   ![](../images/module12/pic02.png)
+
+7. Next, go back to your virtual machine. Copy paste the link into the manager and hit ‘register’. Wait a minute or so, the integration runtime should show up in the list very soon!
+
+   ![](../images/module12/pic02.png)
+
+8. If everything works well your self-hosted integration runtime should be running within Purview. Congrats that you made it this far!
+
+   ![](../images/module12/pic02.png)
+
+## 5. Key vault creation
+
+For securely accessing your storage account you will store your storage account key in a Key Vault. A key vault is a central place for managing your keys, secrets, credentials and certifications. This avoids keys get lost or changing these is a cumbersome task.
+
+1. For creating a Key Vault go back to your Azure Portal. Search for Key Vault, hit create, provide a name and hit create.
+
+   ![](../images/module12/pic02.png)
+
+2. After deployment you need to ensure that Azure Purview has read access to the Key Vault. Open Key Vault, go to Access configuration, and hit Go to access policies.
+
+   ![](../images/module12/pic02.png)
+
+3. Because the Account Key is just a secret we will only provide access for Get and List, see below. Click next when ready.
+
+   ![](../images/module12/pic02.png)
+
+4. For providing access you need to use the system-managed identity of Azure Purview. This identity has the same name as your Purview instance name. Find it, select it and hit Next.
+
+   ![](../images/module12/pic02.png)
+
+5. Next you need to ensure two things: 1) purview’s managed identity has access to read from the storage account 2) the storage account key has been stored in the Key Vault. Go back to your storage account. Navigate to IAM and give your Purview Managed Identity the role: Storage Blob Data Reader. Detailed instructions can be found [here](https://docs.microsoft.com/en-us/azure/purview/register-scan-adls-gen2).
+
+   ![](../images/module12/pic02.png)
+
+6. Next, go to Access keys within the storage account section. Show the keys using the button at the top. Select Key1 and copy the secret to your clipboard. Head back to your Key Vault.
+
+   ![](../images/module12/pic02.png)
+
+7. Within your Key Vault, select Secrets and choose Generate/Import. The dialog below should pop up. Enter a name for your secret and copy/paste the Storage Account Key value from your clipboard. Hit Create to store your newly created secret.
+
+   ![](../images/module12/pic02.png)
+
+## 6. Key Vault configuration within Azure Purview
+
+Now the Storage Account Key has been stored in the Key Vault it is time to move back to Azure Purview for your final configuration. Go to your settings panel on the right and select Credentials. 
+
+1. Click on Manage Key Vault connections, provide a new name and select your newly created key vault from the list. Hit create for saving.
+
+   ![](../images/module12/pic02.png)
+
+2. Next, you need to store a new credential. Click on + New, enter a new name, select Account Key from the list of authentication options. Finally, you need to enter a secret name. It is important that this name exactly matches the name of your secret in the Key Vault! Hit create to finalize.
+
+   ![](../images/module12/pic02.png)
+
+3. Now you can move to Sources. Register a new source, select Azure Data Lake Storage Gen2 and select your storage account from the list.
+
+   ![](../images/module12/pic02.png)
+
+3. Next you need to start scanning your source. Click new scan and select your Self-Hosted Integration Runtime from the list. Before you continue ensure everything works by testing your connection.
+
+   ![](../images/module12/pic02.png)
+
+4. If everything works you should be able to select your folders and start scanning!
+
+   ![](../images/module12/pic02.png)
+
+## 7. Summary
+This has been a long read, but also demonstrates how you can use your own integration runtime to securely scan sources. With some additional overhead all data and metadata traffic remains secure within your own virtual network. There’s no risk for any data exfiltration!
+
 
 > :bulb: **Did you know?**
 >
 > The Purview Integration Runtime can also be used to scan and ingest metadata assets from Azure cloud services that are hidden behind private endpoints, such as Azure Data Lake, Azure SQL Database, Azure Cosmos DB [and more](https://docs.microsoft.com/en-us/azure/purview/catalog-private-link#support-matrix-for-scanning-data-sources-through-ingestion-private-endpoint).
 
-<div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
+<div align="right"><a href="#module-11---securely-scan-sources-using-self-hosted-integration-runtimes">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 
@@ -152,7 +212,7 @@ To invoke the install the self-hosted integration runtime, we must first log int
    D) All of these  
    E) None of these
 
-<div align="right"><a href="#module-11---self-hosted-integration-runtime">↥ back to top</a></div>
+<div align="right"><a href="#module-11---securely-scan-sources-using-self-hosted-integration-runtimes">↥ back to top</a></div>
 
 ## :tada: Summary
 

@@ -299,10 +299,6 @@ In this lab you'll learn how read and publish events using Azure Event Hubs and 
 
 As demonstrated in this tutorial you can programmatically monitor for metadata changes in real-time. Via this approach you can enrich your user experience by also integrating with other services.
 
-> :bulb: **Did you know?**
->
-> By using managed private endpoints, you do not have to manage your own VNETs. Microsoft takes care of managing this. [More information](https://docs.microsoft.com/en-us/azure/purview/catalog-managed-vnet).
-
 <div align="right"><a href="#module-13---process-events-using-atlas-kafka-topics-via-event-hubs-and-nodejs">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check

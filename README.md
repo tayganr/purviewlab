@@ -27,7 +27,7 @@ Azure Purview is a unified data governance service that helps you manage and gov
 
 ## :books: Optional Learning Modules
 
-11. [Self-Hosted Integration Runtime](./modules/module11.md)
+11. [Securely scan sources using Self-Hosted Integration Runtimes](./modules/module11.md)
 12. [Managed private endpoints](./modules/module12.md)
 13. [Process events using Atlas Kafka topics via Event Hubs and NodeJS](./modules/module13.md)
 

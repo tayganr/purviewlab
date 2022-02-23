@@ -762,6 +762,193 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
+## 7. Read glossary in Azure Purview
+ 
+ 1. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below. 
+
+    * Paste the copied endpoint into the URL (e.g. `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog`)
+    * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/glossary`
+
+    Note: Calling this particular endpoint will result in the bulk retrieval of all **existing glossary terms**.
+
+    | Property | Value |
+    | --- | --- |
+    | HTTP Method | `GET` |
+    | URL | `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog/api/atlas/v2/glossary` |
+
+    Navigate to **Headers**, provide the following key value pair, click **Send**.
+
+    | Header Key | Header Value |
+    | --- | --- |
+    | Authorization | `Bearer YOUR_ACCESS_TOKEN` |
+
+    Note: You generated an `access_token` in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
+ 
+ ![](../images/module10/10.16-read-glossary.png)
+ 
+  2. If successful, Postman should return a JSON document in the body of the response.  Save your **glossary guid** for later use – this is on the first line in the json response, as shown below (e.g. guid: "ef3ab74e-f517-47c0-b56f-1fd4d6eb8493")
+ 
+  ![](../images/module10/10.17-read-glossary-200OK.png)
+
+<div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+ 
+## 8. Create glossary terms
+ 1. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below. 
+
+    * Paste the copied endpoint into the URL (e.g. `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog`)
+    * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/glossary/term?includeTermHierarchy=True`
+
+    Note: Calling this particular endpoint will result in **creating a glossary term**.
+
+    | Property | Value |
+    | --- | --- |
+    | HTTP Method | `POST` |
+    | URL | `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog/api/atlas/v2/glossary/term?includeTermHierarchy=True` |
+
+    Navigate to **Headers**, provide the following key value pair:
+
+    | Header Key | Header Value |
+    | --- | --- |
+    | Authorization | `Bearer YOUR_ACCESS_TOKEN` |
+
+    Note: You generated an `access_token` in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
+ 
+ ![](../images/module10/10.18-create-term-auth.png)
+ 
+Navigate to **Body** and for the **raw** section, select **JSON** option. To create a basic glossary term, add the minimum mandatory payload, by providing the glossary guid (saved at the previous exercise) and the name for your new term, then click **Send**.
+ 
+  ![](../images/module10/10.19-create-term-body.png)
+ 
+ 2. If successful, Postman should return a JSON document in the body of the response. Save your **termGuid** for later use – this is on the first line in the json response, as shown below (e.g. guid: " a8859aa4-f3b1-47ee-b835-8ec8c07d0638")
+ 
+  ![](../images/module10/10.20-create-term-200OK.png)
+ 
+ 3. Navigate to **Purview Studio > Manage Glossary** and write in the search bar the name of your newly created term to check if this appears in your glossary:
+ 
+ ![](../images/module10/10.21-create-term-studio.png)
+ 
+ <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+ 
+ Note: If you don’t specify the status when you create a glossary term, by default it appears in **“Draft”** mode.
+ 
+## 9. Add/edit simple attribute for a glossary term
+ 
+ 1. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below. 
+
+    * Paste the copied endpoint into the URL (e.g. `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog`)
+    * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/glossary/term/{termGuid}?includeTermHierarchy=True`, using the **termGuid** saved at the previous exercise
+
+    Note: Calling this particular endpoint will result in **updating a glossary term**.
+
+    | Property | Value |
+    | --- | --- |
+    | HTTP Method | `PUT` |
+    | URL | `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog/api/atlas/v2/glossary/term/{termGuid}?includeTermHierarchy=True` |
+
+    Navigate to **Headers**, provide the following key value pair:
+
+    | Header Key | Header Value |
+    | --- | --- |
+    | Authorization | `Bearer YOUR_ACCESS_TOKEN` |
+
+    Note: You generated an `access_token` in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
+ 
+  ![](../images/module10/10.22-edit-term-auth.png)
+ 
+Navigate to **Body** and for the **raw** section, select **JSON** option. To update a simple attribute for your glossary term, add the minimum mandatory payload, by providing the **glossary guid** (saved at the previous exercise) and the **nickName** for your term, add the attribute you want to update – in this exercise, you will modify the **Status** from **Draft** (the default when a new term is created) to **Approved**, then click **Send**.
+ 
+ ![](../images/module10/10.23-edit-term-body.png)
+ 
+ 2. If successful, Postman should return a JSON document in the body of the response:
+ 
+ ![](../images/module10/10.24-edit-term-200OK.png)
+ 
+ 3. Navigate to **Purview Studio > Manage Glossary** and write in the search bar the name of your term to check if this appears with the new status:
+ 
+ ![](../images/module10/10.25-edit-term-studio.png)
+ 
+ <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+ 
+## 10. Add/edit complex attribute for a glossary term
+ 1. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below. 
+
+    * Paste the copied endpoint into the URL (e.g. `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog`)
+    * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/glossary/term/{termGuid}?includeTermHierarchy=True`, using the **termGuid** saved at the previous exercise
+
+    Note: Calling this particular endpoint will result in **updating a glossary term**.
+
+    | Property | Value |
+    | --- | --- |
+    | HTTP Method | `PUT` |
+    | URL | `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog/api/atlas/v2/glossary/term/{termGuid}?includeTermHierarchy=True` |
+
+    Navigate to **Headers**, provide the following key value pair:
+
+    | Header Key | Header Value |
+    | --- | --- |
+    | Authorization | `Bearer YOUR_ACCESS_TOKEN` |
+
+    Note: You generated an `access_token` in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
+ 
+  ![](../images/module10/10.22-edit-term-auth.png)
+ 
+Navigate to **Body** and for the **raw** section, select **JSON** option. In this exercise you will add contacts to your glossary term. First, you need to add the minimum mandatory payload, by providing the **glossary guid** (saved at the previous exercise) and the **nickName** for your term, then add the contacts object that include both **Steward** and **Expert**.  
+ 
+ ![](../images/module10/10.26-edit-contacts-body.png)
+ 
+ For this exercise, to get the Expert/Steward id, you can go to the Azure Active Directory and copy the id next to your name: 
+ 
+  ![](../images/module10/10.27-AAD-ids.png)
+ 
+ After you add the details in the JSON section, click **Send**.
+ 
+ 2. If successful, Postman should return a JSON document in the body of the response:
+ 
+ ![](../images/module10/10.28-edit-contacts-200OK.png)
+ 
+ 3. Navigate to **Purview Studio > Manage Glossary** and write in the search bar the name of your term to check if this appears with the corresponding contacts:
+ 
+ ![](../images/module10/10.29-edit-contacts-studio.png)
+ 
+ <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+  
+
+ 
+## 11. Delete glossary term
+ 
+ 1. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below. 
+
+    * Paste the copied endpoint into the URL (e.g. `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog`)
+    * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/glossary/term/{termGuid}`
+
+    Note: Calling this particular endpoint will result in **deleting a glossary term**.
+
+    | Property | Value |
+    | --- | --- |
+    | HTTP Method | `DELETE` |
+    | URL | `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog/api/atlas/v2/glossary/term/{termGuid}` |
+
+    Navigate to **Headers**, provide the following key value pair, click **Send**.
+
+    | Header Key | Header Value |
+    | --- | --- |
+    | Authorization | `Bearer YOUR_ACCESS_TOKEN` |
+
+    Note: You generated an `access_token` in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
+ 
+  ![](../images/module10/10.30-delete-term.png)
+ 
+ 2. If successful, Postman should return a JSON document in the body of the response:
+ 
+   ![](../images/module10/10.30-delete-term-204.png)
+ 
+ 3. Navigate to **Purview Studio > Manage Glossary** and write in the search bar the name of your deleted term to check this is no longer in your glossary:
+ 
+ ![](../images/module10/10.31-delete-term-studio.png)
+ 
+ 
+ <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+ 
 ## :mortar_board: Knowledge Check
 
 [http://aka.ms/purviewlab/q10](http://aka.ms/purviewlab/q10)

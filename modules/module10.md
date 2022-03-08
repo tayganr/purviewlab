@@ -676,7 +676,6 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 3. **Copy** the client secret value for later use.
 
-
     > :bulb: **Did you know?**
     >
     > A **client secret** is a secret string that the application uses to prove its identity when requesting a token, this can also can be referred to as an application password.
@@ -784,9 +783,11 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
    * If successful, Postman should return a JSON document in the body of the response. 
 
-4. If successful, Postman should return a JSON document in the body of the response. Click on the **magnifying glass** and search for the following phrase `"name": "azure_sql_table"` to jump down to the entity definition for an Azure SQL Table.
+4. Create two custom entities. 
 
     * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/entity`
+
+    * Replace the body with the following code block
 
    ```json
    {
@@ -809,6 +810,16 @@ To invoke the REST API, we must first register an application (i.e. service prin
    }
    ```
 
+   * Submit and validate your output. **Important:** copy paste the GUID from the newly created entity. You'll need it in the next section when creating custom lineage.
+
+   ![](../images/module10/rest04.png)
+
+   * By now, you can also view and validate your results in Purview.
+
+   ![](../images/module10/rest05.png)
+
+   * Repeat the steps for a second entity:
+
    ```json
    {
       "entity":{
@@ -829,6 +840,18 @@ To invoke the REST API, we must first register an application (i.e. service prin
       }
    }
    ```
+
+   * Submit and validate your output.
+
+   * You will have two newly created entities. Also validate within your Azure Purview Studio environment that these new entities are created. Don't forget to capture the GUID from the second entity.
+
+   ![](../images/module10/rest06.png)
+
+   ![](../images/module10/rest07.png)
+
+5. Create custom lineage.
+
+   * Replace the body with the following code. Replace the GUIDs with the ones captured in the previous section. 
 
    ```json
    {
@@ -853,6 +876,15 @@ To invoke the REST API, we must first register an application (i.e. service prin
       }
    }
    ```
+
+   * Submit and validate your output.
+
+   ![](../images/module10/rest08.png)
+
+   ![](../images/module10/rest09.png)
+
+   ![](../images/module10/rest10.png)
+
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 

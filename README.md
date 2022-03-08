@@ -27,10 +27,10 @@ Azure Purview is a unified data governance service that helps you manage and gov
 7. [Insights](./modules/module07.md)
 8. [Monitor](./modules/module08.md)
 9. [Integrate with Azure Synapse Analytics](./modules/module09.md)
-10. [REST API](./modules/module10.md)
 
 ## :books: Optional Learning Modules
 
+10. [REST API](./modules/module10.md)
 11. [Securely scan sources using Self-Hosted Integration Runtimes](./modules/module11.md)
 12. [Managed private endpoints](./modules/module12.md)
 13. [Process events using Atlas Kafka topics via Event Hubs and NodeJS](./modules/module13.md)

@@ -720,11 +720,11 @@ To invoke the REST API, we must first register an application (i.e. service prin
     | client_secret | `YOUR_CLIENT_SECRET` |
     | resource | `https://purview.azure.net` |
 
-    ![](../images/module10/10.09-postman-login.png)
+    ![](../images/module10/rest01.png)
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
-## 6. Read data from Azure Purview
+## 6. Register metadata in Azure Purview
 
 1. Within the Azure portal, open the Azure Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.
 
@@ -739,27 +739,120 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
     | Property | Value |
     | --- | --- |
-    | HTTP Method | `GET` |
+    | HTTP Method | `POST` |
     | URL | `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog/api/atlas/v2/types/typedefs` |
 
-    Navigate to **Headers**, provide the following key value pair, click **Send**.
+    * In Postman, Navigate to **Auth**, provide the auth code from the previous step.
 
-    | Header Key | Header Value |
-    | --- | --- |
-    | Authorization | `Bearer YOUR_ACCESS_TOKEN` |
+    ![Purview Properties](../images/module10/rest02.png)
 
-    Note: You generated an `access_token` in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
+    * In Postman, Navigate to **Body**, and copy paste the content from below.
 
-    ![](../images/module10/10.10-postman-get.png)
+   ```json
+   {
+      "entityDefs":[
+         {
+            "category":"ENTITY",
+            "version":1,
+            "name":"Custom Source",
+            "description":"Custom database source",
+            "typeVersion":"1.0",
+            "attributeDefs":[
+               {
+                  "name":"CustomAttribute",
+                  "typeName":"string",
+                  "isOptional":true
+               }
+            ],
+            "superTypes":[
+               "DataSet"
+            ],
+            "subTypes":[
+               
+            ],
+            "relationshipAttributeDefs":[
+               
+            ]
+         }
+      ]
+   }
+   ```
+
+   * Submit and validate your output.
+
+   ![](../images/module10/rest03.png)
+
+   * If successful, Postman should return a JSON document in the body of the response. 
 
 4. If successful, Postman should return a JSON document in the body of the response. Click on the **magnifying glass** and search for the following phrase `"name": "azure_sql_table"` to jump down to the entity definition for an Azure SQL Table.
 
-    > :bulb: **Did you know?**
-    >
-    > While Azure Purview provides a number of system built type definitions for a variety of object types, Customers can use the API to create their own custom type definitions.
+    * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/entity`
 
-    ![](../images/module10/10.12-typedef-search.png)
+   ```json
+   {
+      "entity":{
+         "meanings":[
+            
+         ],
+         "status":"ACTIVE",
+         "version":0,
+         "typeName":"Custom Source",
+         "attributes":{
+            "qualifiedName":"custom://customdatabase/orders",
+            "name":"orders table",
+            "description":"orders description",
+            "principalId":0,
+            "objectType":null,
+            "CustomAttribute":"It works!"
+         }
+      }
+   }
+   ```
 
+   ```json
+   {
+      "entity":{
+         "meanings":[
+            
+         ],
+         "status":"ACTIVE",
+         "version":0,
+         "typeName":"Custom Source",
+         "attributes":{
+            "qualifiedName":"custom://customdatabase/customers",
+            "name":"customers table",
+            "description":"customers description",
+            "principalId":0,
+            "objectType":null,
+            "CustomAttribute":"It works!"
+         }
+      }
+   }
+   ```
+
+   ```json
+   {
+      "entity":{
+         "status":"ACTIVE",
+         "version":0,
+         "typeName":"Process",
+         "attributes":{
+            "inputs":[
+               {
+                  "guid":"e18cdcc6-c7ff-4d7a-ae7e-048c5e60a1dc"
+               }
+            ],
+            "outputs":[
+               {
+                  "guid":"c71fa5b2-ff5a-4b54-96e2-487962a05af5"
+               }
+            ],
+            "qualifiedName":"apacheatlas://customlineage01",
+            "name":"customlineage01"
+         }
+      }
+   }
+   ```
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 

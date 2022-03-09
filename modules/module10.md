@@ -36,6 +36,11 @@ The primary focus of this module is the **catalog** which is based on the open-s
 4. [Provide Service Principal Access to Azure Purview](#4-provide-service-principal-access-to-azure-purview)
 5. [Get an Access Token](#5-get-an-access-token)
 6. [Read data from Azure Purview](#6-read-data-from-azure-purview)
+7. [Read glossary in Azure Purview](#7-read-glossary-in-azure-purview)
+8. [Create glossary terms](#8-create-glossary-terms)
+9. [Add/edit simple attribute for a glossary term](#9-addedit-simple-attribute-for-a-glossary-term)
+10. [Add/edit complex attribute for a glossary term](#10-addedit-complex-attribute-for-a-glossary-term)
+11. [Delete glossary term](#11-delete-glossary-term)
 
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>

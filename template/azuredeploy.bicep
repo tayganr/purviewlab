@@ -23,6 +23,9 @@ resource adls 'Microsoft.Storage/storageAccounts@2021-04-01' = {
   }
   properties: {
     isHnsEnabled: true
+    minimumTlsVersion: 'TLS1_2'
+    allowBlobPublicAccess: false
+    supportsHttpsTrafficOnly: true
   }
 }
 
@@ -112,6 +115,8 @@ resource swsadls 'Microsoft.Storage/storageAccounts@2021-04-01' = {
       ipRules: []
       defaultAction: 'Allow'
     }
+    minimumTlsVersion: 'TLS1_2'
+    allowBlobPublicAccess: false
     supportsHttpsTrafficOnly: true
     accessTier: 'Hot'
   }

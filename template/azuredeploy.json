@@ -87,7 +87,10 @@
         "name": "Standard_LRS"
       },
       "properties": {
-        "isHnsEnabled": true
+        "isHnsEnabled": true,
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": false,
+        "supportsHttpsTrafficOnly": true
       }
     },
     {
@@ -165,6 +168,8 @@
           "ipRules": [],
           "defaultAction": "Allow"
         },
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": false,
         "supportsHttpsTrafficOnly": true,
         "accessTier": "Hot"
       }

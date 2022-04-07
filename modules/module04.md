@@ -8,7 +8,7 @@ A Glossary is an important tool for maintaining and organizing your catalog. It 
 
 When implementing your Glossary it is important to think about how you to structure your business terms and definitions. For example, you could use hierarchies and align these with business domains such as: Finance, Marketing, Sales, HR, etc. You could think of naming standards or introduce term templates for capturing additional information about your business metadata. You could also use relationships for linking business terms, such as Acronyms, Related terms and Synonyms. These relationships could help to avoid creating terms with duplicated names and lower the overhead of management.
 
-In this lab you learn how to create terms using a system and custom term template. You'll lean how to import and export terms. Lastly you learn about linking a term to data assets, which helps to relate technical metadata to business metadata.
+In this lab you learn how to create terms using a system and custom term template. You'll also learn how to import and export terms. Lastly, you learn about linking terms to data assets, which helps to relate technical metadata to business metadata.
 
 ## :thinking: Prerequisites
 

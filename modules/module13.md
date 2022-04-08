@@ -1,5 +1,7 @@
 # Module 13 - Process events using Atlas Kafka topics via Event Hubs and NodeJS
 
+[< Previous Module](../modules/module12.md) - **[Home](../README.md)**
+
 ## :loudspeaker: Introduction
 
 Azure Purview is a unified data governance solution that runs on Azure. Some people say it is a data catalog, but it better to Purview as a control framework for managing and controlling your data landscape. For example, you can use Azure Purview as a metastore for dynamically orchestrating your data pipelines.

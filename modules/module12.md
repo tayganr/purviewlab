@@ -1,5 +1,7 @@
 # Module 12 - Managed private endpoints
 
+[< Previous Module](../modules/module11.md) - **[Home](../README.md)** - [Next Module >](../modules/module13.md)
+
 ## :loudspeaker: Introduction
 
 An integration runtime (IR) is compute infrastructure that Azure Purview uses to power data scan across different network environments. These integration runtimes come in different flavors. One of them is using managed private endpoints, which Microsoft recently added. With this new set of features you can better manage and secure your data scanning within Purview. As a result your metadata traffic is distributed via Azure Private Link, which eliminated any exposure to the internet. This protects you from any data exfiltration risks.
@@ -159,4 +161,4 @@ In this module, you learned how to install managed private endpoints. If you'd l
 
 - [Use a Managed VNet with your Azure Purview account](https://docs.microsoft.com/en-us/azure/purview/catalog-managed-vnetn)
 
-[Back to Home >](../README.md)
+[Continue >](../modules/module13.md)

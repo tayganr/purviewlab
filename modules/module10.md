@@ -1,6 +1,6 @@
 # Module 10 - REST API
 
-[< Previous Module](../modules/module09.md) - **[Home](../README.md)**
+[< Previous Module](../modules/module09.md) - **[Home](../README.md)** - [Next Module >](../modules/module11.md)
 
 ## :loudspeaker: Introduction
 
@@ -42,6 +42,7 @@ The primary focus of this module is the **catalog** which is based on the open-s
 9. [Add/edit simple attribute for a glossary term](#9-addedit-simple-attribute-for-a-glossary-term)
 10. [Add/edit complex attribute for a glossary term](#10-addedit-complex-attribute-for-a-glossary-term)
 11. [Delete glossary term](#11-delete-glossary-term)
+12. [Register custom entity types and lineage](#12-register-custom-entity-types-and-lineage)
 
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
@@ -728,7 +729,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
-## 6. Register metadata in Azure Purview
+## 6. Read data from Azure Purview
 
 1. Within the Azure portal, open the Azure Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.
 
@@ -743,152 +744,26 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
     | Property | Value |
     | --- | --- |
-    | HTTP Method | `POST` |
+    | HTTP Method | `GET` |
     | URL | `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog/api/atlas/v2/types/typedefs` |
 
-    * In Postman, Navigate to **Auth**, provide the auth code from the previous step.
+    Navigate to **Headers**, provide the following key value pair, click **Send**.
 
-    ![Purview Properties](../images/module10/rest02.png)
+    | Header Key | Header Value |
+    | --- | --- |
+    | Authorization | `Bearer YOUR_ACCESS_TOKEN` |
 
-    * In Postman, Navigate to **Body**, and copy paste the content from below.
+    Note: You generated an `access_token` in the previous request. Copy and paste this value. Ensure to include the "Bearer " prefix.
 
-   ```json
-   {
-      "entityDefs":[
-         {
-            "category":"ENTITY",
-            "version":1,
-            "name":"Custom Source",
-            "description":"Custom database source",
-            "typeVersion":"1.0",
-            "attributeDefs":[
-               {
-                  "name":"CustomAttribute",
-                  "typeName":"string",
-                  "isOptional":true
-               }
-            ],
-            "superTypes":[
-               "DataSet"
-            ],
-            "subTypes":[
-               
-            ],
-            "relationshipAttributeDefs":[
-               
-            ]
-         }
-      ]
-   }
-   ```
+    ![](../images/module10/10.10-postman-get.png)
 
-   * Submit and validate your output.
+4. If successful, Postman should return a JSON document in the body of the response. Click on the **magnifying glass** and search for the following phrase `"name": "azure_sql_table"` to jump down to the entity definition for an Azure SQL Table.
 
-   ![](../images/module10/rest03.png)
+    > :bulb: **Did you know?**
+    >
+    > While Azure Purview provides a number of system built type definitions for a variety of object types, Customers can use the API to create their own custom type definitions.
 
-   * If successful, Postman should return a JSON document in the body of the response. 
-
-4. Create two custom entities. 
-
-    * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/entity`
-
-    * Replace the body with the following code block
-
-   ```json
-   {
-      "entity":{
-         "meanings":[
-            
-         ],
-         "status":"ACTIVE",
-         "version":0,
-         "typeName":"Custom Source",
-         "attributes":{
-            "qualifiedName":"custom://customdatabase/orders",
-            "name":"orders table",
-            "description":"orders description",
-            "principalId":0,
-            "objectType":null,
-            "CustomAttribute":"It works!"
-         }
-      }
-   }
-   ```
-
-   * Submit and validate your output. **Important:** copy paste the GUID from the newly created entity. You'll need it in the next section when creating custom lineage.
-
-   ![](../images/module10/rest04.png)
-
-   * By now, you can also view and validate your results in Purview.
-
-   ![](../images/module10/rest05.png)
-
-   * Repeat the steps for a second entity:
-
-   ```json
-   {
-      "entity":{
-         "meanings":[
-            
-         ],
-         "status":"ACTIVE",
-         "version":0,
-         "typeName":"Custom Source",
-         "attributes":{
-            "qualifiedName":"custom://customdatabase/customers",
-            "name":"customers table",
-            "description":"customers description",
-            "principalId":0,
-            "objectType":null,
-            "CustomAttribute":"It works!"
-         }
-      }
-   }
-   ```
-
-   * Submit and validate your output.
-
-   * You will have two newly created entities. Also validate within your Azure Purview Studio environment that these new entities are created. Don't forget to capture the GUID from the second entity.
-
-   ![](../images/module10/rest06.png)
-
-   ![](../images/module10/rest07.png)
-
-5. Create custom lineage.
-
-   * Replace the body with the following code. Replace the GUIDs with the ones captured in the previous section. 
-
-   ```json
-   {
-      "entity":{
-         "status":"ACTIVE",
-         "version":0,
-         "typeName":"Process",
-         "attributes":{
-            "inputs":[
-               {
-                  "guid":"e18cdcc6-c7ff-4d7a-ae7e-048c5e60a1dc"
-               }
-            ],
-            "outputs":[
-               {
-                  "guid":"c71fa5b2-ff5a-4b54-96e2-487962a05af5"
-               }
-            ],
-            "qualifiedName":"apacheatlas://customlineage01",
-            "name":"customlineage01"
-         }
-      }
-   }
-   ```
-
-   * Submit and validate your output.
-
-   ![](../images/module10/rest08.png)
-
-   ![](../images/module10/rest09.png)
-
-   ![](../images/module10/rest10.png)
+    ![](../images/module10/10.12-typedef-search.png)
 
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
@@ -1079,6 +954,171 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. In thi
  ![](../images/module10/10.31-delete-term-studio.png)
  
  <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
+
+## 12. Register custom entity types and lineage
+
+1. Within the Azure portal, open the Azure Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.
+
+    ![Purview Properties](../images/module10/10.11-purview-properties.png)
+
+3. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below. 
+
+    * Paste the copied endpoint into the URL (e.g. `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog`)
+    * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/types/typedefs`
+
+    Note: Calling this particular endpoint will result in the bulk retrieval of all **type definitions**.
+
+    | Property | Value |
+    | --- | --- |
+    | HTTP Method | `POST` |
+    | URL | `https://YOUR_PURVIEW_ACCOUNT.purview.azure.com/catalog/api/atlas/v2/types/typedefs` |
+
+    * In Postman, Navigate to **Auth**, provide the auth code from the previous step.
+
+    ![Purview Properties](../images/module10/rest02.png)
+
+    * In Postman, Navigate to **Body**, and copy paste the content from below.
+
+   ```json
+   {
+      "entityDefs":[
+         {
+            "category":"ENTITY",
+            "version":1,
+            "name":"Custom Source",
+            "description":"Custom database source",
+            "typeVersion":"1.0",
+            "attributeDefs":[
+               {
+                  "name":"CustomAttribute",
+                  "typeName":"string",
+                  "isOptional":true
+               }
+            ],
+            "superTypes":[
+               "DataSet"
+            ],
+            "subTypes":[
+               
+            ],
+            "relationshipAttributeDefs":[
+               
+            ]
+         }
+      ]
+   }
+   ```
+
+   * Submit and validate your output.
+
+   ![](../images/module10/rest03.png)
+
+   * If successful, Postman should return a JSON document in the body of the response. 
+
+4. Create two custom entities. 
+
+    * Add the following at the end of the URL to complete the endpoint: `/api/atlas/v2/entity`
+
+    * Replace the body with the following code block
+
+   ```json
+   {
+      "entity":{
+         "meanings":[
+            
+         ],
+         "status":"ACTIVE",
+         "version":0,
+         "typeName":"Custom Source",
+         "attributes":{
+            "qualifiedName":"custom://customdatabase/orders",
+            "name":"orders table",
+            "description":"orders description",
+            "principalId":0,
+            "objectType":null,
+            "CustomAttribute":"It works!"
+         }
+      }
+   }
+   ```
+
+   * Submit and validate your output. **Important:** copy paste the GUID from the newly created entity. You'll need it in the next section when creating custom lineage.
+
+   ![](../images/module10/rest04.png)
+
+   * By now, you can also view and validate your results in Purview.
+
+   ![](../images/module10/rest05.png)
+
+   * Repeat the steps for a second entity:
+
+   ```json
+   {
+      "entity":{
+         "meanings":[
+            
+         ],
+         "status":"ACTIVE",
+         "version":0,
+         "typeName":"Custom Source",
+         "attributes":{
+            "qualifiedName":"custom://customdatabase/customers",
+            "name":"customers table",
+            "description":"customers description",
+            "principalId":0,
+            "objectType":null,
+            "CustomAttribute":"It works!"
+         }
+      }
+   }
+   ```
+
+   * Submit and validate your output.
+
+   * You will have two newly created entities. Also validate within your Azure Purview Studio environment that these new entities are created. Don't forget to capture the GUID from the second entity.
+
+   ![](../images/module10/rest06.png)
+
+   ![](../images/module10/rest07.png)
+
+5. Create custom lineage.
+
+   * Replace the body with the following code. Replace the GUIDs with the ones captured in the previous section. 
+
+   ```json
+   {
+      "entity":{
+         "status":"ACTIVE",
+         "version":0,
+         "typeName":"Process",
+         "attributes":{
+            "inputs":[
+               {
+                  "guid":"e18cdcc6-c7ff-4d7a-ae7e-048c5e60a1dc"
+               }
+            ],
+            "outputs":[
+               {
+                  "guid":"c71fa5b2-ff5a-4b54-96e2-487962a05af5"
+               }
+            ],
+            "qualifiedName":"apacheatlas://customlineage01",
+            "name":"customlineage01"
+         }
+      }
+   }
+   ```
+
+   * Submit and validate your output.
+
+   ![](../images/module10/rest08.png)
+
+   ![](../images/module10/rest09.png)
+
+   ![](../images/module10/rest10.png)
+
+
+<div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
  
 ## :mortar_board: Knowledge Check
 

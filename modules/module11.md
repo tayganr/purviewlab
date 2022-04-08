@@ -1,5 +1,7 @@
 # Module 11 - Securely scan sources using Self-Hosted Integration Runtimes
 
+[< Previous Module](../modules/module10.md) - **[Home](../README.md)** - [Next Module >](../modules/module12.md)
+
 ## :loudspeaker: Introduction
 
 Azure Purview comes with a managed infrastructure component called AutoResolveIntegrationRuntime. This component is required when scanning sources and most useful when connecting to data stores and computes services with public accessible endpoints. However some of your sources might be VM-based or can be applications that either sit in a private network (VNET) or other networks, such as on-premises. For these kind of scenarios a Self-Hosted Integration Runtime (SHIR) is recommended.
@@ -239,4 +241,4 @@ In this module, you learned how to install the self-hosted integration runtime t
   - [Contoso BI dataset](https://www.microsoft.com/en-us/download/details.aspx?id=18279)
 - [Trigger a scan of the on-premise data source](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#creating-and-running-a-scan)
 
-[Back to Home >](../README.md)
+[Continue >](../modules/module12.md)

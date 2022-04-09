@@ -12,13 +12,6 @@
 ! * The screenshots and information below, has been provided so that you can conceptualise the type
 ! of insights that can be gleaned from a fully populated environment.                              
 ```
-
-## :thinking: Prerequisites
-
-* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
-* Set up and complete a scan (see [module 02](../modules/module02.md)).
-
 ## :loudspeaker: Introduction
 
 Insights provides customers, a single pane of glass view into their catalog and further aims to provide specific insights to the data source administrators, business users, data stewards, data officer, and security administrators. Azure Purview currently has the following reports available:
@@ -28,6 +21,12 @@ Insights provides customers, a single pane of glass view into their catalog and 
 * Glossary
 * Classification
 * Sensitivity Labels
+
+## :thinking: Prerequisites
+
+* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* Set up and complete a scan (see [module 02](../modules/module02.md)).
 
 ## :dart: Objectives
 

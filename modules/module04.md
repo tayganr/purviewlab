@@ -2,14 +2,20 @@
 
 [< Previous Module](../modules/module03.md) - **[Home](../README.md)** - [Next Module >](../modules/module05.md)
 
+## :loudspeaker: Introduction
+
+A [Glossary](https://docs.microsoft.com/en-us/azure/purview/concept-business-glossary), sometimes called Data Glossary or Business Glossary, is a list of business terms with their definitions. A Glossary is an important tool for maintaining and organizing information about your data. It is used for capturing domain knowledge of information that is commonly used, communicated, and shared in organizations as they are conducting business.
+
+There aren’t any rules for the size and representation of glossaries. They can stay abstract or high-level, but also are allowed to be detailed, describing carefully attributes, dependencies, relationships and definitions. A glossary isn't limited to only a single database, in fact it can cover many applications or multiple databases. Multiple applications can work together to accomplish a specific business need. This means that the relation between a glossary and data attributes is a one-to-many relationship. The glossary can also include and capture more concepts than the concepts representing the application or database itself. It can include concepts, which are used to make the context clearer, but don’t play a direct role (yet) in the application or database design. It can also include concepts, that represents future requirements, but didn’t find their way yet into the actual design of the application or database yet.
+
+When implementing your Glossary it is important to think about how you to structure your business terms and definitions. For example, you could use hierarchies and align these with business domains such as: Finance, Marketing, Sales, HR, etc. You could think of naming standards or introduce term templates for capturing additional information about your business metadata. You could also use relationships for linking business terms, such as Acronyms, Related terms and Synonyms. These relationships could help to avoid creating terms with duplicated names and lower the overhead of management.
+
+In this lab you learn how to create terms using a system and custom term template. You'll also learn how to import and export terms. Lastly, you learn about linking terms to data assets, which helps to relate technical metadata to business metadata.
+
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
-
-## :loudspeaker: Introduction
-
-A glossary is an important tool for maintaining and organizing your catalog. You build your glossary by defining new terms or importing a term list and then applying those terms to your assets.
 
 ## :dart: Objectives
 

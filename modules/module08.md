@@ -2,15 +2,15 @@
 
 [< Previous Module](../modules/module07.md) - **[Home](../README.md)** - [Next Module >](../modules/module09.md)
 
+## :loudspeaker: Introduction
+
+Azure Purview administrators can use Azure Monitor to track the operational state of an Azure Purview account instance. This information, for example, can be the number of scans completed or cancelled. Metrics are collected to provide data points for you to track potential problems, troubleshoot, and improve the reliability of the Purview platform.
+
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 * Your subscription must have the **Microsoft.Insights** resource provider registered.
-
-## :loudspeaker: Introduction
-
-Azure Purview administrators can use Azure Monitor to track the operational state of an Azure Purview account instance. Metrics are collected to provide data points for you to track potential problems, troubleshoot, and improve the reliability of the Purview platform.
 
 ## :dart: Objectives
 

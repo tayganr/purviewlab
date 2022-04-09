@@ -2,6 +2,10 @@
 
 **[Home](../README.md)** - [Next Module >](../modules/module01.md)
 
+## :loudspeaker: Introduction
+
+In order to follow along with the Azure Purview lab exercises, you need to provision a set of resources.
+
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
@@ -15,10 +19,6 @@
     * Microsoft.Storage
     * Microsoft.Sql
     * Microsoft.Synapse
-
-## :loudspeaker: Introduction
-
-In order to follow along with the Azure Purview lab exercises, we need to provision a set of resources.
 
 ## :test_tube: Lab Environment Setup
 

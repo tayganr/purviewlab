@@ -2,15 +2,17 @@
 
 [< Previous Module](../modules/module08.md) - **[Home](../README.md)** - [Next Module >](../modules/module10.md)
 
+## :loudspeaker: Introduction
+
+Azure Synapse Analytics, formerly known as Azure SQL Data Warehouse, is a big data analytics solution with enterprise data warehousing features. It provides different types of compute environments for different workloads. It is often used to process large volumes of data and can be used to design a data lake, data warehouse or big data analytics platform.
+
+Registering an Azure Purview account to a Synapse workspace allows you to discover Azure Purview assets, interact with them through Synapse specific capabilities, and push lineage information to Azure Purview. This enables you to see what data is ingested, processed and consumed by what analytical processes.
+
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * An Azure Azure Purview account (see [module 01](../modules/module01.md)).
 * An Azure Purview catalog with some assets (see [module 02](../modules/module02.md)).
-
-## :loudspeaker: Introduction
-
-Registering an Azure Purview account to a Synapse workspace allows you to discover Azure Purview assets, interact with them through Synapse specific capabilities, and push lineage information to Azure Purview.
 
 ## :dart: Objectives
 

@@ -4,7 +4,7 @@
 
 ## :loudspeaker: Introduction
 
-Azure Purview administrators can use Azure Monitor to track the operational state of an Azure Purview account instance. Metrics are collected to provide data points for you to track potential problems, troubleshoot, and improve the reliability of the Purview platform.
+Azure Purview administrators can use Azure Monitor to track the operational state of an Azure Purview account instance. This information, for example, can be the number of scans completed or cancelled. Metrics are collected to provide data points for you to track potential problems, troubleshoot, and improve the reliability of the Purview platform.
 
 ## :thinking: Prerequisites
 

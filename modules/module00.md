@@ -19,6 +19,7 @@ In order to follow along with the Azure Purview lab exercises, you need to provi
     * Microsoft.Storage
     * Microsoft.Sql
     * Microsoft.Synapse
+    * Microsoft.Insights
 
 ## :test_tube: Lab Environment Setup
 

@@ -50,9 +50,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
     | Location | `YOUR_LOCATION` |
     | Managed Resource Group Name | `pvlab-rg-managed` |
 
-    > Note: The
-
-    ![Purview Account Basics](../images/module01/_01.03-create-basic.png)
+    ![Purview Account Basics](../images/module01/01.03-create-basic.png)
 
     > :bulb: **Did you know?**
     >
@@ -68,15 +66,15 @@ When planning your Microsoft Purview deployment, you first need to provision a M
 
 4. On the **Networking** tab, select **All networks**.
    
-    ![Networking](../images/module01/_01.04-create-networking.png)
+    ![Networking](../images/module01/01.04-create-networking.png)
 
 5. On the **Review + Create** tab, once the message in the ribbon returns "Validation passed", verify your selections and click **Create**.
 
-    ![Create Purview Account](../images/module01/_01.05-create-create.png)
+    ![Create Purview Account](../images/module01/01.05-create-create.png)
 
 6. Wait several minutes while your deployment is in progress. Once complete, click **Go to resource**.
 
-    ![Go to resource](../images/module01/_01.06-goto-resource.png)
+    ![Go to resource](../images/module01/01.06-goto-resource.png)
 
 <div align="right"><a href="#module-01---create-a-microsoft-purview-account">↥ back to top</a></div>
 
@@ -86,28 +84,28 @@ By default, the identity used to create the Microsoft Purview account resource w
 
 1. Navigate to your Microsoft Purview account and click **Open** within the **Open Purview Studio** tile.
 
-    ![Access Control](../images/module01/_01.07-open-studio.png)
+    ![Access Control](../images/module01/01.07-open-studio.png)
 
 2. On the left-hand side, navigate to **Data map**.
 
-    ![Add Role Assignment](../images/module01/_01.08-studio-datamap.png)
+    ![Add Role Assignment](../images/module01/01.08-studio-datamap.png)
 
 3. Select **Collections**.
 
-    ![Collections](../images/module01/_01.09-datamap-collections.png)
+    ![Collections](../images/module01/01.09-datamap-collections.png)
 
     
 4. Select **Role assignments**.
 
-    ![Role assignments](../images/module01/_01.10-collections-roleassignments.png)
+    ![Role assignments](../images/module01/01.10-collections-roleassignments.png)
 
 5. On the right-hand side of **Data curators**, click the **Add** icon.
 
-    ![Add Role Assignment](../images/module01/_01.11-roleassignments-datacurator.png)
+    ![Add Role Assignment](../images/module01/01.11-roleassignments-datacurator.png)
 
 6. Search for another user within your Azure Active Directory, select their account, click **OK**.
 
-    ![Add or Remove Data Curators](../images/module01/_01.12-datacurator-add.png)
+    ![Add or Remove Data Curators](../images/module01/01.12-datacurator-add.png)
 
     > :bulb: **Did you know?**
     >
@@ -128,23 +126,23 @@ By default, the identity used to create the Microsoft Purview account resource w
 
 [http://aka.ms/purviewlab/q01](http://aka.ms/purviewlab/q01)
 
-1. Which of the following Microsoft Purview pricing meters is fluid, with consumption varying based on usage?
+1. Which of the following Microsoft Purview pricing meters is serverless and used to support data map population through scanning and ingestion jobs?
 
     A ) Capacity Units  
     B ) vCore Hours  
     C ) Neither
 
-2. Which of the following Microsoft Purview pricing meters is always on, with consumption based on quantity provisioned?
+2. Which of the following Microsoft Purview pricing meters is always on and used to support data map consumption through capacity and storage?
 
     A ) Capacity Units  
     B ) vCore Hours  
     C ) Neither
 
-3. Which Microsoft Purview module provides the base functionality (i.e. source registration, automated scanning and classification, data discovery)?
+3. Which Microsoft Purview feature is included and billed with the consumption of the data map?
 
-    A ) C0  
-    B ) C1  
-    C ) D0
+    A ) Data Estate Insights  
+    B ) Search and browse of data assets  
+    C ) SQL DevOps access
 
 4. Which predefined Microsoft Purview role provides access to manage data sources?
 

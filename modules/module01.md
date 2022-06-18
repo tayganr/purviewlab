@@ -23,10 +23,10 @@ When planning your Microsoft Purview deployment, you first need to provision a M
 
 | #  | Section | Role |
 | --- | --- | --- |
-| 1 | [Create a Microsoft Purview Account](#1-create-an-azure-purview-account) | Azure Administrator |
+| 1 | [Create a Microsoft Purview Account](#1-create-a-microsoft-purview-account) | Azure Administrator |
 | 2 | [Grant Access to Microsoft Purview's Data Plane](#2-grant-access-to-azure-purviews-data-plane) | Collection Administrator |
 
-<div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
+<div align="right"><a href="#module-01---create-a-microsoft-purview-account">↥ back to top</a></div>
 
 ## 1. Create a Microsoft Purview Account
 
@@ -78,7 +78,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
 
     ![Go to resource](../images/module01/_01.06-goto-resource.png)
 
-<div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
+<div align="right"><a href="#module-01---create-a-microsoft-purview-account">↥ back to top</a></div>
 
 ## 2. Grant Access to Microsoft Purview's Data Plane
 
@@ -122,7 +122,7 @@ By default, the identity used to create the Microsoft Purview account resource w
     | Data Curator || `Read/Write` |  | Access to catalog (read & write). |
     | Data Source Admin |  || `Read/Write` | Manage data sources and data scans. |
 
-<div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
+<div align="right"><a href="#module-01---create-a-microsoft-purview-account">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 
@@ -152,7 +152,7 @@ By default, the identity used to create the Microsoft Purview account resource w
     B ) Purview Data Curator  
     C ) Purview Data Source Administrator
 
-<div align="right"><a href="#module-01---create-an-azure-purview-account">↥ back to top</a></div>
+<div align="right"><a href="#module-01---create-a-microsoft-purview-account">↥ back to top</a></div>
 
 ## :tada: Summary
 

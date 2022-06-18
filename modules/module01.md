@@ -126,25 +126,25 @@ By default, the identity used to create the Microsoft Purview account resource w
 
 [http://aka.ms/purviewlab/q01](http://aka.ms/purviewlab/q01)
 
-1. Which of the following Microsoft Purview pricing meters is serverless and used to support data map population through scanning and ingestion jobs?
+1. Which of the following Microsoft Purview pricing meters is **serverless** and used to support **data map population** through scanning and ingestion jobs?
 
     A ) Capacity Units  
     B ) vCore Hours  
     C ) Neither
 
-2. Which of the following Microsoft Purview pricing meters is always on and used to support data map consumption through capacity and storage?
+2. Which of the following Microsoft Purview pricing meters is **always on** and used to support **data map consumption** through capacity and storage?
 
     A ) Capacity Units  
     B ) vCore Hours  
     C ) Neither
 
-3. Which Microsoft Purview feature is included and billed with the consumption of the data map?
+3. Which Microsoft Purview **feature** is included and billed with the consumption of the **data map**?
 
     A ) Data Estate Insights  
     B ) Search and browse of data assets  
     C ) SQL DevOps access
 
-4. Which predefined Microsoft Purview role provides access to manage data sources?
+4. Which predefined Microsoft Purview role provides access to **manage data sources**?
 
     A ) Purview Data Reader  
     B ) Purview Data Curator  

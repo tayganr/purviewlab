@@ -4,14 +4,14 @@
 
 ## :loudspeaker: Introduction
 
-Azure Purview comes with a managed infrastructure component called AutoResolveIntegrationRuntime. This component is required when scanning sources and most useful when connecting to data stores and computes services with public accessible endpoints. However some of your sources might be VM-based or can be applications that either sit in a private network (VNET) or other networks, such as on-premises. For these kind of scenarios a Self-Hosted Integration Runtime (SHIR) is recommended.
+Microsoft Purview comes with a managed infrastructure component called AutoResolveIntegrationRuntime. This component is required when scanning sources and most useful when connecting to data stores and computes services with public accessible endpoints. However some of your sources might be VM-based or can be applications that either sit in a private network (VNET) or other networks, such as on-premises. For these kind of scenarios a Self-Hosted Integration Runtime (SHIR) is recommended.
 
-In this lab you learn how to setup a more complex scenario of using a SHIR and private virtual network. First, you'll deploy a virtual network and storage account, then you will deploy and use private endpoints to route all traffic securely, without using any public accessible endpoints. Lastly, you configure the SHIR, Azure Key Vault and configure everything in Azure Purview.
+In this lab you learn how to setup a more complex scenario of using a SHIR and private virtual network. First, you'll deploy a virtual network and storage account, then you will deploy and use private endpoints to route all traffic securely, without using any public accessible endpoints. Lastly, you configure the SHIR, Azure Key Vault and configure everything in Microsoft Purview.
 
 ## :thinking: Prerequisites
 
 - An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-- An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+- An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :dart: Objectives
 
@@ -24,14 +24,14 @@ In this lab you learn how to setup a more complex scenario of using a SHIR and p
 3. [Private endpoint creation](#3-private-endpoint-creation)
 4. [Self-hosted integration runtime installation](#4-self-hosted-integration-runtime-installation)
 5. [Key vault creation](#5-key-vault-creation)
-6. [Key Vault configuration within Azure Purview](#6-key-vault-configuration-within-purview)
+6. [Key Vault configuration within Microsoft Purview](#6-key-vault-configuration-within-purview)
 7. [Summary](#7-summary)
 
 <div align="right"><a href="#module-11---securely-scan-sources-using-self-hosted-integration-runtimes">↥ back to top</a></div>
 
 ## 1. Virtual network creation
 
-1. For deploying your Self-Hosted Integration Runtime you first need to create a new virtual network. This is needed for the virtual machine and private endpoint to be created. Open the Azure Portal, search for Virtual Network and click Create. First you need to give your new network a name. I’m using the same resource group that is used for Azure Purview.
+1. For deploying your Self-Hosted Integration Runtime you first need to create a new virtual network. This is needed for the virtual machine and private endpoint to be created. Open the Azure Portal, search for Virtual Network and click Create. First you need to give your new network a name. I’m using the same resource group that is used for Microsoft Purview.
 
    ![](../images/module11/pic01.png)
 
@@ -115,7 +115,7 @@ For this demo you will be using Windows 10. Open the Azure Portal again to searc
 
    ![](../images/module11/pic12.png)
 
-5. When everything is working, you must download the self-hosted integration runtime package. The installation is straight forward. Just hit next and wait for the service to show up. While waiting, you should open Azure Purview. Open the data map and go to integration runtimes. Hit + new and select the self-hosted from the panel and continue.
+5. When everything is working, you must download the self-hosted integration runtime package. The installation is straight forward. Just hit next and wait for the service to show up. While waiting, you should open Microsoft Purview. Open the data map and go to integration runtimes. Hit + new and select the self-hosted from the panel and continue.
 
    ![](../images/module11/pic13.png)
 
@@ -141,7 +141,7 @@ For securely accessing your storage account you will store your storage account 
 
    ![](../images/module11/pic17.png)
 
-2. After deployment you need to ensure that Azure Purview has read access to the Key Vault. Open Key Vault, go to Access configuration, and hit Go to access policies.
+2. After deployment you need to ensure that Microsoft Purview has read access to the Key Vault. Open Key Vault, go to Access configuration, and hit Go to access policies.
 
    ![](../images/module11/pic19.png)
 
@@ -149,7 +149,7 @@ For securely accessing your storage account you will store your storage account 
 
    ![](../images/module11/pic20.png)
 
-4. For providing access you need to use the system-managed identity of Azure Purview. This identity has the same name as your Purview instance name. Find it, select it and hit Next.
+4. For providing access you need to use the system-managed identity of Microsoft Purview. This identity has the same name as your Purview instance name. Find it, select it and hit Next.
 
    ![](../images/module11/pic21.png)
 
@@ -167,9 +167,9 @@ For securely accessing your storage account you will store your storage account 
 
 <div align="right"><a href="#module-11---securely-scan-sources-using-self-hosted-integration-runtimes">↥ back to top</a></div>
 
-## 6. Key Vault configuration within Azure Purview
+## 6. Key Vault configuration within Microsoft Purview
 
-Now the Storage Account Key has been stored in the Key Vault it is time to move back to Azure Purview for your final configuration. Go to your settings panel on the right and select Credentials. 
+Now the Storage Account Key has been stored in the Key Vault it is time to move back to Microsoft Purview for your final configuration. Go to your settings panel on the right and select Credentials. 
 
 1. Click on Manage Key Vault connections, provide a new name and select your newly created key vault from the list. Hit create for saving.
 
@@ -232,7 +232,7 @@ This has been a long read, but also demonstrates how you can use your own integr
 
 ## :tada: Summary
 
-In this module, you learned how to install the self-hosted integration runtime to your virtual machine network and get it connected up to Azure Purview. If you'd like continue with this module to complete further tasks, please feel free to complete the tutorial links below:
+In this module, you learned how to install the self-hosted integration runtime to your virtual machine network and get it connected up to Microsoft Purview. If you'd like continue with this module to complete further tasks, please feel free to complete the tutorial links below:
 
 - [Setting up authentication for a scan](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#setting-up-authentication-for-a-scan)
 - [Register SQL Server on VM as a data source in Purview](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#register-a-sql-server-data-source)

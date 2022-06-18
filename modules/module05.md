@@ -4,15 +4,15 @@
 
 ## :loudspeaker: Introduction
 
-In Azure Purview, classifications are similar to subject tags, and are used to mark and identify data of a specific type that's found within your data estate during scanning. Classifications help you to better manage your data. You can use them for prioritizing your data efforts or improve data security and regulatory compliance. Classifications also improve user productivity and decision-making, and allow you to reduce costs by classifying and finding unused data.
+In Microsoft Purview, classifications are similar to subject tags, and are used to mark and identify data of a specific type that's found within your data estate during scanning. Classifications help you to better manage your data. You can use them for prioritizing your data efforts or improve data security and regulatory compliance. Classifications also improve user productivity and decision-making, and allow you to reduce costs by classifying and finding unused data.
 
-Azure Purview provides a large set of default classifications that represent typical data types that might exist in your data estate (e.g. email address, credit card number, passport number, etc). In this module you learn how to create a custom classification, which can be an alternative to default classifications when they don't meet your needs.
+Microsoft Purview provides a large set of default classifications that represent typical data types that might exist in your data estate (e.g. email address, credit card number, passport number, etc). In this module you learn how to create a custom classification, which can be an alternative to default classifications when they don't meet your needs.
 
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * An Azure Data Lake Storage Gen2 Account (see [module 00](../modules/module00.md)).
-* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :hammer: Tools
 
@@ -180,7 +180,7 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 
     ![Test Connection](../images/module05/05.18-scan-test.png)
 
-3. By default, Azure Purview will have the parent Azure Data Lake Storage Gen2 account selected and therefore include all paths in scope. To reduce the scope, deselect the parent and select the **Twitter** folder only. Click **Continue**.
+3. By default, Microsoft Purview will have the parent Azure Data Lake Storage Gen2 account selected and therefore include all paths in scope. To reduce the scope, deselect the parent and select the **Twitter** folder only. Click **Continue**.
 
     ![Scope Scan](../images/module05/05.19-scan-scope.png)
 

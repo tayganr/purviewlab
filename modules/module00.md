@@ -4,7 +4,7 @@
 
 ## :loudspeaker: Introduction
 
-In order to follow along with the Azure Purview lab exercises, you need to provision a set of resources.
+In order to follow along with the Microsoft Purview lab exercises, you need to provision a set of resources.
 
 ## :thinking: Prerequisites
 
@@ -43,10 +43,10 @@ In order to follow along with the Azure Purview lab exercises, you need to provi
 
     ![Resource Group](../images/module00/00.04-deploy-resources.png)
 
-Note: The Azure Purview account resource has been purposely **excluded** from the template so that participants have an opportunity to understand how to deploy an Azure Purview account via the Azure Portal.
+Note: The Microsoft Purview account resource has been purposely **excluded** from the template so that participants have an opportunity to understand how to deploy a Microsoft Purview account via the Azure Portal.
 
 ## :tada: Summary
 
-By successfully deploying the Azure Purview lab template, you have the Azure resources needed to follow along with the learning exercises.
+By successfully deploying the Microsoft Purview lab template, you have the Azure resources needed to follow along with the learning exercises.
 
 [Continue >](../modules/module01.md)

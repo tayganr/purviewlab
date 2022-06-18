@@ -4,15 +4,15 @@
 
 ## :loudspeaker: Introduction
 
-Once sources have been registered and scanned, the underlying data catalog will begin to populate with assets that represent real-world objects (e.g. a table in an Azure SQL Database, a Power BI report, etc.) The surfacing of these assets via Azure Purview's search experience helps empower data consumers to find data assets that matters to them.
+Once sources have been registered and scanned, the underlying data catalog will begin to populate with assets that represent real-world objects (e.g. a table in an Azure SQL Database, a Power BI report, etc.) The surfacing of these assets via Microsoft Purview's search experience helps empower data consumers to find data assets that matters to them.
 
 In this module, you'll learn to edit technical metadata by adding definitions and classifications to data attributes, such as tables and columns. You'll learn to assign technical ownership by linking technical attributes to contact persons. You'll learn to use classifications to mark data. All these activities, such as categorizing data, will help you to better manage your data.
 
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
-* An Azure Purview catalog with some assets (see [module 02](../modules/module02.md)).
+* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
+* An Microsoft Purview catalog with some assets (see [module 02](../modules/module02.md)).
 
 ## :dart: Objectives
 
@@ -43,7 +43,7 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 
 > :bulb: **Did you know?**
 >
-> While **Purview Studio** is provided as the default user experience, customers and partners can interface with the underlying platform using the [Azure Purview REST API](https://docs.microsoft.com/en-us/rest/api/purview/). The openness of the platform enables the possibility of integrating Azure Purview with custom user interfaces as well as the ability to perform read/write operations programmatically. 
+> While **Purview Studio** is provided as the default user experience, customers and partners can interface with the underlying platform using the [Microsoft Purview REST API](https://docs.microsoft.com/en-us/rest/api/purview/). The openness of the platform enables the possibility of integrating Microsoft Purview with custom user interfaces as well as the ability to perform read/write operations programmatically. 
 
 <div align="right"><a href="#module-03---search--browse">↥ back to top</a></div>
 
@@ -138,7 +138,7 @@ While the search experience is ideal for keyword based discovery, Purview Studio
 
 ## 4. Bulk Edit
 
-Azure Purview allows us to perform certain operations (add/replace/remove) against a subset of attributes (Expert, Owner, Term, Classification) in bulk directly within Purview Studio.
+Microsoft Purview allows us to perform certain operations (add/replace/remove) against a subset of attributes (Expert, Owner, Term, Classification) in bulk directly within Purview Studio.
 
 
 1. Open Purview Studio and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.

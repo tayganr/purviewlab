@@ -4,16 +4,16 @@
 
 ## :loudspeaker: Introduction
 
-Azure Purview is a unified data governance solution that runs on Azure. Some people say it is a data catalog, but it better to Purview as a control framework for managing and controlling your data landscape. For example, you can use Azure Purview as a metastore for dynamically orchestrating your data pipelines.
+Microsoft Purview is a unified data governance solution that runs on Azure. Some people say it is a data catalog, but it better to Purview as a control framework for managing and controlling your data landscape. For example, you can use Microsoft Purview as a metastore for dynamically orchestrating your data pipelines.
 
-When Azure Purview is deployed, a managed event hub is created as part of your Purview account creation. This opens up many possibilities when integrating Azure Purview with other applications. Because of the open nature of Azure Purview, you can automate and integration different aspects. For example, you can trigger a workflow outside Azure Purview, when new data is scanned, or make an API call for fetching and storing additional metadata inside Purview. In this tutorial I want to show you how this works.
+When Microsoft Purview is deployed, a managed event hub is created as part of your Purview account creation. This opens up many possibilities when integrating Microsoft Purview with other applications. Because of the open nature of Microsoft Purview, you can automate and integration different aspects. For example, you can trigger a workflow outside Microsoft Purview, when new data is scanned, or make an API call for fetching and storing additional metadata inside Purview. In this tutorial I want to show you how this works.
 
 In this lab you'll learn how read and publish events using Azure Event Hubs and NodeJS.
 
 ## :thinking: Prerequisites
 
 - An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-- An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+- An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
 - NodeJS installed: [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 ## :dart: Objectives
@@ -42,7 +42,7 @@ In this lab you'll learn how read and publish events using Azure Event Hubs and 
 
 ## 2. Read events
 
-1. For reading events from Azure Purview you can use the sample code below. Important is to copy and paste the connection string in the configuration section at the top. All changes are published to the ATLAS_ENTITIES topic, so also pay attention to this.
+1. For reading events from Microsoft Purview you can use the sample code below. Important is to copy and paste the connection string in the configuration section at the top. All changes are published to the ATLAS_ENTITIES topic, so also pay attention to this.
 
    ```javascript
    var Transform = require('stream').Transform;
@@ -107,7 +107,7 @@ In this lab you'll learn how read and publish events using Azure Event Hubs and 
    node consumer.js
    ```
 
-3. For creating notifications go back to your Azure Purview Studio. Make some changes to your environment, for example, by scanning an existing source. If everything goes well, you should see the following output on the screen:
+3. For creating notifications go back to your Microsoft Purview Studio. Make some changes to your environment, for example, by scanning an existing source. If everything goes well, you should see the following output on the screen:
 
    ![](../images/module13/kafka02.png)
 
@@ -295,7 +295,7 @@ In this lab you'll learn how read and publish events using Azure Event Hubs and 
 
    ![](../images/module13/kafka03.png)
 
-4. And finally you should see your newly created object in Azure Purview itself:
+4. And finally you should see your newly created object in Microsoft Purview itself:
 
    ![](../images/module13/kafka04.png)
 
@@ -305,7 +305,7 @@ As demonstrated in this tutorial you can programmatically monitor for metadata c
 
 ## :mortar_board: Knowledge Check
 
-1. When publishing events to Azure Purview you need to make use of the ATLAS_HOOK topic name.
+1. When publishing events to Microsoft Purview you need to make use of the ATLAS_HOOK topic name.
 
    A) True  
    B) False
@@ -314,9 +314,9 @@ As demonstrated in this tutorial you can programmatically monitor for metadata c
 
 ## :tada: Summary
 
-In this module, you learned how to send events to and receive events from Azure Purview's Atlas Kafka topics via event hub using the NodeJS library. If you'd like continue with this module to complete further tasks, please feel free to complete the tutorial links below:
+In this module, you learned how to send events to and receive events from Microsoft Purview's Atlas Kafka topics via event hub using the NodeJS library. If you'd like continue with this module to complete further tasks, please feel free to complete the tutorial links below:
 
-- [Publish messages to and process messages from Azure Purview's Atlas Kafka topics via Event Hubs using .NET](https://docs.microsoft.com/en-us/azure/purview/manage-kafka-dotnet)
-- [Modern Data Pipelines with Azure Synapse Analytics and Azure Purview](https://piethein.medium.com/modern-data-pipelines-with-azure-synapse-analytics-and-azure-purview-fe752d874c67)
+- [Publish messages to and process messages from Microsoft Purview's Atlas Kafka topics via Event Hubs using .NET](https://docs.microsoft.com/en-us/azure/purview/manage-kafka-dotnet)
+- [Modern Data Pipelines with Azure Synapse Analytics and Microsoft Purview](https://piethein.medium.com/modern-data-pipelines-with-azure-synapse-analytics-and-azure-purview-fe752d874c67)
 
 [Back to Home >](../README.md)

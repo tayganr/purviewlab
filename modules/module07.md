@@ -5,16 +5,16 @@
 ```diff
 !                               << PLEASE READ BEFORE PROCEEDING >>                                
 !                                                                                                  
-! * Insights within Azure Purview can take several hours to surface post the completion of a scan. 
+! * Insights within Microsoft Purview can take several hours to surface post the completion of a scan. 
 ! * At this point of the workshop, only a limited number of data visualisations may be populated.  
-! * To populate all reports with data, Azure Purview requires an environment with a variety of     
+! * To populate all reports with data, Microsoft Purview requires an environment with a variety of     
 ! sources and assets to be scanned that is beyond the scope of this workshop.                      
 ! * The screenshots and information below, has been provided so that you can conceptualise the type
 ! of insights that can be gleaned from a fully populated environment.                              
 ```
 ## :loudspeaker: Introduction
 
-Insights provides customers, a single pane of glass view into their catalog and further aims to provide specific insights to the data source administrators, business users, data stewards, data officer, and security administrators. Azure Purview currently has the following reports available:
+Insights provides customers, a single pane of glass view into their catalog and further aims to provide specific insights to the data source administrators, business users, data stewards, data officer, and security administrators. Microsoft Purview currently has the following reports available:
 
 * Assets
 * Scans
@@ -25,7 +25,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
 * Set up and complete a scan (see [module 02](../modules/module02.md)).
 
 ## :dart: Objectives
@@ -178,7 +178,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
     >
     > **Sensitivity labels** state how sensitive data is in your organization. For example, data contained within a particular asset might be `highly confidential`. **Classifications** on the other hand indicate the type of data values (e.g. Driver's License Number, Email Address, SWIFT Code, etc) 
     >
-    > Azure Purview's ability to apply sensitivity labels is due to the close integration with **Microsoft Information Protection** offered in Microsoft 365. Note: You must turn on Information Protection for Azure Purview in the Microsoft 365 compliance center. For more information, check out how to [Labeling in Azure Purview](https://docs.microsoft.com/en-us/azure/purview/create-sensitivity-label).
+    > Microsoft Purview's ability to apply sensitivity labels is due to the close integration with **Microsoft Information Protection** offered in Microsoft 365. Note: You must turn on Information Protection for Microsoft Purview in the Microsoft 365 compliance center. For more information, check out how to [Labeling in Microsoft Purview](https://docs.microsoft.com/en-us/azure/purview/create-sensitivity-label).
 
     ![Sensitivity Labels Insights](../images/module07/07.20-labels-insights.png)
 

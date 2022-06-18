@@ -15,7 +15,7 @@ In this lab you learn how to create terms using a system and custom term templat
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :dart: Objectives
 
@@ -77,7 +77,7 @@ In this lab you learn how to create terms using a system and custom term templat
     ```
     **Resource Name**
     ```
-    Azure Purview
+    Microsoft Purview
     ```
     **Resource Link**
     ```
@@ -275,6 +275,6 @@ In this lab you learn how to create terms using a system and custom term templat
 
 ## :tada: Summary
 
-This module provided an overview of how to create, export, and import terms into the Azure Purview glossary.
+This module provided an overview of how to create, export, and import terms into the Microsoft Purview glossary.
 
 [Continue >](../modules/module05.md)

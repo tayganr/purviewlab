@@ -4,20 +4,20 @@
 
 ## :loudspeaker: Introduction
 
-While Purview Studio is the default interface for Azure Purview, the underlying platform can be accessed via a set of APIs. This opens up the possibility of a variety of scenarios including:
+While Purview Studio is the default interface for Microsoft Purview, the underlying platform can be accessed via a set of APIs. This opens up the possibility of a variety of scenarios including:
 
-  * Working with Azure Purview assets programmatically (e.g. bulk create/read/update/delete).
+  * Working with Microsoft Purview assets programmatically (e.g. bulk create/read/update/delete).
   * Adding support for other data sources beyond those supported out of the box.
   * Extending the lineage functionality to other ETL processes.
-  * Embedding Azure Purview asset data within custom user experiences.
-  * Triggering Azure Purview scans to run off the back of a custom event.
+  * Embedding Microsoft Purview asset data within custom user experiences.
+  * Triggering Microsoft Purview scans to run off the back of a custom event.
 
-The primary focus of this module is the **catalog** which is based on the open-source [Apache Atlas](https://atlas.apache.org/) project. Read below for more details on Apache Atlas and how it relates to Azure Purview.
+The primary focus of this module is the **catalog** which is based on the open-source [Apache Atlas](https://atlas.apache.org/) project. Read below for more details on Apache Atlas and how it relates to Microsoft Purview.
 
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* An Azure Azure Purview account (see [module 01](../modules/module01.md)).
+* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :hammer: Tools
 
@@ -27,17 +27,17 @@ The primary focus of this module is the **catalog** which is based on the open-s
 
 * Understand the high-level Apache Atlas concepts.
 * Generate an access token.
-* Read data from the Azure Purview platform.
+* Read data from the Microsoft Purview platform.
 
 ## Table of Contents
 
 1. [Apache Atlas](#1-apache-atlas)
 2. [Register an Application](#2-register-an-application)
 3. [Generate a Client Secret](#3-generate-a-client-secret)
-4. [Provide Service Principal Access to Azure Purview](#4-provide-service-principal-access-to-azure-purview)
+4. [Provide Service Principal Access to Microsoft Purview](#4-provide-service-principal-access-to-azure-purview)
 5. [Get an Access Token](#5-get-an-access-token)
-6. [Read data from Azure Purview](#6-read-data-from-azure-purview)
-7. [Read glossary in Azure Purview](#7-read-glossary-in-azure-purview)
+6. [Read data from Microsoft Purview](#6-read-data-from-azure-purview)
+7. [Read glossary in Microsoft Purview](#7-read-glossary-in-azure-purview)
 8. [Create glossary terms](#8-create-glossary-terms)
 9. [Add/edit simple attribute for a glossary term](#9-addedit-simple-attribute-for-a-glossary-term)
 10. [Add/edit complex attribute for a glossary term](#10-addedit-complex-attribute-for-a-glossary-term)
@@ -55,7 +55,7 @@ The primary focus of this module is the **catalog** which is based on the open-s
 >
 > Source: [Apache.org](https://atlas.apache.org/#/)
 
-Azure Purview's **data catalog** is largely based on **Apache Atlas**, and therefore shares much of the same surface area that allows users to programmatically perform CRUD (CREATE/READ/UPDATE/DELETE) operations over Azure Purview assets.
+Microsoft Purview's **data catalog** is largely based on **Apache Atlas**, and therefore shares much of the same surface area that allows users to programmatically perform CRUD (CREATE/READ/UPDATE/DELETE) operations over Microsoft Purview assets.
 
 ![](../images/module10/10.11-purview-platform.png)
 
@@ -630,13 +630,13 @@ Returns lineage information about an entity (e.g. `Azure Data Factory Copy Activ
 </p>
 </details>
 
-Note: While Azure Purview is using Apache Atlas, there are certain areas such as Discovery which is responsible for search, where Azure Purview has deviated and implemented a custom search API.
+Note: While Microsoft Purview is using Apache Atlas, there are certain areas such as Discovery which is responsible for search, where Microsoft Purview has deviated and implemented a custom search API.
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
 ## 2. Register an Application
 
-To invoke the REST API, we must first register an application (i.e. service principal) that will act as the identity that the Azure Purview platform reognizes and is configured to trust.    
+To invoke the REST API, we must first register an application (i.e. service principal) that will act as the identity that the Microsoft Purview platform reognizes and is configured to trust.    
 
 > :bulb: **Did you know?**
 >
@@ -690,7 +690,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
-## 4. Provide Service Principal Access to Azure Purview
+## 4. Provide Service Principal Access to Microsoft Purview
 
 1. Navigate to **Purview Studio** > **Data map** > **Collections** > **YOUR_ROOT_COLLECTION**, and then click **Add data curators**.
 
@@ -708,7 +708,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
     > :bulb: **Did you know?**
     >
-    > The OAuth2 service endpoint is used to gain access to protected resources such as Azure Purview. The HTTP request enables us to acquire an `access_token`, this will subsequently be used to query the Azure Purview API.
+    > The OAuth2 service endpoint is used to gain access to protected resources such as Microsoft Purview. The HTTP request enables us to acquire an `access_token`, this will subsequently be used to query the Microsoft Purview API.
     
     | Property | Value |
     | --- | --- |
@@ -729,9 +729,9 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
 
-## 6. Read data from Azure Purview
+## 6. Read data from Microsoft Purview
 
-1. Within the Azure portal, open the Azure Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.
+1. Within the Azure portal, open the Microsoft Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.
 
     ![Purview Properties](../images/module10/10.11-purview-properties.png)
 
@@ -761,7 +761,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
     > :bulb: **Did you know?**
     >
-    > While Azure Purview provides a number of system built type definitions for a variety of object types, Customers can use the API to create their own custom type definitions.
+    > While Microsoft Purview provides a number of system built type definitions for a variety of object types, Customers can use the API to create their own custom type definitions.
 
     ![](../images/module10/10.12-typedef-search.png)
 
@@ -769,7 +769,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
 <div align="right"><a href="#module-10---rest-api">↥ back to top</a></div>
  
  
- ## 7. Read glossary in Azure Purview
+ ## 7. Read glossary in Microsoft Purview
  
  1. Using [Postman](https://www.postman.com/product/rest-client/) once more, create a new **HTTP request** as per the details below. 
 
@@ -957,7 +957,7 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. In thi
 
 ## 12. Register custom entity types and lineage
 
-1. Within the Azure portal, open the Azure Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.
+1. Within the Azure portal, open the Microsoft Purview account, navigate to **Properties** and find the **Atlas endpoint**. **Copy** this value for later use.
 
     ![Purview Properties](../images/module10/10.11-purview-properties.png)
 
@@ -1075,7 +1075,7 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. In thi
 
    * Submit and validate your output.
 
-   * You will have two newly created entities. Also validate within your Azure Purview Studio environment that these new entities are created. Don't forget to capture the GUID from the second entity.
+   * You will have two newly created entities. Also validate within your Microsoft Purview Studio environment that these new entities are created. Don't forget to capture the GUID from the second entity.
 
    ![](../images/module10/rest06.png)
 
@@ -1124,18 +1124,18 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. In thi
 
 [http://aka.ms/purviewlab/q10](http://aka.ms/purviewlab/q10)
 
-1. The Azure Purview API is largely based on which open source project?
+1. The Microsoft Purview API is largely based on which open source project?
 
     A ) Apache Maven  
     B ) Apache Spark  
     C ) Apache Atlas
 
-2. The Azure Purview API only works with Python.
+2. The Microsoft Purview API only works with Python.
 
     A ) True  
     B ) False  
 
-3. The Azure Purview API can be used to create custom lineage between data processes and data assets.
+3. The Microsoft Purview API can be used to create custom lineage between data processes and data assets.
 
     A ) True  
     B ) False  
@@ -1144,6 +1144,6 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. In thi
 
 ## :tada: Summary
 
-In this module, you learned how to get started with the Azure Purview REST API. To learn more about the Azure Purview REST API, check out the Azure Purview [Swagger documentation](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).
+In this module, you learned how to get started with the Microsoft Purview REST API. To learn more about the Microsoft Purview REST API, check out the Microsoft Purview [Swagger documentation](https://github.com/Azure/Purview-Samples/raw/master/rest-api/PurviewCatalogAPISwagger.zip).
 
 [Continue >](../modules/module11.md)

@@ -19,7 +19,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
 * Create a Microsoft Purview account using the Azure portal.
 * Provide additional users access to Microsoft Purview's data plane.
 
-##  :bookmark_tabs: Table of Contents
+## :bookmark_tabs: Table of Contents
 
 | #  | Section | Role |
 | --- | --- | --- |
@@ -82,7 +82,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
 
 By default, the identity used to create the Microsoft Purview account resource will have full access tothe Microsoft Purview Governance Portal. The following instructions detail how to provide access to additional users within your Azure Active Directory.
 
-1. Navigate to your Microsoft Purview account and click **Open** within the **Open the Microsoft Purview Governance Portal** tile.
+1. Navigate to your Microsoft Purview account and click the **Open Microsoft Purview Governance Portal** tile.
 
     ![Access Control](../images/module01/01.07-open-studio.png)
 
@@ -94,7 +94,6 @@ By default, the identity used to create the Microsoft Purview account resource w
 
     ![Collections](../images/module01/01.09-datamap-collections.png)
 
-    
 4. Select **Role assignments**.
 
     ![Role assignments](../images/module01/01.10-collections-roleassignments.png)

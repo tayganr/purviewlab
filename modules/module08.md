@@ -105,7 +105,7 @@ Metrics can be accessed from the Azure Portal for a Microsoft Purview account in
 
     ![Save Diagnostic Setting](../images/module08/08.15-diagnostic-save.png)
 
-3. To test the capture of raw events, trigger a full scan by navigating to **Microsoft Purview Studio** > **Data map** > **Sources** and click **View details** on an existing source.
+3. To test the capture of raw events, trigger a full scan by navigating to **Microsoftthe Microsoft Purview Governance Portal** > **Data map** > **Sources** and click **View details** on an existing source.
 
     ![Source Details](../images/module08/08.16-sources-details.png)
 

@@ -32,7 +32,7 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 
 ## 1. Search Catalog
 
-1. Open Purview Studio and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
+1. Openthe Microsoft Purview Governance Portal and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 
@@ -43,7 +43,7 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 
 > :bulb: **Did you know?**
 >
-> While **Purview Studio** is provided as the default user experience, customers and partners can interface with the underlying platform using the [Microsoft Purview REST API](https://docs.microsoft.com/en-us/rest/api/purview/). The openness of the platform enables the possibility of integrating Microsoft Purview with custom user interfaces as well as the ability to perform read/write operations programmatically. 
+> While the **Microsoft Purview Governance Portal** is provided as the default user experience, customers and partners can interface with the underlying platform using the [Microsoft Purview REST API](https://docs.microsoft.com/en-us/rest/api/purview/). The openness of the platform enables the possibility of integrating Microsoft Purview with custom user interfaces as well as the ability to perform read/write operations programmatically. 
 
 <div align="right"><a href="#module-03---search--browse">↥ back to top</a></div>
 
@@ -116,9 +116,9 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 
 ## 3. Browse Assets
 
-While the search experience is ideal for keyword based discovery, Purview Studio allows alternate methods of browsing assets (i.e. by collection OR by source type).
+While the search experience is ideal for keyword based discovery,the Microsoft Purview Governance Portal allows alternate methods of browsing assets (i.e. by collection OR by source type).
 
-1. Open Purview Studio and from the **Data catlog** screen, click **Browse assets**.
+1. Openthe Microsoft Purview Governance Portal and from the **Data catlog** screen, click **Browse assets**.
 
     ![Browse Assets](../images/module03/03.09-home-browse.png)
 
@@ -138,10 +138,10 @@ While the search experience is ideal for keyword based discovery, Purview Studio
 
 ## 4. Bulk Edit
 
-Microsoft Purview allows us to perform certain operations (add/replace/remove) against a subset of attributes (Expert, Owner, Term, Classification) in bulk directly within Purview Studio.
+Microsoft Purview allows us to perform certain operations (add/replace/remove) against a subset of attributes (Expert, Owner, Term, Classification) in bulk directly withinthe Microsoft Purview Governance Portal.
 
 
-1. Open Purview Studio and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
+1. Openthe Microsoft Purview Governance Portal and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 
@@ -173,17 +173,17 @@ Microsoft Purview allows us to perform certain operations (add/replace/remove) a
     B ) Classification  
     C ) Size  
 
-2. Using Purview Studio (UI), you can edit an asset and manually update an assets Description?
+2. Usingthe Microsoft Purview Governance Portal (UI), you can edit an asset and manually update an assets Description?
 
     A ) True  
     B ) False  
 
-3. Using Purview Studio (UI), you can edit an asset and manually add and remove Classifications?
+3. Usingthe Microsoft Purview Governance Portal (UI), you can edit an asset and manually add and remove Classifications?
 
     A ) True  
     B ) False  
 
-4. Using Purview Studio (UI), you can edit an asset and manually update an assets Technical Properties (e.g. qualifiedName, partitionCount, totalSizeBytes, etc)?
+4. Usingthe Microsoft Purview Governance Portal (UI), you can edit an asset and manually update an assets Technical Properties (e.g. qualifiedName, partitionCount, totalSizeBytes, etc)?
 
     A ) True  
     B ) False  

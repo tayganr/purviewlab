@@ -131,7 +131,7 @@ In order to securely store our Azure SQL Database password, we need to generate 
 
 To make the secret accessible to Microsoft Purview, we must first establish a connection to Azure Key Vault.
 
-1. Open **Purview Studio**, navigate to **Management Center** > **Credentials**, click **Manage Key Vault connections**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Management Center** > **Credentials**, click **Manage Key Vault connections**.
 
     ![Manage Key Vault Connections](../images/module02/02.57-management-vault.png)
 
@@ -183,7 +183,7 @@ To make the secret accessible to Microsoft Purview, we must first establish a co
 
 ## 5. Register a Source (Azure SQL DB)
 
-1. Open Purview Studio, navigate to **Data map** > **Sources**, and click **Register**.
+1. Openthe Microsoft Purview Governance Portal, navigate to **Data map** > **Sources**, and click **Register**.
 
     ![](../images/module02/02.42-sources-register.png)
 
@@ -199,7 +199,7 @@ To make the secret accessible to Microsoft Purview, we must first establish a co
 
 ## 6. Scan a Source with Azure Key Vault Credentials
 
-1. Open Purview Studio, navigate to **Data map** > **Sources**, and within the Azure SQL Database tile, click the **New Scan** button.
+1. Openthe Microsoft Purview Governance Portal, navigate to **Data map** > **Sources**, and within the Azure SQL Database tile, click the **New Scan** button.
 
     ![](../images/module02/02.64-sources-scansql.png)
 

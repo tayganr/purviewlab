@@ -39,7 +39,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 ## 1. Create a Term (System Default Term Template)
 
-1. Open Purview Studio and from the **Data catalog**, click **Manage glossary**.
+1. Openthe Microsoft Purview Governance Portal and from the **Data catalog**, click **Manage glossary**.
 
     ![](../images/module04/04.00-manage-glossary.png)
 
@@ -88,7 +88,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 ## 2. Create a Term (Custom Term Template)
 
-1. Open Purview Studio and from the **Data catalog**, click **Manage glossary**.
+1. Openthe Microsoft Purview Governance Portal and from the **Data catalog**, click **Manage glossary**.
 
     ![](../images/module04/04.00-manage-glossary.png)
 
@@ -184,7 +184,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
     > :bulb: **Did you know?**
     >
-    > When using Purview Studio to **Export terms**, all terms selected for the export must use the same **Term template**. Selecting terms from different term templates will result in the **Export terms** button being greyed out.
+    > When usingthe Microsoft Purview Governance Portal to **Export terms**, all terms selected for the export must use the same **Term template**. Selecting terms from different term templates will result in the **Export terms** button being greyed out.
 
     ![Export Terms](../images/module04/04.17-glossary-export.png)
 
@@ -266,7 +266,7 @@ In this lab you learn how to create terms using a system and custom term templat
     B ) Antonyms  
     C ) Related terms  
 
-3. Glossary terms created using different term templates can be exported together using the Purview Studio (UI) glossary "Export terms" functionality?
+3. Glossary terms created using different term templates can be exported together using thethe Microsoft Purview Governance Portal (UI) glossary "Export terms" functionality?
 
     A ) True  
     B ) False  

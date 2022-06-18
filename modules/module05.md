@@ -36,7 +36,7 @@ Microsoft Purview provides a large set of default classifications that represent
 
 ## 1. Create a Classification
 
-1. Open Purview Studio, navigate to **Data map** > **Classifications** (under Annotation management) and click **New**.
+1. Openthe Microsoft Purview Governance Portal, navigate to **Data map** > **Classifications** (under Annotation management) and click **New**.
 
     ![New Classification](../images/module05/05.01-classifications-new.png)
 
@@ -172,7 +172,7 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 
 ## 5. Scan an Azure Data Lake Storage Gen2 Account
 
-1. Open Purview Studio, navigate to **Data map** > **Sources** and click **New Scan** within the Azure Data Lake Storage Gen2 tile. Note: If you have not registered your Azure Data Lake Storage Gen2 Account, see [module 02](../modules/module02.md).
+1. Openthe Microsoft Purview Governance Portal, navigate to **Data map** > **Sources** and click **New Scan** within the Azure Data Lake Storage Gen2 tile. Note: If you have not registered your Azure Data Lake Storage Gen2 Account, see [module 02](../modules/module02.md).
 
     ![New Scan](../images/module05/05.17-sources-newscan.png)
 

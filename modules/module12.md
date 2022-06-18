@@ -82,7 +82,7 @@ With the newly released features Microsoft Purview now provides three options fo
 - **Self-hosted integration runtimes (SHIR)**: this option particularly useful for VM-based data sources or applications that either sit in a private network (VNET) or other networks, such as on-premises.
 - **Managed Virtual Network Integration Runtime**: this new option supports connecting to data stores using private link service in private network environment. This ensures that data scanning process is completely isolated and secure, while also being fully managed.
 
-1. For this demonstration we will use the Managed Virtual Network Integration Runtime. Use your Microsoft Purview Studio Portal and navigate to your data map on the left. Select integration runtime and choose Azure.
+1. For this demonstration we will use the Managed Virtual Network Integration Runtime. Use your Microsoftthe Microsoft Purview Governance Portal Portal and navigate to your data map on the left. Select integration runtime and choose Azure.
 
    ![](../images/module12/Step09.png)
 

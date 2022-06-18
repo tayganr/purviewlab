@@ -38,7 +38,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## 1. Create an Azure Data Factory Connection in Microsoft Purview
 
-1. Open Purview Studio, navigate to **Management** > **Data Factory** (under Lineage connections) and click **New**.
+1. Openthe Microsoft Purview Governance Portal, navigate to **Management** > **Data Factory** (under Lineage connections) and click **New**.
 
     > :warning: To view/add/remove Data Factory connections, you need to be assigned the **Collection admin** role on the root collection.
 
@@ -139,7 +139,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## 3. View Lineage in Microsoft Purview
 
-1. Open Purview Studio, from the **Data catalog** screen click **Browse assets**.
+1. Openthe Microsoft Purview Governance Portal, from the **Data catalog** screen click **Browse assets**.
 
     ![](../images/module06/06.29-purview-browse.png)
 

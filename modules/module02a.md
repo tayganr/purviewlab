@@ -126,7 +126,7 @@ Before proceeding with the following steps, you will need to:
 >
 > For more information, check out [Collection Architectures and Best Practices](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections).
 
-1. Open Purview Studio, navigate to **Data Map** > **Collections**, and click  **Add a collection**.
+1. Openthe Microsoft Purview Governance Portal, navigate to **Data Map** > **Collections**, and click  **Add a collection**.
 
     ![New Collection](../images/module02/02.18-sources-collection.png)
 
@@ -138,7 +138,7 @@ Before proceeding with the following steps, you will need to:
 
 ## 4. Register a Source (ADLS Gen2)
 
-1. Open Purview Studio, navigate to **Data Map** > **Sources**, and click on **Register**.
+1. Openthe Microsoft Purview Governance Portal, navigate to **Data Map** > **Sources**, and click on **Register**.
 
     ![Register](../images/module02/02.20-sources-register.png)
 
@@ -158,7 +158,7 @@ Before proceeding with the following steps, you will need to:
 
 ## 5. Scan a Source with the Microsoft Purview Managed Identity
 
-1. Open Purview Studio, navigate to **Data Map** > **Sources**, and within the Azure Data Lake Storage Gen2 tile, click the **New Scan** button.
+1. Openthe Microsoft Purview Governance Portal, navigate to **Data Map** > **Sources**, and within the Azure Data Lake Storage Gen2 tile, click the **New Scan** button.
 
     ![New Scan](../images/module02/02.23-scan-new.png)
 
@@ -198,7 +198,7 @@ Before proceeding with the following steps, you will need to:
 
 ## 6. View Assets
 
-1. Navigate to **Purview Studio** > **Data catalog**, and perform a wildcard search by typing the asterisk character (`*`) into the search box and hitting the Enter key to submit the query.
+1. Navigate to the **Microsoft Purview Governance Portal** > **Data catalog**, and perform a wildcard search by typing the asterisk character (`*`) into the search box and hitting the Enter key to submit the query.
 
     ![](../images/module02/02.80-wildcard-search.png)
 

@@ -4,7 +4,7 @@
 
 ## :loudspeaker: Introduction
 
-While Purview Studio is the default interface for Microsoft Purview, the underlying platform can be accessed via a set of APIs. This opens up the possibility of a variety of scenarios including:
+Whilethe Microsoft Purview Governance Portal is the default interface for Microsoft Purview, the underlying platform can be accessed via a set of APIs. This opens up the possibility of a variety of scenarios including:
 
   * Working with Microsoft Purview assets programmatically (e.g. bulk create/read/update/delete).
   * Adding support for other data sources beyond those supported out of the box.
@@ -692,7 +692,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 ## 4. Provide Service Principal Access to Microsoft Purview
 
-1. Navigate to **Purview Studio** > **Data map** > **Collections** > **YOUR_ROOT_COLLECTION**, and then click **Add data curators**.
+1. Navigate to the **Microsoft Purview Governance Portal** > **Data map** > **Collections** > **YOUR_ROOT_COLLECTION**, and then click **Add data curators**.
 
     ![](../images/module10/10.14-spn-role.png)
 
@@ -830,7 +830,7 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. To cre
  
   ![](../images/module10/10.20-create-term-200OK.png)
  
- 3. Navigate to **Purview Studio > Manage Glossary** and write in the search bar the name of your newly created term to check if this appears in your glossary:
+ 3. Navigate to the **Microsoft Purview Governance Portal > Manage Glossary** and write in the search bar the name of your newly created term to check if this appears in your glossary:
  
  ![](../images/module10/10.21-create-term-studio.png)
  
@@ -870,7 +870,7 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. To upd
  
  ![](../images/module10/10.24-edit-term-200OK.png)
  
- 3. Navigate to **Purview Studio > Manage Glossary** and write in the search bar the name of your term to check if this appears with the new status:
+ 3. Navigate to the **Microsoft Purview Governance Portal > Manage Glossary** and write in the search bar the name of your term to check if this appears with the new status:
  
  ![](../images/module10/10.25-edit-term-studio.png)
  
@@ -913,7 +913,7 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. In thi
  
  ![](../images/module10/10.28-edit-contacts-200OK.png)
  
- 3. Navigate to **Purview Studio > Manage Glossary** and write in the search bar the name of your term to check if this appears with the corresponding contacts:
+ 3. Navigate to the **Microsoft Purview Governance Portal > Manage Glossary** and write in the search bar the name of your term to check if this appears with the corresponding contacts:
  
  ![](../images/module10/10.29-edit-contacts-studio.png)
  
@@ -949,7 +949,7 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. In thi
  
    ![](../images/module10/10.30-delete-term-204.png)
  
- 3. Navigate to **Purview Studio > Manage Glossary** and write in the search bar the name of your deleted term to check this is no longer in your glossary:
+ 3. Navigate to the **Microsoft Purview Governance Portal > Manage Glossary** and write in the search bar the name of your deleted term to check this is no longer in your glossary:
  
  ![](../images/module10/10.31-delete-term-studio.png)
  
@@ -1075,7 +1075,7 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. In thi
 
    * Submit and validate your output.
 
-   * You will have two newly created entities. Also validate within your Microsoft Purview Studio environment that these new entities are created. Don't forget to capture the GUID from the second entity.
+   * You will have two newly created entities. Also validate within your Microsoftthe Microsoft Purview Governance Portal environment that these new entities are created. Don't forget to capture the GUID from the second entity.
 
    ![](../images/module10/rest06.png)
 

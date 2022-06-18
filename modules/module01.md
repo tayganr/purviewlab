@@ -38,7 +38,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
 
     ![Create Purview Resource](../images/module01/01.02-create-purview.png)
 
-3. Provide the necessary inputs on the **Basics** tab.  
+3. Provide the necessary inputs on the **Basics** tab and click **Next: Networking >**.  
 
     > Note: The table below provides example values for illustrative purposes only, ensure to specify values that make sense for your deployment. If you have pre-deployed other Azure resources using the lab template, they would have been created with a `randomId`, it is recommended to use the same `randomId` for the Microsoft Purview account name as per the example below.
 
@@ -56,7 +56,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
     >
     > **Capacity Units** determine the size of the platform and is a **provisioned** (always on) set of resources that is needed to keep the Microsoft Purview platform up and running. 1 Capacity Unit is able to support approximately 25 data map operations per second and includes up to 10GB of metadata storage about data assets.
     >
-    > Capacity Units are required regardless of whether you plan to invoke the Microsoft Purview API endpoints directly (i.e. ISV scenario) or indirectly via Purview Studio (GUI).
+    > Capacity Units are required regardless of whether you plan to invoke the Microsoft Purview API endpoints directly (i.e. ISV scenario) or indirectly viathe Microsoft Purview Governance Portal (GUI).
     >
     > Note: With the introduction of the [Elastic Data Map](https://docs.microsoft.com/en-us/azure/purview/concept-elastic-data-map), you no longer need to specify how many Capacity Units that you need. Microsoft Purview will scale capacity elastically based on the request load.
     > 
@@ -64,8 +64,8 @@ When planning your Microsoft Purview deployment, you first need to provision a M
     >
     > For more information, check out the [Microsoft Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/microsoft-purview/) page.
 
-4. On the **Networking** tab, select **All networks**.
-   
+4. On the **Networking** tab, select **All networks**, and click **Review + Create**.
+
     ![Networking](../images/module01/01.04-create-networking.png)
 
 5. On the **Review + Create** tab, once the message in the ribbon returns "Validation passed", verify your selections and click **Create**.
@@ -80,9 +80,9 @@ When planning your Microsoft Purview deployment, you first need to provision a M
 
 ## 2. Grant Access to Microsoft Purview's Data Plane
 
-By default, the identity used to create the Microsoft Purview account resource will have full access to Purview Studio. The following instructions detail how to provide access to additional users within your Azure Active Directory.
+By default, the identity used to create the Microsoft Purview account resource will have full access tothe Microsoft Purview Governance Portal. The following instructions detail how to provide access to additional users within your Azure Active Directory.
 
-1. Navigate to your Microsoft Purview account and click **Open** within the **Open Purview Studio** tile.
+1. Navigate to your Microsoft Purview account and click **Open** within the **Openthe Microsoft Purview Governance Portal** tile.
 
     ![Access Control](../images/module01/01.07-open-studio.png)
 

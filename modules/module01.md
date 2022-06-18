@@ -82,7 +82,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
 
 By default, the identity used to create the Microsoft Purview account resource will have full access tothe Microsoft Purview Governance Portal. The following instructions detail how to provide access to additional users within your Azure Active Directory.
 
-1. Navigate to your Microsoft Purview account and click **Open** within the **Openthe Microsoft Purview Governance Portal** tile.
+1. Navigate to your Microsoft Purview account and click **Open** within the **Open the Microsoft Purview Governance Portal** tile.
 
     ![Access Control](../images/module01/01.07-open-studio.png)
 

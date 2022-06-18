@@ -183,7 +183,7 @@ To make the secret accessible to Microsoft Purview, we must first establish a co
 
 ## 5. Register a Source (Azure SQL DB)
 
-1. Openthe Microsoft Purview Governance Portal, navigate to **Data map** > **Sources**, and click **Register**.
+1. Open the Microsoft Purview Governance Portal, navigate to **Data map** > **Sources**, and click **Register**.
 
     ![](../images/module02/02.42-sources-register.png)
 
@@ -199,7 +199,7 @@ To make the secret accessible to Microsoft Purview, we must first establish a co
 
 ## 6. Scan a Source with Azure Key Vault Credentials
 
-1. Openthe Microsoft Purview Governance Portal, navigate to **Data map** > **Sources**, and within the Azure SQL Database tile, click the **New Scan** button.
+1. Open the Microsoft Purview Governance Portal, navigate to **Data map** > **Sources**, and within the Azure SQL Database tile, click the **New Scan** button.
 
     ![](../images/module02/02.64-sources-scansql.png)
 

@@ -22,7 +22,7 @@ In this lab you'll learn how to make use a managed private endpoints. You'll lea
 
 1. [Resource group creation](#1-resource-group-creation)
 2. [Storage account creation](#2-storage-account-creation)
-3. [Microsoft Purview creation](#3-azure-purview-creation)
+3. [Microsoft Purview creation](#3-microsoft-purview-creation)
 4. [Authentication for a scan](#4-authenticate-for-a-scan)
 5. [Managed Virtual Network Integration Runtime](#5-managed-virtual-network-integration-runtime)
 6. [Private endpoint for Azure Blob Storage](#6-private-endpoint-for-azure-blob-storage)

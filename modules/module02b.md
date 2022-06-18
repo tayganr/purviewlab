@@ -23,9 +23,9 @@ In this module, you'll walk through how to register and scan data sources. You'l
 | #  | Section | Role |
 | --- | --- | --- |
 | 1 | [Key Vault Access Policy #1 (Grant Yourself Access)](#1-key-vault-access-policy-1-grant-yourself-access) | Azure Administrator |
-| 2 | [Key Vault Access Policy #2 (Grant Microsoft Purview Access)](#2-key-vault-access-policy-2-grant-azure-purview-access) | Azure Administrator |
+| 2 | [Key Vault Access Policy #2 (Grant Microsoft Purview Access)](#2-key-vault-access-policy-2-grant-microsoft-purview-access) | Azure Administrator |
 | 3 | [Generate a Secret](#3-generate-a-secret) | Azure Administrator |
-| 4 | [Add Credentials to Microsoft Purview](#4-add-credentials-to-azure-purview) | Microsoft Purview Administrator |
+| 4 | [Add Credentials to Microsoft Purview](#4-add-credentials-to-microsoft-purview) | Microsoft Purview Administrator |
 | 5 | [Register a Source (Azure SQL DB)](#5-register-a-source-azure-sql-db) | Data Source Administrator |
 | 6 | [Scan a Source with Azure Key Vault Credentials](#6-scan-a-source-with-azure-key-vault-credentials) | Data Source Administrator |
 | 7 | [View Assets](#7-view-assets) | Data Reader |

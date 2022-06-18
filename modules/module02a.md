@@ -27,11 +27,11 @@ In this module, you'll walk through how to register and scan data sources. You'l
 
 | #  | Section | Role |
 | --- | --- | --- |
-| 1 | [Grant the Microsoft Purview Managed Identity Access](#1-grant-the-azure-purview-managed-identity-access) | Azure Administrator |
+| 1 | [Grant the Microsoft Purview Managed Identity Access](#1-grant-the-microsoft-purview-managed-identity-access) | Azure Administrator |
 | 2 | [Upload Data to Azure Data Lake Storage Gen2 Account](#2-upload-data-to-azure-data-lake-storage-gen2-account) | Azure Administrator |
 | 3 | [Create a Collection](#3-create-a-collection) | Collection Administrator |
 | 4 | [Register a Source (ADLS Gen2)](#4-register-a-source-adls-gen2) | Data Source Administrator |
-| 5 | [Scan a Source with the Microsoft Purview Managed Identity](#5-scan-a-source-with-the-azure-purview-managed-identity) | Data Source Administrator |
+| 5 | [Scan a Source with the Microsoft Purview Managed Identity](#5-scan-a-source-with-the-microsoft-purview-managed-identity) | Data Source Administrator |
 | 6 | [View Assets](#6-view-assets) | Data Reader |
 
 <div align="right"><a href="#module-02a---register--scan-adls-gen2">↥ back to top</a></div>

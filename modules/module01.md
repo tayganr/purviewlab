@@ -24,7 +24,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
 | #  | Section | Role |
 | --- | --- | --- |
 | 1 | [Create a Microsoft Purview Account](#1-create-a-microsoft-purview-account) | Azure Administrator |
-| 2 | [Grant Access to Microsoft Purview's Data Plane](#2-grant-access-to-azure-purviews-data-plane) | Collection Administrator |
+| 2 | [Grant Access to Microsoft Purview's Data Plane](#2-grant-access-to-microsoft-purviews-data-plane) | Collection Administrator |
 
 <div align="right"><a href="#module-01---create-a-microsoft-purview-account">↥ back to top</a></div>
 
@@ -64,7 +64,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
     > 
     > **vCore Hours** on the other hand, is the unit of measure for **serverless** compute that is needed to run a scan. You only pay per vCore Hour of scanning that you consume (rounded up to the nearest minute).
     >
-    > For more information, check out the [Microsoft Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/azure-purview/) page.
+    > For more information, check out the [Microsoft Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/microsoft-purview/) page.
 
 4. On the **Networking** tab, select **All networks**.
    

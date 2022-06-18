@@ -19,8 +19,8 @@ Microsoft Purview administrators can use Azure Monitor to track the operational 
 
 ## Table of Contents
 
-1. [Provide a User Access to Microsoft Purview Metrics](#1-provide-a-user-access-to-azure-purview-metrics)
-2. [Visualize Microsoft Purview Metrics](#2-visualize-azure-purview-metrics)
+1. [Provide a User Access to Microsoft Purview Metrics](#1-provide-a-user-access-to-microsoft-purview-metrics)
+2. [Visualize Microsoft Purview Metrics](#2-visualize-microsoft-purview-metrics)
 3. [Send Diagnostic Logs to Azure Storage](#3-send-diagnostic-logs-to-azure-storage)
 
 <div align="right"><a href="#module-08---monitor">↥ back to top</a></div>

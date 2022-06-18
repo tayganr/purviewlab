@@ -30,9 +30,9 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## Table of Contents
 
-1. [Create an Azure Data Factory Connection in Microsoft Purview](#1-create-an-azure-data-factory-connection-in-azure-purview)
+1. [Create an Azure Data Factory Connection in Microsoft Purview](#1-create-an-azure-data-factory-connection-in-microsoft-purview)
 2. [Copy Data using Azure Data Factory](#2-copy-data-using-azure-data-factory)
-3. [View Lineage in Microsoft Purview](#3-view-lineage-in-azure-purview)
+3. [View Lineage in Microsoft Purview](#3-view-lineage-in-microsoft-purview)
 
 <div align="right"><a href="#module-06---lineage">↥ back to top</a></div>
 

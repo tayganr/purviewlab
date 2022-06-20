@@ -239,7 +239,7 @@ To make the secret accessible to Microsoft Purview, we must first establish a co
 
 1. To view the assets that have materialised as an outcome of running the scans, perform a wildcard search by typing the asterisk character (`*`) into the search bar and hitting the Enter key to submit the query and return the search results.
 
-    ![ALT](../images/module02/02.72-search-wildcard.png)
+    ![ALT](../images/module02/02.83-search-wildcard2.png)
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 

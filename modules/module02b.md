@@ -183,11 +183,11 @@ To make the secret accessible to Microsoft Purview, we must first establish a co
 
 ## 5. Register a Source (Azure SQL DB)
 
-1. Open the Microsoft Purview Governance Portal, navigate to **Data map** > **Sources**, and click **Register**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Data map** > **Sources**, and click **Register**.
 
     ![ALT](../images/module02/02.42-sources-register.png)
 
-2. Navigate to the **Azure** tab, select **Azure SQL Database**, click **Continue**.
+2. Search for `SQL Database`, select **Azure SQL Database**, and click **Continue**.
 
     ![ALT](../images/module02/02.43-register-sqldb.png)
 
@@ -199,11 +199,11 @@ To make the secret accessible to Microsoft Purview, we must first establish a co
 
 ## 6. Scan a Source with Azure Key Vault Credentials
 
-1. Open the Microsoft Purview Governance Portal, navigate to **Data map** > **Sources**, and within the Azure SQL Database tile, click the **New Scan** button.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Data map** > **Sources**, and within the Azure SQL Database tile, click the **New Scan** button.
 
     ![ALT](../images/module02/02.64-sources-scansql.png)
 
-2. Select the **Database** and **Credential** from the drop-down menus. Click **Test connection**. Click **Continue**. 
+2. Select your **Database** (e.g. `pvlab-{randomID}-sqldb`), set the **Credential** to `credential-SQL`, turn **Lineage extraction** to `Off`, and click **Test connection**. Once the connection test is successful, click **Continue**.
 
     > Note: If the "Test connection" appears to be hanging, click Cancel and re-try.
 

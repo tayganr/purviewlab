@@ -93,7 +93,7 @@ Before proceeding with the following steps, you will need to:
 
     ![Extract](../images/module02/02.08-explorer-extract.png)
 
-4. Open Azure Storage Explorer, click on the Toggle Explorer icon, expand the Azure Subscription to find your Azure Storage Account. Right-click on Blob Containers and select **Create Blob Container**. Name the container **raw**.
+4. Open Azure Storage Explorer, click on the Toggle Explorer icon, expand the Azure Subscription to find your Azure Storage Account. Right-click on Blob Containers and select **Create Blob Container**. Name the container `raw`.
 
     ![Create Blob Container](../images/module02/02.12-explorer-container.png)
 
@@ -127,11 +127,11 @@ Before proceeding with the following steps, you will need to:
 >
 > For more information, check out [Collection Architectures and Best Practices](https://docs.microsoft.com/azure/purview/concept-best-practices-collections).
 
-1. Open the Microsoft Purview Governance Portal, navigate to **Data Map** > **Collections**, and click  **Add a collection**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Data Map** > **Collections**, and click  **Add a collection**.
 
     ![New Collection](../images/module02/02.18-sources-collection.png)
 
-2. Provide the collection a **Name** (e.g. Contoso) and click **Create**.
+2. Provide the collection a **Name** (e.g. `Contoso`) and click **Create**.
 
     ![New Collection](../images/module02/02.76-collection-create.png)
 

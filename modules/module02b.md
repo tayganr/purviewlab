@@ -100,7 +100,7 @@ In this next step, we are creating a second access policy which will provide Mic
 
 7. Click **Save**.
 
-    ![Save Access Policy](../images/module02/02.75-keyvault-savepolicy.png)
+    ![Save Access Policy](../images/module02/02.82-keyvault-savepolicy2.png)
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 

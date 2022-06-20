@@ -4,7 +4,7 @@
 
 ## :loudspeaker: Introduction
 
-Whilethe Microsoft Purview Governance Portal is the default interface for Microsoft Purview, the underlying platform can be accessed via a set of APIs. This opens up the possibility of a variety of scenarios including:
+While the Microsoft Purview Governance Portal is the default interface for Microsoft Purview, the underlying platform can be accessed via a set of APIs. This opens up the possibility of a variety of scenarios including:
 
   * Working with Microsoft Purview assets programmatically (e.g. bulk create/read/update/delete).
   * Adding support for other data sources beyond those supported out of the box.
@@ -1075,7 +1075,7 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. In thi
 
    * Submit and validate your output.
 
-   * You will have two newly created entities. Also validate within your Microsoftthe Microsoft Purview Governance Portal environment that these new entities are created. Don't forget to capture the GUID from the second entity.
+   * You will have two newly created entities. Also validate within your Microsoft the Microsoft Purview Governance Portal environment that these new entities are created. Don't forget to capture the GUID from the second entity.
 
    ![](../images/module10/rest06.png)
 

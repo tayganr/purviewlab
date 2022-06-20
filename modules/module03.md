@@ -173,17 +173,17 @@ Microsoft Purview allows us to perform certain operations (add/replace/remove) a
     B ) Classification  
     C ) Size  
 
-2. Usingthe Microsoft Purview Governance Portal (UI), you can edit an asset and manually update an assets Description?
+2. Using the Microsoft Purview Governance Portal (UI), you can edit an asset and manually update an assets Description?
 
     A ) True  
     B ) False  
 
-3. Usingthe Microsoft Purview Governance Portal (UI), you can edit an asset and manually add and remove Classifications?
+3. Using the Microsoft Purview Governance Portal (UI), you can edit an asset and manually add and remove Classifications?
 
     A ) True  
     B ) False  
 
-4. Usingthe Microsoft Purview Governance Portal (UI), you can edit an asset and manually update an assets Technical Properties (e.g. qualifiedName, partitionCount, totalSizeBytes, etc)?
+4. Using the Microsoft Purview Governance Portal (UI), you can edit an asset and manually update an assets Technical Properties (e.g. qualifiedName, partitionCount, totalSizeBytes, etc)?
 
     A ) True  
     B ) False  

@@ -184,7 +184,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
     > :bulb: **Did you know?**
     >
-    > When usingthe Microsoft Purview Governance Portal to **Export terms**, all terms selected for the export must use the same **Term template**. Selecting terms from different term templates will result in the **Export terms** button being greyed out.
+    > When using the Microsoft Purview Governance Portal to **Export terms**, all terms selected for the export must use the same **Term template**. Selecting terms from different term templates will result in the **Export terms** button being greyed out.
 
     ![Export Terms](../images/module04/04.17-glossary-export.png)
 
@@ -266,7 +266,7 @@ In this lab you learn how to create terms using a system and custom term templat
     B ) Antonyms  
     C ) Related terms  
 
-3. Glossary terms created using different term templates can be exported together using thethe Microsoft Purview Governance Portal (UI) glossary "Export terms" functionality?
+3. Glossary terms created using different term templates can be exported together using the the Microsoft Purview Governance Portal (UI) glossary "Export terms" functionality?
 
     A ) True  
     B ) False  

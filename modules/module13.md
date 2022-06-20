@@ -107,7 +107,7 @@ In this lab you'll learn how read and publish events using Azure Event Hubs and 
    node consumer.js
    ```
 
-3. For creating notifications go back to your Microsoftthe Microsoft Purview Governance Portal. Make some changes to your environment, for example, by scanning an existing source. If everything goes well, you should see the following output on the screen:
+3. For creating notifications go back to your Microsoft the Microsoft Purview Governance Portal. Make some changes to your environment, for example, by scanning an existing source. If everything goes well, you should see the following output on the screen:
 
    ![](../images/module13/kafka02.png)
 

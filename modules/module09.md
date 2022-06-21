@@ -10,7 +10,7 @@ Registering a Microsoft Purview account to a Synapse workspace allows you to dis
 
 ## :thinking: Prerequisites
 
-* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 * A Microsoft Purview account (see [module 01](../modules/module01.md)).
 * A Microsoft Purview catalog with some assets (see [module 02](../modules/module02.md)).
 
@@ -71,7 +71,7 @@ Registering a Microsoft Purview account to a Synapse workspace allows you to dis
 
     > :bulb: **Did you know?**
     >
-    > When connecting a Synapse workspace to Purview, Synapse will attempt to add the necessary Purview role assignment (i.e. `Data Curator`) to the Synapse managed identity automatically. This operation will be successful if you belong to the **Collection admins** role on the Purview root collection and have access to the Microsoft Purview account. For more information, check out [Connect a Synapse workspace to a Microsoft Purview account](https://docs.microsoft.com/en-us/azure/synapse-analytics/catalog-and-governance/quickstart-connect-microsoft-purview).
+    > When connecting a Synapse workspace to Purview, Synapse will attempt to add the necessary Purview role assignment (i.e. `Data Curator`) to the Synapse managed identity automatically. This operation will be successful if you belong to the **Collection admins** role on the Purview root collection and have access to the Microsoft Purview account. For more information, check out [Connect a Synapse workspace to a Microsoft Purview account](https://docs.microsoft.com/azure/synapse-analytics/catalog-and-governance/quickstart-connect-microsoft-purview).
 
     ![Purview Account Registered](../images/module09/09.11-synapse-success.png)
 

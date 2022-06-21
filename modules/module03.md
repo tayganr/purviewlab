@@ -10,7 +10,7 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 
 ## :thinking: Prerequisites
 
-* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 * A Microsoft Purview account (see [module 01](../modules/module01.md)).
 * A Microsoft Purview catalog with some assets (see [module 02](../modules/module02.md)).
 
@@ -40,10 +40,9 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 
     ![Filter by Classification](../images/module03/03.02-search-filter.png)
 
-
 > :bulb: **Did you know?**
 >
-> While the **Microsoft Purview Governance Portal** is provided as the default user experience, customers and partners can interface with the underlying platform using the [Microsoft Purview REST API](https://docs.microsoft.com/en-us/rest/api/purview/). The openness of the platform enables the possibility of integrating Microsoft Purview with custom user interfaces as well as the ability to perform read/write operations programmatically. 
+> While the **Microsoft Purview Governance Portal** is provided as the default user experience, customers and partners can interface with the underlying platform using the [Microsoft Purview REST API](https://docs.microsoft.com/rest/api/purview/). The openness of the platform enables the possibility of integrating Microsoft Purview with custom user interfaces as well as the ability to perform read/write operations programmatically. 
 
 <div align="right"><a href="#module-03---search--browse">↥ back to top</a></div>
 

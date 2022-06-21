@@ -10,7 +10,7 @@ In this lab you'll learn how to make use a managed private endpoints. You'll lea
 
 ## :thinking: Prerequisites
 
-- An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+- An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 - A SQL Virtual Machine (see [module 00](../modules/module00.md)).
 - A Microsoft Purview account (see [module 01](../modules/module01.md)).
 
@@ -32,7 +32,7 @@ In this lab you'll learn how to make use a managed private endpoints. You'll lea
 
 ## 1. Resource group creation
 
-1. In this lab you will start from scratch by first creating a new resource group. In this tutorial you use Canada Central as the region location because these new features aren’t available on all regions yet. Please consult [this link](https://docs.microsoft.com/en-us/azure/purview/catalog-managed-vnet) for more information.
+1. In this lab you will start from scratch by first creating a new resource group. In this tutorial you use Canada Central as the region location because these new features aren’t available on all regions yet. Please consult [this link](https://docs.microsoft.com/azure/purview/catalog-managed-vnet) for more information.
 
    ![](../images/module12/Step01.png)
 
@@ -142,7 +142,7 @@ If everything goes well you’ll notice new metadata will be added to Purview. T
 
 > :bulb: **Did you know?**
 >
-> By using managed private endpoints, you do not have to manage your own VNETs. Microsoft takes care of managing this. [More information](https://docs.microsoft.com/en-us/azure/purview/catalog-managed-vnet).
+> By using managed private endpoints, you do not have to manage your own VNETs. Microsoft takes care of managing this. [More information](https://docs.microsoft.com/azure/purview/catalog-managed-vnet).
 
 <div align="right"><a href="#module-12---managed-private-endpoints">↥ back to top</a></div>
 
@@ -159,6 +159,6 @@ If everything goes well you’ll notice new metadata will be added to Purview. T
 
 In this module, you learned how to install managed private endpoints. If you'd like continue with this module to complete further tasks, please feel free to complete the tutorial links below:
 
-- [Use a Managed VNet with your Microsoft Purview account](https://docs.microsoft.com/en-us/azure/purview/catalog-managed-vnetn)
+- [Use a Managed VNet with your Microsoft Purview account](https://docs.microsoft.com/azure/purview/catalog-managed-vnetn)
 
 [Continue >](../modules/module13.md)

@@ -24,7 +24,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 ## :thinking: Prerequisites
 
-* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 * A Microsoft Purview account (see [module 01](../modules/module01.md)).
 * Set up and complete a scan (see [module 02](../modules/module02.md)).
 
@@ -178,7 +178,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
     >
     > **Sensitivity labels** state how sensitive data is in your organization. For example, data contained within a particular asset might be `highly confidential`. **Classifications** on the other hand indicate the type of data values (e.g. Driver's License Number, Email Address, SWIFT Code, etc) 
     >
-    > Microsoft Purview's ability to apply sensitivity labels is due to the close integration with **Microsoft Information Protection** offered in Microsoft 365. Note: You must turn on Information Protection for Microsoft Purview in the Microsoft 365 compliance center. For more information, check out how to [Labeling in Microsoft Purview](https://docs.microsoft.com/en-us/azure/purview/create-sensitivity-label).
+    > Microsoft Purview's ability to apply sensitivity labels is due to the close integration with **Microsoft Information Protection** offered in Microsoft 365. Note: You must turn on Information Protection for Microsoft Purview in the Microsoft 365 compliance center. For more information, check out how to [Labeling in Microsoft Purview](https://docs.microsoft.com/azure/purview/create-sensitivity-label).
 
     ![Sensitivity Labels Insights](../images/module07/07.20-labels-insights.png)
 

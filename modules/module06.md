@@ -12,7 +12,7 @@ Within Microsoft Purview also custom lineage is supported. Custom lineage is lin
 
 ## :thinking: Prerequisites
 
-* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 * An Azure Data Lake Storage Gen2 Account (see [module 00](../modules/module00.md)).
 * An Azure Data Factory Account (see [module 00](../modules/module00.md)).
 * A Microsoft Purview account (see [module 01](../modules/module01.md)).
@@ -60,7 +60,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
     > :bulb: **Did you know?**
     >
-    > When a user creates an Azure Data Factory connection, behind the scenes the Data Factory managed identity is added to the `Data Curator` role. This provides Azure Data Factory the necessary access to push lineage to Microsoft Purview during a pipeline execution. See [supported Azure Data Factory activities](https://docs.microsoft.com/en-us/azure/purview/how-to-link-azure-data-factory#supported-azure-data-factory-activities) for more information.
+    > When a user creates an Azure Data Factory connection, behind the scenes the Data Factory managed identity is added to the `Data Curator` role. This provides Azure Data Factory the necessary access to push lineage to Microsoft Purview during a pipeline execution. See [supported Azure Data Factory activities](https://docs.microsoft.com/azure/purview/how-to-link-azure-data-factory#supported-azure-data-factory-activities) for more information.
 
     ![](../images/module06/06.35-adf-identity.png)
 

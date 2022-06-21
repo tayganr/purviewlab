@@ -12,7 +12,7 @@ In this lab you'll learn how read and publish events using Azure Event Hubs and 
 
 ## :thinking: Prerequisites
 
-- An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+- An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 - A Microsoft Purview account (see [module 01](../modules/module01.md)).
 - NodeJS installed: [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
@@ -60,7 +60,7 @@ In this lab you'll learn how read and publish events using Azure Event Hubs and 
       'sasl.password': 'Endpoint=sb://atlas-004133bc-3c87-4862-bf9d-b0ea6ae351f5.servicebus.windows.net/;SharedAccessKeyName=AlternateSharedAccessKey;SharedAccessKey=WrIVbXQnYutxKXsvmfP+Wz4G4OLKHjDtuuR8sdfsE1=', //REPLACE
    });
 
-   //Purview's default topic name: https://docs.microsoft.com/en-us/azure/purview/manage-kafka-dotnet
+   //Purview's default topic name: https://docs.microsoft.com/azure/purview/manage-kafka-dotnet
    var topicName = 'ATLAS_ENTITIES';
 
    //logging debug messages, if debug is enabled
@@ -316,7 +316,7 @@ As demonstrated in this tutorial you can programmatically monitor for metadata c
 
 In this module, you learned how to send events to and receive events from Microsoft Purview's Atlas Kafka topics via event hub using the NodeJS library. If you'd like continue with this module to complete further tasks, please feel free to complete the tutorial links below:
 
-- [Publish messages to and process messages from Microsoft Purview's Atlas Kafka topics via Event Hubs using .NET](https://docs.microsoft.com/en-us/azure/purview/manage-kafka-dotnet)
+- [Publish messages to and process messages from Microsoft Purview's Atlas Kafka topics via Event Hubs using .NET](https://docs.microsoft.com/azure/purview/manage-kafka-dotnet)
 - [Modern Data Pipelines with Azure Synapse Analytics and Microsoft Purview](https://piethein.medium.com/modern-data-pipelines-with-azure-synapse-analytics-and-microsoft-purview-fe752d874c67)
 
 [Back to Home >](../README.md)

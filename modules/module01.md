@@ -6,13 +6,13 @@
 
 Microsoft Purview is a unified data governance solution that helps you manage and govern your data at large. It combines many different services for scanning, collecting, organizing and sharing metadata. It uses a catalogue for discoverability, but also offers other features, such as automatic classification, sharing, access management and so on.
 
-When planning your Microsoft Purview deployment, you first need to provision a Microsoft Purview account. Next, you need to define your collections for managing and grouping data assets together. A collection is a logical container in which your metadata, such as data sources, will be managed. When creating collections and placing them in a hierarchy, you need to make different considerations, such as your security requirements, governance structure and democratization needs. For example, a more centralized-alined style of data management leads to different collection structure then a more domain-oriented style of data management. Depending on your needs, different topologies can be used for managing your data. Best practices for this can be found on [this website](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections).
+When planning your Microsoft Purview deployment, you first need to provision a Microsoft Purview account. Next, you need to define your collections for managing and grouping data assets together. A collection is a logical container in which your metadata, such as data sources, will be managed. When creating collections and placing them in a hierarchy, you need to make different considerations, such as your security requirements, governance structure and democratization needs. For example, a more centralized-alined style of data management leads to different collection structure then a more domain-oriented style of data management. Depending on your needs, different topologies can be used for managing your data. Best practices for this can be found on [this website](https://docs.microsoft.com/azure/purview/concept-best-practices-collections).
 
 ## :thinking: Prerequisites
 
-* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 * Your must have permissions to create resources in your Azure subscription.
-* Your subscription must have the following resource providers registered: **Microsoft.Purview**, **Microsoft.Storage**, and **Microsoft.EventHub**. Instructions on how to register a resource provider via the Azure Portal can be found [here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal).
+* Your subscription must have the following resource providers registered: **Microsoft.Purview**, **Microsoft.Storage**, and **Microsoft.EventHub**. Instructions on how to register a resource provider via the Azure Portal can be found [here](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal).
 
 ## :dart: Objectives
 
@@ -58,11 +58,11 @@ When planning your Microsoft Purview deployment, you first need to provision a M
     >
     > Capacity Units are required regardless of whether you plan to invoke the Microsoft Purview API endpoints directly (i.e. ISV scenario) or indirectly viathe Microsoft Purview Governance Portal (GUI).
     >
-    > Note: With the introduction of the [Elastic Data Map](https://docs.microsoft.com/en-us/azure/purview/concept-elastic-data-map), you no longer need to specify how many Capacity Units that you need. Microsoft Purview will scale capacity elastically based on the request load.
+    > Note: With the introduction of the [Elastic Data Map](https://docs.microsoft.com/azure/purview/concept-elastic-data-map), you no longer need to specify how many Capacity Units that you need. Microsoft Purview will scale capacity elastically based on the request load.
     > 
     > **vCore Hours** on the other hand, is the unit of measure for **serverless** compute that is needed to run a scan. You only pay per vCore Hour of scanning that you consume (rounded up to the nearest minute).
     >
-    > For more information, check out the [Microsoft Purview Pricing](https://azure.microsoft.com/en-us/pricing/details/microsoft-purview/) page.
+    > For more information, check out the [Microsoft Purview Pricing](https://azure.microsoft.com/pricing/details/microsoft-purview/) page.
 
 4. On the **Networking** tab, select **All networks**, and click **Review + Create**.
 
@@ -110,7 +110,7 @@ By default, the identity used to create the Microsoft Purview account resource w
     >
     > Microsoft Purview has a set of predefined data plane roles that can be used to control who can access what.
     >
-    > For more information, check out [Access control in Microsoft Purview](https://docs.microsoft.com/en-us/azure/purview/catalog-permissions).
+    > For more information, check out [Access control in Microsoft Purview](https://docs.microsoft.com/azure/purview/catalog-permissions).
 
     | Role  | Collections | Catalog | Sources/Scans | Description | 
     | --- | --- | --- | --- | --- |

@@ -16,7 +16,7 @@ The primary focus of this module is the **catalog** which is based on the open-s
 
 ## :thinking: Prerequisites
 
-* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 * A Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :hammer: Tools
@@ -333,7 +333,7 @@ A hierarchical set of business terms that represents your business domain. For e
     "resources":[
         {
             "displayName":"Workspace Analytics",
-            "url":"https://docs.microsoft.com/en-us/workplace-analytics/use/glossary"
+            "url":"https://docs.microsoft.com/workplace-analytics/use/glossary"
         }
     ]
 }

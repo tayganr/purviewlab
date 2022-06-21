@@ -8,7 +8,7 @@ Microsoft Purview administrators can use Azure Monitor to track the operational 
 
 ## :thinking: Prerequisites
 
-* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 * A Microsoft Purview account (see [module 01](../modules/module01.md)).
 * Your subscription must have the **Microsoft.Insights** resource provider registered.
 

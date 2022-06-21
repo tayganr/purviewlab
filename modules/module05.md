@@ -10,13 +10,13 @@ Microsoft Purview provides a large set of default classifications that represent
 
 ## :thinking: Prerequisites
 
-* An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+* An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 * An Azure Data Lake Storage Gen2 Account (see [module 00](../modules/module00.md)).
 * A Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :hammer: Tools
 
-* [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
+* [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/)
 
 ## :dart: Objectives
 
@@ -140,7 +140,7 @@ Microsoft Purview provides a large set of default classifications that represent
 ## 4. Upload Data to an Azure Data Lake Storage Gen2 Account
 
 Before proceeding with the following steps, you will need to:
-* Download and install [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/).
+* Download and install [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/).
 * Open Azure Storage Explorer.
 * Sign in to Azure via **View > Account Management > Add an account...**.
 

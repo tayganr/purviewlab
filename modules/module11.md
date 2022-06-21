@@ -10,7 +10,7 @@ In this lab you learn how to setup a more complex scenario of using a SHIR and p
 
 ## :thinking: Prerequisites
 
-- An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
+- An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 - A Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :dart: Objectives
@@ -93,7 +93,7 @@ Your next step is creating a private endpoint: a network interface that uses a p
 
 ## 4. Self-hosted integration runtime installation
 
-A self-hosted integration runtime is a software component that scans for metadata. You can install on many different types of (virtual) machines. You can download it from the following location: [https://www.microsoft.com/en-us/download/details.aspx?id=39717](https://www.microsoft.com/en-us/download/details.aspx?id=39717)
+A self-hosted integration runtime is a software component that scans for metadata. You can install on many different types of (virtual) machines. You can download it from the following location: [https://www.microsoft.com/download/details.aspx?id=39717](https://www.microsoft.com/download/details.aspx?id=39717)
 
 For this demo you will be using Windows 10. Open the Azure Portal again to search for virtual machines. 
 
@@ -153,7 +153,7 @@ For securely accessing your storage account you will store your storage account 
 
    ![](../images/module11/pic21.png)
 
-5. Next you need to ensure two things: 1) purview’s managed identity has access to read from the storage account 2) the storage account key has been stored in the Key Vault. Go back to your storage account. Navigate to IAM and give your Purview Managed Identity the role: Storage Blob Data Reader. Detailed instructions can be found [here](https://docs.microsoft.com/en-us/azure/purview/register-scan-adls-gen2).
+5. Next you need to ensure two things: 1) purview’s managed identity has access to read from the storage account 2) the storage account key has been stored in the Key Vault. Go back to your storage account. Navigate to IAM and give your Purview Managed Identity the role: Storage Blob Data Reader. Detailed instructions can be found [here](https://docs.microsoft.com/azure/purview/register-scan-adls-gen2).
 
    ![](../images/module11/pic22.png)
 
@@ -201,7 +201,7 @@ This has been a long read, but also demonstrates how you can use your own integr
 
 > :bulb: **Did you know?**
 >
-> The Purview Integration Runtime can also be used to scan and ingest metadata assets from Azure cloud services that are hidden behind private endpoints, such as Azure Data Lake, Azure SQL Database, Azure Cosmos DB [and more](https://docs.microsoft.com/en-us/azure/purview/catalog-private-link#support-matrix-for-scanning-data-sources-through-ingestion-private-endpoint).
+> The Purview Integration Runtime can also be used to scan and ingest metadata assets from Azure cloud services that are hidden behind private endpoints, such as Azure Data Lake, Azure SQL Database, Azure Cosmos DB [and more](https://docs.microsoft.com/azure/purview/catalog-private-link#support-matrix-for-scanning-data-sources-through-ingestion-private-endpoint).
 
 <div align="right"><a href="#module-11---securely-scan-sources-using-self-hosted-integration-runtimes">↥ back to top</a></div>
 
@@ -234,11 +234,11 @@ This has been a long read, but also demonstrates how you can use your own integr
 
 In this module, you learned how to install the self-hosted integration runtime to your virtual machine network and get it connected up to Microsoft Purview. If you'd like continue with this module to complete further tasks, please feel free to complete the tutorial links below:
 
-- [Setting up authentication for a scan](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#setting-up-authentication-for-a-scan)
-- [Register SQL Server on VM as a data source in Purview](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#register-a-sql-server-data-source)
+- [Setting up authentication for a scan](https://docs.microsoft.com/azure/purview/register-scan-on-premises-sql-server#setting-up-authentication-for-a-scan)
+- [Register SQL Server on VM as a data source in Purview](https://docs.microsoft.com/azure/purview/register-scan-on-premises-sql-server#register-a-sql-server-data-source)
 - Upload same data to the SQL Server on the VM
   - [World Wide Importers dataset](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers)
-  - [Contoso BI dataset](https://www.microsoft.com/en-us/download/details.aspx?id=18279)
-- [Trigger a scan of the on-premise data source](https://docs.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server#creating-and-running-a-scan)
+  - [Contoso BI dataset](https://www.microsoft.com/download/details.aspx?id=18279)
+- [Trigger a scan of the on-premise data source](https://docs.microsoft.com/azure/purview/register-scan-on-premises-sql-server#creating-and-running-a-scan)
 
 [Continue >](../modules/module12.md)

@@ -12,7 +12,7 @@ Microsoft Purview provides a large set of default classifications that represent
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * An Azure Data Lake Storage Gen2 Account (see [module 00](../modules/module00.md)).
-* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
+* A Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :hammer: Tools
 

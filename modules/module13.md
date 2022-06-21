@@ -13,7 +13,7 @@ In this lab you'll learn how read and publish events using Azure Event Hubs and 
 ## :thinking: Prerequisites
 
 - An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-- An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
+- A Microsoft Purview account (see [module 01](../modules/module01.md)).
 - NodeJS installed: [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 ## :dart: Objectives

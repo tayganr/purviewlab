@@ -25,7 +25,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
+* A Microsoft Purview account (see [module 01](../modules/module01.md)).
 * Set up and complete a scan (see [module 02](../modules/module02.md)).
 
 ## :dart: Objectives

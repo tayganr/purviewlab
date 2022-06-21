@@ -15,7 +15,7 @@ Within Microsoft Purview also custom lineage is supported. Custom lineage is lin
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 * An Azure Data Lake Storage Gen2 Account (see [module 00](../modules/module00.md)).
 * An Azure Data Factory Account (see [module 00](../modules/module00.md)).
-* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
+* A Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 * **Dataset**: A dataset (structured or unstructured) provided as an input to a process. For example, a SQL Table, Azure blob, and files (such as .csv and .xml), are all considered datasets. In the lineage section of Purview, datasets are represented by **rectangular boxes**.
 

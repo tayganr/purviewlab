@@ -12,7 +12,7 @@ In this module, you'll walk through how to register and scan data sources. You'l
 
 * An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 * An Azure Data Lake Storage Gen2 account (see [module 00](../modules/module00.md)).
-* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
+* A Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :hammer: Tools
 

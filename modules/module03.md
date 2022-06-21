@@ -11,7 +11,7 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
+* A Microsoft Purview account (see [module 01](../modules/module01.md)).
 * An Microsoft Purview catalog with some assets (see [module 02](../modules/module02.md)).
 
 ## :dart: Objectives
@@ -154,7 +154,7 @@ Microsoft Purview allows us to perform certain operations (add/replace/remove) a
     ![Bulk Edit](../images/module03/03.14-bulk-edit.png)
 
 4. Set the **Attribute** to `Owner`, set **Operation** to `Add`, select one or more users in your organization, and click **Apply**.
- 
+
     ![Apply Changes](../images/module03/03.15-bulk-apply.png)
 
 5. Click **Deselect all and close**.

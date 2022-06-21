@@ -17,7 +17,7 @@ The primary focus of this module is the **catalog** which is based on the open-s
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
+* A Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :hammer: Tools
 

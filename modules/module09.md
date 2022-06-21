@@ -11,7 +11,7 @@ Registering a Microsoft Purview account to a Synapse workspace allows you to dis
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
+* A Microsoft Purview account (see [module 01](../modules/module01.md)).
 * An Microsoft Purview catalog with some assets (see [module 02](../modules/module02.md)).
 
 ## :dart: Objectives

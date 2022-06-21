@@ -15,7 +15,7 @@ In this lab you learn how to create terms using a system and custom term templat
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
-* An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
+* A Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :dart: Objectives
 

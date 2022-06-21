@@ -12,7 +12,7 @@ In this lab you'll learn how to make use a managed private endpoints. You'll lea
 
 - An [Azure account](https://azure.microsoft.com/en-us/free/) with an active subscription.
 - A SQL Virtual Machine (see [module 00](../modules/module00.md)).
-- An Azure Microsoft Purview account (see [module 01](../modules/module01.md)).
+- A Microsoft Purview account (see [module 01](../modules/module01.md)).
 
 ## :dart: Objectives
 

@@ -26,14 +26,16 @@ In this lab you learn how to create terms using a system and custom term templat
 * Assign a Term to an Asset in the Data Catalog.
 * Update an existing Term with Related Terms and Contacts.
 
-## Table of Contents
+## :bookmark_tabs: Table of Contents
 
-1. [Create a Term (System Default Term Template)](#1-create-a-term-system-default-term-template)
-2. [Create a Term (Custom Term Template)](#2-create-a-term-custom-term-template)
-3. [Bulk Import Terms](#3-bulk-import-terms)
-4. [Bulk Export Terms](#4-bulk-export-terms)
-5. [Assign a Term to an Asset](#5-assign-a-term-to-an-asset)
-6. [Update an Existing Term](#6-update-an-existing-term)
+| #  | Section | Role |
+| --- | --- | --- |
+| 1 | [Create a Term (System Default Term Template)](#1-create-a-term-system-default-term-template) | Data Curator |
+| 2 | [Create a Term (Custom Term Template)](#2-create-a-term-custom-term-template) | Data Curator |
+| 3 | [Bulk Import Terms](#3-bulk-import-terms) | Data Curator |
+| 4 | [Bulk Export Terms](#4-bulk-export-terms) | Data Reader |
+| 5 | [Assign a Term to an Asset](#5-assign-a-term-to-an-asset) | Data Curator |
+| 6 | [Update an Existing Term](#6-update-an-existing-term) | Data Curator |
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
@@ -41,7 +43,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog**, click **Manage glossary**.
 
-    ![](../images/module04/04.00-manage-glossary.png)
+    ![ALT](../images/module04/04.00-manage-glossary.png)
 
 2. Click **New term**.
 
@@ -60,27 +62,38 @@ In this lab you learn how to create terms using a system and custom term templat
     ![New Term](../images/module04/04.03-term-create.png)
 
     **Status**
-    ```
+
+    ```text
     Approved
     ```
+
     **Name**
-    ```
+
+    ```text
     Contoso Parent
     ```
+
     **Definition**
-    ```
+
+    ```text
     This will be the parent term.
     ```
+
     **Acronym**
-    ```
+
+    ```text
     CP
     ```
+
     **Resource Name**
-    ```
+
+    ```text
     Microsoft Purview
     ```
+
     **Resource Link**
-    ```
+
+    ```text
     https://aka.ms/Azure-Purview
     ```
 
@@ -90,7 +103,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog**, click **Manage glossary**.
 
-    ![](../images/module04/04.00-manage-glossary.png)
+    ![ALT](../images/module04/04.00-manage-glossary.png)
 
 2. Click **New term**.
 
@@ -119,34 +132,40 @@ In this lab you learn how to create terms using a system and custom term templat
     ![Create term template](../images/module04/04.08-template-create.png)
 
 7. Select **Contoso Template** and click **Continue**.
-    
+
     ![Custom Term Template](../images/module04/04.09-term-custom.png)
 
 8. Change the **Status** of the term to `Approved` and then **copy** and **paste** the values below into the appropriate field, then click **Create**.
 
-    ![](../images/module04/04.10-term-create2.png)
+    ![ALT](../images/module04/04.10-term-create2.png)
 
     **Name**
-    ```
+
+    ```text
     Contoso Child
     ```
+
     **Definition**
-    ```
+
+    ```text
     This will be the long description for the child glossary term.
     ```
+
     **Parent**
-    ```
+
+    ```text
     Contoso Parent
     ```
+
     **Business Unit**
-    ```
+
+    ```text
     Marketing
     ```
 
 9. From the **Glossary** screen, change the view to **Hierarchical view** to see the hierarchical glossary.
 
-    ![](../images/module04/04.11-glossary-table.png)
-
+    ![ALT](../images/module04/04.11-glossary-table.png)
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
@@ -218,7 +237,6 @@ In this lab you learn how to create terms using a system and custom term templat
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
-
 ## 6. Update an Existing Term
 
 1. From the **Glossary** screen, open an existing term (e.g. `Aggregation`).
@@ -253,7 +271,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 ## :mortar_board: Knowledge Check
 
-[http://aka.ms/purviewlab/q04](http://aka.ms/purviewlab/q04)
+[https://aka.ms/purviewlab/q04](https://aka.ms/purviewlab/q04)
 
 1. Glossary terms with the same name but different descriptions can exist under the same parent term?
 

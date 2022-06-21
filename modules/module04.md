@@ -39,7 +39,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 ## 1. Create a Term (System Default Term Template)
 
-1. Open the Microsoft Purview Governance Portal and from the **Data catalog**, click **Manage glossary**.
+1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog**, click **Manage glossary**.
 
     ![](../images/module04/04.00-manage-glossary.png)
 
@@ -88,7 +88,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 ## 2. Create a Term (Custom Term Template)
 
-1. Open the Microsoft Purview Governance Portal and from the **Data catalog**, click **Manage glossary**.
+1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog**, click **Manage glossary**.
 
     ![](../images/module04/04.00-manage-glossary.png)
 

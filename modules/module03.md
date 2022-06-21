@@ -131,9 +131,9 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 
 ## 3. Browse Assets
 
-While the search experience is ideal for keyword based discovery,the Microsoft Purview Governance Portal allows alternate methods of browsing assets (i.e. by collection OR by source type).
+While the search experience is ideal for keyword based discovery, the Microsoft Purview Governance Portal allows alternate methods of browsing assets (i.e. by collection OR by source type).
 
-1. Open the Microsoft Purview Governance Portal and from the **Data catlog** screen, click **Browse assets**.
+1. Open the **Microsoft Purview Governance Portal** and from the **Data catlog** screen, click **Browse assets**.
 
     ![Browse Assets](../images/module03/03.09-home-browse.png)
 
@@ -155,7 +155,7 @@ While the search experience is ideal for keyword based discovery,the Microsoft P
 
 Microsoft Purview allows us to perform certain operations (add/replace/remove) against a subset of attributes (Expert, Owner, Term, Classification) in bulk directly within the Microsoft Purview Governance Portal.
 
-1. Open the Microsoft Purview Governance Portal and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
+1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 

@@ -44,7 +44,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 ## 1. Asset Insights
 
-1. Open the Microsoft Purview Governance Portal, navigate to **Insights** > **Assets**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Insights** > **Assets**.
 
     ![Assets Insights](../images/module07/07.01-assets-insights.png)
 
@@ -78,7 +78,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 ## 2. Scan Insights
 
-1. Open the Microsoft Purview Governance Portal, navigate to **Insights** > **Scans**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Insights** > **Scans**.
 
     ![Scan Insights](../images/module07/07.06-scans-insights.png)
 
@@ -104,7 +104,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 ## 3. Glossary Insights
 
-1. Open the Microsoft Purview Governance Portal, navigate to **Insights** > **Glossary**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Insights** > **Glossary**.
 
     ![Glossary Insights](../images/module07/07.09-glossary-insights.png)
 
@@ -137,7 +137,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 ## 4. Classification Insights
 
-1. Open the Microsoft Purview Governance Portal, navigate to **Insights** > **Classification**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Insights** > **Classification**.
 
     ![Classification Insights](../images/module07/07.14-classification-insights.png)
 
@@ -172,7 +172,7 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 ## 5. Sensitivity Labels Insights
 
-1. Open the Microsoft Purview Governance Portal, navigate to **Insights** > **Sensitivity Labels**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Insights** > **Sensitivity Labels**.
 
     > :bulb: **Did you know?**
     >

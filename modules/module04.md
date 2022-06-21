@@ -61,12 +61,6 @@ In this lab you learn how to create terms using a system and custom term templat
 
     ![New Term](../images/module04/04.03-term-create.png)
 
-    **Status**
-
-    ```text
-    Approved
-    ```
-
     **Name**
 
     ```text
@@ -113,7 +107,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
     ![New term template](../images/module04/04.05-template-new.png)
 
-4. Provide the Term Template a **Name** (e.g. `Contoso Template`) and click **New attribute**.
+4. Specify a **Template name** (e.g. `Contoso Template`) and click **New attribute**.
 
     ![Term template](../images/module04/04.06-attribute-new.png)
 

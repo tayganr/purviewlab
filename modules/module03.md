@@ -34,7 +34,7 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 
 ## 1. Search Catalog
 
-1. Open the Microsoft Purview Governance Portal and from the **Data catalog** screen, type the asterisk character (**\***) into the search bar and hit **Enter**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Data Catalog** > **Home**, type the asterisk character (**\***) into the search bar, and hit **Enter**.
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 
@@ -56,13 +56,13 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 
 2. Update the **Description** by copying and pasting the sample text below.
 
-    ```
+    ```text
     This dataset was curated from the Bing search logs (desktop users only) over the period of Jan 1st, 2020 – (Current Month - 1). Only searches that were issued many times by multiple users were included. The dataset includes queries from all over the world that had an intent related to the Coronavirus or Covid-19. In some cases this intent is explicit in the query itself (e.g., “Coronavirus updates Seattle”), in other cases it is implicit , e.g. “Shelter in place”
     ```
 
     ![Update Description](../images/module03/03.04-asset-description.png)
 
-3. Assign a **Classification** (e.g. World Cities) using the drop-down menu.
+3. Assign a **Classification** (e.g. `World Cities`) using the drop-down menu.
 
     ![Update Classification](../images/module03/03.05-asset-classification.png)
 
@@ -75,27 +75,38 @@ In this module, you'll learn to edit technical metadata by adding definitions an
     ![Update Schema](../images/module03/03.06-asset-schema.png)
 
     **Date**
-    ```
+
+    ```text
     Date on which the query was issued.
     ```
+
     **Query**
-    ```
+
+    ```text
     The actual search query issued by user(s).
     ```
+
     **IsImplicitIntent**
-    ```
+
+    ```text
     True if query did not mention covid or coronavirus or sarsncov2 (e.g, “Shelter in place”). False otherwise.
     ```
+
     **State**
-    ```
+
+    ```text
     State from where the query was issued.
     ```
+
     **Country**
-    ```
+
+    ```text
     Country from where the query was issued.
     ```
+
     **PopularityScore**
-    ```
+
+    ```text
     Value between 1 and 100 inclusive. 1 indicates least popular query on the day/State/Country with Coronavirus intent, and 100 indicates the most popular query for the same geography on the same day.
     ```
 
@@ -103,7 +114,10 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 
     > :bulb: **Did you know?**
     >
-    > Assets can be related to two different types of contacts. **Experts** are often business process or subject matter experts. Where as **Owners** are often senior executives or business area owners that define governance or business processes over certain data areas.
+    > Assets can be related to two different types of contacts.
+    >
+    > * **Experts** are often business process or subject matter experts.
+    > * Where as **Owners** are often senior executives or business area owners that define governance or business processes over certain data areas.
     >
     > For assets in which you are tagged as a **Contact**, these will appear on the home screen (Data catalog), under **My items**.
 

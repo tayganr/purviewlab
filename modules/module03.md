@@ -21,12 +21,14 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 * Update an existing asset.
 * Perform a bulk edit operation.
 
-## Table of Contents
+## :bookmark_tabs: Table of Contents
 
-1. [Search Catalog](#1-search-catalog)
-2. [Update an Asset](#2-update-an-asset)
-3. [Browse Assets](#3-browse-assets)
-4. [Bulk Edit](#4-bulk-edit)
+| #  | Section | Role |
+| --- | --- | --- |
+| 1 | [Search Catalog](#1-search-catalog) | Data Reader |
+| 2 | [Update an Asset](#2-update-an-asset) | Data Curator |
+| 3 | [Browse Assets](#3-browse-assets) | Data Reader |
+| 4 | [Bulk Edit](#4-bulk-edit) | Data Curator |
 
 <div align="right"><a href="#module-03---search--browse">↥ back to top</a></div>
 

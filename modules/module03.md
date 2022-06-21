@@ -114,10 +114,11 @@ In this module, you'll learn to edit technical metadata by adding definitions an
 
     > :bulb: **Did you know?**
     >
-    > Assets can be related to two different types of contacts.
+    > Assets can be related to two different types of contacts:
     >
     > * **Experts** are often business process or subject matter experts.
     > * Where as **Owners** are often senior executives or business area owners that define governance or business processes over certain data areas.
+    >
     >
     > For assets in which you are tagged as a **Contact**, these will appear on the home screen (Data catalog), under **My items**.
 

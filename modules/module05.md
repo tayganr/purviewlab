@@ -23,14 +23,16 @@ Microsoft Purview provides a large set of default classifications that represent
 * Create a custom classification.
 * Trigger a scan that will apply the custom classification to an asset.
 
-## Table of Contents
+## :bookmark_tabs: Table of Contents
 
-1. [Create a Classification](#1-create-a-classification)
-2. [Create a Classification Rule (Regular Expression)](#2-create-a-custom-classification-rule-regular-expression)
-3. [Create a Scan Rule Set](#3-create-a-scan-rule-set)
-4. [Upload Data to an Azure Data Lake Storage Gen2 Account](#4-upload-data-to-an-azure-data-lake-storage-gen2-account)
-5. [Scan an Azure Data Lake Storage Gen2 Account](#5-scan-an-azure-data-lake-storage-gen2-account)
-6. [Search by Classification](#6-search-by-classification)
+| #  | Section | Role |
+| --- | --- | --- |
+| 1 | [Create a Classification](#1-create-a-classification) | Data Curator |
+| 2 | [Create a Classification Rule (Regular Expression)](#2-create-a-custom-classification-rule-regular-expression) | Data Curator |
+| 3 | [Create a Scan Rule Set](#3-create-a-scan-rule-set) | Data Source Admin |
+| 4 | [Upload Data to an Azure Data Lake Storage Gen2 Account](#4-upload-data-to-an-azure-data-lake-storage-gen2-account) | Azure Administrator |
+| 5 | [Scan an Azure Data Lake Storage Gen2 Account](#5-scan-an-azure-data-lake-storage-gen2-account) | Data Source Admin |
+| 6 | [Search by Classification](#6-search-by-classification) | Data Reader |
 
 <div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 

@@ -5,13 +5,14 @@
 ```diff
 !                               << PLEASE READ BEFORE PROCEEDING >>                                
 !                                                                                                  
-! * Insights within Microsoft Purview can take several hours to surface post the completion of a scan. 
+! * Data Estate Insights can take several hours to surface post the completion of a scan.          
 ! * At this point of the workshop, only a limited number of data visualisations may be populated.  
-! * To populate all reports with data, Microsoft Purview requires an environment with a variety of     
+! * To populate all reports with data, Microsoft Purview requires an environment with a variety of 
 ! sources and assets to be scanned that is beyond the scope of this workshop.                      
 ! * The screenshots and information below, has been provided so that you can conceptualise the type
 ! of insights that can be gleaned from a fully populated environment.                              
 ```
+
 ## :loudspeaker: Introduction
 
 Insights provides customers, a single pane of glass view into their catalog and further aims to provide specific insights to the data source administrators, business users, data stewards, data officer, and security administrators. Microsoft Purview currently has the following reports available:
@@ -32,13 +33,15 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 * Understand the different types of insights that can be gleaned from the out of the box reporting.
 
-## Table of Contents
+## :bookmark_tabs: Table of Contents
 
-1. [Asset Insights](#1-asset-insights)
-2. [Scan Insights](#2-scan-insights)
-3. [Glossary Insights](#3-glossary-insights)
-4. [Classification Insights](#4-classification-insights)
-5. [Sensitivity Labels Insights](#5-sensitivity-labels-insights)
+| #  | Section | Role |
+| --- | --- | --- |
+| 1 | [Asset Insights](#1-asset-insights) | Insight Reader |
+| 2 | [Scan Insights](#2-scan-insights) | Insight Reader |
+| 3 | [Glossary Insights](#3-glossary-insights) | Insight Reader |
+| 4 | [Classification Insights](#4-classification-insights) | Insight Reader |
+| 5 | [Sensitivity Labels Insights](#5-sensitivity-labels-insights) | Insight Reader |
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 

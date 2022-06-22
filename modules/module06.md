@@ -139,7 +139,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
 ## 3. View Lineage in Microsoft Purview
 
-1. Open the **Microsoft Purview Governance Portal**, from the **Data catalog** screen click **Browse assets**.
+1. Open the **Microsoft Purview Governance Portal**, from the **Data catalog** screen click **Browse**.
 
     ![ALT](../images/module06/06.29-purview-browse.png)
 
@@ -147,7 +147,7 @@ This module steps through what is required for connecting an Azure Data Factory 
 
     ![ALT](../images/module06/06.30-browse-adf.png)
 
-3. Select the **Azure Data Factory account instance**.
+3. Select the **Azure Data Factory account instance** (e.g. `pvlab-{randomId}-adf`).
 
     ![ALT](../images/module06/06.31-browse-instance.png)
 

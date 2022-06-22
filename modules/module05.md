@@ -153,6 +153,7 @@ Microsoft Purview provides a large set of default classifications that represent
 ## 4. Upload Data to an Azure Data Lake Storage Gen2 Account
 
 Before proceeding with the following steps, you will need to:
+
 * Download and install [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/).
 * Open Azure Storage Explorer.
 * Sign in to Azure via **View > Account Management > Add an account...**.
@@ -161,23 +162,23 @@ Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [modu
 
 1. Download a copy of **[twitter_handles.parquet](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.parquet)** to your local machine by opening the link in a new tab, right-click within the body of the content, and click **Save as**. 
 
-1. Navigate to your Azure Data Lake Storage Gen2 Account, expand **Blob Containers**, and **Open** the **raw** container. Note: If a raw container does not exist, create one.
+2. Navigate to your Azure Data Lake Storage Gen2 Account, expand **Blob Containers**, and **Open** the **raw** container. Note: If a raw container does not exist, create one.
 
     ![Open Container](../images/module05/05.12-explorer-container.png)
 
-2. Click on the **New Folder** button, provide the folder a name (e.g. `Twitter`) and click **OK**.
+3. Click on the **New Folder** button, provide the folder a name (e.g. `Twitter`) and click **OK**.
 
     ![New Folder](../images/module05/05.13-explorer-folder.png)
 
-3. Right-click on the newly created folder and click **Open**.
+4. Right-click on the newly created folder and click **Open**.
 
    ![Open Folder](../images/module05/05.14-explorer-openfolder.png)
 
-4. Click on the **Upload** button and select **Upload Files...**.
+5. Click on the **Upload** button and select **Upload Files...**.
 
     ![Upload File](../images/module05/05.15-explorer-upload.png)
 
-5. Select the local copy of **twitter_handles.parquet** and click **Upload**.
+6. Select the local copy of **twitter_handles.parquet** and click **Upload**.
 
     ![Upload Parquet](../images/module05/05.16-explorer-parquet.png)
 

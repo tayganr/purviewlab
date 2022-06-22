@@ -102,6 +102,8 @@ Microsoft Purview provides a large set of default classifications that represent
     * The plus symbol (`+`) indicates one or more characters matching the preceding item. This may lead to false positives as it would allow for an unlimited number of alphanumeric characters. Twitter handles must be a minimum of 5 and a maximum of 15 characters.
     * With `{5,15}`, this will ensure matches only occur where there is a at least 5 and at most 15 occurrences of the preceding item.
 
+    ![Classification Data Pattern](../images/module05/05.33-classification-pattern.png)
+
 7. While we can also specify a **Column Pattern**, in this example we will rely solely on the Data Pattern. Clear the **Column Pattern** input and click **Create**.
 
     ![Create Classification Rule](../images/module05/05.07-regex-create.png)

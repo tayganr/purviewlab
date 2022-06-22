@@ -83,7 +83,11 @@ Microsoft Purview provides a large set of default classifications that represent
 
 3. Download a copy of **[twitter_handles.csv](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.csv)** to your local machine by opening the link in a new tab, right-click within the body of the content, and click **Save as**.
 
+    ![CSV Save as](../images/module05/05.31-csv-saveas.png)
+
 4. Click the **Browse** icon and open the local copy of **twitter_handles.csv**.
+
+    ![Upload file](../images/module05/05.32-classification-upload.png)
 
 5. Select the data pattern associated to the **Handle** column and click **Add to patterns**.
 

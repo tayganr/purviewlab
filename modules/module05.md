@@ -123,11 +123,14 @@ Microsoft Purview provides a large set of default classifications that represent
 2. Change the **Source Type** to `Azure Data Lake Storage Gen2` then **copy** and **paste** the values below into the appropriate fields. Click **Continue**.
 
     **Scan rule set name**
-    ```
+
+    ```text
     twitter_scan_rule_set
     ```
+
     **Scan rule description**
-    ```
+
+    ```text
     Custom scan rule set to detect parquet files and classify twitter handles.
     ```
 
@@ -137,9 +140,13 @@ Microsoft Purview provides a large set of default classifications that represent
 
     ![Scan Rule Set File Type](../images/module05/05.10-scanruleset-filetype.png)
 
-4. Clear all selected **System rules** and select the custom classification rule **twitter_handle** and click **Create**.
+4. Clear all selected **System rules** and select the custom classification rule **twitter_handle** and click **Continue**.
 
     ![Scan Rule Set Classification](../images/module05/05.11-scanruleset-rules.png)
+
+5. Click **Create**.
+
+    ![Ignore patterns](../images/module05/05.34-scanruleset-ignore.png)
 
 <div align="right"><a href="#module-05---classifications">↥ back to top</a></div>
 

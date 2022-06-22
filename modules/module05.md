@@ -146,6 +146,10 @@ Microsoft Purview provides a large set of default classifications that represent
 
 5. Click **Create**.
 
+    > :bulb: **Did you know?**
+    >
+    > **Ignore patterns** tell Microsoft Purview which assets to exclude during scanning. During scanning, Microsoft Purview will compare the asset's URL against these regular expressions. All assets matching any of the regular expressions mentioned will be ignored while scanning.
+
     ![Ignore patterns](../images/module05/05.34-scanruleset-ignore.png)
 
 <div align="right"><a href="#module-05---classifications">↥ back to top</a></div>

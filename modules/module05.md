@@ -164,7 +164,7 @@ Before proceeding with the following steps, you will need to:
 
 Note: If you have not created an Azure Data Lake Storage Gen2 Account, see [module 02](../modules/module02.md).
 
-1. Download a copy of **[twitter_handles.parquet](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.parquet)** to your local machine by opening the link in a new tab, right-click within the body of the content, and click **Save as**. 
+1. Download a copy of **[twitter_handles.parquet](https://github.com/tayganr/purviewlab/raw/main/assets/twitter_handles.parquet)** to your local machine.
 
 2. Navigate to your Azure Data Lake Storage Gen2 Account, expand **Blob Containers**, and **Open** the **raw** container. Note: If a raw container does not exist, create one.
 

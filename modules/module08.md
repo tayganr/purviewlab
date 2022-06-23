@@ -4,7 +4,7 @@
 
 ## :loudspeaker: Introduction
 
-Microsoft Purview administrators can use Azure Monitor to track the operational state of a Microsoft Purview account instance. This information, for example, can be the number of scans completed or cancelled. Metrics are collected to provide data points for you to track potential problems, troubleshoot, and improve the reliability of the Purview platform.
+Microsoft Purview administrators can use Azure Monitor to track the operational state of a Microsoft Purview account instance. This information, for example, can be the number of scans completed or cancelled. Metrics are collected to provide data points for you to track potential problems, troubleshoot, and improve the reliability of the Microsoft Purview platform.
 
 ## :thinking: Prerequisites
 
@@ -29,7 +29,7 @@ Microsoft Purview administrators can use Azure Monitor to track the operational 
 
 Metrics can be accessed from the Azure Portal for a Microsoft Purview account instance. Access to the metrics can be granted via a role assignment.
 
-* The person who created the Purview account automatically gets permissions to view metrics.
+* The person who created the Microsoft Purview account automatically gets permissions to view metrics.
 * Other individuals can be provided access by adding them to the **Monitoring Reader** role.
 
 1. Sign in to the [Azure portal](https://portal.azure.com), navigate to your **Microsoft Purview** account (e.g. `pvlab-{randomId}-pv`), select **Access Control** and click **Add role assignment**.

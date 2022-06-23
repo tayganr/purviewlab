@@ -255,7 +255,7 @@ View key metrics about the sensitivity labels applied to sources, files, and tab
 1. Which report would show the **number of assets**?
 
     A ) Assets  
-    B ) Scans  
+    B ) Sensitivity labels  
     C ) Classification
 
 2. A glossary term that does not have a steward (i.e. an assigned contact), is shown as an **incomplete term**.
@@ -273,6 +273,6 @@ View key metrics about the sensitivity labels applied to sources, files, and tab
 
 ## :tada: Summary
 
-This module provided an overview of how to glean insights on Assets, Scans, Glossary Terms, Classifications and Sensitivity Labels across your data estate.
+This module provided an overview of how to glean insights on Data stewardship, Assets, Glossary, Classifications and Sensitivity Labels across your data estate.
 
 [Continue >](../modules/module08.md)

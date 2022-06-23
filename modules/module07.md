@@ -68,7 +68,7 @@ View key metrics about your data estate's health and performance.
 
     ![Stewardship KPI](../images/module07/07.02-stewardship-kpis.png)
 
-3. Further down the page you will find additional **data visualizations**, typically these tiles will allow interactive filtering and the ability to drill-down into the underlying detail by clicking **View details**. The Assets page includes the following **graphs**:
+3. Further down the page you will find additional **data visualizations**, typically these tiles will allow interactive filtering and the ability to drill-down into the underlying detail by clicking **View details**. The Data Stewardship page includes the following **graphs**:
 
     **Data estate health**
 

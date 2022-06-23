@@ -31,7 +31,7 @@ Registering a Microsoft Purview account to a Synapse workspace allows you to dis
 
 > :bulb: **Did you know?**
 >
-> One of the key benefits of integrating Azure Synapse Analytics with Microsoft Purview, is the ability to discover Microsoft Purview assets from within Synapse Studio (i.e. no need to swtich between user experiences), with added abilities using Synapse specific capabilities (e.g. SELECT TOP 100). 
+> One of the key benefits of integrating Azure Synapse Analytics with Microsoft Purview, is the ability to discover Microsoft Purview assets from within Synapse Studio (i.e. no need to switch between user experiences), with added abilities using Synapse specific capabilities (e.g. SELECT TOP 100).
 >
 > Note: Before we can demonstrate the ability to query external data sources from Azure Synapse Analytics, we need to ensure our account has the appropriate level of access (i.e. `Storage Blob Data Reader`).
 
@@ -75,9 +75,9 @@ Registering a Microsoft Purview account to a Synapse workspace allows you to dis
 
     ![Purview Account Registered](../images/module09/09.11-synapse-success.png)
 
-5. To validate that Synapse was able to succesfully add the Synapse managed identity to the Data Curator role, navigate to the **Microsoft Purview Governance Portal** > **Data map** > **Collections** > **YOUR_ROOT_COLLECTION**, switch to the **Role assignments** tab and expand **Data curators**. You should be able to see the Synapse Service Principal listed as one of the Data curators. This will provide Synapse read/write access to the catalog.
+5. To validate that Synapse was able to successfully add the Synapse managed identity to the Data Curator role, navigate to the **Microsoft Purview Governance Portal** > **Data map** > **Collections** > **YOUR_ROOT_COLLECTION**, switch to the **Role assignments** tab and expand **Data curators**. You should be able to see the Synapse Service Principal listed as one of the Data curators. This will provide Synapse read/write access to the catalog.
 
-    ![](../images/module09/09.18-synapsemi-curator.png)
+    ![ALT](../images/module09/09.18-synapsemi-curator.png)
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 
@@ -117,7 +117,7 @@ Registering a Microsoft Purview account to a Synapse workspace allows you to dis
 
 3. Once Synapse Analytics is connected to a Microsoft Purview account, users can quickly generate a new linked service or integration dataset via the action buttons (for supported file types)?
 
-    A ) True    
+    A ) True
     B ) False  
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>

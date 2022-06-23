@@ -28,6 +28,7 @@ Microsoft Purview administrators can use Azure Monitor to track the operational 
 ## 1. Provide a User Access to Microsoft Purview Metrics
 
 Metrics can be accessed from the Azure Portal for a Microsoft Purview account instance. Access to the metrics can be granted via a role assignment.
+
 * The person who created the Purview account automatically gets permissions to view metrics.
 * Other individuals can be provided access by adding them to the **Monitoring Reader** role.
 
@@ -81,7 +82,7 @@ Metrics can be accessed from the Azure Portal for a Microsoft Purview account in
 
     ![Metrics Time Range](../images/module08/08.08-metrics-range.png)
 
-5. Below is an example. Note: The account instance would need some historical scan activity in order to visualize the metric. 
+5. Below is an example. Note: The account instance would need some historical scan activity in order to visualize the metric.
 
     ![Metrics Graph](../images/module08/08.09-metrics-graph.png)
 

@@ -56,10 +56,10 @@ When planning your Microsoft Purview deployment, you first need to provision a M
     >
     > **Capacity Units** determine the size of the platform and is a **provisioned** (always on) set of resources that is needed to keep the Microsoft Purview platform up and running. 1 Capacity Unit is able to support approximately 25 data map operations per second and includes up to 10GB of metadata storage about data assets.
     >
-    > Capacity Units are required regardless of whether you plan to invoke the Microsoft Purview API endpoints directly (i.e. ISV scenario) or indirectly viathe Microsoft Purview Governance Portal (GUI).
+    > Capacity Units are required regardless of whether you plan to invoke the Microsoft Purview API endpoints directly (i.e. ISV scenario) or indirectly via the Microsoft Purview Governance Portal (GUI).
     >
     > Note: With the introduction of the [Elastic Data Map](https://docs.microsoft.com/azure/purview/concept-elastic-data-map), you no longer need to specify how many Capacity Units that you need. Microsoft Purview will scale capacity elastically based on the request load.
-    > 
+    >
     > **vCore Hours** on the other hand, is the unit of measure for **serverless** compute that is needed to run a scan. You only pay per vCore Hour of scanning that you consume (rounded up to the nearest minute).
     >
     > For more information, check out the [Microsoft Purview Pricing](https://azure.microsoft.com/pricing/details/microsoft-purview/) page.
@@ -80,7 +80,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
 
 ## 2. Grant Access to Microsoft Purview's Data Plane
 
-By default, the identity used to create the Microsoft Purview account resource will have full access tothe Microsoft Purview Governance Portal. The following instructions detail how to provide access to additional users within your Azure Active Directory.
+By default, the identity used to create the Microsoft Purview account resource will have full access to the Microsoft Purview Governance Portal. The following instructions detail how to provide access to additional users within your Azure Active Directory.
 
 1. Navigate to your Microsoft Purview account and click the **Open Microsoft Purview Governance Portal** tile.
 
@@ -112,7 +112,7 @@ By default, the identity used to create the Microsoft Purview account resource w
     >
     > For more information, check out [Access control in Microsoft Purview](https://docs.microsoft.com/azure/purview/catalog-permissions).
 
-    | Role  | Collections | Catalog | Sources/Scans | Description | 
+    | Role  | Collections | Catalog | Sources/Scans | Description |
     | --- | --- | --- | --- | --- |
     | Collection Admin | `Read/Write` | | | Manage collections and role assignments. |
     | Data Reader ||  `Read` |  | Access to catalog (read only). |

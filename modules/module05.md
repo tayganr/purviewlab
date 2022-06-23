@@ -45,11 +45,14 @@ Microsoft Purview provides a large set of default classifications that represent
 2. **Copy** and **paste** the values below into the appropriate fields and click **OK**.
 
     **Name**
-    ```
+
+    ```text
     Twitter Handle
     ```
+
     **Description**
-    ```
+
+    ```text
     The username that appears at the end of your unique Twitter URL.
     ```
 

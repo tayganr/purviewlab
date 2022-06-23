@@ -115,11 +115,14 @@ In order to securely store our Azure SQL Database password, we need to generate 
 2. **Copy** and **paste** the values below into the matching fields and then click **Create**.
 
     **Name**
-    ```
+
+    ```text
     sql-secret
     ```
+
     **Value**
-    ```
+
+    ```text
     sqlPassword!
     ```
 
@@ -142,7 +145,8 @@ To make the secret accessible to Microsoft Purview, we must first establish a co
 3. **Copy** and **paste** the value below to set the name of your **Key Vault connection**, and then use the drop-down menu items to select the appropriate **Subscription** and **Key Vault name**, then click **Create**.
 
     **Name**
-    ```
+
+    ```text
     myKeyVault
     ```
 
@@ -160,20 +164,23 @@ To make the secret accessible to Microsoft Purview, we must first establish a co
 
     ![ALT](../images/module02/02.62-credentials-new.png)
 
-7.  Using the drop-down menu items, set the **Authentication method** to `SQL authentication` and the **Key Vault connection** to `myKeyVault`. Once the drop-down menu items are set, **Copy** and **paste** the values below into the matching fields, and then click **Create**.
+7. Using the drop-down menu items, set the **Authentication method** to `SQL authentication` and the **Key Vault connection** to `myKeyVault`. Once the drop-down menu items are set, **Copy** and **paste** the values below into the matching fields, and then click **Create**.
 
     **Name**
-    ```
+
+    ```text
     credential-SQL
     ```
 
     **User name**
-    ```
+
+    ```text
     sqladmin
     ```
 
     **Secret name**
-    ```
+
+    ```text
     sql-secret
     ```
 

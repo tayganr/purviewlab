@@ -62,9 +62,9 @@ View key metrics about your data estate's health and performance.
     ![Data stewardship](../images/module07/07.01-insights-stewardship.png)
 
 2. The Data Stewardship page displays the following **high-level metrics**.
-    * Number of Assets by Curation Status
-    * Number of Assets by Ownership Status
-    * Number of Monthly Active Users
+    * **Number of Assets by Curation Status**
+    * **Number of Assets by Ownership Status**
+    * **Number of Monthly Active Users**
 
     ![Stewardship KPI](../images/module07/07.02-stewardship-kpis.png)
 
@@ -105,11 +105,11 @@ View key metrics about your data estate's assets.
     ![Assets](../images/module07/07.09-insights-assets.png)
 
 2. The Assets page displays the following **high-level metrics**.
-    * Number of Assets
-    * Number of Assets by Classification Assignment Status
-    * Number of Assets by Ownership Assignment Status
-    * Number of New Assets (Last 30 days)
-    * Number of Deleted Assets (Last 30 days)
+    * **Number of Assets**
+    * **Number of Assets by Classification Assignment Status**
+    * **Number of Assets by Ownership Assignment Status**
+    * **Number of New Assets (Last 30 days)**
+    * **Number of Deleted Assets (Last 30 days)**
 
     ![Assets KPI](../images/module07/07.10-assets-kpis.png)
 
@@ -138,9 +138,9 @@ View key metrics about glossary terms.
     ![Glossary](../images/module07/07.14-insights-glossary.png
 
 2. The Glossary page displays the following **high-level metrics**.
-    * Total Number of Terms
-    * Total Number of Approved Terms without Assets
-    * Total Number of Expired Terms with Assets
+    * **Total Number of Terms**
+    * **Total Number of Approved Terms without Assets**
+    * **Total Number of Expired Terms with Assets**
 
     ![Glossary KPI](../images/module07/07.15-glossary-kpis.png)
 
@@ -173,11 +173,11 @@ View key metrics about the classifications applied to sources, files, and tables
     ![Classifications](../images/module07/07.19-insights-classifications.png)
 
 2. The Classifications page displays the following **high-level metrics**.
-    * Total Number of Classified Assets
-    * Total Number of Files Classified
-    * Total Number of Tables Classified
-    * Total Number of Unique Classifications
-    * Total Number of Sources Classified
+    * **Total Number of Classified Assets**
+    * **Total Number of Files Classified**
+    * **Total Number of Tables Classified**
+    * **Total Number of Unique Classifications**
+    * **Total Number of Sources Classified**
 
     ![Classifications KPI](../images/module07/07.20-classifications-kpis.png)
 
@@ -216,11 +216,11 @@ View key metrics about the sensitivity labels applied to sources, files, and tab
     ![Sensitivity labels](../images/module07/07.25-insights-labels.png)
 
 2. The Sensitivity Labels page displays the following **high-level metrics**.
-    * Total Number of Labeled Assets
-    * Total Number of Labeled Files
-    * Total Number of Labeled Tables
-    * Total Number of Unique Labels
-    * Total Number of Labeled Sources
+    * **Total Number of Labeled Assets**
+    * **Total Number of Labeled Files**
+    * **Total Number of Labeled Tables**
+    * **Total Number of Unique Labels**
+    * **Total Number of Labeled Sources**
 
     ![Sensitivity labels KPI](../images/module07/07.26-labels-kpis.png)
 

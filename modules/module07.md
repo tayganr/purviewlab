@@ -17,14 +17,19 @@
 
 Insights provides customers, a single pane of glass view into their catalog and further aims to provide specific insights to the data source administrators, business users, data stewards, data officer, and security administrators. Microsoft Purview currently has the following reports available:
 
-* Health
-  * Data stewardship
-* Inventory and ownership
-  * Assets
-* Curation and governance
-  * Glossary
-  * Classifications
-  * Sensitivity labels
+**Health**
+
+* Data stewardship
+
+**Inventory and ownership**
+
+* Assets
+
+**Curation and governance**
+
+* Glossary
+* Classifications
+* Sensitivity labels
 
 ## :thinking: Prerequisites
 

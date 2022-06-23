@@ -106,7 +106,7 @@ Metrics can be accessed from the Azure Portal for a Microsoft Purview account in
 
     ![Save Diagnostic Setting](../images/module08/08.15-diagnostic-save.png)
 
-3. To test the capture of raw events, trigger a full scan by navigating to **Microsoft the Microsoft Purview Governance Portal** > **Data map** > **Sources** and click **View details** on an existing source.
+3. To test the capture of raw events, trigger a full scan by navigating to the **Microsoft Purview Governance Portal** > **Data map** > **Sources** and click **View details** on an existing source.
 
     ![Source Details](../images/module08/08.16-sources-details.png)
 
@@ -122,11 +122,11 @@ Metrics can be accessed from the Azure Portal for a Microsoft Purview account in
 
     ![Scan Progress](../images/module08/08.19-scan-progress.png)
 
-7. Once the scan is complete, navigate to your storage account within the Azure Portal, select **Storage Explorer**, expand **CONTAINERS** and select **insights-logs-scanstatuslogevent**, navigate down the folder hierarchy until you reach a JSON document (e.g. `PT1H.json`).
+7. Once the scan is complete, navigate to your storage account within the Azure Portal, select **Storage browser**, expand **Blob containers** and select **insights-logs-scanstatuslogevent**, navigate down the folder hierarchy until you reach a JSON document (e.g. `PT1H.json`).
 
     ![Storage Explorer](../images/module08/08.20-storage-explorer.png)
 
-8. Download and open a local copy of the JSON document to see the details (e.g. dataSourceName, dataSourceType, assetsDiscovered, scanTotalRunTimeInSeconds, etc).
+8. Download and open a local copy of the JSON document with your choice of text editor (e.g. Notepad++, VSCode, etc) to see details such as dataSourceName, dataSourceType, assetsDiscovered, scanTotalRunTimeInSeconds, and more.
 
     ![Event JSON](../images/module08/08.21-event-json.png)
 

@@ -95,7 +95,7 @@ Registering a Microsoft Purview account to a Synapse workspace allows you to dis
 
     ![Select Top 100](../images/module09/09.14-synapse-select.png)
 
-4. To execute the query, click **Run**. Note: The user executing the query must have the appropriate level of access (e.g. Storage Blob Data Reader), see step 1 for more details..
+4. To execute the query, click **Run**. Note: The user executing the query must have the appropriate level of access (e.g. `Storage Blob Data Reader`), see step 1 for more details.
 
     ![Run Query](../images/module09/09.15-synapse-run.png)
 
@@ -117,7 +117,7 @@ Registering a Microsoft Purview account to a Synapse workspace allows you to dis
 
 3. Once Synapse Analytics is connected to a Microsoft Purview account, users can quickly generate a new linked service or integration dataset via the action buttons (for supported file types)?
 
-    A ) True
+    A ) True  
     B ) False  
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>

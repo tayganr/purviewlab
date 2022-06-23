@@ -247,7 +247,7 @@ To make the secret accessible to Microsoft Purview, we must first establish a co
 
 > Note: This is the same knowledge check referenced in Module 2A. If you have already completed the knowledge check from the previous module, please skip this step.
 
-[http://aka.ms/purviewlab/q02](http://aka.ms/purviewlab/q02)
+[https://aka.ms/purviewlab/q02](https://aka.ms/purviewlab/q02)
 
 1. What type of object can help organize data sources into logical groups?
 

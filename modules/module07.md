@@ -17,11 +17,14 @@
 
 Insights provides customers, a single pane of glass view into their catalog and further aims to provide specific insights to the data source administrators, business users, data stewards, data officer, and security administrators. Microsoft Purview currently has the following reports available:
 
-* Assets
-* Scans
-* Glossary
-* Classification
-* Sensitivity Labels
+* Health
+  * Data stewardship
+* Inventory and ownership
+  * Assets
+* Curation and governance
+  * Glossary
+  * Classifications
+  * Sensitivity labels
 
 ## :thinking: Prerequisites
 
@@ -45,92 +48,104 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
-## 1. Asset Insights
+## 1. Data Stewardship Insights
 
-1. Open the **Microsoft Purview Governance Portal**, navigate to **Insights** > **Assets**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Data estate insights** > **Data stewardship**.
 
-    ![Assets Insights](../images/module07/07.01-assets-insights.png)
+    ![Data stewardship](../images/module07/07.01-insights-stewardship.png)
 
-2. The Assets page displays the following **high-level metrics**.
-    * Number of Source Types
-    * Number of Assets
-    * Number of Classified Assets
-    * Number of Unique File Extensions
+2. The Data Stewardship page displays the following **high-level metrics**.
+    * Number of Assets by Curation Status
+    * Number of Assets by Ownership Status
+    * Number of Monthly Active Users
 
-    ![Assets KPI](../images/module07/07.02-assets-kpi.png)
+    ![Stewardship KPI](../images/module07/07.02-stewardship-kpis.png)
 
 3. Further down the page you will find additional **data visualizations**, typically these tiles will allow interactive filtering and the ability to drill-down into the underlying detail by clicking **View details**. The Assets page includes the following **graphs**:
 
-    **Asset count by source type**
+    **Data estate health**
 
-    ![Assets Graph 01](../images/module07/07.03-assets-graph01.png)
+    ![Stewardship Graph 01](../images/module07/07.03-stewardship-health.png)
 
-    **Top file extensions (By count OR By size)**
+    **Asset curation**
 
-    ![Assets Graph 02](../images/module07/07.04-assets-graph02.png)
+    ![Stewardship Graph 02](../images/module07/07.04-stewardship-curation.png)
 
-    **Files not stored in resource sets**
+    **Trends and gap analysis**
 
-    ![Assets Graph 03](../images/module07/07.05-assets-graph03.png)
+    ![Stewardship Graph 03](../images/module07/07.05-stewardship-gap.png)
 
-    > :bulb: **Did you know?**
-    >
-    > Using the quick filters on the **Asset count by source type** graph and drilling into the details by clicking **View details**, is a quick and easy way of identifying which sources contain certain types of data.
+    **Active users by feature category**
+
+    ![Stewardship Graph 04](../images/module07/07.06-stewardship-activeusers.png)
+
+    **Most viewed assets**
+
+    ![Stewardship Graph 05](../images/module07/07.07-stewardship-mostviewed.png)
+
+    **Top searched keywords**
+
+    ![Stewardship Graph 06](../images/module07/07.08-stewardship-topsearched.png)
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
-## 2. Scan Insights
+## 2. Assets Insights
 
-1. Open the **Microsoft Purview Governance Portal**, navigate to **Insights** > **Scans**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Data estate insights** > **Assets**.
 
-    ![Scan Insights](../images/module07/07.06-scans-insights.png)
+    ![Assets](../images/module07/07.09-insights-assets.png)
 
-2. The Scans page displays the following **high-level metrics**.
-    * Number of Scans
-    * Number of Succeeded (Scans)
-    * Number of Canceled (Scans)
-    * Number of Failed (Scans)
+2. The Assets page displays the following **high-level metrics**.
+    * Number of Assets
+    * Number of Assets by Classification Assignment Status
+    * Number of Assets by Ownership Assignment Status
+    * Number of New Assets (Last 30 days)
+    * Number of Deleted Assets (Last 30 days)
 
-    ![Scan KPI](../images/module07/07.07-scans-kpi.png)
+    ![Assets KPI](../images/module07/07.10-assets-kpis.png)
 
-3. The Scans page includes the following **graphs**:
-    
-    **Scan status**
+3. The Assets page includes the following **graphs**:
 
-    ![Scan Graph 01](../images/module07/07.08-scans-graph01.png)
+    **Data assets by collection or source type**
 
-    > :bulb: **Did you know?**
-    >
-    > Clicking **View details** on the **Scan Status** graph will show scans that have occurred over the last 30 days with aggregated counts by status (Success, Failed, Canceled). Drilling further by clicking on a scan name will reveal the scan run history with quick action buttons to edit, delete, or run.
+    ![Assets Graph 01](../images/module07/07.11-assets-distribution.png)
+
+    **Top file extensions**
+
+    ![Assets Graph 02](../images/module07/07.12-assets-fileext.png)
+
+    **Files not stored in resource sets**
+
+    ![Assets Graph 03](../images/module07/07.13-assets-resourcesets.png)
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
 ## 3. Glossary Insights
 
-1. Open the **Microsoft Purview Governance Portal**, navigate to **Insights** > **Glossary**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Data estate insights** > **Glossary**.
 
-    ![Glossary Insights](../images/module07/07.09-glossary-insights.png)
+    ![Glossary](../images/module07/07.14-insights-glossary.png
 
 2. The Glossary page displays the following **high-level metrics**.
-    * Total terms
-    * Approved terms without assets
-    * Expired terms with assets
+    * Total Number of Terms
+    * Total Number of Approved Terms without Assets
+    * Total Number of Expired Terms with Assets
 
-    ![Glossary KPI](../images/module07/07.10-glossary-kpi.png)
+    ![Glossary KPI](../images/module07/07.15-glossary-kpis.png)
 
 3. The Glossary page includes the following **graphs**:
-     
+
     **Top terms by asset count**
 
-    ![Glossary Graph 01](../images/module07/07.11-glossary-graph01.png)
+    ![Glossary Graph 01](../images/module07/07.16-glossary-topterms.png)
 
-    **Status Overview (Terms with assets OR Terms without assets)**
+    **Terms with and without assets**
 
-    ![Glossary Graph 02](../images/module07/07.12-glossary-graph02.png)
+    ![Glossary Graph 02](../images/module07/07.17-glossary-assignments.png)
 
-    **Incomplete Terms**
+    **Incomplete terms**
 
-    ![Glossary Graph 03](../images/module07/07.13-glossary-graph03.png)
+    ![Glossary Graph 03](../images/module07/07.18-glossary-incomplete.png)
 
     > :bulb: **Did you know?**
     >
@@ -138,85 +153,85 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
-## 4. Classification Insights
+## 4. Classifications Insights
 
-1. Open the **Microsoft Purview Governance Portal**, navigate to **Insights** > **Classification**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Data estate insights** > **Classifications**.
 
-    ![Classification Insights](../images/module07/07.14-classification-insights.png)
+    ![Classifications](../images/module07/07.19-insights-classifications.png)
 
-2. The Classification page displays the following **high-level metrics**.
-    * Total assets classified
-    * Files classified
-    * Tables classified
-    * Unique classifications found
-    * Sources classified
+2. The Classifications page displays the following **high-level metrics**.
+    * Total Number of Classified Assets
+    * Total Number of Files Classified
+    * Total Number of Tables Classified
+    * Total Number of Unique Classifications
+    * Total Number of Sources Classified
 
-    ![Classification KPI](../images/module07/07.15-classification-kpi.png)
+    ![Classifications KPI](../images/module07/07.20-classifications-kpis.png)
 
-3. The Classification page includes the following **graphs**:
-     
-    **Top sources with classified data**
+3. The Classifications page includes the following **graphs**:
 
-    ![Classification Graph 01](../images/module07/07.16-classification-graph01.png)
+    **Top sources with classified data (last 30 days)**
+
+    ![Classifications Graph 01](../images/module07/07.21-classifications-sources.png)
 
     **Top classification categories**
 
-    ![Classification Graph 02](../images/module07/07.17-classification-graph02.png)
+    ![Classifications Graph 02](../images/module07/07.22-classifications-categories.png)
 
-    **Top classifications for files**
+    **Number of Files by Classification**
 
-    ![Classification Graph 03](../images/module07/07.18-classification-graph03.png)
+    ![Classifications Graph 03](../images/module07/07.23-classifications-files.png)
 
-    **Top classifications for tables**
+    **Number of Tables by Classification**
 
-    ![Classification Graph 04](../images/module07/07.19-classification-graph04.png)
+    ![Classifications Graph 03](../images/module07/07.24-classifications-tables.png)
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
-## 5. Sensitivity Labels Insights
+## 5. Sensitivity labels Insights
 
-1. Open the **Microsoft Purview Governance Portal**, navigate to **Insights** > **Sensitivity Labels**.
+1. Open the **Microsoft Purview Governance Portal**, navigate to **Data estate insights** > **Sensitivity labels**.
 
     > :bulb: **Did you know?**
     >
-    > **Sensitivity labels** state how sensitive data is in your organization. For example, data contained within a particular asset might be `highly confidential`. **Classifications** on the other hand indicate the type of data values (e.g. Driver's License Number, Email Address, SWIFT Code, etc) 
+    > **Sensitivity labels** state how **sensitive** data is in your organization. For example, data contained within a particular asset might be `highly confidential`. **Classifications** on the other hand indicate the **type** of data values (e.g. Driver's License Number, Email Address, SWIFT Code, etc).
     >
-    > Microsoft Purview's ability to apply sensitivity labels is due to the close integration with **Microsoft Information Protection** offered in Microsoft 365. Note: You must turn on Information Protection for Microsoft Purview in the Microsoft 365 compliance center. For more information, check out how to [Labeling in Microsoft Purview](https://docs.microsoft.com/azure/purview/create-sensitivity-label).
+    > Microsoft Purview's ability to apply sensitivity labels is controlled within the **Microsoft Purview Compliance Portal**. Note: You must have an active Microsoft 365 license that offers the benefit of automatically applying sensitivity labels. For more information, check out how to [How to label your data](https://docs.microsoft.com/azure/purview/how-to-automatically-label-your-content).
 
-    ![Sensitivity Labels Insights](../images/module07/07.20-labels-insights.png)
+    ![Sensitivity labels](../images/module07/07.25-insights-labels.png)
 
 2. The Sensitivity Labels page displays the following **high-level metrics**.
-    * Total assets labeled
-    * Files labeled
-    * Tables labeled
-    * Unique labels found
-    * Sources labeled
+    * Total Number of Labeled Assets
+    * Total Number of Labeled Files
+    * Total Number of Labeled Tables
+    * Total Number of Unique Labels
+    * Total Number of Labeled Sources
 
-    ![Sensitivity Labels KPI](../images/module07/07.21-labels-kpi.png)
+    ![Sensitivity labels KPI](../images/module07/07.26-labels-kpis.png)
 
 3. The Sensitivity Labels page includes the following **graphs**:
-    
-    **Top sources with labeled data**
 
-    ![Sensitivity Labels Graph 01](../images/module07/07.22-labels-graph01.png)
+    **Top sources with labeled data (last 30 days)**
+
+    ![Sensitivity labels Graph 01](../images/module07/07.27-labels-sources.png)
 
     **Top labels applied across sources**
 
-    ![Sensitivity Labels Graph 02](../images/module07/07.23-labels-graph02.png)
+    ![Sensitivity labels Graph 02](../images/module07/07.28-labels-top.png)
 
-    **Top labels for files**
+    **Number of Files by Label**
 
-    ![Sensitivity Labels Graph 03](../images/module07/07.24-labels-graph03.png)
+    ![Sensitivity labels Graph 03](../images/module07/07.29-labels-files.png)
 
-    **Top labels for tables**
+    **Number of Tables by Label**
 
-    ![Sensitivity Labels Graph 04](../images/module07/07.25-labels-graph04.png)
+    ![Sensitivity labels Graph 03](../images/module07/07.30-labels-tables.png)
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 
-[http://aka.ms/purviewlab/q07](http://aka.ms/purviewlab/q07)
+[https://aka.ms/purviewlab/q07](https://aka.ms/purviewlab/q07)
 
 1. Which report would show the **number of assets**?
 

@@ -133,7 +133,7 @@ Metrics can be accessed from the Azure Portal for a Microsoft Purview account in
 
 ## :mortar_board: Knowledge Check
 
-[http://aka.ms/purviewlab/q08](http://aka.ms/purviewlab/q08)
+[https://aka.ms/purviewlab/q08](https://aka.ms/purviewlab/q08)
 
 1. Which built-in role is needed to provide users access to **view monitoring data**?
 

@@ -179,7 +179,7 @@ Microsoft Purview allows us to perform certain operations (add/replace/remove) a
 
 ## :mortar_board: Knowledge Check
 
-[http://aka.ms/purviewlab/q03](http://aka.ms/purviewlab/q03)
+[https://aka.ms/purviewlab/q03](https://aka.ms/purviewlab/q03)
 
 1. There are a number of **attributes** that we can use to narrow our search results via the **filter pane**, which of the following is **not** available as a quick filter?
 

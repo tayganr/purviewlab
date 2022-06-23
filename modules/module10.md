@@ -1122,7 +1122,7 @@ Navigate to **Body** and for the **raw** section, select **JSON** option. In thi
  
 ## :mortar_board: Knowledge Check
 
-[http://aka.ms/purviewlab/q10](http://aka.ms/purviewlab/q10)
+[https://aka.ms/purviewlab/q10](https://aka.ms/purviewlab/q10)
 
 1. The Microsoft Purview API is largely based on which open source project?
 

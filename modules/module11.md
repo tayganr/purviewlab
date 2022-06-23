@@ -207,7 +207,7 @@ This has been a long read, but also demonstrates how you can use your own integr
 
 ## :mortar_board: Knowledge Check
 
-[http://aka.ms/purviewlab/q11](http://aka.ms/purviewlab/q11)
+[https://aka.ms/purviewlab/q11](https://aka.ms/purviewlab/q11)
 
 1. What is an Self-Hosted Integration Runtime used for?
 

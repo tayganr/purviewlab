@@ -123,7 +123,7 @@ By default, the identity used to create the Microsoft Purview account resource w
 
 ## :mortar_board: Knowledge Check
 
-[http://aka.ms/purviewlab/q01](http://aka.ms/purviewlab/q01)
+[https://aka.ms/purviewlab/q01](https://aka.ms/purviewlab/q01)
 
 1. Which of the following Microsoft Purview pricing meters is **serverless** and used to support **data map population** through scanning and ingestion jobs?
 

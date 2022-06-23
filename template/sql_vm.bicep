@@ -10,7 +10,7 @@ var sqlVirtualMachineName = 'pvlab-${randomString}-sqlvm'
 
 var adminUsername = 'sqladmin${randomString}'
 var upperString = toUpper(randomString)
-var adminPassword = '${randomString}!${upperString}@${randomString}'
+var adminPassword = '${randomString}!${upperString}@${randomString}0aA'
 
 resource networkInterface_resource 'Microsoft.Network/networkInterfaces@2018-10-01' = {
   name: 'pvlab-${randomString}-ni'

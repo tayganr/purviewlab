@@ -19,11 +19,13 @@ Registering a Microsoft Purview account to a Synapse workspace allows you to dis
 * Register a Microsoft Purview account to a Synapse workspace.
 * Query a dataset that exists in the Microsoft Purview catalog with Azure Synapse Analytics.
 
-## Table of Contents
+## :bookmark_tabs: Table of Contents
 
-1. [Azure Data Lake Storage Gen2 Account Access](#1-azure-data-lake-storage-gen2-account-access)
-2. [Connect to a Purview Account](#2-connect-to-a-purview-account)
-3. [Search a Purview Account](#3-search-a-purview-account)
+| #  | Section | Role |
+| --- | --- | --- |
+| 1 | [Azure Data Lake Storage Gen2 Account Access](#1-azure-data-lake-storage-gen2-account-access) | Azure Administrator |
+| 2 | [Connect to a Purview Account](#2-connect-to-a-purview-account) | Synapse Administrator |
+| 3 | [Search a Purview Account](#3-search-a-purview-account) | Data Analyst |
 
 <div align="right"><a href="#module-09---integrate-with-azure-synapse-analytics">↥ back to top</a></div>
 

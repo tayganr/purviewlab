@@ -127,6 +127,10 @@ View key metrics about your data estate's assets.
 
     ![Assets Graph 03](../images/module07/07.13-assets-resourcesets.png)
 
+    > :bulb: **Did you know?**
+    >
+    > Using the quick filters on the **Data assets by source type** graph and drilling into the details by clicking **View details**, is a quick and easy way of identifying which sources contain certain types of data (e.g. set the **Classification category** filter to `Personal`).
+
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
 ## 3. Glossary Insights
@@ -135,7 +139,7 @@ View key metrics about glossary terms.
 
 1. Open the **Microsoft Purview Governance Portal**, navigate to **Data estate insights** > **Glossary**.
 
-    ![Glossary](../images/module07/07.14-insights-glossary.png
+    ![Glossary](../images/module07/07.14-insights-glossary.png)
 
 2. The Glossary page displays the following **high-level metrics**.
     * **Total Number of Terms**

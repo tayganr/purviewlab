@@ -55,6 +55,8 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 ## 1. Data Stewardship Insights
 
+View key metrics about your data estate's health and performance.
+
 1. Open the **Microsoft Purview Governance Portal**, navigate to **Data estate insights** > **Data stewardship**.
 
     ![Data stewardship](../images/module07/07.01-insights-stewardship.png)
@@ -96,6 +98,8 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 ## 2. Assets Insights
 
+View key metrics about your data estate's assets.
+
 1. Open the **Microsoft Purview Governance Portal**, navigate to **Data estate insights** > **Assets**.
 
     ![Assets](../images/module07/07.09-insights-assets.png)
@@ -126,6 +130,8 @@ Insights provides customers, a single pane of glass view into their catalog and 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
 ## 3. Glossary Insights
+
+View key metrics about glossary terms.
 
 1. Open the **Microsoft Purview Governance Portal**, navigate to **Data estate insights** > **Glossary**.
 
@@ -159,6 +165,8 @@ Insights provides customers, a single pane of glass view into their catalog and 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
 ## 4. Classifications Insights
+
+View key metrics about the classifications applied to sources, files, and tables.
 
 1. Open the **Microsoft Purview Governance Portal**, navigate to **Data estate insights** > **Classifications**.
 
@@ -194,6 +202,8 @@ Insights provides customers, a single pane of glass view into their catalog and 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>
 
 ## 5. Sensitivity labels Insights
+
+View key metrics about the sensitivity labels applied to sources, files, and tables.
 
 1. Open the **Microsoft Purview Governance Portal**, navigate to **Data estate insights** > **Sensitivity labels**.
 

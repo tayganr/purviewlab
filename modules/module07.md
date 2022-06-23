@@ -45,10 +45,10 @@ Insights provides customers, a single pane of glass view into their catalog and 
 
 | #  | Section | Role |
 | --- | --- | --- |
-| 1 | [Asset Insights](#1-asset-insights) | Insight Reader |
-| 2 | [Scan Insights](#2-scan-insights) | Insight Reader |
+| 1 | [Data Stewardship Insights](#1-data-stewardship-insights) | Insight Reader |
+| 2 | [Assets Insights](#2-assets-insights) | Insight Reader |
 | 3 | [Glossary Insights](#3-glossary-insights) | Insight Reader |
-| 4 | [Classification Insights](#4-classification-insights) | Insight Reader |
+| 4 | [Classifications Insights](#4-classifications-insights) | Insight Reader |
 | 5 | [Sensitivity Labels Insights](#5-sensitivity-labels-insights) | Insight Reader |
 
 <div align="right"><a href="#module-07---insights">↥ back to top</a></div>

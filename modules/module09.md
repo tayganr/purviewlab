@@ -59,7 +59,7 @@ Registering a Microsoft Purview account to a Synapse workspace allows you to dis
 
     ![Open Synapse Studio](../images/module09/09.08-synapse-studio.png)
 
-2. Navigate to **Manage** > **Microsoft Purview (Preview)** and click **Connect to a Purview account**.
+2. Navigate to **Manage** > **Microsoft Purview** and click **Connect to a Purview account**.
 
     ![Connect to a Purview Account](../images/module09/09.09-synapse-connect.png)
 

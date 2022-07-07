@@ -44,6 +44,7 @@ To make a data resource available for policy management, the Data Use Management
     * Owner
     * Both Contributor and USer Access Administrator
 
+ ![Grant IAM privilege](../images/module14/Storage-IAM.png)  
     
 
 2. Grant Data Source Administrator role to the same user in MS Purview.

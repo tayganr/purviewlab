@@ -134,6 +134,6 @@ Values that need to be copied/pasted should be placed in code snippets
 
 ## :tada: Summary
 
-MODULE_SUMMARY
+Purview policies allow you to manage access to data source from within the governance portal. 
 
 [Continue >](../modules/module00.md)

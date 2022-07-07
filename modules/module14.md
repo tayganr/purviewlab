@@ -119,12 +119,13 @@ Values that need to be copied/pasted should be placed in code snippets
     A ) True 
     B ) False  
 
-2. PLACEHOLDER_KNOWLEDGE_CHECK_QUESTION
+2. Which role is needed for a user to be able to publish the policy.
 
-    A ) True  
-    B ) False  
+    A ) Policy Author 
+    B ) Owner
+    c ) Data Source Administrator.
 
-3. PLACEHOLDER_KNOWLEDGE_CHECK_QUESTION
+3. Once the policy is published, it cannot be edited
 
     A ) True  
     B ) False  

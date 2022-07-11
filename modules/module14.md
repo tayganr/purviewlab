@@ -31,7 +31,7 @@ A policy is a named collection of policy statements. When a policy is published 
 | 1 | [Configure permissions for policy management actions](#1-configure-permissions-for-policy-management-actions) | Collection Admin |
 | 2 | [Author and Publish policies for an Azure Storage](#2-Author-and-Publish-policies-for-an-Azure-Storage) | Data Source Administrator / Policy Author |
 
-<div align="right"><a href="#module14--policies">↥ back to top</a></div>
+<div align="right"><a href="#module-14---policies">↥ back to top</a></div>
 
 ## 1. Configure permissions for policy management actions
 
@@ -73,7 +73,7 @@ To make a data resource available for policy management, the Data Use Management
 Values that need to be copied/pasted should be placed in code snippets
 ```
 
-<div align="right"><a href=""#module14--policies">↥ back to top</a></div>
+<div align="right"><a href=""#module-14---policies">↥ back to top</a></div>
 
 ## 2. Author and Publish policies for an Azure Storage
 
@@ -109,7 +109,7 @@ Values that need to be copied/pasted should be placed in code snippets
 
 ![Data Source](../images/module14/02-10select-data-sources-publish-policy.png)
 
-<div align="right"><a href="#module14--policies">↥ back to top</a></div>
+<div align="right"><a href="#module-14---policies">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 

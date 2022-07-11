@@ -40,14 +40,14 @@ To make a data resource available for policy management, the Data Use Management
     * Owner
     * Both Contributor and User Access Administrator
 
- ![Grant IAM privilege](../images/module14/Storage-IAM.png)  
+ ![Grant IAM privilege](../images/module14/Storage-IAM.png)    
  
  
- ![Grant Contributor privilege](../images/module14/01-01contributor-role.png)  
+ ![Grant Contributor privilege](../images/module14/01-01contributor-role.png)    
  
- ![Grant User Mgmt privilege](../images/module14/01-01user-management.png)
-
-
+ ![Grant User Mgmt privilege](../images/module14/01-01user-management.png)  
+  
+  
 2. Grant roles to the same user in MS Purview.
     In Purview grant the same user **Data Source Adminstrator (DSA)** and **Policy authors** role at the root collection level. 
     Navigate to **Collections**. Click on the root collection. Click on **Role assignments**

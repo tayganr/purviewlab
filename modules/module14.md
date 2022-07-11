@@ -69,9 +69,6 @@ To make a data resource available for policy management, the Data Use Management
 > DSA role can publish a policy. 
 > Policy authors role can create or edit a policy.
 
-```text
-Values that need to be copied/pasted should be placed in code snippets
-```
 
 <div align="right"><a href=""#module-14---policies">↥ back to top</a></div>
 

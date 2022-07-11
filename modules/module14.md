@@ -31,7 +31,7 @@ A policy is a named collection of policy statements. When a policy is published 
 | 1 | [Configure permissions for policy management actions](#1-configure-permissions-for-policy-management-actions) | Collection Admin |
 | 2 | [Author and Publish policies for an Azure Storage](#2-Author-and-Publish-policies-for-an-Azure-Storage) | Data Source Administrator / Policy Author |
 
-<div align="right"><a href="#module14---Configure-permissions-for-policy-management-actions">↥ back to top</a></div>
+<div align="right"><a href="#module14--policies">↥ back to top</a></div>
 
 ## 1. Configure permissions for policy management actions
 
@@ -62,7 +62,7 @@ To make a data resource available for policy management, the Data Use Management
 3. Enable Data Use Management
     After a source is registered, edit the source. Set the **Data Use Management** toggle to **Enabled** as shown below. 
     
-![Enable DUM](../images/module14/01-0DUM.png)
+![Enable DUM](../images/module14/01-03DUM.png)
 
 > :bulb: **Did you know?**
 >
@@ -77,14 +77,14 @@ Values that need to be copied/pasted should be placed in code snippets
 
 ## 2. Author and Publish policies for an Azure Storage
 
-1. In the Microsoft Purview governance portal, navigate to the Data policy feature using the eft side panel as shown
+1. In the Microsoft Purview governance portal, navigate to the Data policy feature using the left side panel as shown
 
  ![Create policy](../images/module14/02-01create-policy.png)
 
 
 2. On the new policy page, enter the **Name** and **Description** of the policy and select the **New policy statement** button, to add a new policy.
 
- ![Add policy](../images/module14/02-02Add-policy.png)
+ ![Add policy](../images/module14/02-02New-Policy.png)
 
 3. Select the **Effect** dropdown and choose **Allow**. 
 4. Select the **Action** dropdown and choose **Read** or **Modify**.
@@ -115,14 +115,14 @@ Values that need to be copied/pasted should be placed in code snippets
 
 1. The data source has to be scanned before the policy can be published on it.
 
-    A ) True 
-    B ) False  
+    A ) True   
+    B ) False    
 
 2. Which role is needed for a user to be able to publish the policy.
 
-    A ) Policy Author 
-    B ) Owner
-    c ) Data Source Administrator.
+    A ) Policy Author   
+    B ) Owner  
+    c ) Data Source Administrator  
 
 3. Once the policy is published, it cannot be edited
 

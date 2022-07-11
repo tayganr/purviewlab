@@ -38,7 +38,7 @@ To make a data resource available for policy management, the Data Use Management
 1. Grant IAM privileges to the user on the storage resource.  
     Navigate to the **Access Control(IAM)** page of the storage account resource. Click on **+ Add** --> **Add role assignment**. Grant either of the following IAM role combinations 
     * Owner
-    * Both Contributor and USer Access Administrator
+    * Both Contributor and User Access Administrator
 
  ![Grant IAM privilege](../images/module14/Storage-IAM.png)  
  

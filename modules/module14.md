@@ -28,8 +28,8 @@ A policy is a named collection of policy statements. When a policy is published 
 
 | #  | Section | Role |
 | --- | --- | --- |
-| 1 | [Configure permissions for policy management actions](module14---Configure-permissions-for-policy-management-actions) | Collection Admin |
-| 2 | [Author and Publish policies for an Azure Storage](module14---Author-and-Publish-policies-for-an-Azure-Storage) | Data Source Administrator / Policy Author |
+| 1 | [Configure permissions for policy management actions](#1-configure-permissions-for-policy-management-actions) | Collection Admin |
+| 2 | [Author and Publish policies for an Azure Storage](#module14---Author-and-Publish-policies-for-an-Azure-Storage) | Data Source Administrator / Policy Author |
 
 <div align="right"><a href="#module14---Configure-permissions-for-policy-management-actions">↥ back to top</a></div>
 

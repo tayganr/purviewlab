@@ -35,7 +35,7 @@ A **policy** is a named collection of policy statements. When a policy is publis
 
 To make a data resource available for policy management, the Data Use Management (DUM) toggle needs to be enabled. A user, who will manage the policies in Purview, will need certain IAM privileges on the resource and MS Purview in order to enable the DUM toggle.
 
-1. Grant IAM privileges to the user on the storage resource
+1. Grant IAM privileges to the user on the storage resource.  
     Navigate to the **Access Control(IAM)** page of the storage account resource. Click on **+ Add** --> **Add role assignment**. Grant either of the following IAM role combinations 
     * Owner
     * Both Contributor and USer Access Administrator

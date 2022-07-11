@@ -1,4 +1,3 @@
-@@ -0,0 +1,110 @@
 # Module 14 - Policies
 
 [< Previous Module](../modules/module00.md) - **[Home](../README.md)** - [Next Module >](../modules/module00.md)
@@ -22,7 +21,7 @@ A policy is a named collection of policy statements. When a policy is published 
 
 * Register data source for data use management
 * Create data owner access policy for Azure Storage
-* Create data owner access policy forAzure SQL DB
+* Create data owner access policy for Azure SQL DB
 * Create data owner access policy for resource groups or subscriptions.
 
 ## :bookmark_tabs: Table of Contents

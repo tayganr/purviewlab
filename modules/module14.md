@@ -48,7 +48,7 @@ To make a data resource available for policy management, the Data Use Management
  ![Grant User Mgmt privilege](../images/module14/01-01user-management.png)  
   
 
-2. Grant roles to the same user in MS Purview.
+2. Grant roles to the same user in MS Purview.  
     In Purview grant the same user **Data Source Adminstrator (DSA)** and **Policy authors** role at the root collection level. 
     Navigate to **Collections**. Click on the root collection. Click on **Role assignments**
 
@@ -57,15 +57,15 @@ To make a data resource available for policy management, the Data Use Management
 
  ![Grant policy privilege](../images/module14/01-02policy-author-roles.png)
 
-3. Enable Data Use Management  
+3. Enable Data Use Management.  
     After a source is registered, edit the source. Set the **Data Use Management** toggle to **Enabled** as shown below. 
     
 ![Enable DUM](../images/module14/01-03DUM.png)
 
 > :bulb: **Did you know?**
 >
-> DSA role can publish a policy. 
-> Policy authors role can create or edit a policy.
+> **DSA** role can publish a policy.  
+> **Policy authors** role can create or edit a policy.
 
 
 <div align="right"><a href=""#module-14---policies">↥ back to top</a></div>
@@ -83,7 +83,7 @@ To make a data resource available for policy management, the Data Use Management
 
 3. Select the **Effect** dropdown and choose **Allow**. 
 4. Select the **Action** dropdown and choose **Read** or **Modify**.
-5. Select the **Data Resources** button This will bring up a window to enter the Data resource information. Use the **Assets** box and enter the **Data Source Type** and hte **Name** of a previously registered and scanned data source.
+5. Select the **Data Resources** button This will bring up a window to enter the Data resource information. Use the **Assets** box and enter the **Data Source Type** and the **Name** of a previously registered and scanned data source.
 
  ![Data Resource](../images/module14/02-05DataResource.png)
  
@@ -96,7 +96,7 @@ To make a data resource available for policy management, the Data Use Management
 ![Policy Subject](../images/module14/02-07Subject.png)
 
 8. Select the **Save** button to save the policy.
-9. Select the newly created policy from the list of policies on the the Policy portal. Select the **Publish** button on the right top cornerof the page.
+9. Select the newly created policy from the list of policies on the the Policy portal. Select the **Publish** button on the right top corner of the page.
 
 ![Policy Publish](../images/module14/02-09publish-policy.png)
 

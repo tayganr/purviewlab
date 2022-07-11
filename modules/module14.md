@@ -6,9 +6,9 @@
 
 A new feature of Purview is Policies, which enables you to secure your data estate from within the Microsoft Purview Governance Portal. This feature is in Preview as of July 2022.
 
-Data access policies can be enforced through Purview on data systems that have been registered for policy. This allows Data stewards and owners to grant read, write access to various data stores from within Purview by creating a data access plicy through the Policy Management app in the governance portal. This allows data owners to get a single view / modify of all access granted to all systems from a single dashboard.
+Data access policies can be enforced through Purview on data systems that have been registered in Purview for scanning and data use management. This feature allows Data stewards and owners to grant read, write access to various data stores from within Purview by creating a data access policy through the Policy Management app in the governance portal, enabling a single dashboard view of all access granted to all systems.
 
-A policy is a named collection of policy statements. When a policy is published to one or more data systems under Purview’s governance, it's then enforced by them. A policy definition includes a policy name, description, and a list of one or more policy statements.
+A **policy** is a named collection of policy statements. When a policy is published to one or more data systems under Purview’s governance, it's then enforced by the system. A policy definition includes a policy name, description, and a list of one or more policy statements.
 
 ## :thinking: Prerequisites
 
@@ -21,8 +21,6 @@ A policy is a named collection of policy statements. When a policy is published 
 
 * Register data source for data use management
 * Create data owner access policy for Azure Storage
-* Create data owner access policy for Azure SQL DB
-* Create data owner access policy for resource groups or subscriptions.
 
 ## :bookmark_tabs: Table of Contents
 

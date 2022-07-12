@@ -29,7 +29,7 @@ A **policy** is a named collection of policy statements. When a policy is publis
 | 1 | [Configure permissions for policy management actions](#1-configure-permissions-for-policy-management-actions) | Collection Admin |
 | 2 | [Author and Publish policies for an Azure Storage](#2-Author-and-Publish-policies-for-an-Azure-Storage) | Data Source Administrator / Policy Author |
 
-<div align="right"><a href="#module-14---policies">↥ back to top</a></div>
+<div align="right"><a href="#module-14---data-owner-policies-azure-storage">↥ back to top</a></div>
 
 ## 1. Configure permissions for policy management actions
 
@@ -45,11 +45,11 @@ To make a data resource available for policy management, the Data Use Management
  
  ![Grant Contributor privilege](../images/module14/01-01contributor-role.png)    
  
- ![Grant User Mgmt privilege](../images/module14/01-01user-management.png)  
+ ![Grant User Management privilege](../images/module14/01-01user-management.png)  
   
 
 2. Grant roles to the same user in MS Purview.  
-    In Purview grant the same user **Data Source Adminstrator (DSA)** and **Policy authors** role at the root collection level. 
+    In Purview grant the same user **Data Source Administrator (DSA)** and **Policy authors** role at the root collection level. 
     Navigate to **Collections**. Click on the root collection. Click on **Role assignments**
 
  ![Grant DSA privilege](../images/module14/01-01purview-role.png)
@@ -68,7 +68,7 @@ To make a data resource available for policy management, the Data Use Management
 > **Policy authors** role can create or edit a policy.
 
 
-<div align="right"><a href=""#module-14---policies">↥ back to top</a></div>
+<div align="right"><a href="#module-14---data-owner-policies-azure-storage">↥ back to top</a></div>
 
 ## 2. Author and Publish policies for an Azure Storage
 
@@ -104,7 +104,7 @@ To make a data resource available for policy management, the Data Use Management
 
 ![Data Source](../images/module14/02-10select-data-sources-publish-policy.png)
 
-<div align="right"><a href="#module-14---policies">↥ back to top</a></div>
+<div align="right"><a href="#module-14---data-owner-policies-azure-storage">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 

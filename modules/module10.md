@@ -710,7 +710,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
 ## 5. Get an Access Token
 
-1. Open [Postman](https://www.postman.com/product/rest-client/), create a new **HTTP request** as per the details below.
+1. Open [Postman](https://www.postman.com/product/rest-client/), create a new **HTTP request** as per the details below. Note: Within the URL, be sure to replace **YOUR_TENANT_ID** with the Tenant ID you copied earlier.
 
     > :bulb: **Did you know?**
     >
@@ -767,7 +767,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
 
     > :bulb: **Did you know?**
     >
-    > While Microsoft Purview provides a number of system built type definitions for a variety of object types, Customers can use the API to create their own custom type definitions.
+    > While Microsoft Purview provides a number of system built type definitions for a variety of object types, customers can use the API to create their own custom type definitions.
 
     ![ALT](../images/module10/10.12-typedef-search.png)
 

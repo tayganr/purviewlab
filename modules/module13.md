@@ -1,6 +1,6 @@
 # Module 13 - Process events using Atlas Kafka topics via Event Hubs and NodeJS
 
-[< Previous Module](../modules/module12.md) - **[Home](../README.md)**
+[< Previous Module](../modules/module12.md) - **[Home](../README.md)** - [Next Module >](../modules/module14.md)
 
 ## :loudspeaker: Introduction
 

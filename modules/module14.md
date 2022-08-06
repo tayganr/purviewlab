@@ -1,6 +1,6 @@
 # Module 14 - Data owner policies (Azure Storage)
 
-[< Previous Module](../modules/module13.md) - **[Home](../README.md)**
+[< Previous Module](../modules/module13.md) - **[Home](../README.md)** - [Next Module >](../modules/module15.md)
 
 ## :loudspeaker: Introduction
 
@@ -121,4 +121,4 @@ To make a data resource available for policy management, the Data Use Management
 
 Purview policies allow you to manage access to data source from within the governance portal.
 
-[Continue >](../modules/module00.md)
+[Continue >](../modules/module15.md)

@@ -44,7 +44,11 @@ In order for Microsoft Purview to be able to scan for lineage in an Azure SQL Da
 
 1. From the Azure portal, open the Azure SQL Database server, select **Azure Active Directory**, and click **Set admin**.
 
+    ![Set SQL Admin](../images/module15/15.01-sqladmin.png)
+
 2. In the menu that appears, search for your user and click **Select**.
+
+    ![Set SQL Admin](../images/module15/15.02-sqladmin.png)
 
 > :bulb: **Did you know?**
 >
@@ -53,6 +57,8 @@ In order for Microsoft Purview to be able to scan for lineage in an Azure SQL Da
 ## 2. Configure the Microsoft Purview MSI in the Azure SQL Database
 
 1. From the Azure portal, open the Azure SQL Database instance and select **Query editor**. If necessary, log into the **Query editor** using your account.
+
+    ![Query Editor](../images/module15/15.03-queryeditor.png)
 
 2. From within the Query window, run the following:
 
@@ -69,6 +75,8 @@ The SQL statements above will:
 * Create a Master Key if it does not already exist.
 * Add the Microsoft Purview Managed Identity as a user in the Azure SQL Database.
 * Assign the Microsoft Purview Managed Identity db_owner access, required for determining lineage.
+
+    ![Query Editor](../images/module15/15.04-queryeditor.png)
 
 ## 3. Add example tables and stored procedure to Azure SQL Database
 
@@ -110,32 +118,52 @@ SELECT * FROM dbo.SourceTest
 WHERE dbo.SourceTest.ID = @UserId
 ```
 
+    ![Query Editor](../images/module15/15.05-queryeditor.png)
+
  > Note: We'll be returning to the Query editor shortly, so we recommend opening the Microsoft Purview portal, if not already open, in another tab for convenience as you progress in the next steps.
 
 ## 4. Add a new Azure SQL Database Scan with lineage enabled
 
 1. Open the **Microsoft Purview Governance Portal**, navigate to **Data map** > **Sources**, and within the Azure SQL Database tile, click the **New Scan** button.
 
+    ![New Scan](../images/module15/15.06-newscan.png)
+
 2. Assign the scan a name, such as `Scan-Lineage`. Select your **Database** (e.g. `pvlab-{randomID}-sqldb`), set the **Credential** to `credential-SQL`, ensure **Lineage extraction** is `On`, and click **Test connection**. Once the connection test is successful, click **Continue**.
+
+    ![New Scan](../images/module15/15.07-newscantest.png)
 
  > Note: If the "Test connection" appears to be hanging, click Cancel and re-try. This may happen if the database has been inactive and deprovisioned. 
  > Note: If the "Test connection" fails because of a permissions issue, ensure the earlier steps have been followed to add the Microsoft Purview MSI to the db_owner role.
 
 3. When the list of database tables appears, select our two new tables, **dbo.SourceTest** and **dbo.DestinationTest**. All others can be deselected, as they were configured in the previous scan.
 
-4. Click **Continue**, and **Continue** again accepting the default scan rule set.s
+    ![New Scan](../images/module15/15.08-newscantables.png)
+
+4. Click **Continue**, and **Continue** again accepting the default scan rule set.
+
+    ![New Scan](../images/module15/15.09-newscanruleset.png)
 
 5. Set the trigger to **Once**, click **Continue**.
 
+    ![New Scan](../images/module15/15.10-newscantriggeronce.png)
+
 6. Once the scan has been saved, it will be queued for execution. Navigate to the scan history by selecting **View Details** on the Azure SQL Database connection on the **Data Map**. 
 
+    ![New Scan](../images/module15/15.11-datasourceviewdetails.png)
+
 7. Select the scan name you created, `Scan-Lineage`, and observe it actually created two scans. One for the lineage, and the other for the tables.
+
+    ![New Scan](../images/module15/15.12-datasourceviewdetails.png)
+
+    ![New Scan](../images/module15/15.13-newscandetails.png)
 
  > Note: Keep this page open in the Microsoft Purview portal as we'll be returning here shortly.
 
 ## 5. Execute the stored procedure to simulate data movement
 
-1. Clear the Query editor once again, and run the script below. This will execute the stored procedure created above, simulating data movement of ID #3 from **SourceTest** to **DestinationTest**. 
+1. In the Query editor window (in the Azure portal), clear the Query editor once again, and run the script below. This will execute the stored procedure created above, simulating data movement of ID #3 from **SourceTest** to **DestinationTest**. 
+
+    ![New Scan](../images/module15/15.14-sqlexecute.png)
 
 ```sql
 EXEC dbo.MoveDataTest 3
@@ -147,19 +175,25 @@ The select statement should show the row in the **DestinationTest** table.
 
 ## 6. Re-run lineage scan and observe output
 
-1. On the Microsoft Purview portal tab, we can manually trigger a run of the scan in order to pick up the lineage. In a typical production environment, these scans would run periodically, but we only run them as needed here. To trigger the scan, click **Run scan now** and observe the scan has been Queued once more.
+1. On the Microsoft Purview portal tab, we can manually trigger a run of the scan in order to pick up the lineage. In a typical production environment, these scans would run periodically, but we only run them as needed in dev/test. To trigger the scan, click **Run scan now** > **Full scan** and observe the scan has been Queued once more.
+
+    ![New Scan](../images/module15/15.15-runscannow.png)
 
 > :bulb: **Did you know?**
 >
 > In order for Microsoft Purview to detect the lineage, it observes the actual execution of the stored procedure. Therefore, the lineage will not be detected until there is an execution of the MoveDataTest stored procedure.
 
-2. In a few moments, the scan will complete. You may need to refresh the page to check on status.
+2. In a few moments, the scan will complete. You may need to refresh the page to check on the run status. Once the scans have completed, the scan history should look like the below image.
 
-3. Once the scans have completed, the scan history should look like the below image.
+    ![New Scan](../images/module15/15.16-scancomplete.png)
 
 4. To observe the lineage, select **Data Catalog** > **Browse**, select the Contoso collection, and select the SourceTest table.
 
+    ![New Scan](../images/module15/15.17-sourcetest.png)
+
 5. Navigate to the Lineage tab, and observe the lineage from SourceTest to DestinationTest via the MoveTest stored procedure.
+
+    ![New Scan](../images/module15/15.18-lineage.png)
 
 <div align="right"><a href="#module-15---azure-sql-database-lineage-extraction">↥ back to top</a></div>
 
@@ -190,6 +224,6 @@ The select statement should show the row in the **DestinationTest** table.
 
 ## :tada: Summary
 
-In this module, you learned how to configure Microsoft Purview to extract lineage information from stored procedures 
+In this module, you learned how to configure Microsoft Purview to extract lineage information from stored procedures.
 
 [Continue >](../modules/module00.md)

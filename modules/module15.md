@@ -116,9 +116,9 @@ AS
 INSERT INTO dbo.DestinationTest
 SELECT * FROM dbo.SourceTest
 WHERE dbo.SourceTest.ID = @UserId
-```
+```  
 
-    ![Query Editor](../images/module15/15.05-queryeditor.png)
+![Query Editor](../images/module15/15.05-queryeditor.png)
 
  > Note: We'll be returning to the Query editor shortly, so we recommend opening the Microsoft Purview portal, if not already open, in another tab for convenience as you progress in the next steps.
 

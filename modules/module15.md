@@ -60,7 +60,7 @@ In order for Microsoft Purview to be able to scan for lineage in an Azure SQL Da
 
     ![Query Editor](../images/module15/15.03-queryeditor.png)
 
-2. From within the Query window, run the following:
+2. From within the Query window, run the following command. Be sure to replace [PurviewExample] with the name of your Microsoft Purview account:
 
 ```sql
 CREATE MASTER KEY

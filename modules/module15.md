@@ -151,9 +151,11 @@ WHERE dbo.SourceTest.ID = @UserId
 
     ![New Scan](../images/module15/15.11-datasourceviewdetails.png)
 
-7. Select the scan name you created, `Scan-Lineage`, and observe it actually created two scans. One for the lineage, and the other for the tables.
+7. Select the scan name you created, `Scan-Lineage` under the Recent scans section. You may see multiple scans here from previous modules.
 
     ![New Scan](../images/module15/15.12-datasourceviewdetails.png)
+
+8. Observe it actually created two scans. One for the lineage, and the other for the tables. These scans may still be running, or they may be completed.
 
     ![New Scan](../images/module15/15.13-newscandetails.png)
 
@@ -167,8 +169,9 @@ WHERE dbo.SourceTest.ID = @UserId
 EXEC dbo.MoveDataTest 3
 
 SELECT * FROM dbo.DestinationTest
-```
-    ![New Scan](../images/module15/15.14-sqlexecute.png)
+```  
+
+![New Scan](../images/module15/15.14-sqlexecute.png)
 
 ## 6. Re-run lineage scan and observe output
 
@@ -180,7 +183,7 @@ SELECT * FROM dbo.DestinationTest
 >
 > In order for Microsoft Purview to detect the lineage, it observes the actual execution of the stored procedure. Therefore, the lineage will not be detected until there is an execution of the MoveDataTest stored procedure.
 
-2. In a few moments, the scan will complete. You may need to refresh the page to check on the run status. Once the scans have completed, the scan history should look like the below image.
+2. In a few moments, the scan will complete. You may need to refresh the page to check on the run status. Once the scans have completed, the scan history should look similar to the image below.
 
     ![New Scan](../images/module15/15.16-scancomplete.png)
 

@@ -161,17 +161,14 @@ WHERE dbo.SourceTest.ID = @UserId
 
 ## 5. Execute the stored procedure to simulate data movement
 
-1. In the Query editor window (in the Azure portal), clear the Query editor once again, and run the script below. This will execute the stored procedure created above, simulating data movement of ID #3 from **SourceTest** to **DestinationTest**. 
-
-    ![New Scan](../images/module15/15.14-sqlexecute.png)
+1. In the Query editor window (in the Azure portal), clear the Query editor once again, and run the script below. This will execute the stored procedure created above, simulating data movement of ID #3 from **SourceTest** to **DestinationTest**. The select statement should show the row in the **DestinationTest** table.
 
 ```sql
 EXEC dbo.MoveDataTest 3
 
 SELECT * FROM dbo.DestinationTest
 ```
-
-The select statement should show the row in the **DestinationTest** table.
+    ![New Scan](../images/module15/15.14-sqlexecute.png)
 
 ## 6. Re-run lineage scan and observe output
 
@@ -218,7 +215,7 @@ The select statement should show the row in the **DestinationTest** table.
 
 4. Extra credit test: Can lineage extraction occur from an ad-hoc SQL statement that moves data like the stored procedure?
 
-    A ) Yes 
+    A ) Yes  
     B ) No  
 
 <div align="right"><a href="#module-15---azure-sql-database-lineage-extraction">↥ back to top</a></div>

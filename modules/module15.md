@@ -201,24 +201,25 @@ The select statement should show the row in the **DestinationTest** table.
 
 1. When creating a scan with Lineage Extraction enabled, how many scans are actually created as a result?
 
-    A ) One 
-    B ) Two
+    A ) One  
+    B ) Two  
 
 2. The Microsoft Purview MSI requires a user with which database role permission?
 
     A ) db_datareader  
-    B ) db_owner
+    B ) db_owner  
     C ) db_securityadmin  
 
 3. Lineage information is extracted from the database:
 
-    A ) When the intial scan is completed
-    B ) After there is at least one execution of a stored procedure that moves data
-    C ) When the lineage scan completes after there is at least one execution of a stored procedure that moves data
+    A ) When the intial scan is completed  
+    B ) After there is at least one execution of a stored procedure that moves data  
+    C ) When the lineage scan completes after there is at least one execution of a stored procedure that moves data  
 
 4. Extra credit test: Can lineage extraction occur from an ad-hoc SQL statement that moves data like the stored procedure?
+
     A ) Yes 
-    B ) No
+    B ) No  
 
 <div align="right"><a href="#module-15---azure-sql-database-lineage-extraction">↥ back to top</a></div>
 

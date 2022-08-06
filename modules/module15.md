@@ -128,7 +128,7 @@ WHERE dbo.SourceTest.ID = @UserId
 
     ![New Scan](../images/module15/15.06-newscan.png)
 
-2. Assign the scan a name, such as `Scan-Lineage`. Select your **Database** (e.g. `pvlab-{randomID}-sqldb`), set the **Credential** to `credential-SQL`, ensure **Lineage extraction** is `On`, and click **Test connection**. Once the connection test is successful, click **Continue**.
+2. Assign the scan a name, such as `Scan-Lineage`. Select your **Database** (e.g. `pvlab-{randomID}-sqldb`), set the **Credential** to `Microsoft Purview MSI`, ensure **Lineage extraction** is `On`, and click **Test connection**. Once the connection test is successful, click **Continue**.
 
     ![New Scan](../images/module15/15.07-newscantest.png)
 

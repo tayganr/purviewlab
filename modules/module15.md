@@ -30,10 +30,10 @@ This module steps through what is required for connecting an Azure SQL Database 
 | 1 | [Add Azure SQL Database Administrator](#1-add-azure-sql-database-administrator) | Azure Administrator |
 | 2 | [Configure the Microsoft Purview MSI in the Azure SQL Database](#2-configure-the-microsoft-purview-msi-in-the-azure-sql-database) | Azure Administrator |
 | 2 | [Configure the Microsoft Purview MSI in the Azure SQL Database](#2-configure-the-microsoft-purview-msi-in-the-azure-sql-database) | Azure Administrator |
-| 3 | [Add example tables and stored procedure to Azure SQL Database](#3-add-example-tables-and-stored-procedure-to-azure-sql-database) | Microsoft Purview Administrator |
+| 3 | [Add example tables and stored procedure to Azure SQL Database](#3-add-example-tables-and-stored-procedure-to-azure-sql-database) | Database Administrator |
 | 4 | [Add a new Azure SQL Database Scan with lineage enabled](#4-add-a-new-azure-sql-database-scan-with-lineage-enabled) | Microsoft Purview Administrator |
 | 5 | [Execute the stored procedure to simulate data movement](#5-execute-the-stored-procedure-to-simulate-data-movement) | Azure Administrator |
-| 6 | [Re-run lineage scan and observe output](#6-re-run-lineage-scan-and-observe-output) | Azure Administrator |
+| 6 | [Re-run lineage scan and observe output](#6-re-run-lineage-scan-and-observe-output) | Microsoft Purview Administrator |
 
 
 <div align="right"><a href="#module-00---title">↥ back to top</a></div>
@@ -213,7 +213,7 @@ SELECT * FROM dbo.DestinationTest
     B ) After there is at least one execution of a stored procedure that moves data  
     C ) When the lineage scan completes after there is at least one execution of a stored procedure that moves data  
 
-4. Extra credit test: Can lineage extraction occur from an ad-hoc SQL statement that moves data like the stored procedure?
+4. Extra credit: Can lineage extraction occur from an ad-hoc SQL statement that moves data like the stored procedure?
 
     A ) Yes  
     B ) No  

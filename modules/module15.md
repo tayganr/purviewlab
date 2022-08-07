@@ -205,7 +205,7 @@ SELECT * FROM dbo.DestinationTest
 
     ![New Scan](../images/module15/15.17-sourcetest.png)
 
-4. Navigate to the Lineage tab, and observe the lineage from SourceTest to DestinationTest via the MoveTest stored procedure.
+4. Navigate to the Lineage tab, and observe the lineage from SourceTest to DestinationTest via the MoveDataTest stored procedure.
 
     ![New Scan](../images/module15/15.18-lineage.png)
 

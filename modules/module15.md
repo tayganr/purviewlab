@@ -8,13 +8,14 @@ As you've learned in the [Lineage Module](../modules/module06.md), Microsoft Pur
 
 Lineage extraction is a complicated process because there are many ways data may be moved and transformed thoughout its lifecycle. Lineage information can either be extracted by Purview during the scanning process (when supported), or lineage information can be pushed to Purview via the Apache Atlas REST API.
 
-In this module, we'll implement the Azure SQL Database Lineage functionality.
+In this module, we'll implement the Azure SQL Database Lineage Extraction functionality.
 
 ## :thinking: Prerequisites
 
 * An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 * An Azure SQL Database (see [module 00](../modules/module00.md)).
 * A Microsoft Purview account (see [module 01](../modules/module01.md)).
+* An Azure SQL Database set up as a data source in Microsoft Purview (see [module 02B](../modules/module02b.md)).
 
 This module steps through what is required for connecting an Azure SQL Database with a Microsoft Purview account to track data lineage.
 
@@ -88,34 +89,42 @@ ID int PRIMARY KEY,
 FirstName nvarchar(50),
 LastName nvarchar(50)
 );
+GO
 
-CREATE TABLE [dbo].[DestinationTest](
-ID int PRIMARY KEY,
-FirstName nvarchar(50),
-LastName nvarchar(50)
+CREATE TABLE [dbo].[DestinationTest](
+ID INT NOT NULL IDENTITY PRIMARY KEY,
+SourceId INT,
+FirstName NVARCHAR(50),
+LastName NVARCHAR(50),
+CreateDate DATETIME
 );
-
-INSERT INTO dbo.SourceTest
-(ID, FirstName, LastName)
-VALUES (1, 'First1', 'Last1');
+GO
+ALTER TABLE [dbo].[DestinationTest] ADD CONSTRAINT DF_DestinationTest DEFAULT GETDATE() FOR CreateDate
 GO
 
 INSERT INTO dbo.SourceTest
 (ID, FirstName, LastName)
-VALUES (2, 'First2', 'Last2');
+VALUES (1, 'Bob', 'Smith');
 GO
 
 INSERT INTO dbo.SourceTest
 (ID, FirstName, LastName)
-VALUES (3, 'First3', 'Last3');
+VALUES (2, 'Mike', 'Jones');
 GO
 
-CREATE PROCEDURE dbo.MoveDataTest 
-@UserId int
+INSERT INTO dbo.SourceTest
+(ID, FirstName, LastName)
+VALUES (3, 'Becky', 'McDonald');
+GO
+
+CREATE PROCEDURE dbo.MoveDataTest 
+@UserId int
 AS
-INSERT INTO dbo.DestinationTest
-SELECT * FROM dbo.SourceTest
-WHERE dbo.SourceTest.ID = @UserId
+INSERT INTO dbo.DestinationTesttemp
+(SourceId, FirstName, LastName)
+SELECT ID, FirstName, LastName
+FROM dbo.SourceTest
+WHERE dbo.SourceTest.ID = @UserId
 ```  
 
 ![Query Editor](../images/module15/15.05-queryeditor.png)
@@ -163,10 +172,13 @@ WHERE dbo.SourceTest.ID = @UserId
 
 ## 5. Execute the stored procedure to simulate data movement
 
-1. In the Query editor window (in the Azure portal), clear the Query editor once again, and run the script below. This will execute the stored procedure created above, simulating data movement of ID #3 from **SourceTest** to **DestinationTest**. The select statement should show the row in the **DestinationTest** table.
+1. In the Query editor window (in the Azure portal), clear the Query editor once again, and run the script below. This will execute the stored procedure created above, simulating data movement of rows from **SourceTest** to **DestinationTest**. The select statement should show the row in the **DestinationTest** table.
 
 ```sql
 EXEC dbo.MoveDataTest 3
+EXEC dbo.MoveDataTest 1
+EXEC dbo.MoveDataTest 2
+EXEC dbo.MoveDataTest 2
 
 SELECT * FROM dbo.DestinationTest
 ```  
@@ -194,6 +206,22 @@ SELECT * FROM dbo.DestinationTest
 5. Navigate to the Lineage tab, and observe the lineage from SourceTest to DestinationTest via the MoveTest stored procedure.
 
     ![New Scan](../images/module15/15.18-lineage.png)
+
+<div align="right"><a href="#module-15---azure-sql-database-lineage-extraction">↥ back to top</a></div>
+
+## :thinking: Troubleshooting / FAQ
+
+### Do I have to assign an AD Admin to the Azure SQL Database for Lineage Extraction to work?
+
+Yes. Adding the Microsoft Purview Managed Identity to the Azure SQL Database requires an AD user with sufficient priveledge; you won't be able to add it with SQL-Auth.
+
+### Can I use a SQL-Auth account with appropriate permissions, and configure the scan to use that account instead of the Managed Identity?
+
+No. While you'll be able to connect and scan the Azure SQL Database successfully, lineage information will not be extracted. 
+
+### Where can I learn more about this feature?
+
+Read more about Azure SQL Database lineage extraction [Azure blog located here](https://azure.microsoft.com/en-us/blog/introducing-dynamic-lineage-extraction-from-azure-sql-databases-in-azure-purview/)
 
 <div align="right"><a href="#module-15---azure-sql-database-lineage-extraction">↥ back to top</a></div>
 

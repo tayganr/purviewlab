@@ -237,7 +237,7 @@ The below script is an example of how to create a new login and user called `Pur
 
 ```sql
 -- in the master database
-CREATE LOGIN [PurviewScanner] WITH PASSWORD = <strongpassword>';
+CREATE LOGIN [PurviewScanner] WITH PASSWORD = '<strongpassword>';
 ```
 
 ```sql

@@ -259,8 +259,8 @@ Read more about Azure SQL Database lineage extraction in the [Azure blog located
 1. When creating a scan with Lineage Extraction enabled, how many scans are actually created as a result?
 
     A ) One  
-    B ) Two 
-    C ) Three 
+    B ) Two  
+    C ) Three  
 
 2. The Microsoft Purview lineage scanner for Azure SQL Database requires a user with which database role permission?
 
@@ -271,7 +271,7 @@ Read more about Azure SQL Database lineage extraction in the [Azure blog located
 3. Lineage information is extracted from the database:
 
     A ) When the intial scan is completed  
-    B ) After the initial lineage scan is configured, and after there is at least one execution of a stored procedure the scanner will detect the lineage on the next scan run 
+    B ) After the initial lineage scan is configured, and after there is at least one execution of a stored procedure the scanner will detect the lineage on the next scan run  
     C ) When the stored procedure executes, lineage information is pushed to Microsoft Purview  
 
 4. Extra credit: Can lineage extraction occur from an ad-hoc SQL statement that moves data like the stored procedure?

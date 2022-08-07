@@ -120,7 +120,7 @@ GO
 CREATE PROCEDURE dbo.MoveDataTest 
 @UserId int
 AS
-INSERT INTO dbo.DestinationTesttemp
+INSERT INTO dbo.DestinationTest
 (SourceId, FirstName, LastName)
 SELECT ID, FirstName, LastName
 FROM dbo.SourceTest
@@ -136,6 +136,8 @@ WHERE dbo.SourceTest.ID = @UserId
 1. Open the **Microsoft Purview Governance Portal**, navigate to **Data map** > **Sources**, and within the Azure SQL Database tile, click the **New Scan** button.
 
     ![New Scan](../images/module15/15.06-newscan.png)
+
+ > Note: If you do not have the Azure SQL Database source already configured, please see [module 02B](../modules/module02b.md) for adding the database as a source.
 
 2. Assign the scan a name, such as `Scan-Lineage`. Select your **Database** (e.g. `pvlab-{randomID}-sqldb`), set the **Credential** to `Microsoft Purview MSI`, ensure **Lineage extraction** is `On`, and click **Test connection**. Once the connection test is successful, click **Continue**.
 
@@ -199,29 +201,56 @@ SELECT * FROM dbo.DestinationTest
 
     ![New Scan](../images/module15/15.16-scancomplete.png)
 
-4. To observe the lineage, select **Data Catalog** > **Browse**, select the Contoso collection, and select the SourceTest table.
+3. To observe the lineage, select **Data Catalog** > **Browse**, select the Contoso collection, and select the SourceTest table.
 
     ![New Scan](../images/module15/15.17-sourcetest.png)
 
-5. Navigate to the Lineage tab, and observe the lineage from SourceTest to DestinationTest via the MoveTest stored procedure.
+4. Navigate to the Lineage tab, and observe the lineage from SourceTest to DestinationTest via the MoveTest stored procedure.
 
     ![New Scan](../images/module15/15.18-lineage.png)
+
+## 7. Clean-up and considerations
+
+1. The lineage scan will automatically run every 6 hours. For development/testing purposes, consider deleting the scan when not needed -- particularly if the database is set to deallocate after an idle period (as the database in this lab is configured to do). Running the scan periodically will resume the database.
+
+2. If you would like to delete the artifacts created in this module, you can use this script.
+
+```sql
+drop procedure dbo.MoveDataTest
+drop table dbo.SourceTest
+drop table dbo.DestinationTest
+```
 
 <div align="right"><a href="#module-15---azure-sql-database-lineage-extraction">↥ back to top</a></div>
 
 ## :thinking: Troubleshooting / FAQ
 
-### Do I have to assign an AD Admin to the Azure SQL Database for Lineage Extraction to work?
+### Do I have to assign an AD Admin to the Azure SQL Database to add the Microsoft Purview Managed Identity?
 
-Yes. Adding the Microsoft Purview Managed Identity to the Azure SQL Database requires an AD user with sufficient priveledge; you won't be able to add it with SQL-Auth.
+Yes. Adding the Microsoft Purview Managed Identity to the Azure SQL Database requires an AD user with sufficient priveledge; you won't be able to add a Managed Identity with SQL-Auth.
 
-### Can I use a SQL-Auth account with appropriate permissions, and configure the scan to use that account instead of the Managed Identity?
+### Can I use a SQL-Auth account with appropriate permissions, and configure the scan to use that account instead of the Managed Identity (similar to what is done in Module 02B)?
 
-No. While you'll be able to connect and scan the Azure SQL Database successfully, lineage information will not be extracted. 
+You can, but the recommended approach is to use Managed Identity. If you'd like to use a SQL-Auth account or have no way to use a AD account, consider creating a different account specifically for scanning. To do so, use a tool like Azure Data Studio to connect to the master database, create a login (in the master database) and a user (in the sample database) using SQL statements, and assign the user to the appropriate db-owner role. This credential can be stored in Azure Key Vault the same way as it is done in the earlier modules.
 
+The below script is an example of how to create a new login and user called `PurviewScanner`:
+
+```sql
+-- in the master database
+CREATE LOGIN [PurviewScanner] WITH PASSWORD = <strongpassword>';
+```
+
+```sql
+-- in the sample database
+CREATE USER [PurviewScanner] FROM LOGIN PurviewScanner;
+GO
+
+EXEC sp_addrolemember 'db_owner', [PurviewScanner] 
+GO
+```
 ### Where can I learn more about this feature?
 
-Read more about Azure SQL Database lineage extraction [Azure blog located here](https://azure.microsoft.com/en-us/blog/introducing-dynamic-lineage-extraction-from-azure-sql-databases-in-azure-purview/)
+Read more about Azure SQL Database lineage extraction in the [Azure blog located here](https://azure.microsoft.com/en-us/blog/introducing-dynamic-lineage-extraction-from-azure-sql-databases-in-azure-purview/) and on [Microsoft Docs](https://docs.microsoft.com/en-us/azure/purview/register-scan-azure-sql-database?tabs=sql-authentication#lineagepreview).
 
 <div align="right"><a href="#module-15---azure-sql-database-lineage-extraction">↥ back to top</a></div>
 

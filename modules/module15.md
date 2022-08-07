@@ -35,7 +35,7 @@ This module steps through what is required for connecting an Azure SQL Database 
 | 4 | [Add a new Azure SQL Database Scan with lineage enabled](#4-add-a-new-azure-sql-database-scan-with-lineage-enabled) | Microsoft Purview Administrator |
 | 5 | [Execute the stored procedure to simulate data movement](#5-execute-the-stored-procedure-to-simulate-data-movement) | Azure Administrator |
 | 6 | [Re-run lineage scan and observe output](#6-re-run-lineage-scan-and-observe-output) | Microsoft Purview Administrator |
-
+| 7 | [Clean-up and considerations](#7-clean-up-and-considerations) | Microsoft Purview Administrator |
 
 <div align="right"><a href="#module-00---title">↥ back to top</a></div>
 
@@ -213,7 +213,7 @@ SELECT * FROM dbo.DestinationTest
 
 1. The lineage scan will automatically run every 6 hours. For development/testing purposes, consider deleting the scan when not needed -- particularly if the database is set to deallocate after an idle period (as the database in this lab is configured to do). Running the scan periodically will resume the database.
 
-2. If you would like to delete the artifacts created in this module, you can use this script.
+2. If you would like to delete the artifacts created in this module, you can use this script:
 
 ```sql
 drop procedure dbo.MoveDataTest

@@ -81,7 +81,7 @@ The SQL statements above will:
 
 ## 3. Add example tables and stored procedure to Azure SQL Database
 
-1. Clear the Query editor and run the script below. This script will create two tables (**SourceTest** and **DestinationTest**), insert 3 rows of test data, and add a stored procedure to move an entry from **SourceTest** to **DestinationTest**.
+1. Clear the Query editor and run the script below. This script will create two tables (**SourceTest** and **DestinationTest**), insert 3 rows of test data, and add a stored procedure to copy a row from **SourceTest** to **DestinationTest**.
 
 ```sql
 CREATE TABLE [dbo].[SourceTest](

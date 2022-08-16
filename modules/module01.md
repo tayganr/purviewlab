@@ -46,9 +46,8 @@ When planning your Microsoft Purview deployment, you first need to provision a M
     | --- | --- |
     | Subscription | `YOUR_AZURE_SUBSCRIPTION` |
     | Resource group | `pvlab-rg` |
-    | Purview account name | `pvlab-{randomId}-pv` |
+    | Microsoft Purview account name | `pvlab-{randomId}-pv` |
     | Location | `YOUR_LOCATION` |
-    | Managed Resource Group Name | `pvlab-rg-managed` |
 
     ![Purview Account Basics](../images/module01/01.03-create-basic.png)
 
@@ -62,7 +61,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
     >
     > **vCore Hours** on the other hand, is the unit of measure for **serverless** compute that is needed to run a scan. You only pay per vCore Hour of scanning that you consume (rounded up to the nearest minute).
     >
-    > For more information, check out the [Microsoft Purview Pricing](https://azure.microsoft.com/pricing/details/microsoft-purview/) page.
+    > For more information, check out the [Microsoft Purview Pricing](https://azure.microsoft.com/pricing/details/purview/) page.
 
 4. On the **Networking** tab, select **All networks**, and click **Review + Create**.
 

@@ -16,13 +16,18 @@ An Azure resource provider is a collection of REST operations that provide funct
 1. Navigate to the Azure Portal and open the portal menu
 1. Click **Home**
 1. Click **Subscriptions**
+
     ![TBC](../images/providers/01-providers.png)
+
 1. Select `YOUR_AZURE_SUBSCRIPTION`
+
     ![TBC](../images/providers/02-providers.png)
+
 1. Click **Resource Providers**
 1. Search for a Resource Provider (e.g. `Microsoft.Storage`)
 1. Select the Resource Provider from the list
 1. Click **Register**
+
     ![TBC](../images/providers/03-providers.png)
 
 <div align="right"><a href="#register-a-resource-provider">↥ back to top</a></div>

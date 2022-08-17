@@ -8,7 +8,13 @@ One of the features of Microsoft Purview is the ability to show the lineage betw
 
 Lineage is typically captured from tools that extract, transform and load data. These ETL tools are, for example, Data Factory, Data Share, and Power BI. They capture the lineage of data as it moves. By scanning these ETL tools you can capture and visualize the lineage in Microsoft Purview.
 
-Within Microsoft Purview also custom lineage is supported. Custom lineage is lineage that you created yourself, for example by uploading metadata using the Microsoft Purview's Atlas hooks or REST APIs. Lineage in Purview includes datasets and processes.
+Microsoft Purview also supports the ability to upload custom lineage. Custom lineage is lineage that you created yourself, for example by uploading metadata using the Microsoft Purview's Atlas REST APIs. Lineage in Purview includes relationships between datasets and processes.
+
+> :bulb: **Did you know?**
+>
+> * **Dataset**: A dataset (structured or unstructured) provided as an input to a process. For example, a SQL Table, Azure blob, and files (such as .csv and .xml), are all considered datasets. In the lineage section of Purview, datasets are represented by **rectangular boxes**.
+>
+> * **Process**: An activity or transformation performed on a dataset is called a process. For example, ADF Copy activity, Data Share snapshot and so on. In the lineage section of Purview, processes are represented by **round-edged boxes**.
 
 ## :thinking: Prerequisites
 
@@ -16,10 +22,6 @@ Within Microsoft Purview also custom lineage is supported. Custom lineage is lin
 * An Azure Data Lake Storage Gen2 Account (see [module 00](../modules/module00.md)).
 * An Azure Data Factory Account (see [module 00](../modules/module00.md)).
 * A Microsoft Purview account (see [module 01](../modules/module01.md)).
-
-* **Dataset**: A dataset (structured or unstructured) provided as an input to a process. For example, a SQL Table, Azure blob, and files (such as .csv and .xml), are all considered datasets. In the lineage section of Purview, datasets are represented by **rectangular boxes**.
-
-* **Process**: An activity or transformation performed on a dataset is called a process. For example, ADF Copy activity, Data Share snapshot and so on. In the lineage section of Purview, processes are represented by **round-edged boxes**.
 
 This module steps through what is required for connecting an Azure Data Factory account with a Microsoft Purview account to track data lineage.
 

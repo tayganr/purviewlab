@@ -183,7 +183,7 @@ Microsoft Purview allows us to perform certain operations (add/replace/remove) a
 
 1. There are a number of **attributes** that we can use to narrow our search results via the **filter pane**, which of the following is **not** available as a quick filter?
 
-    A ) Asset Type  
+    A ) Source Type  
     B ) Classification  
     C ) Size  
 

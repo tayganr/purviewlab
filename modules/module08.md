@@ -100,11 +100,11 @@ Metrics can be accessed from the Azure Portal for a Microsoft Purview account in
 
     ![Add Diagnostic Setting](../images/module08/08.14-diagnostic-add.png)
 
-2. Provide the diagnostic setting a name (e.g. `Audit`), select **ScanStatusLogEvent**, select **Archive to a storage account**, select an existing storage account (e.g. `pvlab{randomId}adls`) and click **Save**.
+2. Provide the diagnostic setting a name (e.g. `Audit`), select **ScanStatus**, select **Archive to a storage account**, select an existing storage account (e.g. `pvlab{randomId}adls`) and click **Save**.
 
     > :bulb: **Did you know?**
     >
-    > **ScanStatusLogEvent** tracks the scan life cycle. A scan operation follows progress through a sequence of states, from Queued, Running and finally a terminal state of Succeeded | Failed | Canceled. An event is logged for each state transition.
+    > **ScanStatus** tracks the scan life cycle. A scan operation follows progress through a sequence of states, from Queued, Running and finally a terminal state of Succeeded | Failed | Canceled. An event is logged for each state transition.
 
     ![Save Diagnostic Setting](../images/module08/08.15-diagnostic-save.png)
 

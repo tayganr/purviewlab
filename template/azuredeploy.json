@@ -4,11 +4,10 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1008.15138",
-      "templateHash": "8599240671981338639"
+      "version": "0.9.1.41621",
+      "templateHash": "2803229554544767325"
     }
   },
-  "functions": [],
   "variables": {
     "location": "[resourceGroup().location]",
     "randomString": "[substring(guid(resourceGroup().id), 0, 6)]",
@@ -53,8 +52,7 @@
       "apiVersion": "2021-04-01",
       "name": "[format('{0}/{1}/{2}', format('pvlab{0}synapse', variables('randomString')), 'default', format('synapsefs{0}', variables('randomString')))]",
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', format('pvlab{0}synapse', variables('randomString')), 'default')]",
-        "[resourceId('Microsoft.Storage/storageAccounts', format('pvlab{0}synapse', variables('randomString')))]"
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', format('pvlab{0}synapse', variables('randomString')), 'default')]"
       ]
     },
     {
@@ -209,7 +207,7 @@
     },
     {
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2020-06-01",
+      "apiVersion": "2020-10-01",
       "name": "SQLVMDeployment",
       "properties": {
         "expressionEvaluationOptions": {
@@ -230,8 +228,8 @@
           "metadata": {
             "_generator": {
               "name": "bicep",
-              "version": "0.4.1008.15138",
-              "templateHash": "11748226318447838654"
+              "version": "0.9.1.41621",
+              "templateHash": "13500320971029977407"
             }
           },
           "parameters": {
@@ -242,7 +240,6 @@
               "type": "string"
             }
           },
-          "functions": [],
           "variables": {
             "subnetName": "[format('pvlab-{0}-subnet', parameters('randomString'))]",
             "virtualNetworkName": "[format('pvlab-{0}-vnet', parameters('randomString'))]",
@@ -252,7 +249,7 @@
             "sqlVirtualMachineName": "[format('pvlab-{0}-sqlvm', parameters('randomString'))]",
             "adminUsername": "[format('sqladmin{0}', parameters('randomString'))]",
             "upperString": "[toUpper(parameters('randomString'))]",
-            "adminPassword": "[format('{0}!{1}@{2}', parameters('randomString'), variables('upperString'), parameters('randomString'))]"
+            "adminPassword": "[format('{0}!{1}@{2}0aA', parameters('randomString'), variables('upperString'), parameters('randomString'))]"
           },
           "resources": [
             {

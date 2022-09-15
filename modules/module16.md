@@ -94,7 +94,57 @@ Microsoft Purview Data Sharing supports sharing of files and folders in-place fr
 
 Before we can create a share, we must populate our storage account with some folders and files.
 
-1. From the Azure portal
+1. From the Azure portal, navigate to your resource group and click to open your **storage account**.
+
+    ![ALT](/images/module16/16.09.png)
+
+2. On the side menu, click **Storage browser**.
+
+    ![ALT](/images/module16/16.10.png)
+
+3. Open **Blob containers**.
+
+    ![ALT](/images/module16/16.11.png)
+
+4. Click **Add container**.
+
+    ![ALT](/images/module16/16.12.png)
+
+5. Set the container name (e.g. `send`) and click **Create**.
+
+    ![ALT](/images/module16/16.13.png)
+
+6. Click **Add container**.
+
+    ![ALT](/images/module16/16.14.png)
+
+7. Set the container name (e.g. `receive`) and click **Create**.
+
+    ![ALT](/images/module16/16.15.png)
+
+8. Open the `send` container.
+
+    ![ALT](/images/module16/16.16.png)
+
+9. Click **Add Directory**.
+
+    ![ALT](/images/module16/16.17.png)
+
+10. Set the virtual directory name (e.g. `data`).
+
+    ![ALT](/images/module16/16.18.png)
+
+11. Click **Upload**.
+
+    ![ALT](/images/module16/16.19.png)
+
+12. Browse your local machine to upload sample data and click **Upload**.
+
+    ![ALT](/images/module16/16.20.png)
+
+13. Once the upload is complete, click the close icon.
+
+    ![ALT](/images/module16/16.21.png)
 
 ## :mortar_board: Knowledge Check
 

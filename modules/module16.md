@@ -197,6 +197,58 @@ Before we can create a share, both the data provider and data consumer must have
 
     ![ALT](/images/module16/16.28.png)
 
+## 5. Register a Storage Account
+
+Before we can create create or receive a share, the storage account needs to be registered with a collection.
+
+1. From the Azure portal, navigate to your Microsoft Purview account, and open the **Microsoft Purview Governance Portal**.
+
+    ![ALT](/images/module16/16.29.png)
+
+2. Navigate to **Data map** > **Sources**, and click **Register**.
+
+    ![ALT](/images/module16/16.30.png)
+
+3. Filter the list of sources by searching for `Blob`, select **Azure Blob Storage**, and click **Continue**.
+
+    ![ALT](/images/module16/16.31.png)
+
+4. Select your **Azure subscription**, **Storage account**, and click **Register**.
+
+    ![ALT](/images/module16/16.32.png)
+
+## 6. Create a Sent Share
+
+Data sharing within Microsoft Purview allows data providers to share data with data consumers from supported sources such as Azure Data Lake Storage Gen2 and Azure Blob Storage accounts that have been registered with Microsoft Purview under a collection.
+
+1. Navigate to **Data share** > **Sent shares**, and click **New share**.
+
+    ![ALT](/images/module16/16.33.png)
+
+2. Provide a share name (e.g. `sentShare01`), select the Share type **In-place share**, and click **Continue**.
+
+    ![ALT](/images/module16/16.34.png)
+
+3. Click **Add assets**.
+
+    ![ALT](/images/module16/16.35.png)
+
+4. Set the **Type** to **Azure Blob Storage**, select your registered Azure Blob Storage **source**, and click **Continue**.
+
+    ![ALT](/images/module16/16.36.png)
+
+5. Open the `send` container, select the `data` folder, and click **Add**.
+
+    ![ALT](/images/module16/16.37.png)
+
+6. Click **OK**.
+
+    ![ALT](/images/module16/16.38.png)
+
+7. Type your email address (use the same email address currently logged into Microsoft Purview) as a recipient and click **Create and Share**.
+
+    ![ALT](/images/module16/16.39.png)
+
 ## :mortar_board: Knowledge Check
 
 1. PLACEHOLDER_KNOWLEDGE_CHECK_QUESTION

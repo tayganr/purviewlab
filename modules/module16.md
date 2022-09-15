@@ -169,6 +169,34 @@ Before we can create a share, both the data provider and data consumer must have
 
     ![ALT](/images/module16/16.09.png)
 
+2. Open **Access Control (IAM)**.
+
+    ![ALT](/images/module16/16.22.png)
+
+3. Click **Add role assignment**.
+
+    ![ALT](/images/module16/16.23.png)
+
+4. Filter the list of roles by searching for `Storage Blob Data Owner`, select the **Storage Blob Data Owner** role, and click **Next**.
+
+    ![ALT](/images/module16/16.24.png)
+
+5. Click **Select members**.
+
+    ![ALT](/images/module16/16.25.png)
+
+6. Filter the results by searching for your account, select your account, and click **Select**.
+
+    ![ALT](/images/module16/16.26.png)
+
+7. Click **Review + assign**.
+
+    ![ALT](/images/module16/16.27.png)
+
+8. Click **Review + assign**.
+
+    ![ALT](/images/module16/16.28.png)
+
 ## :mortar_board: Knowledge Check
 
 1. PLACEHOLDER_KNOWLEDGE_CHECK_QUESTION

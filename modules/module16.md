@@ -31,7 +31,7 @@ With Microsoft Purview Data Sharing:
 
 <div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 
-## 1. Register the AllowDataSharing preview feature
+## 1. Enable the AllowDataSharing preview feature
 
 Your Azure subscription must be registered for the Microsoft.Storage **AllowDataSharing** preview feature **BEFORE** you create storage account(s) to share and receive data.
 
@@ -53,7 +53,7 @@ Your Azure subscription must be registered for the Microsoft.Storage **AllowData
 
 Microsoft Purview Data Sharing supports sharing of files and folders in-place from Azure Data Lake Storage Gen2 and Blob Storage accounts.
 
-> :grey_exclamation: **Note**
+> **Note**
 >
 > * Source and target storage accounts must be created **AFTER** the **AllowDataSharing** preview registration step is complete.
 > * Both the source and target storage accounts **must be in the same Azure region** as each other.
@@ -69,7 +69,7 @@ Microsoft Purview Data Sharing supports sharing of files and folders in-place fr
 
 3. Populate the Basics screen and click **Review**.
 
-    > :grey_exclamation: **Note**
+    > **Note**
     >
     > Supported storage account configurations:
     > | Configuration | Support |

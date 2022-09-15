@@ -94,7 +94,7 @@ Microsoft Purview Data Sharing supports sharing of files and folders in-place fr
 
 Before we can create a share, we must populate our storage account with some folders and files.
 
-1. From the Azure portal, navigate to your resource group and click to open your **storage account**.
+1. From the Azure portal, navigate to your resource group, and open your **storage account**.
 
     ![ALT](/images/module16/16.09.png)
 
@@ -140,11 +140,33 @@ Before we can create a share, we must populate our storage account with some fol
 
 12. Browse your local machine to upload sample data and click **Upload**.
 
+    > Note
+    >
+    > In this example, we are using the [Hippocorpus dataset](https://msropendata.com/datasets/0a83fb6f-a759-4a17-aaa2-fbac84577318) from Microsoft Research Open Data. If you would like to use this data, [download a copy of the zip file](https://github.com/tayganr/purviewlab/raw/main/assets/hippocorpus-u20220112.zip) and extract the contents to your local machine.
+
     ![ALT](/images/module16/16.20.png)
 
 13. Once the upload is complete, click the close icon.
 
     ![ALT](/images/module16/16.21.png)
+
+<div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
+
+## 4. Assign a Storage Account Role
+
+Before we can create a share, both the data provider and data consumer must have appropriate levels of access to the storage account.
+
+> Note
+>
+> Below are eligible roles for sharing data and receiving shares.
+> | Persona | Owner | Contributor | Storage Blob Data Owner | Storage Blob Data Contributor |
+> | --- | -- | -- | -- | -- |
+> | Data Provider | :white_check_mark: | | :white_check_mark: | |
+> | Data Consumer | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+1. From the Azure portal, navigate to your resource group, and open your **storage account**.
+
+    ![ALT](/images/module16/16.09.png)
 
 ## :mortar_board: Knowledge Check
 

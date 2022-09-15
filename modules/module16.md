@@ -201,6 +201,8 @@ Before we can create a share, both the data provider and data consumer must have
 
     ![ALT](/images/module16/16.28.png)
 
+<div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
+
 ## 5. Register a Storage Account
 
 Before we can create create or receive a share, the storage account needs to be registered with a collection.
@@ -220,6 +222,8 @@ Before we can create create or receive a share, the storage account needs to be 
 4. Select your **Azure subscription**, **Storage account**, and click **Register**.
 
     ![ALT](/images/module16/16.32.png)
+
+<div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 
 ## 6. Create a Sent Share
 
@@ -252,6 +256,8 @@ Data sharing within Microsoft Purview allows data providers to share data with d
 7. Type your email address (use the same email address currently logged into Microsoft Purview) as a recipient and click **Create and Share**.
 
     ![ALT](/images/module16/16.39.png)
+
+<div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 

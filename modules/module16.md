@@ -119,31 +119,19 @@ Before we can create a share, we must populate our storage account with some fol
 
     ![ALT](/images/module16/16.13.png)
 
-6. Click **Add container**.
-
-    ![ALT](/images/module16/16.14.png)
-
-7. Set the container name (e.g. `receive`) and click **Create**.
-
-    ![ALT](/images/module16/16.15.png)
-
-8. Open the `send` container.
-
-    ![ALT](/images/module16/16.16.png)
-
-9. Click **Add Directory**.
+6. Open the `send` container and click **Add Directory**.
 
     ![ALT](/images/module16/16.17.png)
 
-10. Set the virtual directory name (e.g. `data`).
+7. Set the virtual directory name (e.g. `data`).
 
     ![ALT](/images/module16/16.18.png)
 
-11. Click **Upload**.
+8. Click **Upload**.
 
     ![ALT](/images/module16/16.19.png)
 
-12. Browse your local machine to upload sample data and click **Upload**.
+9. Browse your local machine to upload sample data and click **Upload**.
 
     > Note
     >
@@ -151,7 +139,7 @@ Before we can create a share, we must populate our storage account with some fol
 
     ![ALT](/images/module16/16.20.png)
 
-13. Once the upload is complete, click the close icon.
+10. Once the upload is complete, click the close icon.
 
     ![ALT](/images/module16/16.21.png)
 
@@ -258,6 +246,34 @@ Data sharing within Microsoft Purview allows data providers to share data with d
     ![ALT](/images/module16/16.39.png)
 
 <div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
+
+## 7. Accept a Received Share
+
+TBC
+
+1. Navigate to **Data share** > **Received shares** > **Pending**, and click to open the received share (e.g. `sentShare01`).
+
+    ![ALT](/images/module16/16.40.png)
+
+2. Update the received share name (e.g. `receivedShare01`) and click **Accept and configure**.
+
+    ![ALT](/images/module16/16.41.png)
+
+3. Click **Map**.
+
+    ![ALT](/images/module16/16.42.png)
+
+4. Select the target Azure Blob Storage account from the list of sources, set the **Path**, set the **Folder**, and click **Map to target**.
+
+    ![ALT](/images/module16/16.43.png)
+
+5. Click **Close**.
+
+    ![ALT](/images/module16/16.44.png)
+
+6. Periodically click **Refresh** until the asset is **Mapped**.
+
+    ![ALT](/images/module16/16.45.png)
 
 ## :mortar_board: Knowledge Check
 

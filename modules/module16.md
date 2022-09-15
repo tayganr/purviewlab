@@ -29,6 +29,10 @@ With Microsoft Purview Data Sharing:
 | 2 | [Create a Storage Account](#2-create-a-storage-account) | Azure Administrator |
 | 3 | [Populate the Storage Account](#3-populate-the-storage-account) | Data Producer |
 | 4 | [Assign a Storage Account Role](#4-assign-a-storage-account-role) | Azure Administrator |
+| 5 | [Register a Storage Account](#5-register-a-storage-account) | Data Source Administrator|
+| 6 | [Create a Sent Share](#6-create-a-sent-share) | Data Share Contributor |
+| 1 | [XXX]() ||
+| 1 | [XXX]() ||
 
 <div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 

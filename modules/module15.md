@@ -1,6 +1,6 @@
 # Module 15 - Azure SQL Database Lineage Extraction
 
-[< Previous Module](../modules/module14.md) - **[Home](../README.md)**
+[< Previous Module](../modules/module14.md) - **[Home](../README.md)** - [Next Module >](../modules/module16.md)
 
 ## :loudspeaker: Introduction
 

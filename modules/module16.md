@@ -156,7 +156,7 @@ Before we can create a share, we must populate our storage account with some fol
 
 Before we can create a share, both the data provider and data consumer must have appropriate levels of access to the storage account.
 
-> Note
+> **Note**
 >
 > Below are eligible roles for sharing data and receiving shares.
 > | Persona | Owner | Contributor | Storage Blob Data Owner | Storage Blob Data Contributor |

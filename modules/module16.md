@@ -47,7 +47,7 @@ Your Azure subscription must be registered for the Microsoft.Storage **AllowData
 
     ![ALT](/images/module16/16.03.png)
 
-<div align="right"><a href="#module-00---title">↥ back to top</a></div>
+<div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 
 ## 2. Create a Storage Account
 
@@ -88,8 +88,13 @@ Microsoft Purview Data Sharing supports sharing of files and folders in-place fr
 
     ![ALT](/images/module16/16.08.png)
 
+<div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 
-<div align="right"><a href="#module-00---title">↥ back to top</a></div>
+## 3. Populate the Storage Account
+
+Before we can create a share, we must populate our storage account with some folders and files.
+
+1. From the Azure portal
 
 ## :mortar_board: Knowledge Check
 
@@ -109,7 +114,7 @@ Microsoft Purview Data Sharing supports sharing of files and folders in-place fr
     A ) True  
     B ) False  
 
-<div align="right"><a href="#module-00---title">↥ back to top</a></div>
+<div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 
 ## :tada: Summary
 

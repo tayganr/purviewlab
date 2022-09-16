@@ -31,8 +31,7 @@ With Microsoft Purview Data Sharing:
 | 4 | [Assign a Storage Account Role](#4-assign-a-storage-account-role) | Azure Administrator |
 | 5 | [Register a Storage Account](#5-register-a-storage-account) | Data Source Administrator|
 | 6 | [Create a Sent Share](#6-create-a-sent-share) | Data Share Contributor |
-| 1 | [XXX]() ||
-| 1 | [XXX]() ||
+| 7 | [Accept a Received Share](#7-accept-a-received-share) | Data Share Contributor |
 
 <div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 

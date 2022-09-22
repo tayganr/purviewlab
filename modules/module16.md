@@ -17,9 +17,9 @@ With Microsoft Purview Data Sharing:
 
 ## :dart: Objectives
 
-* OBJECTIVE_PLACHOLDER
-* OBJECTIVE_PLACHOLDER
-* OBJECTIVE_PLACHOLDER
+* Register a storage account within Microsoft Purview to send and receive data.
+* Create a sent share.
+* Accept a received share.
 
 ## :bookmark_tabs: Table of Contents
 
@@ -37,7 +37,7 @@ With Microsoft Purview Data Sharing:
 
 ## 1. Enable the AllowDataSharing preview feature
 
-Your Azure subscription must be registered for the Microsoft.Storage **AllowDataSharing** preview feature **BEFORE** you create storage account(s) to share and receive data.
+Your Azure subscription must be registered for the Microsoft.Storage **AllowDataSharing** preview feature **BEFORE** you can create a storage account to share and receive data.
 
 1. Open the Azure portal, type `Subscriptions` in the search bar and click **Subscriptions**.
 
@@ -47,7 +47,7 @@ Your Azure subscription must be registered for the Microsoft.Storage **AllowData
 
     ![ALT](/images/module16/16.02.png)
 
-3. Scroll down on the left side menu and click **Preview features**, filter the results by searching for `AllowDataSharing`, select the **AllowDataSharing** feature and click **Register**. Periodically click **Refresh** to confirm the state is **Registered**. Note: This can take 15 minutes to 1 hour to complete.
+3. Scroll down on the left side menu and click **Preview features**, filter the results by searching for `AllowDataSharing`, select the **AllowDataSharing** feature and click **Register**. Periodically click **Refresh** to confirm that the feature is **Registered**. Note: This can take 15 minutes to 1 hour to complete.
 
     ![ALT](/images/module16/16.03.png)
 
@@ -61,7 +61,7 @@ Microsoft Purview Data Sharing supports sharing of files and folders in-place fr
 >
 > * Source and target storage accounts must be created **AFTER** the **AllowDataSharing** preview registration step is complete.
 > * Both the source and target storage accounts **must be in the same Azure region** as each other.
-> * The storage account needs to be **registered in the collections** where you'll send or receive the share.
+> * The storage account needs to be **registered to a collection**.
 
 1. From the Azure portal, open the portal menu and click **Create a resource**.
 
@@ -132,7 +132,7 @@ Before we can create a share, we must populate our storage account with some fol
 
 9. Browse your local machine to upload sample data and click **Upload**.
 
-    > Note
+    > **Note**
     >
     > In this example, we are using the [Hippocorpus dataset](https://msropendata.com/datasets/0a83fb6f-a759-4a17-aaa2-fbac84577318) from Microsoft Research Open Data. If you would like to use this data, [download a copy of the zip file](https://github.com/tayganr/purviewlab/raw/main/assets/hippocorpus-u20220112.zip) and extract the contents to your local machine.
 
@@ -248,7 +248,7 @@ Data sharing within Microsoft Purview allows data providers to share data with d
 
 ## 7. Accept a Received Share
 
-TBC
+Once a share has been received, the recipients have the option to accept and configure the share in order to access the shared data.
 
 1. Navigate to **Data share** > **Received shares** > **Pending**, and click to open the received share (e.g. `sentShare01`).
 
@@ -262,7 +262,7 @@ TBC
 
     ![ALT](/images/module16/16.42.png)
 
-4. Select the target Azure Blob Storage account from the list of sources, set the **Path**, set the **Folder**, and click **Map to target**.
+4. Select the target Azure Blob Storage account from the list of sources, set the **Path** (e.g. `receive`), set the **Folder** (e.g. `hippocorpus`), and click **Map to target**.
 
     ![ALT](/images/module16/16.43.png)
 
@@ -273,6 +273,8 @@ TBC
 6. Periodically click **Refresh** until the asset is **Mapped**.
 
     ![ALT](/images/module16/16.45.png)
+
+<div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 

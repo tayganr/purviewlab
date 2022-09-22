@@ -264,6 +264,10 @@ Once a share has been received, the recipients have the option to accept and con
 
 4. Select the target Azure Blob Storage account from the list of sources, set the **Path** (e.g. `receive`), set the **Folder** (e.g. `hippocorpus`), and click **Map to target**.
 
+    > :bulb: **Did you know?**
+    >
+    > **Path** refers to the storage account **container name** (the root of the path). When specified, you must name a new container or a container which was already used to receive in-place share data.
+
     ![ALT](/images/module16/16.43.png)
 
 5. Click **Close**.

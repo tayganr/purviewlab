@@ -17,7 +17,7 @@ With Microsoft Purview Data Sharing:
 
 ## :dart: Objectives
 
-* Register a storage account within Microsoft Purview to send and receive data.
+* Register a storage account to send and receive data.
 * Share data with a recipient by creating a sent share.
 * Accept a received share and access shared data.
 

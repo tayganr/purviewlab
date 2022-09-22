@@ -32,6 +32,7 @@ With Microsoft Purview Data Sharing:
 | 5 | [Register the Storage Account](#5-register-the-storage-account) | Data Source Administrator|
 | 6 | [Create a Sent Share](#6-create-a-sent-share) | Data Share Contributor |
 | 7 | [Accept a Received Share](#7-accept-a-received-share) | Data Share Contributor |
+| 8 | [Access and Download Shared Data](#8-access-and-download-shared-data) | Data Share Contributor |
 
 <div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 
@@ -291,6 +292,36 @@ Once a share has been received, the recipients have the option to accept and con
 6. Periodically click **Refresh** until the asset is **Mapped**.
 
     ![ALT](/images/module16/16.45.png)
+
+<div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
+
+## 8. Access and Download Shared Data
+
+Once a received share has been accepted and configured, you can access and download the data.
+
+> **Note**
+>
+> While the shared data can be visibly seen within the data consumers target storage account, the data has been shared in-place (without data duplication). In other words, the files are symbolic links pointing back to the original files that reside in the data producers source storage account. These files can be read and downloaded by the data consumer, but the data consumer is unable to delete or modify the files.
+
+1. Once the asset is mapped, click on the **Target** URL.
+
+    ![ALT](/images/module16/16.46.png)
+
+1. Navigate to the **Storage browser**.
+
+    ![ALT](/images/module16/16.47.png)
+
+1. Click **Blob containers**.
+
+    ![ALT](/images/module16/16.48.png)
+
+1. Navigate to `receive` > `hippocorpus` > `files`.
+
+    ![ALT](/images/module16/16.49.png)
+
+1. Open one of the files (e.g. `hippoCorpusV2.csv`) and click **Download**.
+
+    ![ALT](/images/module16/16.50.png)
 
 <div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 

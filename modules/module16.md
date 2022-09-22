@@ -242,6 +242,11 @@ Data sharing within Microsoft Purview allows data providers to share data with d
 
 7. Type your email address (use the same email address currently logged into Microsoft Purview) as a recipient and click **Create and Share**.
 
+    > :bulb: **Did you know?**
+    >
+    > * You can optionally specify an **Expiration date** for when to terminate the share.
+    > * You can share the same data with multiple recipients by clicking on **Add recipient** multiple times.
+
     ![ALT](/images/module16/16.39.png)
 
 <div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>

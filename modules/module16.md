@@ -37,7 +37,7 @@ With Microsoft Purview Data Sharing:
 
 ## 1. Enable the AllowDataSharing preview feature
 
-Your Azure subscription must be registered for the Microsoft.Storage **AllowDataSharing** preview feature **BEFORE** you can create a storage account to share and receive data.
+Your Azure subscription **MUST** be registered for the Microsoft.Storage **AllowDataSharing** preview feature **BEFORE** you can create a storage account to share and receive data.
 
 1. Open the Azure portal, type `Subscriptions` in the search bar and click **Subscriptions**.
 

@@ -296,21 +296,22 @@ Once a share has been received, the recipients have the option to accept and con
 
 ## :mortar_board: Knowledge Check
 
-1. PLACEHOLDER_KNOWLEDGE_CHECK_QUESTION
+1. Which of the following roles, would allow a data provider to share data from a storage account?
 
-    A ) Asset Type  
-    B ) Classification  
-    C ) Size  
+    A ) Storage Blob Data Contributor  
+    B ) Storage Blob Data Owner  
+    C ) Owner  
 
-2. PLACEHOLDER_KNOWLEDGE_CHECK_QUESTION
-
-    A ) True  
-    B ) False  
-
-3. PLACEHOLDER_KNOWLEDGE_CHECK_QUESTION
+2. You can only share data from storage accounts that are registered to a collection within Microsoft Purview's Data Map.
 
     A ) True  
     B ) False  
+
+3. Which of the following best describes the list of what is currently supported when sharing data from a storage account?
+
+    A ) Files (only)  
+    B ) Folder and Files  
+    C ) Container, Folder, and Files  
 
 <div align="right"><a href="#module-16---data-sharing">↥ back to top</a></div>
 

@@ -19,7 +19,7 @@ With Microsoft Purview Data Sharing:
 
 * Register a storage account to send and receive data.
 * Share data with a recipient by creating a sent share.
-* Accept a received share and access shared data.
+* Accept and configure a received share to access shared data.
 
 ## :bookmark_tabs: Table of Contents
 

@@ -236,7 +236,7 @@ Data sharing within Microsoft Purview allows data providers to share data with d
 
     ![ALT](/images/module16/16.37.png)
 
-6. Click **OK**.
+6. Optionally rename the asset (e.g. `hippocorpus`), optionally rename the path (e.g. `files`), then click **OK**.
 
     ![ALT](/images/module16/16.38.png)
 

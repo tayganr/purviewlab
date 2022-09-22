@@ -37,6 +37,7 @@ Microsoft Purview is a unified data governance service that helps you manage and
 13. [Process events using Atlas Kafka topics via Event Hubs and NodeJS](./modules/module13.md)
 14. [Data owner policies (Azure Storage)](./modules/module14.md)
 15. [Azure SQL Database Lineage Extraction](./modules/module15.md)
+16. [Data Sharing](./modules/module16.md)
 
 <div align="right"><a href="#microsoft-purview-workshop">↥ back to top</a></div>
 

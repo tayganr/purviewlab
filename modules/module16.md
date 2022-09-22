@@ -317,6 +317,6 @@ Once a share has been received, the recipients have the option to accept and con
 
 ## :tada: Summary
 
-MODULE_SUMMARY
+You have successfully shared data by creating a sent share, and accessed shared data by accepting and configuring a received share.
 
 [Continue >](../modules/module00.md)

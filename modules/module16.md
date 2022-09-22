@@ -18,8 +18,8 @@ With Microsoft Purview Data Sharing:
 ## :dart: Objectives
 
 * Register a storage account within Microsoft Purview to send and receive data.
-* Create a sent share.
-* Accept a received share.
+* Share data with a recipient by creating a sent share.
+* Accept a received share and access shared data.
 
 ## :bookmark_tabs: Table of Contents
 
@@ -234,9 +234,18 @@ Data sharing within Microsoft Purview allows data providers to share data with d
 
 5. Open the `send` container, select the `data` folder, and click **Add**.
 
+    > :bulb: **Did you know?**
+    >
+    > * When you add assets, you have the option to select **folders** or **files**.
+    > * Sharing at the **container** level is not currently supported.
+
     ![ALT](/images/module16/16.37.png)
 
 6. Optionally rename the asset (e.g. `hippocorpus`), optionally rename the path (e.g. `files`), then click **OK**.
+
+    > :bulb: **Did you know?**
+    >
+    > The **name** of the asset is what recipients of the Share will see.
 
     ![ALT](/images/module16/16.38.png)
 

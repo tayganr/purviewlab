@@ -96,7 +96,7 @@ Microsoft Purview Data Sharing supports sharing of files and folders in-place fr
 
 ## 3. Populate the Storage Account
 
-Before we can create a share, we must populate our storage account with some folders and files.
+Before we can create a share, we must populate our storage account with some data.
 
 1. From the Azure portal, navigate to your resource group, and open your **storage account**.
 

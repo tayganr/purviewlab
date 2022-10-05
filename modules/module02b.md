@@ -80,7 +80,7 @@ In this next step, we are creating a second access policy which will provide Mic
 
     ![Secret Permissions](../images/module02/02.89-secret-permissions.png)
 
-1. Search for the name of your Microsoft Purview account (e.g. `pvlab-{randomID}-pv`), select the item, then click **Select**.
+1. Search for the name of your Microsoft Purview account (e.g. `pvlab-{randomID}-pv`), select the item, then click **Next**.
 
     ![Search Principal](../images/module02/02.90-principal-select.png)
 

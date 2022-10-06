@@ -42,31 +42,25 @@ Before we can add secrets (such as passwords) to Azure Key Vault, we need to set
 
 1. Navigate to your **Azure Key Vault** resource and click **Access policies**.
 
-    ![Access Policies](../images/module02/02.73-keyvault-policies.png)
+    ![Access Policies](../images/module02/02.84-keyvault-policies.png)
 
-2. Click **Add Access Policy**.
+1. Click **➕ Create**.
 
-    ![Add Access Policy](../images/module02/02.74-keyvault-addpolicy.png)
+    ![Add Access Policy](../images/module02/02.85-keyvault-addpolicy.png)
 
-3. Under **Select principal**, click **None selected**.
+1. Under **Secret permissions**, click **Select all**. Then, click **Next**.
 
-    ![Select Principal](../images/module02/02.48-policy-select.png)
+    ![Secret Permissions](../images/module02/02.86-secret-permissions.png)
 
-4. Search for your **account name**, select your account name from the **search results**, then click **Select**.
+1. Search for your **account name**, select your account name from the search results, then click **Next**.
 
-    ![Search Principal](../images/module02/02.77-principal-select.png)
+    ![Search Principal](../images/module02/02.87-principal-select.png)
 
-5. Under **Secret permissions**, click **Select all**.
+1. Skip the **Application (optional)** page by clicking **Next** again.
 
-    ![Secret Permissions](../images/module02/02.78-secret-permissions.png)
+1. Review your selections then click **Create**.
 
-6. Review your selections then click **Add**.
-
-    ![Review Access Policy](../images/module02/02.79-review-permissions.png)
-
-7. Click **Save**.
-
-    ![Save Access Policy](../images/module02/02.75-keyvault-savepolicy.png)
+    ![Review Access Policy](../images/module02/02.88-review-permissions.png)
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 
@@ -76,31 +70,25 @@ In this next step, we are creating a second access policy which will provide Mic
 
 1. Navigate to your **Azure Key Vault** resource and click **Access policies**.
 
-    ![Access Policies](../images/module02/02.73-keyvault-policies.png)
+    ![Access Policies](../images/module02/02.84-keyvault-policies.png)
 
-2. Click **Add Access Policy**.
+1. Click **➕ Create**.
 
-    ![Add Access Policy](../images/module02/02.81-keyvault-addpolicy2.png)
+    ![Add Access Policy](../images/module02/02.85-keyvault-addpolicy.png)
 
-3. Under **Select principal**, click **None selected**.
+1. Under **Secret permissions**, select **Get** and **List**. Then, click **Next**.
 
-    ![Select Principal](../images/module02/02.48-policy-select.png)
+    ![Secret Permissions](../images/module02/02.89-secret-permissions.png)
 
-4. Search for the name of your Microsoft Purview account (e.g. `pvlab-{randomId}-pv`), select the item, then click **Select**.
+1. Search for the name of your Microsoft Purview account (e.g. `pvlab-{randomID}-pv`), select the item, then click **Next**.
 
-    ![Search Principal](../images/module02/02.49-policy-principal.png)
+    ![Search Principal](../images/module02/02.90-principal-select.png)
 
-5. Under **Secret permissions**, select **Get** and **List**.
+1. Skip the **Application (optional)** page by clicking **Next** again.
 
-    ![Secret Permissions](../images/module02/02.50-secret-permissions.png)
+1. Review your selections then click **Create**.
 
-6. Review your selections then click **Add**.
-
-    ![Review Access Policy](../images/module02/02.51-policy-add.png)
-
-7. Click **Save**.
-
-    ![Save Access Policy](../images/module02/02.82-keyvault-savepolicy2.png)
+    ![Review Access Policy](../images/module02/02.88-review-permissions.png)
 
 <div align="right"><a href="#module-02b---register--scan-azure-sql-db">↥ back to top</a></div>
 

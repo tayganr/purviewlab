@@ -48,6 +48,7 @@ When planning your Microsoft Purview deployment, you first need to provision a M
     | Resource group | `pvlab-rg` |
     | Microsoft Purview account name | `pvlab-{randomId}-pv` |
     | Location | `YOUR_LOCATION` |
+    | Event Hubs namespace name | `Enable` |
 
     ![Purview Account Basics](../images/module01/01.03-create-basic.png)
 

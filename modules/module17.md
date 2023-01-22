@@ -39,17 +39,19 @@ G(Contoso<br>Organization) ---> |1:N has| D(Sales<br>Department)
 
 ## :dart: Objectives
 
-* OBJECTIVE_PLACHOLDER
-* OBJECTIVE_PLACHOLDER
-* OBJECTIVE_PLACHOLDER
+* Create a custom asset type.
+* Define a custom relationship.
+* Create and relate business assets.
+* Bulk import business assets.
 
 ## :bookmark_tabs: Table of Contents
 
 | #  | Section | Role |
 | --- | --- | --- |
-| 1 | [H2_TITLE](#jump-link) | Role |
-| 2 | [H2_TITLE](#jump-link) | Role |
-| 3 | [H2_TITLE](#jump-link) | Role |
+| 1 | [Create an Asset Type](#1-create-an-asset-type) | Data map administrator |
+| 2 | [Create a Relationship](#2-create-a-relationship) | Data map administrator |
+| 3 | [Create a Business Asset](#3-create-a-business-asset) | Data curator |
+| 4 | [Bulk Import Assets](#4-bulk-import-assets) | Data curator |
 
 <div align="right"><a href="#module-00---title">↥ back to top</a></div>
 

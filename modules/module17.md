@@ -219,18 +219,19 @@ In addition to being able to create business assets one at a time via the Micros
 
 ## :mortar_board: Knowledge Check
 
-1. PLACEHOLDER_KNOWLEDGE_CHECK_QUESTION
+1. Which application within the Microsoft Purview Governance Portal has the ability to define new asset types?
 
-    A ) Asset Type  
-    B ) Classification  
-    C ) Size  
+    A ) Data policy  
+    B ) Data catalog  
+    C ) Data map  
 
-2. PLACEHOLDER_KNOWLEDGE_CHECK_QUESTION
+2. Which category is most appropriate where two asset types are related, while also being completely independent of one another (can exist without the other, and vice versa)?
 
-    A ) True  
-    B ) False  
+    A ) Association  
+    B ) Aggregation  
+    C ) Composition  
 
-3. PLACEHOLDER_KNOWLEDGE_CHECK_QUESTION
+3. A Business Asset is an instance of an Asset Type.
 
     A ) True  
     B ) False  

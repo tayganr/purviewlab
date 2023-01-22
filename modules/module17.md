@@ -57,7 +57,7 @@ G(Contoso<br>Organization) ---> |1:N has| D(Sales<br>Department)
 
 ## 1. Create an Asset Type
 
-An **asset type** is a template definition for a particular type of  asset. For example, you may create an asset type called `Parent Company` which might have attributes such as `Industry` and `Founded`. Once the asset type for Parent Company has been created, we can then create business assets of that type (*instances of parent company*). For Example, an instance of parent company might be `XYZ Inc`, who specialize in the `Manufacturing` industry, and was founded in `1985`.
+An **asset type** is a template definition for a particular type of  asset. For example, you may create an asset type called `Parent Company` with asset type specific attributes such as `Industry` and `Founded`. Once the asset type for Parent Company has been created, we can then create business assets of that type (*instances of parent company*). For example, an instance of parent company might be `XYZ Inc`, who specialize in the `Manufacturing` industry, and was founded in `1985`.
 
 > :bulb: **Did you know?**
 >
@@ -107,7 +107,7 @@ An **asset type** is a template definition for a particular type of  asset. For 
 
 ## 2. Create a Relationship
 
-Similar to how asset types are template definitions for asset instances, we can create **relationship definitions** (e.g. *Parent Company has Organizations*) which act as the template describing how asset instances interact with one another (e.g. `XYZ Conglomerate` *has* `ABC Labs`).
+Similar to asset types, we can create **relationship definitions** (e.g. *Parent Company has Organizations*) which act as the template describing how asset instances interact with one another (e.g. `XYZ Conglomerate` *has* `ABC Labs`).
 
 1. From the Microsoft Purview Governance Portal, navigate to **Data map** > **Asset types** and click **New relationship**.
 
@@ -123,13 +123,13 @@ Similar to how asset types are template definitions for asset instances, we can 
 >
 > * **Association** is a relationship between two assets where one asset uses the other asset, but there is no ownership (no containment). This means that the two asset types are independent of each other. For example, a `Department` asset type might have an association with an `Application` asset type, but the `Application` can exist without the `Department` and vice versa.
 > * **Aggregation** is a special kind of containment association where one asset is the owner (container) of the other asset, but the lifecycles of the container and the children are totally independent. For example, a `System` asset type might have an aggregation relationship with a `Database` asset type.
-> * **Composition** is  a special kind of containment association where one asset type is the owner of the other asset type and the ownership is exclusive. This means that the lifetime of the objects, the children cannot exist without the container (tightly bound). For example, an `Organization` asset type might have a composition relationship with a `Department` asset type, where a `Department` object can't exist without an `Organization` object. When the `Organization` object is deleted, the `Department` objects associated with it is also deleted.
+> * **Composition** is  a special kind of containment association where one asset type is the owner of the other asset type and the ownership is exclusive. This means throughout the lifetime of the objects, the children cannot exist without the container (tightly bound). For example, an `Organization` asset type might have a composition relationship with a `Department` asset type, where a `Department` object can't exist without an `Organization` object. When the `Organization` object is deleted, the `Department` objects associated with it is also deleted.
 > 
-> | Relationship Category | Type | Lifecycle | If Container (Head) Deleted... |
-> | -- | -- | -- | -- |
-> | Association | No Containment | Independant | Children (Tail) continue to exist |
-> | Aggregation | Containment | Independant | Children (Tail) continue to exist |
-> | Composition |  Containment | Dependant | Children (Tail) are deleted |
+>     | Relationship Category | Type | Lifecycle | If Container (Head) Deleted... |
+>     | -- | -- | -- | -- |
+>     | Association | No Containment | Independant | Children (Tail) continue to exist |
+>     | Aggregation | Containment | Independant | Children (Tail) continue to exist |
+>     | Composition |  Containment | Dependant | Children (Tail) are deleted |
 
 <div align="right"><a href="#module-17---metamodel">↥ back to top</a></div>
 

@@ -203,7 +203,7 @@ Microsoft Purview also allows for the bulk creation of business assets by upload
 
     ![ALT](/images/module17/17.13.png)
 
-2. Download a copy of **[import_business_assets.csv](https://github.com/tayganr/purviewlab/raw/main/assets/import_business_assets.csv)** to your local machine by opening the link in a new tab, right-click within the body of the content, click **Save as**.
+2. Download a copy of **[import_business_assets.csv](https://github.com/tayganr/purviewlab/raw/main/assets/import_business_assets.csv)** to your local machine. Open the link in a new tab, right-click within the body of the content, and click **Save as**.
 
     ![ALT](/images/module17/17.17.png)
 

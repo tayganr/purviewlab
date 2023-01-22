@@ -53,7 +53,7 @@ G(Contoso<br>Organization) ---> |1:N has| D(Sales<br>Department)
 | 3 | [Create a Business Asset](#3-create-a-business-asset) | Data curator |
 | 4 | [Bulk Import Assets](#4-bulk-import-assets) | Data curator |
 
-<div align="right"><a href="#module-00---title">↥ back to top</a></div>
+<div align="right"><a href="#module-17---metamodel">↥ back to top</a></div>
 
 ## 1. Create an Asset Type
 
@@ -95,7 +95,7 @@ An **asset type** is a template definition for a particular type of  asset. For 
 
 4. Click **Create**.
 
-<div align="right"><a href="#module-00---title">↥ back to top</a></div>
+<div align="right"><a href="#module-17---metamodel">↥ back to top</a></div>
 
 ## 2. Create a Relationship
 
@@ -119,7 +119,7 @@ Similar to how asset types are template definitions for asset instances, we can 
 > | Aggregation | Containment | Independant | Children (Tail) continue to exist |
 > | Composition |  Containment | Dependant | Children (Tail) are deleted |
 
-<div align="right"><a href="#module-00---title">↥ back to top</a></div>
+<div align="right"><a href="#module-17---metamodel">↥ back to top</a></div>
 
 ## 3. Create a Business Asset
 
@@ -165,7 +165,7 @@ Now that we have our custom asset type (Parent Company), in addition to predefin
 
 8. Visualize the relationship between the business assets by navigating to the **Related** tab. Reveal the reverse relationship by setting the drop down menu to `Show reverse relationship`.
 
-<div align="right"><a href="#module-00---title">↥ back to top</a></div>
+<div align="right"><a href="#module-17---metamodel">↥ back to top</a></div>
 
 ## 4. Bulk Import Assets
 
@@ -179,7 +179,7 @@ In addition to being able to create business assets one at a time via the Micros
 
 4. Once the import is complete, click **Refresh**.
 
-<div align="right"><a href="#module-00---title">↥ back to top</a></div>
+<div align="right"><a href="#module-17---metamodel">↥ back to top</a></div>
 
 ## :mortar_board: Knowledge Check
 
@@ -199,7 +199,7 @@ In addition to being able to create business assets one at a time via the Micros
     A ) True  
     B ) False  
 
-<div align="right"><a href="#module-00---title">↥ back to top</a></div>
+<div align="right"><a href="#module-17---metamodel">↥ back to top</a></div>
 
 ## :tada: Summary
 

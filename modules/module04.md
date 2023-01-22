@@ -165,7 +165,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 ## 3. Bulk Import Terms
 
-1. Download a copy of **[import-terms-sample.csv](https://github.com/tayganr/purviewlab/raw/main/assets/import-terms-sample.csv)** to your local machine by opening the link in a new tab, right-click within the body of the content, click **Save as** .
+1. Download a copy of **[import-terms-sample.csv](https://github.com/tayganr/purviewlab/raw/main/assets/import-terms-sample.csv)** to your local machine by opening the link in a new tab, right-click within the body of the content, click **Save as**.
 
     ![Import terms](../images/module04/04.29-sample-saveas.png)
 

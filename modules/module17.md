@@ -63,7 +63,9 @@ An **asset type** is a template definition for a particular type of  asset. For 
 >
 > Microsoft Purview provides a set of predefined asset types which you can augment and extend to meet your business needs.
 
-1. From the Microsoft Purview Governance Portal, navigate to **Data map** > **Asset types** and click **New asset type**.
+1. From the Microsoft Purview Governance Portal, navigate to **Data map** > **Asset types**, and click **New asset type**.
+
+    ![ALT](/images/module17/17.01.png)
 
 2. Copy and paste the values below into the matching fields (**Name** and **Description**), set the **Type** to `Organization`, and click **New attribute**.
 
@@ -79,6 +81,8 @@ An **asset type** is a template definition for a particular type of  asset. For 
     A parent company is a company that owns one or more other companies, known as subsidiaries. 
     ```
 
+    ![ALT](/images/module17/17.02.png)
+
 3. Copy and paste the values below into the matching fields (**Name** and **Description**), check **Mark as required**, set the **Field type** to `Date`, and click **Apply**.
 
     **Attribute name**
@@ -93,7 +97,11 @@ An **asset type** is a template definition for a particular type of  asset. For 
     The founded date of a company refers to the date on which the company was established or incorporated.
     ```
 
+    ![ALT](/images/module17/17.03.png)
+
 4. Click **Create**.
+
+    ![ALT](/images/module17/17.04.png)
 
 <div align="right"><a href="#module-17---metamodel">↥ back to top</a></div>
 
@@ -103,7 +111,11 @@ Similar to how asset types are template definitions for asset instances, we can 
 
 1. From the Microsoft Purview Governance Portal, navigate to **Data map** > **Asset types** and click **New relationship**.
 
+    ![ALT](/images/module17/17.05.png)
+
 2. Set **Asset type (Head)** to `Parent Company`, set **Asset type (Tail)** to `Organization`, set **Relationship** to `Has`, set the **Relationship category** to `Composition`, set the **Cardinality** to `One to many`, and click **Create**.
+
+    ![ALT](/images/module17/17.06.png)
 
 > :bulb: **Did you know?**
 >
@@ -125,7 +137,9 @@ Similar to how asset types are template definitions for asset instances, we can 
 
 Now that we have our custom asset type (Parent Company), in addition to predefined asset types (e.g. Organization), we can create and relate business assets.
 
-1. From the Microsoft Purview Governance Portal, navigate to **Data catalog** > **Business assets** and click **New asset**.
+1. From the Microsoft Purview Governance Portal, navigate to **Data catalog** > **Business assets**, and click **New asset**.
+
+    ![ALT](/images/module17/17.16.png)
 
 2. Set the **Asset type** to `Parent Company`, copy and paste the values below into the matching fields (**Name** and **Description**), and set the **Founded** attribute to `10/15/2003`, and click **Create**.
 
@@ -141,7 +155,11 @@ Now that we have our custom asset type (Parent Company), in addition to predefin
     The XYZ Conglomerate is a multinational corporation that specializes in a diverse range of industries, including technology, healthcare, finance, and retail. The company was founded in the early 21st century and has since grown to become one of the largest and most powerful corporations in the world.
     ```
 
-3. Navigate to **Data catalog** > **Business assets** and click **New asset**.
+    ![ALT](/images/module17/17.07.png)
+
+3. Navigate to **Data catalog** > **Business assets**, and click **New asset**.
+
+    ![ALT](/images/module17/17.16.png)
 
 4. Set the **Asset type** to `Organization`, copy and paste the values below into the matching fields (**Name** and **Description**), and navigte to the  **Related** tab.
 
@@ -157,13 +175,23 @@ Now that we have our custom asset type (Parent Company), in addition to predefin
     The ABC Labs is a subsidiary of the XYZ Conglomerate, focused on providing cutting-edge technology solutions to businesses and governments worldwide. Founded in the mid-21st century, the ABC Labs has quickly established itself as a leader in the field of artificial intelligence and automation. 
     ```
 
+    ![ALT](/images/module17/17.08.png)
+
 5. Within the **Define relationships** panel, click **Add linked assets (Parent Company)**.
+
+    ![ALT](/images/module17/17.09.png)
 
 6. From the search results, select `XYZ Conglomerate`, and click **Add**.
 
+    ![ALT](/images/module17/17.10.png)
+
 7. Click **Create**.
 
+    ![ALT](/images/module17/17.11.png)
+
 8. Visualize the relationship between the business assets by navigating to the **Related** tab. Reveal the reverse relationship by setting the drop down menu to `Show reverse relationship`.
+
+    ![ALT](/images/module17/17.12.png)
 
 <div align="right"><a href="#module-17---metamodel">↥ back to top</a></div>
 
@@ -173,11 +201,19 @@ In addition to being able to create business assets one at a time via the Micros
 
 1. Navigate to **Data catalog** > **Business assets** and click **Import assets**.
 
-2. Download a copy of **import_business_assets.csv** to your local machine by opening the link in a new tab, right-click within the body of the content, click Save as.
+    ![ALT](/images/module17/17.13.png)
 
-3. Set the **Asset type** to Department, click Browse, open the local copy of **import_business_assets.csv**, and click **OK**.
+2. Download a copy of **[import_business_assets.csv](https://github.com/tayganr/purviewlab/raw/main/assets/import_business_assets.csv)** to your local machine by opening the link in a new tab, right-click within the body of the content, click **Save as**.
 
-4. Once the import is complete, click **Refresh**.
+    ![ALT](/images/module17/17.17.png)
+
+3. Set the **Asset type** to `Department`, click Browse, open the local copy of **import_business_assets.csv**, and click **OK**.
+
+    ![ALT](/images/module17/17.14.png)
+
+4. Once the import is complete, click **Refresh**. You should see a list of the newly created assets.
+
+    ![ALT](/images/module17/17.15.png)
 
 <div align="right"><a href="#module-17---metamodel">↥ back to top</a></div>
 

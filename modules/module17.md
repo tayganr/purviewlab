@@ -135,7 +135,7 @@ Similar to asset types, we can create **relationship definitions** (e.g. *Parent
 
 ## 3. Create a Business Asset
 
-Now that we have our custom asset type (Parent Company), in addition to predefined asset types (e.g. Organization), we can create and relate business assets.
+Now that we have our pre-requisite asset types, we can create and relate business assets (instances of an asset type).
 
 1. From the Microsoft Purview Governance Portal, navigate to **Data catalog** > **Business assets**, and click **New asset**.
 

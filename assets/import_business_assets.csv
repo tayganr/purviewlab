@@ -1,0 +1,6 @@
+﻿Guid,Name,Type,Description,[Contacts]Expert,[Contacts]Owner,[Contacts]Steward,[Relationships]represents,[Relationships]isGroupedBy_LineOfBusiness,[Relationships]manages,[Relationships]isPartOf,[Relationships]meanings
+,Research and Development,Purview_Department,Responsible for researching and developing new technologies and products in the field of AI and automation.,,,,,,,,
+,Engineering,Purview_Department,Responsible for designing and building the products and solutions offered by ABC Labs.,,,,,,,,
+,Sales and Marketing,Purview_Department,Responsible for promoting and selling ABC Labs' products and solutions to businesses and governments.,,,,,,,,
+,Business Development,Purview_Department,Responsible for identifying and pursuing new business opportunities and partnerships.,,,,,,,,
+,Operations ,Purview_Department,"Responsible for the day-to-day operations of the company, including logistics, supply chain management, and customer support.",,,,,,,,

@@ -38,6 +38,7 @@ Microsoft Purview is a unified data governance service that helps you manage and
 14. [Data owner policies (Azure Storage)](./modules/module14.md)
 15. [Azure SQL Database Lineage Extraction](./modules/module15.md)
 16. [Data Sharing](./modules/module16.md)
+17. [Metamodel](./modules/module17.md)
 
 <div align="right"><a href="#microsoft-purview-workshop">↥ back to top</a></div>
 

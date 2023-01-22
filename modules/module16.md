@@ -1,6 +1,6 @@
 # Module 16 - Data Sharing
 
-[< Previous Module](../modules/module15.md) - **[Home](../README.md)**
+[< Previous Module](../modules/module15.md) - **[Home](../README.md)** - [Next Module >](../modules/module17.md)
 
 ## :loudspeaker: Introduction
 
@@ -350,4 +350,4 @@ Once a received share has been accepted and configured, you can access and downl
 
 You have successfully shared data by creating a sent share, and accessed shared data by accepting and configuring a received share.
 
-[Continue >](../modules/module00.md)
+[Continue >](../modules/module17.md)

@@ -135,13 +135,13 @@ Similar to asset types, we can create **relationship definitions** (e.g. *Parent
 
 ## 3. Create a Business Asset
 
-Now that we have our pre-requisite asset types, we can create and relate business assets (instances of an asset type).
+Now that we have our prerequisite asset types, we can create and relate business assets (instances of an asset type).
 
 1. From the Microsoft Purview Governance Portal, navigate to **Data catalog** > **Business assets**, and click **New asset**.
 
     ![ALT](/images/module17/17.16.png)
 
-2. Set the **Asset type** to `Parent Company`, copy and paste the values below into the matching fields (**Name** and **Description**), and set the **Founded** attribute to `10/15/2003`, and click **Create**.
+2. Set the **Asset type** to `Parent Company`, copy and paste the values below into the matching fields (**Name** and **Description**), and set the **Founded** attribute to `10/18/2003`, and click **Create**.
 
     **Name**
 
@@ -157,7 +157,7 @@ Now that we have our pre-requisite asset types, we can create and relate busines
 
     ![ALT](/images/module17/17.07.png)
 
-3. Navigate to **Data catalog** > **Business assets**, and click **New asset**.
+3. We will now create an `Organization` asset, which will be part of parent company `XYZ Conglomerate`. Navigate to **Data catalog** > **Business assets**, and click **New asset**.
 
     ![ALT](/images/module17/17.16.png)
 
@@ -197,7 +197,7 @@ Now that we have our pre-requisite asset types, we can create and relate busines
 
 ## 4. Bulk Import Assets
 
-In addition to being able to create business assets one at a time via the Microsoft Purview Governance Portal UI, we can also bulk import business assets by uploading a prepared CSV file.
+Microsoft Purview also allows for the bulk creation of business assets by uploading a prepared CSV file.
 
 1. Navigate to **Data catalog** > **Business assets** and click **Import assets**.
 

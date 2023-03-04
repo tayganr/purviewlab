@@ -30,12 +30,13 @@ In this lab you learn how to create terms using a system and custom term templat
 
 | #  | Section | Role |
 | --- | --- | --- |
-| 1 | [Create a Term (System Default Term Template)](#1-create-a-term-system-default-term-template) | Data Curator |
-| 2 | [Create a Term (Custom Term Template)](#2-create-a-term-custom-term-template) | Data Curator |
-| 3 | [Bulk Import Terms](#3-bulk-import-terms) | Data Curator |
-| 4 | [Bulk Export Terms](#4-bulk-export-terms) | Data Reader |
-| 5 | [Assign a Term to an Asset](#5-assign-a-term-to-an-asset) | Data Curator |
-| 6 | [Update an Existing Term](#6-update-an-existing-term) | Data Curator |
+| 1 | [Create a Glossary](#1-create-a-glossary) | Data Curator |
+| 1 | [Create a Term (System Default Term Template)](#2-create-a-term-system-default-term-template) | Data Curator |
+| 2 | [Create a Term (Custom Term Template)](#3-create-a-term-custom-term-template) | Data Curator |
+| 3 | [Bulk Import Terms](#4-bulk-import-terms) | Data Curator |
+| 4 | [Bulk Export Terms](#5-bulk-export-terms) | Data Reader |
+| 5 | [Assign a Term to an Asset](#6-assign-a-term-to-an-asset) | Data Curator |
+| 6 | [Update an Existing Term](#7-update-an-existing-term) | Data Curator |
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
@@ -63,7 +64,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
-## 1. Create a Term (System Default Term Template)
+## 2. Create a Term (System Default Term Template)
 
 1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog**, navigate to **Glossary**, and select **Glossary**.
 
@@ -117,7 +118,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
-## 2. Create a Term (Custom Term Template)
+## 3. Create a Term (Custom Term Template)
 
 1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog**, navigate to **Glossary**, and select **Glossary**.
 
@@ -187,7 +188,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
-## 3. Bulk Import Terms
+## 4. Bulk Import Terms
 
 1. Download a copy of **[import-terms-sample.csv](https://github.com/tayganr/purviewlab/raw/main/assets/import-terms-sample.csv)** to your local machine by opening the link in a new tab, right-click within the body of the content, click **Save as**.
 
@@ -215,11 +216,9 @@ In this lab you learn how to create terms using a system and custom term templat
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
-## 4. Bulk Export Terms
+## 5. Bulk Export Terms
 
 1. From the **Glossary** screen, we want to select ALL terms (top check box) and then de-select terms that do not belong to Workplace Analytics (i.e. Contoso Parent, Contoso Child). **All Workplace Analytics terms** should be selected. Click **Export terms**. 
-
-
 
     ![Export Terms](../images/module04/04.17-glossary-export.png)
 
@@ -229,7 +228,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
-## 5. Assign a Term to an Asset
+## 6. Assign a Term to an Asset
 
 1. Perform a wildcard search by typing asterisk (**\***) into the search bar and hitting the Enter key to submit the query. Click on an asset title (e.g. `QueriesByState`) to view the details.
 
@@ -253,7 +252,7 @@ In this lab you learn how to create terms using a system and custom term templat
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
-## 6. Update an Existing Term
+## 7. Update an Existing Term
 
 1. From the **Glossary** screen, open an existing term (e.g. `Aggregation`).
 

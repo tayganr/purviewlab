@@ -18,7 +18,7 @@ In this lab you'll learn how read and publish events using Azure Event Hubs and 
 
 ## :dart: Objectives
 
-- Connect to on premise data source using a self-hosted integration runtime.
+- Read and publish events using Azure Event Hubs.
 
 ## Table of Contents
 

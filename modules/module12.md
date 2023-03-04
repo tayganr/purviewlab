@@ -16,7 +16,7 @@ In this lab you'll learn how to make use a managed private endpoints. You'll lea
 
 ## :dart: Objectives
 
-- Connect to on premise data source using a self-hosted integration runtime.
+- Scan a storage account via a private endpoint using an Azure Managed Integration Runtime (IR) within a Microsoft Purview Managed Virtual Network.
 
 ## Table of Contents
 

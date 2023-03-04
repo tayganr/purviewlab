@@ -39,9 +39,33 @@ In this lab you learn how to create terms using a system and custom term templat
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
+## 1. Create a Glossary
+
+1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog**, navigate to **Glossary**, and click **New glossary**.
+
+    ![ALT](../images/module04/04.30-glossary-new.png)
+
+2. **Copy** and **paste** the values below into the appropriate fields, set your Azure AD identity as the **Steward** and **Expert**, and click **Create**.
+
+    ![ALT](../images/module04/04.31-glossary-create.png)
+
+    **Name**
+
+    ```text
+    Glossary
+    ```
+
+    **Description**
+
+    ```text
+    A glossary is a vocabulary of business terms that can be mapped to assets like a database, tables, columns etc. Glossary terms can help establish a common language across the business, abstracting the technical jargon typically associated with data repositories.
+    ```
+
+<div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
+
 ## 1. Create a Term (System Default Term Template)
 
-1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog**, click **Glossary**.
+1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog**, navigate to **Glossary**, and select **Glossary**.
 
     ![ALT](../images/module04/04.00-manage-glossary.png)
 
@@ -88,14 +112,14 @@ In this lab you learn how to create terms using a system and custom term templat
     **Resource Link**
 
     ```text
-    https://aka.ms/Azure-Purview
+    https://aka.ms/MicrosoftPurview
     ```
 
 <div align="right"><a href="#module-04---glossary">↥ back to top</a></div>
 
 ## 2. Create a Term (Custom Term Template)
 
-1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog**, click **Glossary**.
+1. Open the **Microsoft Purview Governance Portal** and from the **Data catalog**, navigate to **Glossary**, and select **Glossary**.
 
     ![ALT](../images/module04/04.00-manage-glossary.png)
 
@@ -157,7 +181,7 @@ In this lab you learn how to create terms using a system and custom term templat
     Marketing
     ```
 
-9. From the **Glossary** screen, change the view to **Hierarchical view** to see the hierarchical glossary.
+9. From the **Glossary** screen, select **Terms**, then toggle the view to **Hierarchical view** to see the hierarchical glossary.
 
     ![ALT](../images/module04/04.11-glossary-table.png)
 

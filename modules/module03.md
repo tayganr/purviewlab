@@ -159,7 +159,7 @@ Microsoft Purview allows us to perform certain operations (add/replace/remove) a
 
     ![Search Wildcard](../images/module03/03.01-search-wildcard.png)
 
-2. Hover your mouse over an item in the list to reveal the checkbox on the right-hand side. Select five items and click **View selected**.
+2. Filter the results to **File** and **Table**, select the first five items in the search results, and click **View selected**.
 
     ![View Selected](../images/module03/03.13-bulk-view.png)
 

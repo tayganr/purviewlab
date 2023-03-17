@@ -62,7 +62,7 @@ Microsoft Purview Data Sharing supports sharing of files and folders in-place fr
 >
 > * Source and target storage accounts must be created **AFTER** the **AllowDataSharing** preview registration step is complete.
 > * Both the source and target storage accounts **must be in the same Azure region** as each other.
-> * The storage account needs to be **registered to a collection**.
+> * The storage account needs to be **registered to a collection**. The receive storage also should be under the same collection. Make sure that both the storage accounts are in the same region.
 
 1. From the Azure portal, open the portal menu and click **Create a resource**.
 

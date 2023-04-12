@@ -8,7 +8,7 @@ One of the features of Microsoft Purview is the ability to show the lineage betw
 
 Lineage is typically captured from tools that extract, transform and load data. These ETL tools are, for example, Data Factory, Data Share, and Power BI. They capture the lineage of data as it moves. By scanning these ETL tools you can capture and visualize the lineage in Microsoft Purview.
 
-Microsoft Purview also supports the ability to upload custom lineage. Custom lineage is lineage that you created yourself, for example by uploading metadata using the Microsoft Purview's Atlas REST APIs. Lineage in Purview includes relationships between datasets and processes.
+Microsoft Purview also supports the ability to document custom lineage. Custom lineage is lineage that you created yourself, for example by uploading metadata using the Microsoft Purview's Atlas REST APIs, or by adding manual lineage via the Microsoft Purview governance portal. Lineage in Purview includes relationships between datasets and processes.
 
 > :bulb: **Did you know?**
 >

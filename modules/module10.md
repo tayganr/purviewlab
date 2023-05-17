@@ -719,7 +719,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
     | Property | Value |
     | --- | --- |
     | HTTP Method | `POST` |
-    | URL | `https://login.microsoftonline.com/YOUR_TENANT_ID/oauth2/token` |
+    | URL | `https://login.microsoftonline.com/YOUR_TENANT_ID/oauth2/v2.0/token` |
     | Body Type | `x-wwww-form-urlencoded` |
 
     Navigate to **Body**, select `x-wwww-form-urlencoded` and provide the following key value pairs. Once HTTP request is ready, click **Send**. If successful, the response will contain an **access token**, copy this value for later use.
@@ -729,7 +729,7 @@ To invoke the REST API, we must first register an application (i.e. service prin
     | grant_type | `client_credentials` |
     | client_id | `YOUR_CLIENT_ID` |
     | client_secret | `YOUR_CLIENT_SECRET` |
-    | resource | `https://purview.azure.net` |
+    | scope | `https://purview.azure.net/.default` |
 
     ![ALT](../images/module10/rest01.png)
 
